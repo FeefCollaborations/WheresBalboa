@@ -1,0 +1,13 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': '/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/Cluster/Cluster.framework/Modules'
+    'contents': [{
+      'type': 'file',
+      'name': 'module.modulemap',
+      'external-contents': '/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Intermediates/Pods.build/Debug-iphoneos/Cluster.build/unextended-module.modulemap',
+    }]
+  }]
+}

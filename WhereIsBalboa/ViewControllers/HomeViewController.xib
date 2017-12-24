@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="WhereIsBalboa" customModuleProvider="target">
+            <connections>
+                <outlet property="balbabeViewControllerContainer" destination="i1K-6P-f3D" id="7VI-5X-45z"/>
+                <outlet property="datePicker" destination="Nai-A9-RdF" id="Xld-D2-XSK"/>
+                <outlet property="dateSelectionTextField" destination="rsI-3V-mv2" id="vJo-Vh-s5b"/>
+                <outlet property="dateStepper" destination="kCQ-z2-zFG" id="ofc-H4-ecg"/>
+                <outlet property="doneInputAccessory" destination="xnu-il-3cm" id="u82-Jp-VG5"/>
+                <outlet property="profileBarButtonItem" destination="HiJ-4M-JXx" id="teb-vK-gA8"/>
+                <outlet property="tripsBarButtonItem" destination="0Vx-sk-vYi" id="VHh-1b-UoR"/>
+                <outlet property="view" destination="T9y-Ee-Khw" id="3PE-kU-8KW"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="T9y-Ee-Khw">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i1K-6P-f3D" userLabel="View Controller Container View">
+                    <rect key="frame" x="0.0" y="20" width="375" height="579"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g88-nt-n5i">
+                    <rect key="frame" x="0.0" y="599" width="375" height="68"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0ca-uH-kZt">
+                            <rect key="frame" x="8" y="0.0" width="359" height="60"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jkn-nh-457">
+                                    <rect key="frame" x="0.0" y="15" width="94" height="30"/>
+                                    <state key="normal" title="Toggle"/>
+                                    <connections>
+                                        <action selector="toggleTripViewType" destination="-1" eventType="touchUpInside" id="hKe-Wk-tvb"/>
+                                    </connections>
+                                </button>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EAF-r9-M2L">
+                                    <rect key="frame" x="102" y="0.0" width="1" height="60"/>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="1" id="xzS-9b-AVx"/>
+                                    </constraints>
+                                </view>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Select Date" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rsI-3V-mv2">
+                                    <rect key="frame" x="111" y="21.5" width="137" height="17"/>
+                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jVJ-Tg-RXz">
+                                    <rect key="frame" x="256" y="0.0" width="1" height="60"/>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="1" id="AVc-BF-5Al"/>
+                                    </constraints>
+                                </view>
+                                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="9.2233720368547758e+18" translatesAutoresizingMaskIntoConstraints="NO" id="kCQ-z2-zFG">
+                                    <rect key="frame" x="265" y="15.5" width="94" height="29"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="94" id="8b6-qR-QCL"/>
+                                    </constraints>
+                                    <connections>
+                                        <action selector="stepDate:" destination="-1" eventType="valueChanged" id="iqh-9X-oLM"/>
+                                    </connections>
+                                </stepper>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="rsI-3V-mv2" firstAttribute="centerX" secondItem="0ca-uH-kZt" secondAttribute="centerX" id="a30-W2-0UB"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="0ca-uH-kZt" firstAttribute="leading" secondItem="g88-nt-n5i" secondAttribute="leading" constant="8" id="E9k-nX-pjL"/>
+                        <constraint firstItem="0ca-uH-kZt" firstAttribute="top" secondItem="g88-nt-n5i" secondAttribute="top" id="cth-kp-qcb"/>
+                        <constraint firstAttribute="bottom" secondItem="0ca-uH-kZt" secondAttribute="bottom" constant="8" id="pca-Gi-8cp"/>
+                        <constraint firstAttribute="trailing" secondItem="0ca-uH-kZt" secondAttribute="trailing" constant="8" id="uTt-pG-sR7"/>
+                        <constraint firstAttribute="height" constant="68" id="y2B-wY-p1A"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="g88-nt-n5i" firstAttribute="leading" secondItem="iG1-dR-hrg" secondAttribute="leading" id="1LC-se-h9h"/>
+                <constraint firstItem="i1K-6P-f3D" firstAttribute="top" secondItem="iG1-dR-hrg" secondAttribute="top" id="ATk-nk-ahl"/>
+                <constraint firstItem="i1K-6P-f3D" firstAttribute="leading" secondItem="iG1-dR-hrg" secondAttribute="leading" id="SPJ-kS-A6r"/>
+                <constraint firstItem="g88-nt-n5i" firstAttribute="top" secondItem="i1K-6P-f3D" secondAttribute="bottom" id="Xmv-Az-h5M"/>
+                <constraint firstAttribute="bottom" secondItem="g88-nt-n5i" secondAttribute="bottom" id="ZJy-m2-9vf"/>
+                <constraint firstItem="g88-nt-n5i" firstAttribute="trailing" secondItem="iG1-dR-hrg" secondAttribute="trailing" id="lHG-XA-Dvf"/>
+                <constraint firstItem="i1K-6P-f3D" firstAttribute="trailing" secondItem="iG1-dR-hrg" secondAttribute="trailing" id="lQq-em-YNr"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="iG1-dR-hrg"/>
+            <point key="canvasLocation" x="-54" y="-8"/>
+        </view>
+        <barButtonItem title="Profile" id="HiJ-4M-JXx">
+            <connections>
+                <action selector="goToProfile" destination="-1" id="1ZS-db-yIg"/>
+            </connections>
+        </barButtonItem>
+        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" id="Nai-A9-RdF">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="162"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+            <date key="date" timeIntervalSinceReferenceDate="535477374.34107703">
+                <!--2017-12-20 15:42:54 +0000-->
+            </date>
+        </datePicker>
+        <barButtonItem title="My Trips" id="0Vx-sk-vYi">
+            <connections>
+                <action selector="goToTrips" destination="-1" id="lBZ-mI-Enh"/>
+            </connections>
+        </barButtonItem>
+        <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="xnu-il-3cm">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+            <items>
+                <barButtonItem systemItem="done" id="nhr-R7-YcR">
+                    <connections>
+                        <action selector="doneTappedOnPicker" destination="-1" id="2yG-m9-MPV"/>
+                    </connections>
+                </barButtonItem>
+            </items>
+        </toolbar>
+    </objects>
+</document>

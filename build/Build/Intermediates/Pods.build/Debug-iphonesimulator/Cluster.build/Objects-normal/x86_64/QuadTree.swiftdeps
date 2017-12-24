@@ -1,0 +1,440 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "AnnotationsContainer"
+- "QuadTreeNode"
+- "QuadTree"
+provides-nominal:
+- "7Cluster20AnnotationsContainerP"
+- "7Cluster12QuadTreeNodeC"
+- "7Cluster12QuadTreeNodeC0D4TypeO"
+- "7Cluster12QuadTreeNodeC8ChildrenV"
+- "7Cluster12QuadTreeNodeC8ChildrenV0E8IteratorV"
+- "7Cluster8QuadTreeC"
+provides-member:
+- ["7Cluster20AnnotationsContainerP", ""]
+- ["7Cluster12QuadTreeNodeC", ""]
+- ["7Cluster12QuadTreeNodeC0D4TypeO", ""]
+- ["7Cluster12QuadTreeNodeC8ChildrenV", ""]
+- ["7Cluster12QuadTreeNodeC8ChildrenV0E8IteratorV", ""]
+- ["7Cluster8QuadTreeC", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "+="
+- !private "=="
+- "AnnotationsContainer"
+- "AssignmentPrecedence"
+- "Bool"
+- !private "BooleanLiteralType"
+- "FloatLiteralType"
+- "IntegerLiteralType"
+- "IteratorProtocol"
+- "MKAnnotation"
+- "MKMapRect"
+- "QuadTree"
+- "QuadTreeNode"
+- "Sequence"
+- !private "StringLiteralType"
+- !private "fatalError"
+- !private "preconditionFailure"
+- !private "~="
+depends-member:
+- ["7Cluster20AnnotationsContainerP", "Bool"]
+- !private ["7Cluster20AnnotationsContainerP", "Children"]
+- ["7Cluster20AnnotationsContainerP", "MKAnnotation"]
+- ["7Cluster20AnnotationsContainerP", "MKMapRect"]
+- !private ["7Cluster20AnnotationsContainerP", "QuadTreeNode"]
+- ["7Cluster20AnnotationsContainerP", "add"]
+- ["7Cluster20AnnotationsContainerP", "annotations"]
+- !private ["7Cluster20AnnotationsContainerP", "fatalError"]
+- !private ["7Cluster20AnnotationsContainerP", "init"]
+- !private ["7Cluster20AnnotationsContainerP", "maxPointCapacity"]
+- !private ["7Cluster20AnnotationsContainerP", "preconditionFailure"]
+- !private ["7Cluster20AnnotationsContainerP", "rect"]
+- ["7Cluster20AnnotationsContainerP", "remove"]
+- !private ["7Cluster20AnnotationsContainerP", "root"]
+- !private ["7Cluster20AnnotationsContainerP", "subdivide"]
+- !private ["7Cluster20AnnotationsContainerP", "type"]
+- ["7Cluster20AnnotationsContainerP", ""]
+- !private ["Sa", "append"]
+- !private ["Sa", "count"]
+- !private ["Sa", "index"]
+- ["Sa", "init"]
+- !private ["Sa", "map"]
+- !private ["Sa", "remove"]
+- !private ["s23BidirectionalCollectionP", "append"]
+- !private ["s23BidirectionalCollectionP", "count"]
+- !private ["s23BidirectionalCollectionP", "index"]
+- ["s23BidirectionalCollectionP", "init"]
+- !private ["s23BidirectionalCollectionP", "map"]
+- !private ["s23BidirectionalCollectionP", "remove"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["SC22CLLocationCoordinate2DV", "deinit"]
+- !private ["s7CVarArgP", "append"]
+- !private ["s7CVarArgP", "count"]
+- !private ["s7CVarArgP", "index"]
+- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "map"]
+- !private ["s7CVarArgP", "remove"]
+- ["7Cluster12QuadTreeNodeC8ChildrenV", "Children"]
+- ["7Cluster12QuadTreeNodeC8ChildrenV", "ChildrenIterator"]
+- ["7Cluster12QuadTreeNodeC8ChildrenV", "Element"]
+- ["7Cluster12QuadTreeNodeC8ChildrenV", "Iterator"]
+- ["7Cluster12QuadTreeNodeC8ChildrenV", "IteratorProtocol"]
+- !private ["7Cluster12QuadTreeNodeC8ChildrenV", "MKMapRect"]
+- ["7Cluster12QuadTreeNodeC8ChildrenV", "QuadTreeNode"]
+- ["7Cluster12QuadTreeNodeC8ChildrenV", "SubSequence"]
+- ["7Cluster12QuadTreeNodeC8ChildrenV", "_copyContents"]
+- ["7Cluster12QuadTreeNodeC8ChildrenV", "_copyToContiguousArray"]
+- ["7Cluster12QuadTreeNodeC8ChildrenV", "_customContainsEquatableElement"]
+- ["7Cluster12QuadTreeNodeC8ChildrenV", "_preprocessingPass"]
+- ["7Cluster12QuadTreeNodeC8ChildrenV", "deinit"]
+- ["7Cluster12QuadTreeNodeC8ChildrenV", "drop"]
+- ["7Cluster12QuadTreeNodeC8ChildrenV", "dropFirst"]
+- ["7Cluster12QuadTreeNodeC8ChildrenV", "dropLast"]
+- ["7Cluster12QuadTreeNodeC8ChildrenV", "filter"]
+- ["7Cluster12QuadTreeNodeC8ChildrenV", "forEach"]
+- ["7Cluster12QuadTreeNodeC8ChildrenV", "init"]
+- ["7Cluster12QuadTreeNodeC8ChildrenV", "makeIterator"]
+- ["7Cluster12QuadTreeNodeC8ChildrenV", "map"]
+- ["7Cluster12QuadTreeNodeC8ChildrenV", "northEast"]
+- ["7Cluster12QuadTreeNodeC8ChildrenV", "northWest"]
+- ["7Cluster12QuadTreeNodeC8ChildrenV", "prefix"]
+- ["7Cluster12QuadTreeNodeC8ChildrenV", "southEast"]
+- ["7Cluster12QuadTreeNodeC8ChildrenV", "southWest"]
+- ["7Cluster12QuadTreeNodeC8ChildrenV", "split"]
+- ["7Cluster12QuadTreeNodeC8ChildrenV", "suffix"]
+- ["7Cluster12QuadTreeNodeC8ChildrenV", "underestimatedCount"]
+- ["7Cluster12QuadTreeNodeC8ChildrenV0E8IteratorV", "Children"]
+- ["7Cluster12QuadTreeNodeC8ChildrenV0E8IteratorV", "Element"]
+- ["7Cluster12QuadTreeNodeC8ChildrenV0E8IteratorV", "QuadTreeNode"]
+- !private ["7Cluster12QuadTreeNodeC8ChildrenV0E8IteratorV", "children"]
+- ["7Cluster12QuadTreeNodeC8ChildrenV0E8IteratorV", "deinit"]
+- !private ["7Cluster12QuadTreeNodeC8ChildrenV0E8IteratorV", "index"]
+- ["7Cluster12QuadTreeNodeC8ChildrenV0E8IteratorV", "init"]
+- ["7Cluster12QuadTreeNodeC8ChildrenV0E8IteratorV", "next"]
+- !private ["s10CollectionP", "append"]
+- !private ["s10CollectionP", "count"]
+- !private ["s10CollectionP", "index"]
+- ["s10CollectionP", "init"]
+- !private ["s10CollectionP", "map"]
+- !private ["s10CollectionP", "remove"]
+- !private ["s10ComparableP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "append"]
+- !private ["s28CustomDebugStringConvertibleP", "count"]
+- !private ["s28CustomDebugStringConvertibleP", "index"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "map"]
+- !private ["s28CustomDebugStringConvertibleP", "remove"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "append"]
+- !private ["s17CustomReflectableP", "count"]
+- !private ["s17CustomReflectableP", "index"]
+- ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "map"]
+- !private ["s17CustomReflectableP", "remove"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "append"]
+- !private ["s23CustomStringConvertibleP", "count"]
+- !private ["s23CustomStringConvertibleP", "index"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "map"]
+- !private ["s23CustomStringConvertibleP", "remove"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "append"]
+- !private ["s9DecodableP", "count"]
+- !private ["s9DecodableP", "index"]
+- ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "map"]
+- !private ["s9DecodableP", "remove"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "append"]
+- !private ["s9EncodableP", "count"]
+- !private ["s9EncodableP", "index"]
+- ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "map"]
+- !private ["s9EncodableP", "remove"]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "init"]
+- !private ["s25ExpressibleByArrayLiteralP", "append"]
+- !private ["s25ExpressibleByArrayLiteralP", "count"]
+- !private ["s25ExpressibleByArrayLiteralP", "index"]
+- ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s25ExpressibleByArrayLiteralP", "map"]
+- !private ["s25ExpressibleByArrayLiteralP", "remove"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s23ExpressibleByNilLiteralP", "map"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "init"]
+- ["s16IteratorProtocolP", "Element"]
+- !private ["s16IteratorProtocolP", "children"]
+- !private ["s16IteratorProtocolP", "index"]
+- !private ["s16IteratorProtocolP", "init"]
+- ["s16IteratorProtocolP", "next"]
+- ["s16IteratorProtocolP", ""]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["So12MKAnnotationP", "coordinate"]
+- !private ["SC9MKMapRectV", "contains"]
+- !private ["SC9MKMapRectV", "init"]
+- !private ["SC9MKMapRectV", "intersects"]
+- !private ["SC9MKMapRectV", "maxX"]
+- !private ["SC9MKMapRectV", "maxY"]
+- !private ["SC9MKMapRectV", "midX"]
+- !private ["SC9MKMapRectV", "midY"]
+- !private ["SC9MKMapRectV", "minX"]
+- !private ["SC9MKMapRectV", "minY"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["s17MutableCollectionP", "append"]
+- !private ["s17MutableCollectionP", "count"]
+- !private ["s17MutableCollectionP", "index"]
+- ["s17MutableCollectionP", "init"]
+- !private ["s17MutableCollectionP", "map"]
+- !private ["s17MutableCollectionP", "remove"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So9NSCopyingP", "init"]
+- !private ["So21NSItemProviderReadingP", "init"]
+- !private ["So21NSItemProviderWritingP", "init"]
+- !private ["So16NSMutableCopyingP", "init"]
+- !private ["So16NSObjectProtocolP", "coordinate"]
+- !private ["So16NSObjectProtocolP", "init"]
+- !private ["So14NSSecureCodingP", "init"]
+- !private ["So8NSStringC", "init"]
+- ["7Cluster12QuadTreeNodeC0D4TypeO", "Children"]
+- ["7Cluster12QuadTreeNodeC0D4TypeO", "internal"]
+- ["7Cluster12QuadTreeNodeC0D4TypeO", "leaf"]
+- !private ["Sq", "map"]
+- ["7Cluster8QuadTreeC", "Bool"]
+- ["7Cluster8QuadTreeC", "MKAnnotation"]
+- ["7Cluster8QuadTreeC", "MKMapRect"]
+- ["7Cluster8QuadTreeC", "QuadTreeNode"]
+- ["7Cluster8QuadTreeC", "add"]
+- ["7Cluster8QuadTreeC", "annotations"]
+- ["7Cluster8QuadTreeC", "deinit"]
+- ["7Cluster8QuadTreeC", "init"]
+- ["7Cluster8QuadTreeC", "remove"]
+- ["7Cluster8QuadTreeC", "root"]
+- ["7Cluster12QuadTreeNodeC", "Bool"]
+- ["7Cluster12QuadTreeNodeC", "Children"]
+- ["7Cluster12QuadTreeNodeC", "IteratorProtocol"]
+- ["7Cluster12QuadTreeNodeC", "MKAnnotation"]
+- ["7Cluster12QuadTreeNodeC", "MKMapRect"]
+- ["7Cluster12QuadTreeNodeC", "NodeType"]
+- ["7Cluster12QuadTreeNodeC", "QuadTreeNode"]
+- ["7Cluster12QuadTreeNodeC", "Sequence"]
+- ["7Cluster12QuadTreeNodeC", "add"]
+- ["7Cluster12QuadTreeNodeC", "annotations"]
+- ["7Cluster12QuadTreeNodeC", "deinit"]
+- !private ["7Cluster12QuadTreeNodeC", "fatalError"]
+- ["7Cluster12QuadTreeNodeC", "init"]
+- ["7Cluster12QuadTreeNodeC", "maxPointCapacity"]
+- !private ["7Cluster12QuadTreeNodeC", "preconditionFailure"]
+- ["7Cluster12QuadTreeNodeC", "rect"]
+- ["7Cluster12QuadTreeNodeC", "remove"]
+- !private ["7Cluster12QuadTreeNodeC", "subdivide"]
+- ["7Cluster12QuadTreeNodeC", "type"]
+- !private ["s22RandomAccessCollectionP", "append"]
+- !private ["s22RandomAccessCollectionP", "count"]
+- !private ["s22RandomAccessCollectionP", "index"]
+- ["s22RandomAccessCollectionP", "init"]
+- !private ["s22RandomAccessCollectionP", "map"]
+- !private ["s22RandomAccessCollectionP", "remove"]
+- !private ["s26RangeReplaceableCollectionP", "append"]
+- !private ["s26RangeReplaceableCollectionP", "count"]
+- !private ["s26RangeReplaceableCollectionP", "index"]
+- ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s26RangeReplaceableCollectionP", "map"]
+- !private ["s26RangeReplaceableCollectionP", "remove"]
+- !private ["s8SequenceP", "ChildrenIterator"]
+- ["s8SequenceP", "Element"]
+- ["s8SequenceP", "Iterator"]
+- !private ["s8SequenceP", "MKMapRect"]
+- !private ["s8SequenceP", "QuadTreeNode"]
+- ["s8SequenceP", "SubSequence"]
+- ["s8SequenceP", "_copyContents"]
+- ["s8SequenceP", "_copyToContiguousArray"]
+- ["s8SequenceP", "_customContainsEquatableElement"]
+- ["s8SequenceP", "_preprocessingPass"]
+- !private ["s8SequenceP", "append"]
+- !private ["s8SequenceP", "count"]
+- ["s8SequenceP", "drop"]
+- ["s8SequenceP", "dropFirst"]
+- ["s8SequenceP", "dropLast"]
+- ["s8SequenceP", "filter"]
+- ["s8SequenceP", "forEach"]
+- !private ["s8SequenceP", "index"]
+- ["s8SequenceP", "init"]
+- ["s8SequenceP", "makeIterator"]
+- ["s8SequenceP", "map"]
+- !private ["s8SequenceP", "northEast"]
+- !private ["s8SequenceP", "northWest"]
+- ["s8SequenceP", "prefix"]
+- !private ["s8SequenceP", "remove"]
+- !private ["s8SequenceP", "southEast"]
+- !private ["s8SequenceP", "southWest"]
+- ["s8SequenceP", "split"]
+- ["s8SequenceP", "suffix"]
+- ["s8SequenceP", "underestimatedCount"]
+- ["s8SequenceP", ""]
+- !private ["s12StaticStringV", "init"]
+- !private ["SS", "init"]
+- !private ["s14StringProtocolP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["s14_ArrayProtocolP", "append"]
+- !private ["s14_ArrayProtocolP", "count"]
+- !private ["s14_ArrayProtocolP", "index"]
+- ["s14_ArrayProtocolP", "init"]
+- !private ["s14_ArrayProtocolP", "map"]
+- !private ["s14_ArrayProtocolP", "remove"]
+- !private ["s23_BidirectionalIndexableP", "append"]
+- !private ["s23_BidirectionalIndexableP", "count"]
+- !private ["s23_BidirectionalIndexableP", "index"]
+- ["s23_BidirectionalIndexableP", "init"]
+- !private ["s23_BidirectionalIndexableP", "map"]
+- !private ["s23_BidirectionalIndexableP", "remove"]
+- !private ["s24_DestructorSafeContainerP", "append"]
+- !private ["s24_DestructorSafeContainerP", "count"]
+- !private ["s24_DestructorSafeContainerP", "index"]
+- ["s24_DestructorSafeContainerP", "init"]
+- !private ["s24_DestructorSafeContainerP", "map"]
+- !private ["s24_DestructorSafeContainerP", "remove"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s10_IndexableP", "append"]
+- !private ["s10_IndexableP", "count"]
+- !private ["s10_IndexableP", "index"]
+- ["s10_IndexableP", "init"]
+- !private ["s10_IndexableP", "map"]
+- !private ["s10_IndexableP", "remove"]
+- !private ["s14_IndexableBaseP", "append"]
+- !private ["s14_IndexableBaseP", "count"]
+- !private ["s14_IndexableBaseP", "index"]
+- ["s14_IndexableBaseP", "init"]
+- !private ["s14_IndexableBaseP", "map"]
+- !private ["s14_IndexableBaseP", "remove"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["s17_MutableIndexableP", "append"]
+- !private ["s17_MutableIndexableP", "count"]
+- !private ["s17_MutableIndexableP", "index"]
+- ["s17_MutableIndexableP", "init"]
+- !private ["s17_MutableIndexableP", "map"]
+- !private ["s17_MutableIndexableP", "remove"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s21_ObjectiveCBridgeableP", "append"]
+- !private ["s21_ObjectiveCBridgeableP", "count"]
+- !private ["s21_ObjectiveCBridgeableP", "index"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "map"]
+- !private ["s21_ObjectiveCBridgeableP", "remove"]
+- !private ["s22_RandomAccessIndexableP", "append"]
+- !private ["s22_RandomAccessIndexableP", "count"]
+- !private ["s22_RandomAccessIndexableP", "index"]
+- ["s22_RandomAccessIndexableP", "init"]
+- !private ["s22_RandomAccessIndexableP", "map"]
+- !private ["s22_RandomAccessIndexableP", "remove"]
+- !private ["s26_RangeReplaceableIndexableP", "append"]
+- !private ["s26_RangeReplaceableIndexableP", "count"]
+- !private ["s26_RangeReplaceableIndexableP", "index"]
+- ["s26_RangeReplaceableIndexableP", "init"]
+- !private ["s26_RangeReplaceableIndexableP", "map"]
+- !private ["s26_RangeReplaceableIndexableP", "remove"]
+- !private ["s16_SwiftStringViewP", "init"]
+depends-nominal:
+- "7Cluster20AnnotationsContainerP"
+- "Sa"
+- "s23BidirectionalCollectionP"
+- !private "Sb"
+- !private "SC22CLLocationCoordinate2DV"
+- "s7CVarArgP"
+- "7Cluster12QuadTreeNodeC8ChildrenV"
+- "7Cluster12QuadTreeNodeC8ChildrenV0E8IteratorV"
+- "s10CollectionP"
+- !private "s10ComparableP"
+- "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "s9DecodableP"
+- "s9EncodableP"
+- !private "s9EquatableP"
+- "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "s8HashableP"
+- "s16IteratorProtocolP"
+- !private "s25LosslessStringConvertibleP"
+- !private "So12MKAnnotationP"
+- !private "SC9MKMapRectV"
+- !private "s10MirrorPathP"
+- "s17MutableCollectionP"
+- !private "So8NSCodingP"
+- !private "So9NSCopyingP"
+- !private "So21NSItemProviderReadingP"
+- !private "So21NSItemProviderWritingP"
+- !private "So16NSMutableCopyingP"
+- !private "So16NSObjectProtocolP"
+- !private "So14NSSecureCodingP"
+- !private "So8NSStringC"
+- "7Cluster12QuadTreeNodeC0D4TypeO"
+- !private "Sq"
+- "7Cluster8QuadTreeC"
+- "7Cluster12QuadTreeNodeC"
+- "s22RandomAccessCollectionP"
+- "s26RangeReplaceableCollectionP"
+- "s8SequenceP"
+- !private "s12StaticStringV"
+- !private "SS"
+- !private "s14StringProtocolP"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- "s14_ArrayProtocolP"
+- "s23_BidirectionalIndexableP"
+- "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s33_ExpressibleByStringInterpolationP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- "s10_IndexableP"
+- "s14_IndexableBaseP"
+- !private "10Foundation27_KeyValueCodingAndObservingP"
+- "s17_MutableIndexableP"
+- "s21_ObjectiveCBridgeableP"
+- "s22_RandomAccessIndexableP"
+- "s26_RangeReplaceableIndexableP"
+- !private "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreLocation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/MapKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/Target Support Files/Cluster/Cluster-umbrella.h"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Intermediates/Pods.build/Debug-iphonesimulator/Cluster.build/unextended-module.modulemap"
+interface-hash: "24aefcd2fd4f4e67d42eb5f4fadf8de0"

@@ -1,0 +1,565 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		483B990D1FEE9717009DF029 /* TripsDataConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483B990C1FEE9717009DF029 /* TripsDataConfiguration.swift */; };
+		483B990F1FEEA017009DF029 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483B990E1FEEA017009DF029 /* LoadingViewController.swift */; };
+		483B99111FEEA032009DF029 /* LoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 483B99101FEEA032009DF029 /* LoadingViewController.xib */; };
+		483B99131FEF7828009DF029 /* UserTripListTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 483B99121FEF7828009DF029 /* UserTripListTableViewController.xib */; };
+		483B99151FEF7853009DF029 /* UserTripListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483B99141FEF7853009DF029 /* UserTripListTableViewDataSource.swift */; };
+		483B99171FEF7934009DF029 /* OwnTripTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483B99161FEF7934009DF029 /* OwnTripTableViewCell.swift */; };
+		483B99191FEF793D009DF029 /* OwnTripTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 483B99181FEF793D009DF029 /* OwnTripTableViewCell.xib */; };
+		483B991D1FEF8578009DF029 /* TripAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483B991C1FEF8578009DF029 /* TripAnnotation.swift */; };
+		483B99211FEF90A3009DF029 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483B99201FEF90A2009DF029 /* UIView.swift */; };
+		483B99231FEFA44B009DF029 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483B99221FEFA44B009DF029 /* UIImage.swift */; };
+		483E304D1FEAAB58006D4512 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483E304C1FEAAB58006D4512 /* AppDelegate.swift */; };
+		483E30541FEAAB58006D4512 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 483E30531FEAAB58006D4512 /* Assets.xcassets */; };
+		483E30571FEAAB58006D4512 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 483E30551FEAAB58006D4512 /* LaunchScreen.storyboard */; };
+		483E30751FEAABC4006D4512 /* TripMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483E30611FEAABC4006D4512 /* TripMapViewController.swift */; };
+		483E30761FEAABC4006D4512 /* TripMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 483E30621FEAABC4006D4512 /* TripMapViewController.xib */; };
+		483E30771FEAABC4006D4512 /* EntryGateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483E30631FEAABC4006D4512 /* EntryGateViewController.swift */; };
+		483E30781FEAABC4006D4512 /* EntryGateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 483E30641FEAABC4006D4512 /* EntryGateViewController.xib */; };
+		483E30791FEAABC4006D4512 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483E30651FEAABC4006D4512 /* HomeViewController.swift */; };
+		483E307A1FEAABC4006D4512 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 483E30661FEAABC4006D4512 /* HomeViewController.xib */; };
+		483E307B1FEAABC4006D4512 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483E30671FEAABC4006D4512 /* ProfileViewController.swift */; };
+		483E307C1FEAABC4006D4512 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 483E30681FEAABC4006D4512 /* ProfileViewController.xib */; };
+		483E307D1FEAABC4006D4512 /* TripEditorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483E30691FEAABC4006D4512 /* TripEditorTableViewController.swift */; };
+		483E307E1FEAABC4006D4512 /* TripEditorTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 483E306A1FEAABC4006D4512 /* TripEditorTableViewController.xib */; };
+		483E307F1FEAABC4006D4512 /* TripListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483E306B1FEAABC4006D4512 /* TripListTableViewController.swift */; };
+		483E30801FEAABC4006D4512 /* TripListTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 483E306C1FEAABC4006D4512 /* TripListTableViewController.xib */; };
+		483E30811FEAABC4006D4512 /* TripViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483E306E1FEAABC4006D4512 /* TripViewType.swift */; };
+		483E30821FEAABC4006D4512 /* UIViewAnimationCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483E30701FEAABC4006D4512 /* UIViewAnimationCurve.swift */; };
+		483E30831FEAABC4006D4512 /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483E30721FEAABC4006D4512 /* KeyboardManager.swift */; };
+		483E30851FEAB2A5006D4512 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 483E30841FEAB2A5006D4512 /* GoogleService-Info.plist */; };
+		483E30871FEAB922006D4512 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483E30861FEAB922006D4512 /* Trip.swift */; };
+		483E30891FEABDDF006D4512 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483E30881FEABDDF006D4512 /* DateFormatter.swift */; };
+		483E308B1FEAC364006D4512 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483E308A1FEAC364006D4512 /* Date.swift */; };
+		483E308F1FEADC42006D4512 /* Balbabe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483E308E1FEADC42006D4512 /* Balbabe.swift */; };
+		483E30911FEADE5A006D4512 /* TripListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483E30901FEADE5A006D4512 /* TripListTableViewDataSource.swift */; };
+		483E30931FEADF63006D4512 /* TripTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483E30921FEADF63006D4512 /* TripTableViewCell.swift */; };
+		483E30961FEADFA2006D4512 /* TripTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 483E30951FEADFA2006D4512 /* TripTableViewCell.xib */; };
+		483E30981FEB7075006D4512 /* UserTripListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483E30971FEB7075006D4512 /* UserTripListTableViewController.swift */; };
+		C1721180A29D8C402F48B0E2 /* Pods_WhereIsBalboa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 169CE0DFA5645B11B4FC3115 /* Pods_WhereIsBalboa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		169CE0DFA5645B11B4FC3115 /* Pods_WhereIsBalboa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhereIsBalboa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		329AEBE3B64A29654C79F38B /* Pods-WhereIsBalboa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhereIsBalboa.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhereIsBalboa/Pods-WhereIsBalboa.debug.xcconfig"; sourceTree = "<group>"; };
+		3764ED0D75B66BD7768C4E19 /* Pods-WhereIsBalboa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhereIsBalboa.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhereIsBalboa/Pods-WhereIsBalboa.release.xcconfig"; sourceTree = "<group>"; };
+		483B990C1FEE9717009DF029 /* TripsDataConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsDataConfiguration.swift; sourceTree = "<group>"; };
+		483B990E1FEEA017009DF029 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		483B99101FEEA032009DF029 /* LoadingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingViewController.xib; sourceTree = "<group>"; };
+		483B99121FEF7828009DF029 /* UserTripListTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTripListTableViewController.xib; sourceTree = "<group>"; };
+		483B99141FEF7853009DF029 /* UserTripListTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTripListTableViewDataSource.swift; sourceTree = "<group>"; };
+		483B99161FEF7934009DF029 /* OwnTripTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnTripTableViewCell.swift; sourceTree = "<group>"; };
+		483B99181FEF793D009DF029 /* OwnTripTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OwnTripTableViewCell.xib; sourceTree = "<group>"; };
+		483B991C1FEF8578009DF029 /* TripAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripAnnotation.swift; sourceTree = "<group>"; };
+		483B99201FEF90A2009DF029 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		483B99221FEFA44B009DF029 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		483E30491FEAAB58006D4512 /* WhereIsBalboa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhereIsBalboa.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		483E304C1FEAAB58006D4512 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		483E30531FEAAB58006D4512 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		483E30561FEAAB58006D4512 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		483E30581FEAAB58006D4512 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		483E30611FEAABC4006D4512 /* TripMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripMapViewController.swift; sourceTree = "<group>"; };
+		483E30621FEAABC4006D4512 /* TripMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TripMapViewController.xib; sourceTree = "<group>"; };
+		483E30631FEAABC4006D4512 /* EntryGateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryGateViewController.swift; sourceTree = "<group>"; };
+		483E30641FEAABC4006D4512 /* EntryGateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EntryGateViewController.xib; sourceTree = "<group>"; };
+		483E30651FEAABC4006D4512 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		483E30661FEAABC4006D4512 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		483E30671FEAABC4006D4512 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		483E30681FEAABC4006D4512 /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		483E30691FEAABC4006D4512 /* TripEditorTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripEditorTableViewController.swift; sourceTree = "<group>"; };
+		483E306A1FEAABC4006D4512 /* TripEditorTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TripEditorTableViewController.xib; sourceTree = "<group>"; };
+		483E306B1FEAABC4006D4512 /* TripListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripListTableViewController.swift; sourceTree = "<group>"; };
+		483E306C1FEAABC4006D4512 /* TripListTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TripListTableViewController.xib; sourceTree = "<group>"; };
+		483E306E1FEAABC4006D4512 /* TripViewType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripViewType.swift; sourceTree = "<group>"; };
+		483E30701FEAABC4006D4512 /* UIViewAnimationCurve.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewAnimationCurve.swift; sourceTree = "<group>"; };
+		483E30721FEAABC4006D4512 /* KeyboardManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardManager.swift; sourceTree = "<group>"; };
+		483E30841FEAB2A5006D4512 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		483E30861FEAB922006D4512 /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
+		483E30881FEABDDF006D4512 /* DateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateFormatter.swift; path = WhereIsBalboa/Extensions/DateFormatter.swift; sourceTree = SOURCE_ROOT; };
+		483E308A1FEAC364006D4512 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		483E308E1FEADC42006D4512 /* Balbabe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Balbabe.swift; sourceTree = "<group>"; };
+		483E30901FEADE5A006D4512 /* TripListTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListTableViewDataSource.swift; sourceTree = "<group>"; };
+		483E30921FEADF63006D4512 /* TripTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTableViewCell.swift; sourceTree = "<group>"; };
+		483E30951FEADFA2006D4512 /* TripTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TripTableViewCell.xib; sourceTree = "<group>"; };
+		483E30971FEB7075006D4512 /* UserTripListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTripListTableViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		483E30461FEAAB58006D4512 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1721180A29D8C402F48B0E2 /* Pods_WhereIsBalboa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1FF45CF512315A2B188FEDF5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				169CE0DFA5645B11B4FC3115 /* Pods_WhereIsBalboa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		483E30401FEAAB58006D4512 = {
+			isa = PBXGroup;
+			children = (
+				483E304B1FEAAB58006D4512 /* WhereIsBalboa */,
+				483E304A1FEAAB58006D4512 /* Products */,
+				84FEE0789AB3B10807195D79 /* Pods */,
+				1FF45CF512315A2B188FEDF5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		483E304A1FEAAB58006D4512 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				483E30491FEAAB58006D4512 /* WhereIsBalboa.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		483E304B1FEAAB58006D4512 /* WhereIsBalboa */ = {
+			isa = PBXGroup;
+			children = (
+				483E304C1FEAAB58006D4512 /* AppDelegate.swift */,
+				483E30531FEAAB58006D4512 /* Assets.xcassets */,
+				483E306F1FEAABC4006D4512 /* Extensions */,
+				483E30841FEAB2A5006D4512 /* GoogleService-Info.plist */,
+				483E30581FEAAB58006D4512 /* Info.plist */,
+				483E30551FEAAB58006D4512 /* LaunchScreen.storyboard */,
+				483E30711FEAABC4006D4512 /* Logic */,
+				483E306D1FEAABC4006D4512 /* Models */,
+				483E305E1FEAABC4006D4512 /* ViewControllers */,
+				483E30941FEADF93006D4512 /* Views */,
+			);
+			path = WhereIsBalboa;
+			sourceTree = "<group>";
+		};
+		483E305E1FEAABC4006D4512 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				483E30631FEAABC4006D4512 /* EntryGateViewController.swift */,
+				483E30641FEAABC4006D4512 /* EntryGateViewController.xib */,
+				483E30651FEAABC4006D4512 /* HomeViewController.swift */,
+				483E30661FEAABC4006D4512 /* HomeViewController.xib */,
+				483E30671FEAABC4006D4512 /* ProfileViewController.swift */,
+				483E30681FEAABC4006D4512 /* ProfileViewController.xib */,
+				483E30691FEAABC4006D4512 /* TripEditorTableViewController.swift */,
+				483E306A1FEAABC4006D4512 /* TripEditorTableViewController.xib */,
+				483E306B1FEAABC4006D4512 /* TripListTableViewController.swift */,
+				483E306C1FEAABC4006D4512 /* TripListTableViewController.xib */,
+				483E30611FEAABC4006D4512 /* TripMapViewController.swift */,
+				483E30621FEAABC4006D4512 /* TripMapViewController.xib */,
+				483E30971FEB7075006D4512 /* UserTripListTableViewController.swift */,
+				483B99121FEF7828009DF029 /* UserTripListTableViewController.xib */,
+				483B990E1FEEA017009DF029 /* LoadingViewController.swift */,
+				483B99101FEEA032009DF029 /* LoadingViewController.xib */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		483E306D1FEAABC4006D4512 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				483E306E1FEAABC4006D4512 /* TripViewType.swift */,
+				483E30861FEAB922006D4512 /* Trip.swift */,
+				483E308E1FEADC42006D4512 /* Balbabe.swift */,
+				483B990C1FEE9717009DF029 /* TripsDataConfiguration.swift */,
+				483B991C1FEF8578009DF029 /* TripAnnotation.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		483E306F1FEAABC4006D4512 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				483E308A1FEAC364006D4512 /* Date.swift */,
+				483E30881FEABDDF006D4512 /* DateFormatter.swift */,
+				483B99221FEFA44B009DF029 /* UIImage.swift */,
+				483B99201FEF90A2009DF029 /* UIView.swift */,
+				483E30701FEAABC4006D4512 /* UIViewAnimationCurve.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		483E30711FEAABC4006D4512 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				483E30721FEAABC4006D4512 /* KeyboardManager.swift */,
+				483B99141FEF7853009DF029 /* UserTripListTableViewDataSource.swift */,
+				483E30901FEADE5A006D4512 /* TripListTableViewDataSource.swift */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
+		483E30941FEADF93006D4512 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				483E30921FEADF63006D4512 /* TripTableViewCell.swift */,
+				483E30951FEADFA2006D4512 /* TripTableViewCell.xib */,
+				483B99161FEF7934009DF029 /* OwnTripTableViewCell.swift */,
+				483B99181FEF793D009DF029 /* OwnTripTableViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		84FEE0789AB3B10807195D79 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				329AEBE3B64A29654C79F38B /* Pods-WhereIsBalboa.debug.xcconfig */,
+				3764ED0D75B66BD7768C4E19 /* Pods-WhereIsBalboa.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		483E30481FEAAB58006D4512 /* WhereIsBalboa */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 483E305B1FEAAB58006D4512 /* Build configuration list for PBXNativeTarget "WhereIsBalboa" */;
+			buildPhases = (
+				F0415A1DDB759DCACB9455BA /* [CP] Check Pods Manifest.lock */,
+				483E30451FEAAB58006D4512 /* Sources */,
+				483E30461FEAAB58006D4512 /* Frameworks */,
+				483E30471FEAAB58006D4512 /* Resources */,
+				5E89C4C489AC49A641A248CF /* [CP] Embed Pods Frameworks */,
+				CA75BD51878153484E2FA852 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WhereIsBalboa;
+			productName = WhereIsBalboa;
+			productReference = 483E30491FEAAB58006D4512 /* WhereIsBalboa.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		483E30411FEAAB58006D4512 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				TargetAttributes = {
+					483E30481FEAAB58006D4512 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 483E30441FEAAB58006D4512 /* Build configuration list for PBXProject "WhereIsBalboa" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 483E30401FEAAB58006D4512;
+			productRefGroup = 483E304A1FEAAB58006D4512 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				483E30481FEAAB58006D4512 /* WhereIsBalboa */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		483E30471FEAAB58006D4512 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				483E30801FEAABC4006D4512 /* TripListTableViewController.xib in Resources */,
+				483B99131FEF7828009DF029 /* UserTripListTableViewController.xib in Resources */,
+				483E307E1FEAABC4006D4512 /* TripEditorTableViewController.xib in Resources */,
+				483B99191FEF793D009DF029 /* OwnTripTableViewCell.xib in Resources */,
+				483E30781FEAABC4006D4512 /* EntryGateViewController.xib in Resources */,
+				483E30571FEAAB58006D4512 /* LaunchScreen.storyboard in Resources */,
+				483E307C1FEAABC4006D4512 /* ProfileViewController.xib in Resources */,
+				483B99111FEEA032009DF029 /* LoadingViewController.xib in Resources */,
+				483E30541FEAAB58006D4512 /* Assets.xcassets in Resources */,
+				483E30761FEAABC4006D4512 /* TripMapViewController.xib in Resources */,
+				483E30961FEADFA2006D4512 /* TripTableViewCell.xib in Resources */,
+				483E30851FEAB2A5006D4512 /* GoogleService-Info.plist in Resources */,
+				483E307A1FEAABC4006D4512 /* HomeViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5E89C4C489AC49A641A248CF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhereIsBalboa/Pods-WhereIsBalboa-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA75BD51878153484E2FA852 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhereIsBalboa/Pods-WhereIsBalboa-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0415A1DDB759DCACB9455BA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		483E30451FEAAB58006D4512 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				483E30871FEAB922006D4512 /* Trip.swift in Sources */,
+				483E308F1FEADC42006D4512 /* Balbabe.swift in Sources */,
+				483E30821FEAABC4006D4512 /* UIViewAnimationCurve.swift in Sources */,
+				483E30771FEAABC4006D4512 /* EntryGateViewController.swift in Sources */,
+				483E30981FEB7075006D4512 /* UserTripListTableViewController.swift in Sources */,
+				483E30891FEABDDF006D4512 /* DateFormatter.swift in Sources */,
+				483B990F1FEEA017009DF029 /* LoadingViewController.swift in Sources */,
+				483B99211FEF90A3009DF029 /* UIView.swift in Sources */,
+				483E30911FEADE5A006D4512 /* TripListTableViewDataSource.swift in Sources */,
+				483B99231FEFA44B009DF029 /* UIImage.swift in Sources */,
+				483E304D1FEAAB58006D4512 /* AppDelegate.swift in Sources */,
+				483E307B1FEAABC4006D4512 /* ProfileViewController.swift in Sources */,
+				483B990D1FEE9717009DF029 /* TripsDataConfiguration.swift in Sources */,
+				483E30751FEAABC4006D4512 /* TripMapViewController.swift in Sources */,
+				483E307F1FEAABC4006D4512 /* TripListTableViewController.swift in Sources */,
+				483B991D1FEF8578009DF029 /* TripAnnotation.swift in Sources */,
+				483E308B1FEAC364006D4512 /* Date.swift in Sources */,
+				483E30831FEAABC4006D4512 /* KeyboardManager.swift in Sources */,
+				483B99151FEF7853009DF029 /* UserTripListTableViewDataSource.swift in Sources */,
+				483E307D1FEAABC4006D4512 /* TripEditorTableViewController.swift in Sources */,
+				483E30791FEAABC4006D4512 /* HomeViewController.swift in Sources */,
+				483B99171FEF7934009DF029 /* OwnTripTableViewCell.swift in Sources */,
+				483E30931FEADF63006D4512 /* TripTableViewCell.swift in Sources */,
+				483E30811FEAABC4006D4512 /* TripViewType.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		483E30551FEAAB58006D4512 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				483E30561FEAAB58006D4512 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		483E30591FEAAB58006D4512 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		483E305A1FEAAB58006D4512 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		483E305C1FEAAB58006D4512 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 329AEBE3B64A29654C79F38B /* Pods-WhereIsBalboa.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 239483289D;
+				INFOPLIST_FILE = WhereIsBalboa/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Feef.Anthony.WhereIsBalboa;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		483E305D1FEAAB58006D4512 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3764ED0D75B66BD7768C4E19 /* Pods-WhereIsBalboa.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 239483289D;
+				INFOPLIST_FILE = WhereIsBalboa/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Feef.Anthony.WhereIsBalboa;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		483E30441FEAAB58006D4512 /* Build configuration list for PBXProject "WhereIsBalboa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				483E30591FEAAB58006D4512 /* Debug */,
+				483E305A1FEAAB58006D4512 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		483E305B1FEAAB58006D4512 /* Build configuration list for PBXNativeTarget "WhereIsBalboa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				483E305C1FEAAB58006D4512 /* Debug */,
+				483E305D1FEAAB58006D4512 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 483E30411FEAAB58006D4512 /* Project object */;
+}

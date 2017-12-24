@@ -1,0 +1,10 @@
+framework module Cluster {
+  umbrella header "Cluster-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module Cluster.__Swift {
+    exclude header "Cluster-Swift.h"
+}

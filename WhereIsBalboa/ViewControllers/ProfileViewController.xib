@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="WhereIsBalboa" customModuleProvider="target">
+            <connections>
+                <outlet property="confirmPasswordTextField" destination="Zek-k0-cbI" id="vPO-mj-WHF"/>
+                <outlet property="hometownTextField" destination="ly6-CE-SzK" id="TMw-Or-pxK"/>
+                <outlet property="logoutBarButtonItem" destination="2az-W4-ISm" id="6so-Yo-gbt"/>
+                <outlet property="nameTextField" destination="7Kc-pb-aOF" id="e79-9M-iZi"/>
+                <outlet property="newPasswordTextField" destination="tfS-dB-KhK" id="xMV-6h-hBH"/>
+                <outlet property="view" destination="eyi-Jf-jOL" id="T63-l5-obi"/>
+                <outlet property="whatsappTextField" destination="ROs-Wc-QxS" id="0hD-82-lpa"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="eyi-Jf-jOL">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0Wg-FF-NLb">
+                    <rect key="frame" x="16" y="206.5" width="343" height="254"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Kc-pb-aOF">
+                            <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Whatsapp" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ROs-Wc-QxS">
+                            <rect key="frame" x="0.0" y="40" width="343" height="30"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zon-N8-VD8">
+                            <rect key="frame" x="0.0" y="80" width="343" height="2"/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="2" id="Ujy-lx-fJP"/>
+                            </constraints>
+                        </view>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Hometown" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ly6-CE-SzK">
+                            <rect key="frame" x="0.0" y="92" width="343" height="30"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GQV-xQ-e8V">
+                            <rect key="frame" x="0.0" y="132" width="343" height="2"/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="2" id="uNI-C0-jPE"/>
+                            </constraints>
+                        </view>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tfS-dB-KhK">
+                            <rect key="frame" x="0.0" y="144" width="343" height="30"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zek-k0-cbI">
+                            <rect key="frame" x="0.0" y="184" width="343" height="30"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aya-dg-tne">
+                            <rect key="frame" x="0.0" y="224" width="343" height="30"/>
+                            <state key="normal" title="Save Changes"/>
+                            <connections>
+                                <action selector="saveProfileChanges" destination="-1" eventType="touchUpInside" id="rph-eu-rd9"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="aya-dg-tne" firstAttribute="trailing" secondItem="7Kc-pb-aOF" secondAttribute="trailing" id="094-Z6-4eP"/>
+                        <constraint firstItem="aya-dg-tne" firstAttribute="leading" secondItem="7Kc-pb-aOF" secondAttribute="leading" id="1Bl-rE-A8E"/>
+                        <constraint firstItem="tfS-dB-KhK" firstAttribute="leading" secondItem="Zon-N8-VD8" secondAttribute="leading" id="1zA-b2-hJe"/>
+                        <constraint firstAttribute="trailing" secondItem="7Kc-pb-aOF" secondAttribute="trailing" id="2zV-2n-E9p"/>
+                        <constraint firstItem="ly6-CE-SzK" firstAttribute="trailing" secondItem="Zon-N8-VD8" secondAttribute="trailing" id="4iF-zV-qVw"/>
+                        <constraint firstItem="tfS-dB-KhK" firstAttribute="trailing" secondItem="7Kc-pb-aOF" secondAttribute="trailing" id="564-cD-QYk"/>
+                        <constraint firstItem="Zek-k0-cbI" firstAttribute="leading" secondItem="7Kc-pb-aOF" secondAttribute="leading" id="Efr-UD-7Eu"/>
+                        <constraint firstItem="tfS-dB-KhK" firstAttribute="trailing" secondItem="Zon-N8-VD8" secondAttribute="trailing" id="G25-Bq-xa1"/>
+                        <constraint firstItem="ROs-Wc-QxS" firstAttribute="trailing" secondItem="7Kc-pb-aOF" secondAttribute="trailing" id="GCY-Gq-lI4"/>
+                        <constraint firstItem="ROs-Wc-QxS" firstAttribute="leading" secondItem="7Kc-pb-aOF" secondAttribute="leading" id="JKL-qa-Y8U"/>
+                        <constraint firstItem="7Kc-pb-aOF" firstAttribute="leading" secondItem="0Wg-FF-NLb" secondAttribute="leading" id="NZi-QD-XCb"/>
+                        <constraint firstItem="GQV-xQ-e8V" firstAttribute="leading" secondItem="Zon-N8-VD8" secondAttribute="leading" id="Qh0-Dg-joq"/>
+                        <constraint firstItem="ly6-CE-SzK" firstAttribute="leading" secondItem="Zon-N8-VD8" secondAttribute="leading" id="TKP-pK-9EX"/>
+                        <constraint firstItem="tfS-dB-KhK" firstAttribute="leading" secondItem="7Kc-pb-aOF" secondAttribute="leading" id="XMC-PS-XPt"/>
+                        <constraint firstItem="Zek-k0-cbI" firstAttribute="trailing" secondItem="7Kc-pb-aOF" secondAttribute="trailing" id="bx6-Af-aoZ"/>
+                        <constraint firstItem="GQV-xQ-e8V" firstAttribute="trailing" secondItem="Zon-N8-VD8" secondAttribute="trailing" id="hoK-um-HVu"/>
+                        <constraint firstItem="ly6-CE-SzK" firstAttribute="trailing" secondItem="GQV-xQ-e8V" secondAttribute="trailing" id="uYq-Ze-tK4"/>
+                        <constraint firstItem="ly6-CE-SzK" firstAttribute="leading" secondItem="GQV-xQ-e8V" secondAttribute="leading" id="whq-vj-oGF"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="0Wg-FF-NLb" firstAttribute="centerY" secondItem="eyi-Jf-jOL" secondAttribute="centerY" id="1Dv-X2-g1i"/>
+                <constraint firstItem="0Wg-FF-NLb" firstAttribute="leading" secondItem="KHA-CA-yTt" secondAttribute="leading" constant="16" id="OCm-dJ-Eou"/>
+                <constraint firstItem="KHA-CA-yTt" firstAttribute="trailing" secondItem="0Wg-FF-NLb" secondAttribute="trailing" constant="16" id="X8l-7H-E14"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="KHA-CA-yTt"/>
+            <point key="canvasLocation" x="46.5" y="-47.5"/>
+        </view>
+        <barButtonItem title="Logout" id="2az-W4-ISm">
+            <connections>
+                <action selector="logout" destination="-1" id="OXY-dn-nNn"/>
+            </connections>
+        </barButtonItem>
+    </objects>
+</document>

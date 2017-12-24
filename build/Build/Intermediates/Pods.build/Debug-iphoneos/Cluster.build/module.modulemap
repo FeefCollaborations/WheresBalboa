@@ -1,0 +1,11 @@
+framework module Cluster {
+  umbrella header "Cluster-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module Cluster.Swift {
+    header "Cluster-Swift.h"
+    requires objc
+}
