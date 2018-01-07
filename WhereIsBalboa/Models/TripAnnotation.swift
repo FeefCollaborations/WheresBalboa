@@ -8,8 +8,8 @@ class TripAnnotation: MKPointAnnotation {
         self.balbabe = balbabe
         self.trip = trip
         super.init()
-        coordinate = trip.location.coordinate
+        coordinate = trip.metadata.address.location.coordinate
         title = balbabe.name
-        subtitle = "\(DateFormatter.fullDate.string(from: trip.startDate)) - \(DateFormatter.fullDate.string(from: trip.endDate))"
+        subtitle = "\(DateFormatter.fullDate.string(from: trip.metadata.dateInterval.start)) - \(DateFormatter.fullDate.string(from: trip.metadata.dateInterval.end))"
     }
 }

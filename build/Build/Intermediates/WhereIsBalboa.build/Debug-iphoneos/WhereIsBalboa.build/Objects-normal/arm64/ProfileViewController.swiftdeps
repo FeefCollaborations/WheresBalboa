@@ -17,6 +17,7 @@ provides-dynamic-lookup:
 - "viewWillAppear"
 - "whatsappTextField"
 depends-top-level:
+- !private "+"
 - "AssignmentPrecedence"
 - "Balbabe"
 - "Bool"
@@ -29,101 +30,139 @@ depends-top-level:
 - "UIViewController"
 - !private "fatalError"
 depends-member:
+- !private ["13WhereIsBalboa7AddressV", "city"]
+- !private ["13WhereIsBalboa7AddressV", "country"]
+- !private ["13WhereIsBalboa7BalbabeV", "hometown"]
+- !private ["13WhereIsBalboa7BalbabeV", "name"]
+- !private ["13WhereIsBalboa7BalbabeV", "whatsapp"]
 - !private ["s23BidirectionalCollectionP", "init"]
+- !private ["So15CALayerDelegateP", "text"]
 - !private ["s7CVarArgP", "balbabe"]
 - !private ["s7CVarArgP", "fatalError"]
+- !private ["s7CVarArgP", "hometownTextField"]
 - !private ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "logoutBarButtonItem"]
+- !private ["s7CVarArgP", "nameTextField"]
 - !private ["s7CVarArgP", "navigationController"]
 - !private ["s7CVarArgP", "navigationItem"]
 - !private ["s7CVarArgP", "popToRootViewController"]
 - !private ["s7CVarArgP", "rightBarButtonItem"]
 - !private ["s7CVarArgP", "setNavigationBarHidden"]
+- !private ["s7CVarArgP", "text"]
 - !private ["s7CVarArgP", "viewDidLoad"]
 - !private ["s7CVarArgP", "viewWillAppear"]
+- !private ["s7CVarArgP", "whatsappTextField"]
 - ["s7CVarArgP", ""]
 - !private ["s10CollectionP", "init"]
 - !private ["s10ComparableP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "balbabe"]
 - !private ["s28CustomDebugStringConvertibleP", "fatalError"]
+- !private ["s28CustomDebugStringConvertibleP", "hometownTextField"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "logoutBarButtonItem"]
+- !private ["s28CustomDebugStringConvertibleP", "nameTextField"]
 - !private ["s28CustomDebugStringConvertibleP", "navigationController"]
 - !private ["s28CustomDebugStringConvertibleP", "navigationItem"]
 - !private ["s28CustomDebugStringConvertibleP", "popToRootViewController"]
 - !private ["s28CustomDebugStringConvertibleP", "rightBarButtonItem"]
 - !private ["s28CustomDebugStringConvertibleP", "setNavigationBarHidden"]
+- !private ["s28CustomDebugStringConvertibleP", "text"]
 - !private ["s28CustomDebugStringConvertibleP", "viewDidLoad"]
 - !private ["s28CustomDebugStringConvertibleP", "viewWillAppear"]
+- !private ["s28CustomDebugStringConvertibleP", "whatsappTextField"]
 - ["s28CustomDebugStringConvertibleP", ""]
 - !private ["s29CustomPlaygroundQuickLookableP", "init"]
 - !private ["s17CustomReflectableP", "init"]
 - !private ["s23CustomStringConvertibleP", "balbabe"]
 - !private ["s23CustomStringConvertibleP", "fatalError"]
+- !private ["s23CustomStringConvertibleP", "hometownTextField"]
 - !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "logoutBarButtonItem"]
+- !private ["s23CustomStringConvertibleP", "nameTextField"]
 - !private ["s23CustomStringConvertibleP", "navigationController"]
 - !private ["s23CustomStringConvertibleP", "navigationItem"]
 - !private ["s23CustomStringConvertibleP", "popToRootViewController"]
 - !private ["s23CustomStringConvertibleP", "rightBarButtonItem"]
 - !private ["s23CustomStringConvertibleP", "setNavigationBarHidden"]
+- !private ["s23CustomStringConvertibleP", "text"]
 - !private ["s23CustomStringConvertibleP", "viewDidLoad"]
 - !private ["s23CustomStringConvertibleP", "viewWillAppear"]
+- !private ["s23CustomStringConvertibleP", "whatsappTextField"]
 - ["s23CustomStringConvertibleP", ""]
 - !private ["s9DecodableP", "init"]
 - !private ["s9EncodableP", "init"]
 - !private ["s9EquatableP", "balbabe"]
+- !private ["s9EquatableP", "city"]
+- !private ["s9EquatableP", "country"]
 - !private ["s9EquatableP", "fatalError"]
+- !private ["s9EquatableP", "hometown"]
+- !private ["s9EquatableP", "hometownTextField"]
 - !private ["s9EquatableP", "init"]
 - !private ["s9EquatableP", "logoutBarButtonItem"]
+- !private ["s9EquatableP", "name"]
+- !private ["s9EquatableP", "nameTextField"]
 - !private ["s9EquatableP", "navigationController"]
 - !private ["s9EquatableP", "navigationItem"]
 - !private ["s9EquatableP", "popToRootViewController"]
 - !private ["s9EquatableP", "rightBarButtonItem"]
 - !private ["s9EquatableP", "setNavigationBarHidden"]
+- !private ["s9EquatableP", "text"]
 - !private ["s9EquatableP", "viewDidLoad"]
 - !private ["s9EquatableP", "viewWillAppear"]
+- !private ["s9EquatableP", "whatsapp"]
+- !private ["s9EquatableP", "whatsappTextField"]
 - ["s9EquatableP", ""]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s26ExpressibleByStringLiteralP", "init"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
 - !private ["s8HashableP", "balbabe"]
 - !private ["s8HashableP", "fatalError"]
+- !private ["s8HashableP", "hometownTextField"]
 - !private ["s8HashableP", "init"]
 - !private ["s8HashableP", "logoutBarButtonItem"]
+- !private ["s8HashableP", "nameTextField"]
 - !private ["s8HashableP", "navigationController"]
 - !private ["s8HashableP", "navigationItem"]
 - !private ["s8HashableP", "popToRootViewController"]
 - !private ["s8HashableP", "rightBarButtonItem"]
 - !private ["s8HashableP", "setNavigationBarHidden"]
+- !private ["s8HashableP", "text"]
 - !private ["s8HashableP", "viewDidLoad"]
 - !private ["s8HashableP", "viewWillAppear"]
+- !private ["s8HashableP", "whatsappTextField"]
 - ["s8HashableP", ""]
 - !private ["s25LosslessStringConvertibleP", "init"]
 - !private ["s10MirrorPathP", "init"]
 - !private ["So8NSCodingP", "balbabe"]
 - !private ["So8NSCodingP", "fatalError"]
+- !private ["So8NSCodingP", "hometownTextField"]
 - !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "logoutBarButtonItem"]
+- !private ["So8NSCodingP", "nameTextField"]
 - !private ["So8NSCodingP", "navigationController"]
 - !private ["So8NSCodingP", "navigationItem"]
 - !private ["So8NSCodingP", "popToRootViewController"]
 - !private ["So8NSCodingP", "rightBarButtonItem"]
 - !private ["So8NSCodingP", "setNavigationBarHidden"]
+- !private ["So8NSCodingP", "text"]
 - !private ["So8NSCodingP", "viewDidLoad"]
 - !private ["So8NSCodingP", "viewWillAppear"]
+- !private ["So8NSCodingP", "whatsappTextField"]
 - ["So8NSCodingP", ""]
 - !private ["So9NSCopyingP", "init"]
 - !private ["So26NSExtensionRequestHandlingP", "balbabe"]
 - !private ["So26NSExtensionRequestHandlingP", "fatalError"]
+- !private ["So26NSExtensionRequestHandlingP", "hometownTextField"]
 - !private ["So26NSExtensionRequestHandlingP", "init"]
 - !private ["So26NSExtensionRequestHandlingP", "logoutBarButtonItem"]
+- !private ["So26NSExtensionRequestHandlingP", "nameTextField"]
 - !private ["So26NSExtensionRequestHandlingP", "navigationController"]
 - !private ["So26NSExtensionRequestHandlingP", "navigationItem"]
 - !private ["So26NSExtensionRequestHandlingP", "popToRootViewController"]
 - !private ["So26NSExtensionRequestHandlingP", "setNavigationBarHidden"]
 - !private ["So26NSExtensionRequestHandlingP", "viewDidLoad"]
 - !private ["So26NSExtensionRequestHandlingP", "viewWillAppear"]
+- !private ["So26NSExtensionRequestHandlingP", "whatsappTextField"]
 - ["So26NSExtensionRequestHandlingP", ""]
 - !private ["So21NSItemProviderReadingP", "init"]
 - !private ["So21NSItemProviderWritingP", "init"]
@@ -148,20 +187,25 @@ depends-member:
 - !private ["So8NSObjectC", "rightBarButtonItem"]
 - ["So8NSObjectC", "saveProfileChanges"]
 - !private ["So8NSObjectC", "setNavigationBarHidden"]
+- !private ["So8NSObjectC", "text"]
 - ["So8NSObjectC", "viewDidLoad"]
 - ["So8NSObjectC", "viewWillAppear"]
 - ["So8NSObjectC", "whatsappTextField"]
 - !private ["So16NSObjectProtocolP", "balbabe"]
 - !private ["So16NSObjectProtocolP", "fatalError"]
+- !private ["So16NSObjectProtocolP", "hometownTextField"]
 - !private ["So16NSObjectProtocolP", "init"]
 - !private ["So16NSObjectProtocolP", "logoutBarButtonItem"]
+- !private ["So16NSObjectProtocolP", "nameTextField"]
 - !private ["So16NSObjectProtocolP", "navigationController"]
 - !private ["So16NSObjectProtocolP", "navigationItem"]
 - !private ["So16NSObjectProtocolP", "popToRootViewController"]
 - !private ["So16NSObjectProtocolP", "rightBarButtonItem"]
 - !private ["So16NSObjectProtocolP", "setNavigationBarHidden"]
+- !private ["So16NSObjectProtocolP", "text"]
 - !private ["So16NSObjectProtocolP", "viewDidLoad"]
 - !private ["So16NSObjectProtocolP", "viewWillAppear"]
+- !private ["So16NSObjectProtocolP", "whatsappTextField"]
 - ["So16NSObjectProtocolP", ""]
 - !private ["So14NSSecureCodingP", "init"]
 - !private ["So8NSStringC", "init"]
@@ -193,52 +237,75 @@ depends-member:
 - !private ["s14StringProtocolP", "init"]
 - !private ["s16TextOutputStreamP", "init"]
 - !private ["s20TextOutputStreamableP", "init"]
+- !private ["So29UIAccessibilityIdentificationP", "text"]
+- !private ["So12UIAppearanceP", "text"]
 - !private ["So21UIAppearanceContainerP", "balbabe"]
 - !private ["So21UIAppearanceContainerP", "fatalError"]
+- !private ["So21UIAppearanceContainerP", "hometownTextField"]
 - !private ["So21UIAppearanceContainerP", "init"]
 - !private ["So21UIAppearanceContainerP", "logoutBarButtonItem"]
+- !private ["So21UIAppearanceContainerP", "nameTextField"]
 - !private ["So21UIAppearanceContainerP", "navigationController"]
 - !private ["So21UIAppearanceContainerP", "navigationItem"]
 - !private ["So21UIAppearanceContainerP", "popToRootViewController"]
 - !private ["So21UIAppearanceContainerP", "setNavigationBarHidden"]
+- !private ["So21UIAppearanceContainerP", "text"]
 - !private ["So21UIAppearanceContainerP", "viewDidLoad"]
 - !private ["So21UIAppearanceContainerP", "viewWillAppear"]
+- !private ["So21UIAppearanceContainerP", "whatsappTextField"]
 - ["So21UIAppearanceContainerP", ""]
 - !private ["So18UIContentContainerP", "balbabe"]
 - !private ["So18UIContentContainerP", "fatalError"]
+- !private ["So18UIContentContainerP", "hometownTextField"]
 - !private ["So18UIContentContainerP", "init"]
 - !private ["So18UIContentContainerP", "logoutBarButtonItem"]
+- !private ["So18UIContentContainerP", "nameTextField"]
 - !private ["So18UIContentContainerP", "navigationController"]
 - !private ["So18UIContentContainerP", "navigationItem"]
 - !private ["So18UIContentContainerP", "popToRootViewController"]
 - !private ["So18UIContentContainerP", "setNavigationBarHidden"]
 - !private ["So18UIContentContainerP", "viewDidLoad"]
 - !private ["So18UIContentContainerP", "viewWillAppear"]
+- !private ["So18UIContentContainerP", "whatsappTextField"]
 - ["So18UIContentContainerP", ""]
+- !private ["So30UIContentSizeCategoryAdjustingP", "text"]
+- !private ["So9UIControlC", "text"]
+- !private ["So17UICoordinateSpaceP", "text"]
+- !private ["So13UIDynamicItemP", "text"]
 - !private ["So18UIFocusEnvironmentP", "balbabe"]
 - !private ["So18UIFocusEnvironmentP", "fatalError"]
+- !private ["So18UIFocusEnvironmentP", "hometownTextField"]
 - !private ["So18UIFocusEnvironmentP", "init"]
 - !private ["So18UIFocusEnvironmentP", "logoutBarButtonItem"]
+- !private ["So18UIFocusEnvironmentP", "nameTextField"]
 - !private ["So18UIFocusEnvironmentP", "navigationController"]
 - !private ["So18UIFocusEnvironmentP", "navigationItem"]
 - !private ["So18UIFocusEnvironmentP", "popToRootViewController"]
 - !private ["So18UIFocusEnvironmentP", "setNavigationBarHidden"]
+- !private ["So18UIFocusEnvironmentP", "text"]
 - !private ["So18UIFocusEnvironmentP", "viewDidLoad"]
 - !private ["So18UIFocusEnvironmentP", "viewWillAppear"]
+- !private ["So18UIFocusEnvironmentP", "whatsappTextField"]
 - ["So18UIFocusEnvironmentP", ""]
+- !private ["So11UIFocusItemP", "text"]
+- !private ["So10UIKeyInputP", "text"]
 - !private ["So22UINavigationControllerC", "popToRootViewController"]
 - !private ["So22UINavigationControllerC", "setNavigationBarHidden"]
 - !private ["So16UINavigationItemC", "rightBarButtonItem"]
 - !private ["So30UIPasteConfigurationSupportingP", "balbabe"]
 - !private ["So30UIPasteConfigurationSupportingP", "fatalError"]
+- !private ["So30UIPasteConfigurationSupportingP", "hometownTextField"]
 - !private ["So30UIPasteConfigurationSupportingP", "init"]
 - !private ["So30UIPasteConfigurationSupportingP", "logoutBarButtonItem"]
+- !private ["So30UIPasteConfigurationSupportingP", "nameTextField"]
 - !private ["So30UIPasteConfigurationSupportingP", "navigationController"]
 - !private ["So30UIPasteConfigurationSupportingP", "navigationItem"]
 - !private ["So30UIPasteConfigurationSupportingP", "popToRootViewController"]
 - !private ["So30UIPasteConfigurationSupportingP", "setNavigationBarHidden"]
+- !private ["So30UIPasteConfigurationSupportingP", "text"]
 - !private ["So30UIPasteConfigurationSupportingP", "viewDidLoad"]
 - !private ["So30UIPasteConfigurationSupportingP", "viewWillAppear"]
+- !private ["So30UIPasteConfigurationSupportingP", "whatsappTextField"]
 - ["So30UIPasteConfigurationSupportingP", ""]
 - ["So11UIResponderC", "Balbabe"]
 - ["So11UIResponderC", "Bool"]
@@ -259,42 +326,61 @@ depends-member:
 - !private ["So11UIResponderC", "popToRootViewController"]
 - ["So11UIResponderC", "saveProfileChanges"]
 - !private ["So11UIResponderC", "setNavigationBarHidden"]
+- !private ["So11UIResponderC", "text"]
 - ["So11UIResponderC", "viewDidLoad"]
 - ["So11UIResponderC", "viewWillAppear"]
 - ["So11UIResponderC", "whatsappTextField"]
 - !private ["So30UIResponderStandardEditActionsP", "balbabe"]
 - !private ["So30UIResponderStandardEditActionsP", "fatalError"]
+- !private ["So30UIResponderStandardEditActionsP", "hometownTextField"]
 - !private ["So30UIResponderStandardEditActionsP", "init"]
 - !private ["So30UIResponderStandardEditActionsP", "logoutBarButtonItem"]
+- !private ["So30UIResponderStandardEditActionsP", "nameTextField"]
 - !private ["So30UIResponderStandardEditActionsP", "navigationController"]
 - !private ["So30UIResponderStandardEditActionsP", "navigationItem"]
 - !private ["So30UIResponderStandardEditActionsP", "popToRootViewController"]
 - !private ["So30UIResponderStandardEditActionsP", "setNavigationBarHidden"]
+- !private ["So30UIResponderStandardEditActionsP", "text"]
 - !private ["So30UIResponderStandardEditActionsP", "viewDidLoad"]
 - !private ["So30UIResponderStandardEditActionsP", "viewWillAppear"]
+- !private ["So30UIResponderStandardEditActionsP", "whatsappTextField"]
 - ["So30UIResponderStandardEditActionsP", ""]
 - !private ["So16UIStateRestoringP", "balbabe"]
 - !private ["So16UIStateRestoringP", "fatalError"]
+- !private ["So16UIStateRestoringP", "hometownTextField"]
 - !private ["So16UIStateRestoringP", "init"]
 - !private ["So16UIStateRestoringP", "logoutBarButtonItem"]
+- !private ["So16UIStateRestoringP", "nameTextField"]
 - !private ["So16UIStateRestoringP", "navigationController"]
 - !private ["So16UIStateRestoringP", "navigationItem"]
 - !private ["So16UIStateRestoringP", "popToRootViewController"]
 - !private ["So16UIStateRestoringP", "setNavigationBarHidden"]
 - !private ["So16UIStateRestoringP", "viewDidLoad"]
 - !private ["So16UIStateRestoringP", "viewWillAppear"]
+- !private ["So16UIStateRestoringP", "whatsappTextField"]
 - ["So16UIStateRestoringP", ""]
+- !private ["So15UITextDraggableP", "text"]
+- !private ["So15UITextDroppableP", "text"]
+- !private ["So11UITextFieldC", "text"]
+- !private ["So11UITextInputP", "text"]
+- !private ["So17UITextInputTraitsP", "text"]
+- !private ["So34UITextPasteConfigurationSupportingP", "text"]
 - !private ["So18UITraitEnvironmentP", "balbabe"]
 - !private ["So18UITraitEnvironmentP", "fatalError"]
+- !private ["So18UITraitEnvironmentP", "hometownTextField"]
 - !private ["So18UITraitEnvironmentP", "init"]
 - !private ["So18UITraitEnvironmentP", "logoutBarButtonItem"]
+- !private ["So18UITraitEnvironmentP", "nameTextField"]
 - !private ["So18UITraitEnvironmentP", "navigationController"]
 - !private ["So18UITraitEnvironmentP", "navigationItem"]
 - !private ["So18UITraitEnvironmentP", "popToRootViewController"]
 - !private ["So18UITraitEnvironmentP", "setNavigationBarHidden"]
+- !private ["So18UITraitEnvironmentP", "text"]
 - !private ["So18UITraitEnvironmentP", "viewDidLoad"]
 - !private ["So18UITraitEnvironmentP", "viewWillAppear"]
+- !private ["So18UITraitEnvironmentP", "whatsappTextField"]
 - ["So18UITraitEnvironmentP", ""]
+- !private ["So6UIViewC", "text"]
 - ["So16UIViewControllerC", "Balbabe"]
 - ["So16UIViewControllerC", "Bool"]
 - ["So16UIViewControllerC", "NSCoder"]
@@ -319,6 +405,7 @@ depends-member:
 - ["So16UIViewControllerC", "whatsappTextField"]
 - ["So16UIViewControllerC", ""]
 - !private ["s23_BidirectionalIndexableP", "init"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "text"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
@@ -329,21 +416,28 @@ depends-member:
 - !private ["s14_IndexableBaseP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "balbabe"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "fatalError"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "hometownTextField"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "logoutBarButtonItem"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "nameTextField"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "navigationController"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "navigationItem"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "popToRootViewController"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "rightBarButtonItem"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "setNavigationBarHidden"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "text"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "viewDidLoad"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "viewWillAppear"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "whatsappTextField"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s26_RangeReplaceableIndexableP", "init"]
 - !private ["s16_SwiftStringViewP", "init"]
 depends-nominal:
+- !private "13WhereIsBalboa7AddressV"
+- !private "13WhereIsBalboa7BalbabeV"
 - !private "s23BidirectionalCollectionP"
+- !private "So15CALayerDelegateP"
 - "s7CVarArgP"
 - !private "s10CollectionP"
 - !private "s10ComparableP"
@@ -378,18 +472,34 @@ depends-nominal:
 - !private "s14StringProtocolP"
 - !private "s16TextOutputStreamP"
 - !private "s20TextOutputStreamableP"
+- !private "So29UIAccessibilityIdentificationP"
+- !private "So12UIAppearanceP"
 - "So21UIAppearanceContainerP"
 - "So18UIContentContainerP"
+- !private "So30UIContentSizeCategoryAdjustingP"
+- !private "So9UIControlC"
+- !private "So17UICoordinateSpaceP"
+- !private "So13UIDynamicItemP"
 - "So18UIFocusEnvironmentP"
+- !private "So11UIFocusItemP"
+- !private "So10UIKeyInputP"
 - !private "So22UINavigationControllerC"
 - !private "So16UINavigationItemC"
 - "So30UIPasteConfigurationSupportingP"
 - "So11UIResponderC"
 - "So30UIResponderStandardEditActionsP"
 - "So16UIStateRestoringP"
+- !private "So15UITextDraggableP"
+- !private "So15UITextDroppableP"
+- !private "So11UITextFieldC"
+- !private "So11UITextInputP"
+- !private "So17UITextInputTraitsP"
+- !private "So34UITextPasteConfigurationSupportingP"
 - "So18UITraitEnvironmentP"
+- !private "So6UIViewC"
 - "So16UIViewControllerC"
 - !private "s23_BidirectionalIndexableP"
+- !private "s37_DefaultCustomPlaygroundQuickLookableP"
 - !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - !private "s34_ExpressibleByBuiltinStringLiteralP"
 - !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
@@ -404,11 +514,14 @@ depends-nominal:
 - !private "s16_SwiftStringViewP"
 depends-dynamic-lookup:
 depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Accelerate.apinotesc"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/PopupDialog/PopupDialog.framework/Modules/PopupDialog.swiftmodule/arm64.swiftmodule"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/Cluster/Cluster.framework/Modules/Cluster.swiftmodule/arm64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Accelerate.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Metal.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
@@ -422,6 +535,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FIRInstanceID.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/PopupDialog/PopupDialog.framework/Headers/PopupDialog-umbrella.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/Cluster/Cluster.framework/Headers/Cluster-umbrella.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRMutableData.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageMetadata.h"
@@ -475,18 +589,21 @@ depends-external:
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIROptions.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthErrors.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageConstants.h"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/PopupDialog/PopupDialog.framework/Headers/PopupDialog-Swift.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/Cluster/Cluster.framework/Headers/Cluster-Swift.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthDataResult.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRTransactionResult.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDataSnapshot.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageTaskSnapshot.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalyticsSwiftNameSupport.h"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/PopupDialog/PopupDialog.framework/Headers/FXBlurView.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabaseQuery.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/Firebase/Core/Sources/module.modulemap"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Modules/module.modulemap"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Modules/module.modulemap"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Modules/module.modulemap"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Modules/module.modulemap"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/PopupDialog/PopupDialog.framework/Modules/module.modulemap"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Modules/module.modulemap"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/Cluster/Cluster.framework/Modules/module.modulemap"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"

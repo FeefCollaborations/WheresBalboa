@@ -3,7 +3,7 @@ import MapKit
 import Cluster
 
 class TripMapViewController: UIViewController, MKMapViewDelegate {
-    typealias TripTapHandler = (Trip) -> Void
+    typealias TripTapHandler = (Trip, Balbabe) -> Void
     typealias TripGroupTapHandler = ([Trip: Balbabe]) -> Void
     
     @IBOutlet private var mapView: MKMapView!
@@ -26,6 +26,10 @@ class TripMapViewController: UIViewController, MKMapViewDelegate {
         self.onTripGroupTap = onTripGroupTap
         super.init(nibName: nil, bundle: nil)
         updateAnnotations()
+        guard #available(iOS 11.0, *) else {
+            edgesForExtendedLayout = []
+            return
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -99,7 +103,6 @@ class TripMapViewController: UIViewController, MKMapViewDelegate {
             let cluster = view.annotation as? ClusterAnnotation,
             let tripAnnotations = cluster.annotations as? [TripAnnotation]
         else {
-            // Selected single annotation, pop out callout
             return
         }
         // Selected group annotation
@@ -114,7 +117,7 @@ class TripMapViewController: UIViewController, MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         if let tripAnnotation = view.annotation as? TripAnnotation {
-            onTripTap?(tripAnnotation.trip)
+            onTripTap?(tripAnnotation.trip, tripAnnotation.balbabe)
         }
     }
     

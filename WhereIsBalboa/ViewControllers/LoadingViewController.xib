@@ -20,29 +20,20 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="DEI-z2-szp">
-                    <rect key="frame" x="150" y="301" width="75" height="65.5"/>
-                    <subviews>
-                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="amn-lh-pAT">
-                            <rect key="frame" x="19" y="0.0" width="37" height="37"/>
-                            <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                        </activityIndicatorView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqt-5P-6Hi">
-                            <rect key="frame" x="0.0" y="45" width="75" height="20.5"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                    </subviews>
-                </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BxO-19-Dl1" customClass="LoadingView" customModule="WhereIsBalboa" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="DEI-z2-szp" firstAttribute="centerY" secondItem="7sS-dC-4S6" secondAttribute="centerY" id="5rf-PJ-3vC"/>
-                <constraint firstItem="DEI-z2-szp" firstAttribute="centerX" secondItem="7sS-dC-4S6" secondAttribute="centerX" id="pnm-1g-jvL"/>
+                <constraint firstItem="BxO-19-Dl1" firstAttribute="trailing" secondItem="xF3-Qj-Yl4" secondAttribute="trailing" id="7e5-6b-QKs"/>
+                <constraint firstItem="BxO-19-Dl1" firstAttribute="bottom" secondItem="xF3-Qj-Yl4" secondAttribute="bottom" id="Y5b-uN-xxh"/>
+                <constraint firstItem="BxO-19-Dl1" firstAttribute="top" secondItem="7sS-dC-4S6" secondAttribute="top" id="iFM-RL-ejN"/>
+                <constraint firstItem="BxO-19-Dl1" firstAttribute="leading" secondItem="xF3-Qj-Yl4" secondAttribute="leading" id="jfn-dY-vkB"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="xF3-Qj-Yl4"/>
-            <point key="canvasLocation" x="141" y="-190"/>
+            <point key="canvasLocation" x="140.5" y="-190.5"/>
         </view>
     </objects>
 </document>

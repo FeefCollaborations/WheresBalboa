@@ -1,5 +1,6 @@
 import UIKit
 import FirebaseAuth
+import CoreLocation
 
 class EntryGateViewController: UIViewController {
     
@@ -10,6 +11,10 @@ class EntryGateViewController: UIViewController {
     
     init() {
         super.init(nibName: nil, bundle: nil)
+        guard #available(iOS 11.0, *) else {
+            edgesForExtendedLayout = []
+            return
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -27,7 +32,8 @@ class EntryGateViewController: UIViewController {
     
     @IBAction private func signIn() {
         // TODO: Validate legit user credentials
-        let homeViewController = HomeViewController(Balbabe.dummy())
+        let hometown = Address(location: CLLocation.init(latitude: 6.2, longitude: -75.5), city: "medellin", state: "antioquia", country: "Colombia")
+        let homeViewController = HomeViewController(Balbabe.dummy("feef", hometown))
         navigationController?.pushViewController(homeViewController, animated: true)
     }
 }

@@ -167,6 +167,65 @@
     },
     {
       'type': 'directory',
+      'name': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/PopupDialog/PopupDialog.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "FXBlurView.h",
+          'external-contents': "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/PopupDialog/PopupDialog/Classes/FXBlurView.h"
+        },
+        {
+          'type': 'file',
+          'name': "PopupDialog-Swift.h",
+          'external-contents': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/PopupDialog/PopupDialog.framework/Headers/PopupDialog-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "PopupDialog-umbrella.h",
+          'external-contents': "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/Target Support Files/PopupDialog/PopupDialog-umbrella.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/PopupDialog/PopupDialog.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Intermediates/Pods.build/Debug-iphonesimulator/PopupDialog.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "SwiftyJSON-Swift.h",
+          'external-contents': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Headers/SwiftyJSON-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "SwiftyJSON-umbrella.h",
+          'external-contents': "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/Target Support Files/SwiftyJSON/SwiftyJSON-umbrella.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Intermediates/Pods.build/Debug-iphonesimulator/SwiftyJSON.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
       'name': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/leveldb-library/leveldb.framework/Headers",
       'contents': [
         {

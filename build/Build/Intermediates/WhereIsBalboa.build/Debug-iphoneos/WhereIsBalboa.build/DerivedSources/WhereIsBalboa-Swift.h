@@ -175,6 +175,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import UIKit;
 @import Foundation;
 @import ObjectiveC;
+@import CoreGraphics;
 @import MapKit;
 #endif
 
@@ -202,10 +203,21 @@ SWIFT_CLASS("_TtC13WhereIsBalboa11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-
-
 @class NSCoder;
+@class UITableView;
 @class NSBundle;
+
+SWIFT_CLASS("_TtC13WhereIsBalboa34BalbabeTripListTableViewController")
+@interface BalbabeTripListTableViewController : UIViewController <UITableViewDelegate>
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (void)viewWillAppear:(BOOL)animated;
+- (void)viewDidLoad;
+- (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
+@end
+
+
+
 
 SWIFT_CLASS("_TtC13WhereIsBalboa23EntryGateViewController")
 @interface EntryGateViewController : UIViewController
@@ -232,10 +244,29 @@ SWIFT_CLASS("_TtC13WhereIsBalboa15KeyboardManager")
 @end
 
 
+SWIFT_CLASS("_TtC13WhereIsBalboa11LoadingView")
+@interface LoadingView : UIView
+- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 SWIFT_CLASS("_TtC13WhereIsBalboa21LoadingViewController")
 @interface LoadingViewController : UIViewController
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
+@end
+
+@class UITableViewCell;
+
+SWIFT_CLASS("_TtC13WhereIsBalboa33LocationSearchTableViewController")
+@interface LocationSearchTableViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (void)viewDidLoad;
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
 
@@ -275,7 +306,6 @@ SWIFT_CLASS("_TtC13WhereIsBalboa29TripEditorTableViewController")
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
 
-@class UITableView;
 
 SWIFT_CLASS("_TtC13WhereIsBalboa27TripListTableViewController")
 @interface TripListTableViewController : UIViewController <UITableViewDelegate>
@@ -311,6 +341,7 @@ SWIFT_CLASS("_TtC13WhereIsBalboa21TripMapViewController")
 @end
 
 @class UIImageView;
+@class UIButton;
 
 SWIFT_CLASS("_TtC13WhereIsBalboa17TripTableViewCell")
 @interface TripTableViewCell : UITableViewCell
@@ -319,6 +350,7 @@ SWIFT_CLASS("_TtC13WhereIsBalboa17TripTableViewCell")
 @property (nonatomic, readonly, strong) IBOutlet UILabel * _Null_unspecified dateLabel;
 @property (nonatomic, readonly, strong) IBOutlet UILabel * _Null_unspecified distanceLabel;
 @property (nonatomic, readonly, strong) IBOutlet UIImageView * _Null_unspecified locationImageView;
+@property (nonatomic, readonly, strong) IBOutlet UIButton * _Null_unspecified contactButton;
 - (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -326,14 +358,8 @@ SWIFT_CLASS("_TtC13WhereIsBalboa17TripTableViewCell")
 
 
 
-SWIFT_CLASS("_TtC13WhereIsBalboa31UserTripListTableViewController")
-@interface UserTripListTableViewController : UIViewController <UITableViewDelegate>
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-- (void)viewWillAppear:(BOOL)animated;
-- (void)viewDidLoad;
-- (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
-@end
+
+
 
 
 SWIFT_CLASS("_TtC13WhereIsBalboa31UserTripListTableViewDataSource")

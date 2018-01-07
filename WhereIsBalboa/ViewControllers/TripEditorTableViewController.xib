@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TripEditorTableViewController" customModule="WhereIsBalboa" customModuleProvider="target">
             <connections>
                 <outlet property="cityTextField" destination="eN4-RV-7Y4" id="5uk-g6-eAi"/>
+                <outlet property="deleteButton" destination="4KC-oL-aTL" id="Zag-Q6-SHI"/>
                 <outlet property="endDateTextField" destination="Tqp-UZ-1in" id="aDh-7V-Ifs"/>
                 <outlet property="startDateTextField" destination="Y7T-W1-NY8" id="bap-hJ-vRi"/>
                 <outlet property="view" destination="TgP-8z-cYl" id="fu9-sI-syj"/>
@@ -23,7 +24,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="cDW-zG-uaQ">
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="cDW-zG-uaQ">
                     <rect key="frame" x="16" y="268.5" width="343" height="130"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eN4-RV-7Y4">
@@ -49,10 +50,27 @@
                                 </textField>
                             </subviews>
                         </stackView>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9oz-ta-iwe">
-                            <rect key="frame" x="154.5" y="100" width="34" height="30"/>
-                            <state key="normal" title="Save"/>
-                        </button>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ZeC-tE-ywd">
+                            <rect key="frame" x="0.0" y="100" width="343" height="30"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9oz-ta-iwe">
+                                    <rect key="frame" x="0.0" y="0.0" width="163.5" height="30"/>
+                                    <state key="normal" title="Save"/>
+                                    <connections>
+                                        <action selector="saveTrip" destination="-1" eventType="touchUpInside" id="HZX-Uj-wg5"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4KC-oL-aTL">
+                                    <rect key="frame" x="179.5" y="0.0" width="163.5" height="30"/>
+                                    <state key="normal" title="Delete">
+                                        <color key="titleColor" red="0.79510124360000001" green="0.0" blue="0.060269236259999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="deleteTrip" destination="-1" eventType="touchUpInside" id="cie-vq-IFR"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
                     </subviews>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="eN4-RV-7Y4" secondAttribute="trailing" id="Pqv-0m-qqa"/>

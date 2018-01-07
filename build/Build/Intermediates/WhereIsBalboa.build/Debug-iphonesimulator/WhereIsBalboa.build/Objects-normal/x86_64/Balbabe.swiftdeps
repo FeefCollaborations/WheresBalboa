@@ -9,27 +9,48 @@ provides-member:
 provides-dynamic-lookup:
 depends-top-level:
 - !private "&&"
+- !private "*"
 - !private "+="
 - !private "-"
+- !private "..."
 - !private "/"
+- !private "<"
 - "=="
-- !private "Array"
+- !private ">"
+- "Address"
+- "AssignmentPrecedence"
 - "Balbabe"
 - "Bool"
-- "CLLocation"
+- !private "CLLocation"
+- !private "Date"
+- "DateInterval"
 - !private "Double"
 - "Equatable"
 - "String"
 - "StringLiteralType"
+- !private "TimeInterval"
 - "Trip"
 - "UnicodeScalarType"
 - !private "arc4random_uniform"
 depends-member:
+- !private ["13WhereIsBalboa7AddressV", "init"]
+- !private ["Sa", "append"]
+- !private ["Sa", "filter"]
+- !private ["Sa", "first"]
+- !private ["Sa", "forEach"]
+- !private ["Sa", "init"]
+- !private ["Sa", "last"]
+- !private ["Sa", "removeFirst"]
+- !private ["Sa", "sorted"]
+- ["13WhereIsBalboa7BalbabeV", "Address"]
 - ["13WhereIsBalboa7BalbabeV", "Balbabe"]
-- ["13WhereIsBalboa7BalbabeV", "CLLocation"]
+- !private ["13WhereIsBalboa7BalbabeV", "CLLocation"]
+- !private ["13WhereIsBalboa7BalbabeV", "Date"]
+- ["13WhereIsBalboa7BalbabeV", "DateInterval"]
 - !private ["13WhereIsBalboa7BalbabeV", "Double"]
 - ["13WhereIsBalboa7BalbabeV", "ID"]
 - ["13WhereIsBalboa7BalbabeV", "String"]
+- !private ["13WhereIsBalboa7BalbabeV", "TimeInterval"]
 - ["13WhereIsBalboa7BalbabeV", "Trip"]
 - !private ["13WhereIsBalboa7BalbabeV", "arc4random_uniform"]
 - ["13WhereIsBalboa7BalbabeV", "deinit"]
@@ -37,48 +58,195 @@ depends-member:
 - !private ["13WhereIsBalboa7BalbabeV", "dummyHometown"]
 - !private ["13WhereIsBalboa7BalbabeV", "dummyID"]
 - ["13WhereIsBalboa7BalbabeV", "hometown"]
+- ["13WhereIsBalboa7BalbabeV", "hometownIntervals"]
+- !private ["13WhereIsBalboa7BalbabeV", "hometownIntervalsFor"]
 - ["13WhereIsBalboa7BalbabeV", "id"]
 - ["13WhereIsBalboa7BalbabeV", "init"]
 - ["13WhereIsBalboa7BalbabeV", "name"]
 - ["13WhereIsBalboa7BalbabeV", "trips"]
 - ["13WhereIsBalboa7BalbabeV", "whatsapp"]
+- !private ["s23BidirectionalCollectionP", "append"]
+- !private ["s23BidirectionalCollectionP", "filter"]
+- !private ["s23BidirectionalCollectionP", "first"]
+- !private ["s23BidirectionalCollectionP", "forEach"]
 - ["s23BidirectionalCollectionP", "init"]
+- !private ["s23BidirectionalCollectionP", "last"]
+- !private ["s23BidirectionalCollectionP", "removeFirst"]
+- !private ["s23BidirectionalCollectionP", "sorted"]
 - !private ["s19BinaryFloatingPointP", "init"]
+- !private ["Sb", "_getBuiltinLogicValue"]
 - !private ["So10CLLocationC", "init"]
+- !private ["s7CVarArgP", "append"]
+- !private ["s7CVarArgP", "filter"]
+- !private ["s7CVarArgP", "first"]
+- !private ["s7CVarArgP", "forEach"]
 - ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "last"]
+- !private ["s7CVarArgP", "removeFirst"]
+- !private ["s7CVarArgP", "sorted"]
+- !private ["s11ClosedRangeV", "forEach"]
+- !private ["s10CollectionP", "append"]
+- !private ["s10CollectionP", "filter"]
+- !private ["s10CollectionP", "first"]
+- !private ["s10CollectionP", "forEach"]
 - ["s10CollectionP", "init"]
+- !private ["s10CollectionP", "last"]
+- !private ["s10CollectionP", "removeFirst"]
+- !private ["s10CollectionP", "sorted"]
+- !private ["s10ComparableP", "addingTimeInterval"]
+- !private ["s10ComparableP", "contains"]
+- !private ["s10ComparableP", "distantFuture"]
+- !private ["s10ComparableP", "end"]
 - ["s10ComparableP", "init"]
+- !private ["s10ComparableP", "start"]
+- !private ["s20CountableClosedRangeV", "forEach"]
+- !private ["s28CustomDebugStringConvertibleP", "addingTimeInterval"]
+- !private ["s28CustomDebugStringConvertibleP", "append"]
+- !private ["s28CustomDebugStringConvertibleP", "contains"]
+- !private ["s28CustomDebugStringConvertibleP", "distantFuture"]
+- !private ["s28CustomDebugStringConvertibleP", "end"]
+- !private ["s28CustomDebugStringConvertibleP", "filter"]
+- !private ["s28CustomDebugStringConvertibleP", "first"]
+- !private ["s28CustomDebugStringConvertibleP", "forEach"]
 - ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "last"]
+- !private ["s28CustomDebugStringConvertibleP", "removeFirst"]
+- !private ["s28CustomDebugStringConvertibleP", "sorted"]
+- !private ["s28CustomDebugStringConvertibleP", "start"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "addingTimeInterval"]
+- !private ["s29CustomPlaygroundQuickLookableP", "distantFuture"]
 - ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "addingTimeInterval"]
+- !private ["s17CustomReflectableP", "append"]
+- !private ["s17CustomReflectableP", "contains"]
+- !private ["s17CustomReflectableP", "distantFuture"]
+- !private ["s17CustomReflectableP", "end"]
+- !private ["s17CustomReflectableP", "filter"]
+- !private ["s17CustomReflectableP", "first"]
+- !private ["s17CustomReflectableP", "forEach"]
 - ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "last"]
+- !private ["s17CustomReflectableP", "removeFirst"]
+- !private ["s17CustomReflectableP", "sorted"]
+- !private ["s17CustomReflectableP", "start"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "addingTimeInterval"]
+- !private ["s23CustomStringConvertibleP", "append"]
+- !private ["s23CustomStringConvertibleP", "contains"]
+- !private ["s23CustomStringConvertibleP", "distantFuture"]
+- !private ["s23CustomStringConvertibleP", "end"]
+- !private ["s23CustomStringConvertibleP", "filter"]
+- !private ["s23CustomStringConvertibleP", "first"]
+- !private ["s23CustomStringConvertibleP", "forEach"]
 - ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "last"]
+- !private ["s23CustomStringConvertibleP", "removeFirst"]
+- !private ["s23CustomStringConvertibleP", "sorted"]
+- !private ["s23CustomStringConvertibleP", "start"]
+- !private ["10Foundation4DateV", "addingTimeInterval"]
+- !private ["10Foundation4DateV", "distantFuture"]
+- !private ["10Foundation4DateV", "init"]
+- !private ["10Foundation12DateIntervalV", "contains"]
+- !private ["10Foundation12DateIntervalV", "end"]
+- !private ["10Foundation12DateIntervalV", "init"]
+- !private ["10Foundation12DateIntervalV", "start"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "addingTimeInterval"]
+- !private ["s9DecodableP", "append"]
+- !private ["s9DecodableP", "contains"]
+- !private ["s9DecodableP", "distantFuture"]
+- !private ["s9DecodableP", "end"]
+- !private ["s9DecodableP", "filter"]
+- !private ["s9DecodableP", "first"]
+- !private ["s9DecodableP", "forEach"]
 - ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "last"]
+- !private ["s9DecodableP", "removeFirst"]
+- !private ["s9DecodableP", "sorted"]
+- !private ["s9DecodableP", "start"]
 - !private ["Sd", "init"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "addingTimeInterval"]
+- !private ["s9EncodableP", "append"]
+- !private ["s9EncodableP", "contains"]
+- !private ["s9EncodableP", "distantFuture"]
+- !private ["s9EncodableP", "end"]
+- !private ["s9EncodableP", "filter"]
+- !private ["s9EncodableP", "first"]
+- !private ["s9EncodableP", "forEach"]
 - ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "last"]
+- !private ["s9EncodableP", "removeFirst"]
+- !private ["s9EncodableP", "sorted"]
+- !private ["s9EncodableP", "start"]
+- !private ["s9EquatableP", "Address"]
 - !private ["s9EquatableP", "Balbabe"]
 - !private ["s9EquatableP", "CLLocation"]
+- !private ["s9EquatableP", "Date"]
+- !private ["s9EquatableP", "DateInterval"]
 - !private ["s9EquatableP", "Double"]
+- !private ["s9EquatableP", "TimeInterval"]
+- !private ["s9EquatableP", "Trip"]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "addingTimeInterval"]
 - !private ["s9EquatableP", "arc4random_uniform"]
+- !private ["s9EquatableP", "contains"]
+- !private ["s9EquatableP", "dateInterval"]
+- !private ["s9EquatableP", "distantFuture"]
 - !private ["s9EquatableP", "dummy"]
 - !private ["s9EquatableP", "dummyHometown"]
 - !private ["s9EquatableP", "dummyID"]
+- !private ["s9EquatableP", "end"]
+- !private ["s9EquatableP", "forEach"]
 - !private ["s9EquatableP", "hometown"]
+- !private ["s9EquatableP", "hometownIntervals"]
+- !private ["s9EquatableP", "hometownIntervalsFor"]
 - !private ["s9EquatableP", "id"]
 - ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "metadata"]
 - !private ["s9EquatableP", "name"]
+- !private ["s9EquatableP", "start"]
 - !private ["s9EquatableP", "trips"]
 - !private ["s9EquatableP", "whatsapp"]
 - ["s9EquatableP", ""]
+- !private ["s25ExpressibleByArrayLiteralP", "append"]
+- !private ["s25ExpressibleByArrayLiteralP", "filter"]
+- !private ["s25ExpressibleByArrayLiteralP", "first"]
+- !private ["s25ExpressibleByArrayLiteralP", "forEach"]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s25ExpressibleByArrayLiteralP", "last"]
+- !private ["s25ExpressibleByArrayLiteralP", "removeFirst"]
+- !private ["s25ExpressibleByArrayLiteralP", "sorted"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
 - ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s25ExpressibleByFloatLiteralP", "init"]
 - !private ["s27ExpressibleByIntegerLiteralP", "init"]
 - ["s26ExpressibleByStringLiteralP", "init"]
 - ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
 - !private ["s13FloatingPointP", "init"]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "addingTimeInterval"]
+- !private ["s8HashableP", "contains"]
+- !private ["s8HashableP", "distantFuture"]
 - !private ["s8HashableP", "dummy"]
+- !private ["s8HashableP", "end"]
 - ["s8HashableP", "init"]
+- !private ["s8HashableP", "metadata"]
+- !private ["s8HashableP", "start"]
+- ["10SwiftyJSON17JSONSubscriptTypeP", "init"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
 - ["s25LosslessStringConvertibleP", "init"]
 - ["s10MirrorPathP", "init"]
+- !private ["s17MutableCollectionP", "append"]
+- !private ["s17MutableCollectionP", "filter"]
+- !private ["s17MutableCollectionP", "first"]
+- !private ["s17MutableCollectionP", "forEach"]
+- !private ["s17MutableCollectionP", "init"]
+- !private ["s17MutableCollectionP", "last"]
+- !private ["s17MutableCollectionP", "removeFirst"]
+- !private ["s17MutableCollectionP", "sorted"]
 - ["So8NSCodingP", "init"]
 - ["So9NSCopyingP", "init"]
 - ["So21NSItemProviderReadingP", "init"]
@@ -89,8 +257,37 @@ depends-member:
 - ["So14NSSecureCodingP", "init"]
 - ["So8NSStringC", "init"]
 - !private ["s7NumericP", "init"]
+- !private ["s22RandomAccessCollectionP", "append"]
+- !private ["s22RandomAccessCollectionP", "filter"]
+- !private ["s22RandomAccessCollectionP", "first"]
+- !private ["s22RandomAccessCollectionP", "forEach"]
+- !private ["s22RandomAccessCollectionP", "init"]
+- !private ["s22RandomAccessCollectionP", "last"]
+- !private ["s22RandomAccessCollectionP", "removeFirst"]
+- !private ["s22RandomAccessCollectionP", "sorted"]
+- !private ["s15RangeExpressionP", "forEach"]
+- !private ["s26RangeReplaceableCollectionP", "append"]
+- !private ["s26RangeReplaceableCollectionP", "filter"]
+- !private ["s26RangeReplaceableCollectionP", "first"]
+- !private ["s26RangeReplaceableCollectionP", "forEach"]
 - ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s26RangeReplaceableCollectionP", "last"]
+- !private ["s26RangeReplaceableCollectionP", "removeFirst"]
+- !private ["s26RangeReplaceableCollectionP", "sorted"]
+- !private ["10Foundation20ReferenceConvertibleP", "addingTimeInterval"]
+- !private ["10Foundation20ReferenceConvertibleP", "contains"]
+- !private ["10Foundation20ReferenceConvertibleP", "distantFuture"]
+- !private ["10Foundation20ReferenceConvertibleP", "end"]
+- !private ["10Foundation20ReferenceConvertibleP", "init"]
+- !private ["10Foundation20ReferenceConvertibleP", "start"]
+- !private ["s8SequenceP", "append"]
+- !private ["s8SequenceP", "filter"]
+- !private ["s8SequenceP", "first"]
+- !private ["s8SequenceP", "forEach"]
 - ["s8SequenceP", "init"]
+- !private ["s8SequenceP", "last"]
+- !private ["s8SequenceP", "removeFirst"]
+- !private ["s8SequenceP", "sorted"]
 - !private ["s13SignedNumericP", "init"]
 - !private ["s10StrideableP", "init"]
 - ["SS", "init"]
@@ -99,9 +296,35 @@ depends-member:
 - ["s20TextOutputStreamableP", "init"]
 - !private ["13WhereIsBalboa4TripV", "deinit"]
 - !private ["13WhereIsBalboa4TripV", "dummy"]
+- !private ["13WhereIsBalboa4TripV", "metadata"]
+- !private ["13WhereIsBalboa12TripMetadataV", "dateInterval"]
+- !private ["s14_ArrayProtocolP", "append"]
+- !private ["s14_ArrayProtocolP", "filter"]
+- !private ["s14_ArrayProtocolP", "first"]
+- !private ["s14_ArrayProtocolP", "forEach"]
+- !private ["s14_ArrayProtocolP", "init"]
+- !private ["s14_ArrayProtocolP", "last"]
+- !private ["s14_ArrayProtocolP", "removeFirst"]
+- !private ["s14_ArrayProtocolP", "sorted"]
+- !private ["s23_BidirectionalIndexableP", "append"]
+- !private ["s23_BidirectionalIndexableP", "filter"]
+- !private ["s23_BidirectionalIndexableP", "first"]
+- !private ["s23_BidirectionalIndexableP", "forEach"]
 - ["s23_BidirectionalIndexableP", "init"]
+- !private ["s23_BidirectionalIndexableP", "last"]
+- !private ["s23_BidirectionalIndexableP", "removeFirst"]
+- !private ["s23_BidirectionalIndexableP", "sorted"]
 - !private ["s15_CVarArgAlignedP", "init"]
 - !private ["s22_CVarArgPassedAsDoubleP", "init"]
+- !private ["s24_DestructorSafeContainerP", "append"]
+- !private ["s24_DestructorSafeContainerP", "filter"]
+- !private ["s24_DestructorSafeContainerP", "first"]
+- !private ["s24_DestructorSafeContainerP", "forEach"]
+- !private ["s24_DestructorSafeContainerP", "init"]
+- !private ["s24_DestructorSafeContainerP", "last"]
+- !private ["s24_DestructorSafeContainerP", "removeFirst"]
+- !private ["s24_DestructorSafeContainerP", "sorted"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
 - ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s33_ExpressibleByBuiltinFloatLiteralP", "init"]
 - !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
@@ -110,29 +333,88 @@ depends-member:
 - ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
 - ["s33_ExpressibleByStringInterpolationP", "init"]
 - ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s10_IndexableP", "append"]
+- !private ["s10_IndexableP", "filter"]
+- !private ["s10_IndexableP", "first"]
+- !private ["s10_IndexableP", "forEach"]
 - ["s10_IndexableP", "init"]
+- !private ["s10_IndexableP", "last"]
+- !private ["s10_IndexableP", "removeFirst"]
+- !private ["s10_IndexableP", "sorted"]
+- !private ["s14_IndexableBaseP", "append"]
+- !private ["s14_IndexableBaseP", "filter"]
+- !private ["s14_IndexableBaseP", "first"]
+- !private ["s14_IndexableBaseP", "forEach"]
 - ["s14_IndexableBaseP", "init"]
+- !private ["s14_IndexableBaseP", "last"]
+- !private ["s14_IndexableBaseP", "removeFirst"]
+- !private ["s14_IndexableBaseP", "sorted"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["s17_MutableIndexableP", "append"]
+- !private ["s17_MutableIndexableP", "filter"]
+- !private ["s17_MutableIndexableP", "first"]
+- !private ["s17_MutableIndexableP", "forEach"]
+- !private ["s17_MutableIndexableP", "init"]
+- !private ["s17_MutableIndexableP", "last"]
+- !private ["s17_MutableIndexableP", "removeFirst"]
+- !private ["s17_MutableIndexableP", "sorted"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s21_ObjectiveCBridgeableP", "addingTimeInterval"]
+- !private ["s21_ObjectiveCBridgeableP", "append"]
+- !private ["s21_ObjectiveCBridgeableP", "contains"]
+- !private ["s21_ObjectiveCBridgeableP", "distantFuture"]
+- !private ["s21_ObjectiveCBridgeableP", "end"]
+- !private ["s21_ObjectiveCBridgeableP", "filter"]
+- !private ["s21_ObjectiveCBridgeableP", "first"]
+- !private ["s21_ObjectiveCBridgeableP", "forEach"]
 - ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "last"]
+- !private ["s21_ObjectiveCBridgeableP", "removeFirst"]
+- !private ["s21_ObjectiveCBridgeableP", "sorted"]
+- !private ["s21_ObjectiveCBridgeableP", "start"]
+- !private ["s22_RandomAccessIndexableP", "append"]
+- !private ["s22_RandomAccessIndexableP", "filter"]
+- !private ["s22_RandomAccessIndexableP", "first"]
+- !private ["s22_RandomAccessIndexableP", "forEach"]
+- !private ["s22_RandomAccessIndexableP", "init"]
+- !private ["s22_RandomAccessIndexableP", "last"]
+- !private ["s22_RandomAccessIndexableP", "removeFirst"]
+- !private ["s22_RandomAccessIndexableP", "sorted"]
+- !private ["s26_RangeReplaceableIndexableP", "append"]
+- !private ["s26_RangeReplaceableIndexableP", "filter"]
+- !private ["s26_RangeReplaceableIndexableP", "first"]
+- !private ["s26_RangeReplaceableIndexableP", "forEach"]
 - ["s26_RangeReplaceableIndexableP", "init"]
+- !private ["s26_RangeReplaceableIndexableP", "last"]
+- !private ["s26_RangeReplaceableIndexableP", "removeFirst"]
+- !private ["s26_RangeReplaceableIndexableP", "sorted"]
 - !private ["s11_StrideableP", "init"]
 - ["s16_SwiftStringViewP", "init"]
 depends-nominal:
+- !private "13WhereIsBalboa7AddressV"
+- !private "Sa"
 - "13WhereIsBalboa7BalbabeV"
 - "s23BidirectionalCollectionP"
 - !private "s19BinaryFloatingPointP"
+- !private "Sb"
 - !private "So10CLLocationC"
 - "s7CVarArgP"
+- !private "s11ClosedRangeV"
 - "s10CollectionP"
 - "s10ComparableP"
+- !private "s20CountableClosedRangeV"
 - "s28CustomDebugStringConvertibleP"
 - "s29CustomPlaygroundQuickLookableP"
 - "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
+- !private "10Foundation4DateV"
+- !private "10Foundation12DateIntervalV"
 - "s9DecodableP"
 - !private "Sd"
 - "s9EncodableP"
 - "s9EquatableP"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByBooleanLiteralP"
 - "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - !private "s25ExpressibleByFloatLiteralP"
 - !private "s27ExpressibleByIntegerLiteralP"
@@ -140,8 +422,10 @@ depends-nominal:
 - "s33ExpressibleByUnicodeScalarLiteralP"
 - !private "s13FloatingPointP"
 - "s8HashableP"
+- "10SwiftyJSON17JSONSubscriptTypeP"
 - "s25LosslessStringConvertibleP"
 - "s10MirrorPathP"
+- !private "s17MutableCollectionP"
 - "So8NSCodingP"
 - "So9NSCopyingP"
 - "So21NSItemProviderReadingP"
@@ -152,7 +436,10 @@ depends-nominal:
 - "So14NSSecureCodingP"
 - "So8NSStringC"
 - !private "s7NumericP"
+- !private "s22RandomAccessCollectionP"
+- !private "s15RangeExpressionP"
 - "s26RangeReplaceableCollectionP"
+- !private "10Foundation20ReferenceConvertibleP"
 - "s8SequenceP"
 - !private "s13SignedNumericP"
 - !private "s10StrideableP"
@@ -161,9 +448,13 @@ depends-nominal:
 - "s16TextOutputStreamP"
 - "s20TextOutputStreamableP"
 - !private "13WhereIsBalboa4TripV"
+- !private "13WhereIsBalboa12TripMetadataV"
+- !private "s14_ArrayProtocolP"
 - "s23_BidirectionalIndexableP"
 - !private "s15_CVarArgAlignedP"
 - !private "s22_CVarArgPassedAsDoubleP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
 - "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - !private "s33_ExpressibleByBuiltinFloatLiteralP"
 - !private "s35_ExpressibleByBuiltinIntegerLiteralP"
@@ -175,17 +466,23 @@ depends-nominal:
 - "s10_IndexableP"
 - "s14_IndexableBaseP"
 - "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s17_MutableIndexableP"
 - "s21_ObjectiveCBridgeableP"
+- !private "s22_RandomAccessIndexableP"
 - "s26_RangeReplaceableIndexableP"
 - !private "s11_StrideableP"
 - "s16_SwiftStringViewP"
 depends-dynamic-lookup:
 depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Accelerate.apinotesc"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Modules/SwiftyJSON.swiftmodule/x86_64.swiftmodule"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/PopupDialog/PopupDialog.framework/Modules/PopupDialog.swiftmodule/x86_64.swiftmodule"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/Cluster/Cluster.framework/Modules/Cluster.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Accelerate.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
@@ -199,6 +496,8 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FIRInstanceID.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Headers/SwiftyJSON-umbrella.h"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/PopupDialog/PopupDialog.framework/Headers/PopupDialog-umbrella.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/Cluster/Cluster.framework/Headers/Cluster-umbrella.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRMutableData.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageMetadata.h"
@@ -252,19 +551,24 @@ depends-external:
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIROptions.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthErrors.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageConstants.h"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Headers/SwiftyJSON-Swift.h"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/PopupDialog/PopupDialog.framework/Headers/PopupDialog-Swift.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/Cluster/Cluster.framework/Headers/Cluster-Swift.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthDataResult.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRTransactionResult.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDataSnapshot.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageTaskSnapshot.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalyticsSwiftNameSupport.h"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/PopupDialog/PopupDialog.framework/Headers/FXBlurView.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabaseQuery.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/Firebase/Core/Sources/module.modulemap"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Modules/module.modulemap"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Modules/module.modulemap"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Modules/module.modulemap"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Modules/module.modulemap"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Modules/module.modulemap"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/PopupDialog/PopupDialog.framework/Modules/module.modulemap"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Modules/module.modulemap"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/Cluster/Cluster.framework/Modules/module.modulemap"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
-interface-hash: "ffc8809d9e7214cf5169ac077d1249d7"
+interface-hash: "4f89ac922785e6404e6123bd8b5ff2ec"

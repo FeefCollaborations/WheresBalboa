@@ -7,7 +7,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet private var hometownTextField: UITextField!
     @IBOutlet private var newPasswordTextField: UITextField!
     @IBOutlet private var confirmPasswordTextField: UITextField!
-    
+        
     let balbabe: Balbabe
     
     // MARK: - Init
@@ -15,6 +15,10 @@ class ProfileViewController: UIViewController {
     init(_ balbabe: Balbabe) {
         self.balbabe = balbabe
         super.init(nibName: nil, bundle: nil)
+        guard #available(iOS 11.0, *) else {
+            edgesForExtendedLayout = []
+            return
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -31,7 +35,9 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.rightBarButtonItem = logoutBarButtonItem
-        
+        nameTextField.text = balbabe.name
+        whatsappTextField.text = balbabe.whatsapp
+        hometownTextField.text = balbabe.hometown.city + ", " + balbabe.hometown.country
     }
     
     // MARK: - Button response

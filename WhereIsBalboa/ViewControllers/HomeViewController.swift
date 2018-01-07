@@ -14,10 +14,11 @@ class HomeViewController: UIViewController {
     private var focusedDate = Date()
     private var currentDate = Date()
     
-    let balbabe: Balbabe
-    let loadingViewController = LoadingViewController()
-    var tripListTableViewController: TripListTableViewController?
-    var tripMapViewController: TripMapViewController?
+    private let balbabe: Balbabe
+    private let loadingViewController = LoadingViewController()
+    private var tripListTableViewController: TripListTableViewController?
+    private var tripMapViewController: TripMapViewController?
+    private var balbabes = [Balbabe]()
     
     // MARK: - Init
     
@@ -27,23 +28,12 @@ class HomeViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
         
         // TODO: Add actual balbabe array observing here
-        let balbabes: [Balbabe] = [balbabe, .dummy(), .dummy(), .dummy(), .dummy(), .dummy()]
-        let keyedBalbabes = balbabes.reduce([Trip: Balbabe]()) { aggregate, balbabe in
-            var updated = aggregate
-            updated[balbabe.trips[0]] = balbabe
-            return updated
+        self.balbabes = [balbabe, .dummy("annabel"), .dummy("mikey"), .dummy("liz"), .dummy("smashley"), .dummy("debs")]
+        updateSubviewsFor(focusedDate: focusedDate)
+        guard #available(iOS 11.0, *) else {
+            edgesForExtendedLayout = []
+            return
         }
-        let configuration = TripsDataConfiguration(keyedBalbabes: keyedBalbabes, currentLocation: balbabe.trips[0].location)
-        tripListTableViewController = TripListTableViewController(configuration, relativeToUser: balbabe)
-        let tripMapViewController = TripMapViewController(configuration, loggedInUser: balbabe, onTripTap: { _ in
-            // TODO: Show action sheet for reaching out to balbabe associated with the trip
-        }, onTripGroupTap: { [weak self] keyedBalbabes in
-            let configuration = TripsDataConfiguration(keyedBalbabes: keyedBalbabes, currentLocation: configuration.currentLocation)
-            let tripListTableViewController = TripListTableViewController(configuration, relativeToUser: balbabe)
-            self?.navigationController?.pushViewController(tripListTableViewController, animated: true)
-        })
-        tripViewType = .map(tripMapViewController)
-        self.tripMapViewController = tripMapViewController
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -61,14 +51,19 @@ class HomeViewController: UIViewController {
         dateSelectionTextField.inputView = datePicker
         dateSelectionTextField.inputAccessoryView = doneInputAccessory
         addTripViewer(tripViewType.viewController)
+        currentDate = Date()
+        datePicker.minimumDate = currentDate
+        updateFocusedDate(to: currentDate)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
-        currentDate = Date()
-        datePicker.minimumDate = currentDate
-        updateFocusedDate(to: currentDate)
+        if currentDate.timeIntervalSinceNow > 0 {
+            currentDate = Date()
+            datePicker.minimumDate = currentDate
+            updateFocusedDate(to: currentDate)
+        }
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -89,7 +84,7 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction private func goToTrips() {
-        let tripsViewController = UserTripListTableViewController(balbabe)
+        let tripsViewController = BalbabeTripListTableViewController(balbabe, isLoggedInUser: true)
         navigationController?.pushViewController(tripsViewController, animated: true)
     }
     
@@ -138,10 +133,12 @@ class HomeViewController: UIViewController {
     
     private func addTripViewer(_ viewController: UIViewController) {
         let containedView: UIView = viewController.view
+        containedView.frame = balbabeViewControllerContainer.bounds
         containedView.translatesAutoresizingMaskIntoConstraints = false
         balbabeViewControllerContainer.addSubview(containedView)
         containedView.addFitToParentContraints()
         viewController.didMove(toParentViewController: self)
+        containedView.layoutIfNeeded()
     }
     
     // MARK: - Date management
@@ -154,7 +151,62 @@ class HomeViewController: UIViewController {
         dateStepper.value = Double(focusedDate.daysSince(currentDate))
         datePicker.date = focusedDate
         dateSelectionTextField.text = DateFormatter.fullDate.string(from: focusedDate)
+        updateSubviewsFor(focusedDate: focusedDate)
+    }
+    
+    private func updateSubviewsFor(focusedDate: Date) {
+        let keyedBalbabes = balbabes.reduce([Trip: Balbabe]()) { aggregate, balbabe in
+            var updated = aggregate
+            let trip = tripOf(balbabe, for: focusedDate)
+            updated[trip] = balbabe
+            return updated
+        }
+        let configuration = TripsDataConfiguration(keyedBalbabes: keyedBalbabes, currentLocation: tripOf(balbabe, for: focusedDate).metadata.address.location)
         
-        // TODO: Filter trips based on date and update configurations of map and trip list accordingly
+        if let tripListTableViewController = tripListTableViewController {
+            tripListTableViewController.update(configuration)
+        } else {
+            tripListTableViewController = TripListTableViewController(configuration, relativeToUser: balbabe) { [weak self] _, balbabe in
+                let balbabeTripListViewController = BalbabeTripListTableViewController.init(balbabe, isLoggedInUser: balbabe == self?.balbabe)
+                self?.navigationController?.pushViewController(balbabeTripListViewController, animated: true)
+            }
+        }
+        
+        if let tripMapViewController = tripMapViewController {
+            tripMapViewController.update(configuration)
+        } else {
+            let tripMapViewController = TripMapViewController(configuration, loggedInUser: balbabe, onTripTap: { [weak self] _, balbabe in
+                let balbabeTripListViewController = BalbabeTripListTableViewController.init(balbabe, isLoggedInUser: balbabe == self?.balbabe)
+                self?.navigationController?.pushViewController(balbabeTripListViewController, animated: true)
+            }, onTripGroupTap: { [weak self] keyedBalbabes in
+                guard let strongSelf = self else {
+                    return
+                }
+                let configuration = TripsDataConfiguration(keyedBalbabes: keyedBalbabes, currentLocation: strongSelf.tripOf(strongSelf.balbabe, for: strongSelf.focusedDate).metadata.address.location)
+                let tripListTableViewController = TripListTableViewController(configuration, relativeToUser: strongSelf.balbabe) { _, balbabe in
+                    let balbabeTripListViewController = BalbabeTripListTableViewController.init(balbabe, isLoggedInUser: balbabe == self?.balbabe)
+                    self?.navigationController?.pushViewController(balbabeTripListViewController, animated: true)
+                }
+                strongSelf.navigationController?.pushViewController(tripListTableViewController, animated: true)
+            })
+            tripViewType = .map(tripMapViewController)
+            self.tripMapViewController = tripMapViewController
+        }
+    }
+    
+    private func tripOf(_ balbabe: Balbabe, for date: Date) -> Trip {
+        if let trip = balbabe.trips.first(where: { $0.metadata.dateInterval.contains(date) }) {
+            return trip
+        }
+        let hometown = balbabe.hometown
+        let homeInterval: DateInterval
+        if let interval = balbabe.hometownIntervals.first(where: { $0.contains(date) }) {
+            homeInterval = interval
+        } else {
+            // TODO: Log error
+            homeInterval = DateInterval(start: Date(), end: Date.distantFuture)
+        }
+        let metadata = TripMetadata(address: hometown, dateInterval: homeInterval, isHome: true)
+        return Trip(id: balbabe.id, metadata: metadata)
     }
 }

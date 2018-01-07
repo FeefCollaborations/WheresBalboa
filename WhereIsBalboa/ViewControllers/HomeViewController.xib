@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="WhereIsBalboa" customModuleProvider="target">
             <connections>
-                <outlet property="balbabeViewControllerContainer" destination="i1K-6P-f3D" id="7VI-5X-45z"/>
+                <outlet property="balbabeViewControllerContainer" destination="k0E-Uv-t8T" id="tcu-qQ-qzz"/>
                 <outlet property="datePicker" destination="Nai-A9-RdF" id="Xld-D2-XSK"/>
                 <outlet property="dateSelectionTextField" destination="rsI-3V-mv2" id="vJo-Vh-s5b"/>
                 <outlet property="dateStepper" destination="kCQ-z2-zFG" id="ofc-H4-ecg"/>
@@ -27,10 +27,6 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i1K-6P-f3D" userLabel="View Controller Container View">
-                    <rect key="frame" x="0.0" y="20" width="375" height="579"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g88-nt-n5i">
                     <rect key="frame" x="0.0" y="599" width="375" height="68"/>
                     <subviews>
@@ -88,19 +84,23 @@
                         <constraint firstAttribute="height" constant="68" id="y2B-wY-p1A"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k0E-Uv-t8T">
+                    <rect key="frame" x="0.0" y="20" width="375" height="579"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="g88-nt-n5i" firstAttribute="leading" secondItem="iG1-dR-hrg" secondAttribute="leading" id="1LC-se-h9h"/>
-                <constraint firstItem="i1K-6P-f3D" firstAttribute="top" secondItem="iG1-dR-hrg" secondAttribute="top" id="ATk-nk-ahl"/>
-                <constraint firstItem="i1K-6P-f3D" firstAttribute="leading" secondItem="iG1-dR-hrg" secondAttribute="leading" id="SPJ-kS-A6r"/>
-                <constraint firstItem="g88-nt-n5i" firstAttribute="top" secondItem="i1K-6P-f3D" secondAttribute="bottom" id="Xmv-Az-h5M"/>
+                <constraint firstItem="k0E-Uv-t8T" firstAttribute="leading" secondItem="iG1-dR-hrg" secondAttribute="leading" id="EKR-Gb-6Ih"/>
+                <constraint firstItem="k0E-Uv-t8T" firstAttribute="trailing" secondItem="iG1-dR-hrg" secondAttribute="trailing" id="JvN-FT-iqN"/>
+                <constraint firstItem="k0E-Uv-t8T" firstAttribute="top" secondItem="iG1-dR-hrg" secondAttribute="top" id="RIn-U1-HqA"/>
                 <constraint firstAttribute="bottom" secondItem="g88-nt-n5i" secondAttribute="bottom" id="ZJy-m2-9vf"/>
                 <constraint firstItem="g88-nt-n5i" firstAttribute="trailing" secondItem="iG1-dR-hrg" secondAttribute="trailing" id="lHG-XA-Dvf"/>
-                <constraint firstItem="i1K-6P-f3D" firstAttribute="trailing" secondItem="iG1-dR-hrg" secondAttribute="trailing" id="lQq-em-YNr"/>
+                <constraint firstItem="g88-nt-n5i" firstAttribute="top" secondItem="k0E-Uv-t8T" secondAttribute="bottom" id="srq-P3-M8Y"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="iG1-dR-hrg"/>
-            <point key="canvasLocation" x="-54" y="-8"/>
+            <point key="canvasLocation" x="-54.5" y="-8.5"/>
         </view>
         <barButtonItem title="Profile" id="HiJ-4M-JXx">
             <connections>
@@ -114,7 +114,7 @@
                 <!--2017-12-20 15:42:54 +0000-->
             </date>
         </datePicker>
-        <barButtonItem title="My Trips" id="0Vx-sk-vYi">
+        <barButtonItem title="Your Trips" id="0Vx-sk-vYi">
             <connections>
                 <action selector="goToTrips" destination="-1" id="lBZ-mI-Enh"/>
             </connections>

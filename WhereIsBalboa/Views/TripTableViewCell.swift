@@ -8,6 +8,7 @@ class TripTableViewCell: UITableViewCell {
     @IBOutlet private(set) var dateLabel: UILabel!
     @IBOutlet private(set) var distanceLabel: UILabel!
     @IBOutlet private(set) var locationImageView: UIImageView!
+    @IBOutlet private(set) var contactButton: UIButton!
     
     var onContactTapped: ((TripTableViewCell) -> Void)? = nil
     

@@ -10,13 +10,20 @@
 		483B990D1FEE9717009DF029 /* TripsDataConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483B990C1FEE9717009DF029 /* TripsDataConfiguration.swift */; };
 		483B990F1FEEA017009DF029 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483B990E1FEEA017009DF029 /* LoadingViewController.swift */; };
 		483B99111FEEA032009DF029 /* LoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 483B99101FEEA032009DF029 /* LoadingViewController.xib */; };
-		483B99131FEF7828009DF029 /* UserTripListTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 483B99121FEF7828009DF029 /* UserTripListTableViewController.xib */; };
+		483B99131FEF7828009DF029 /* BalbabeTripListTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 483B99121FEF7828009DF029 /* BalbabeTripListTableViewController.xib */; };
 		483B99151FEF7853009DF029 /* UserTripListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483B99141FEF7853009DF029 /* UserTripListTableViewDataSource.swift */; };
 		483B99171FEF7934009DF029 /* OwnTripTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483B99161FEF7934009DF029 /* OwnTripTableViewCell.swift */; };
 		483B99191FEF793D009DF029 /* OwnTripTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 483B99181FEF793D009DF029 /* OwnTripTableViewCell.xib */; };
 		483B991D1FEF8578009DF029 /* TripAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483B991C1FEF8578009DF029 /* TripAnnotation.swift */; };
 		483B99211FEF90A3009DF029 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483B99201FEF90A2009DF029 /* UIView.swift */; };
 		483B99231FEFA44B009DF029 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483B99221FEFA44B009DF029 /* UIImage.swift */; };
+		483B99251FF003B8009DF029 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483B99241FF003B8009DF029 /* Address.swift */; };
+		483BA6431FF558C4005C9F76 /* LocationListing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483BA6421FF558C4005C9F76 /* LocationListing.swift */; };
+		483BA6451FF558CD005C9F76 /* LocationSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483BA6441FF558CD005C9F76 /* LocationSearchTableViewController.swift */; };
+		483BA64C1FF55A0A005C9F76 /* LocationSearchTableViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483BA64B1FF55A0A005C9F76 /* LocationSearchTableViewControllerDelegate.swift */; };
+		483BA64E1FF55B8C005C9F76 /* LocationSearchTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 483BA64D1FF55B8C005C9F76 /* LocationSearchTableViewController.xib */; };
+		483BA6501FF55BEB005C9F76 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483BA64F1FF55BEB005C9F76 /* LoadingView.swift */; };
+		483BA6521FF58FCF005C9F76 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483BA6511FF58FCF005C9F76 /* UIViewController.swift */; };
 		483E304D1FEAAB58006D4512 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483E304C1FEAAB58006D4512 /* AppDelegate.swift */; };
 		483E30541FEAAB58006D4512 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 483E30531FEAAB58006D4512 /* Assets.xcassets */; };
 		483E30571FEAAB58006D4512 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 483E30551FEAAB58006D4512 /* LaunchScreen.storyboard */; };
@@ -43,7 +50,15 @@
 		483E30911FEADE5A006D4512 /* TripListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483E30901FEADE5A006D4512 /* TripListTableViewDataSource.swift */; };
 		483E30931FEADF63006D4512 /* TripTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483E30921FEADF63006D4512 /* TripTableViewCell.swift */; };
 		483E30961FEADFA2006D4512 /* TripTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 483E30951FEADFA2006D4512 /* TripTableViewCell.xib */; };
-		483E30981FEB7075006D4512 /* UserTripListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483E30971FEB7075006D4512 /* UserTripListTableViewController.swift */; };
+		483E30981FEB7075006D4512 /* BalbabeTripListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483E30971FEB7075006D4512 /* BalbabeTripListTableViewController.swift */; };
+		48B16BA32001F32D00BF45DF /* LoadingViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B16BA22001F32D00BF45DF /* LoadingViewState.swift */; };
+		48B16BA62001F6C500BF45DF /* TripEditOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B16BA52001F6C500BF45DF /* TripEditOperation.swift */; };
+		48B16BA82001F6F000BF45DF /* AsynchronousOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B16BA72001F6F000BF45DF /* AsynchronousOperation.swift */; };
+		48B16BAB2001F78500BF45DF /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B16BA92001F78400BF45DF /* Result.swift */; };
+		48B16BAC2001F78500BF45DF /* ResultGeneratingOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B16BAA2001F78500BF45DF /* ResultGeneratingOperation.swift */; };
+		48B16BAE2001FA2E00BF45DF /* TripMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B16BAD2001FA2E00BF45DF /* TripMetadata.swift */; };
+		48B16BB020020B1000BF45DF /* CitySearchTaskWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B16BAF20020B1000BF45DF /* CitySearchTaskWrapper.swift */; };
+		48B16BB2200228BA00BF45DF /* CityGeocodeTaskWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B16BB1200228BA00BF45DF /* CityGeocodeTaskWrapper.swift */; };
 		C1721180A29D8C402F48B0E2 /* Pods_WhereIsBalboa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 169CE0DFA5645B11B4FC3115 /* Pods_WhereIsBalboa.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,13 +69,20 @@
 		483B990C1FEE9717009DF029 /* TripsDataConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsDataConfiguration.swift; sourceTree = "<group>"; };
 		483B990E1FEEA017009DF029 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		483B99101FEEA032009DF029 /* LoadingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingViewController.xib; sourceTree = "<group>"; };
-		483B99121FEF7828009DF029 /* UserTripListTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTripListTableViewController.xib; sourceTree = "<group>"; };
+		483B99121FEF7828009DF029 /* BalbabeTripListTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BalbabeTripListTableViewController.xib; sourceTree = "<group>"; };
 		483B99141FEF7853009DF029 /* UserTripListTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTripListTableViewDataSource.swift; sourceTree = "<group>"; };
 		483B99161FEF7934009DF029 /* OwnTripTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnTripTableViewCell.swift; sourceTree = "<group>"; };
 		483B99181FEF793D009DF029 /* OwnTripTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OwnTripTableViewCell.xib; sourceTree = "<group>"; };
 		483B991C1FEF8578009DF029 /* TripAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripAnnotation.swift; sourceTree = "<group>"; };
 		483B99201FEF90A2009DF029 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		483B99221FEFA44B009DF029 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		483B99241FF003B8009DF029 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		483BA6421FF558C4005C9F76 /* LocationListing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationListing.swift; sourceTree = "<group>"; };
+		483BA6441FF558CD005C9F76 /* LocationSearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchTableViewController.swift; sourceTree = "<group>"; };
+		483BA64B1FF55A0A005C9F76 /* LocationSearchTableViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchTableViewControllerDelegate.swift; sourceTree = "<group>"; };
+		483BA64D1FF55B8C005C9F76 /* LocationSearchTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationSearchTableViewController.xib; sourceTree = "<group>"; };
+		483BA64F1FF55BEB005C9F76 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		483BA6511FF58FCF005C9F76 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		483E30491FEAAB58006D4512 /* WhereIsBalboa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhereIsBalboa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		483E304C1FEAAB58006D4512 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		483E30531FEAAB58006D4512 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -89,7 +111,15 @@
 		483E30901FEADE5A006D4512 /* TripListTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListTableViewDataSource.swift; sourceTree = "<group>"; };
 		483E30921FEADF63006D4512 /* TripTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTableViewCell.swift; sourceTree = "<group>"; };
 		483E30951FEADFA2006D4512 /* TripTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TripTableViewCell.xib; sourceTree = "<group>"; };
-		483E30971FEB7075006D4512 /* UserTripListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTripListTableViewController.swift; sourceTree = "<group>"; };
+		483E30971FEB7075006D4512 /* BalbabeTripListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalbabeTripListTableViewController.swift; sourceTree = "<group>"; };
+		48B16BA22001F32D00BF45DF /* LoadingViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewState.swift; sourceTree = "<group>"; };
+		48B16BA52001F6C500BF45DF /* TripEditOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripEditOperation.swift; sourceTree = "<group>"; };
+		48B16BA72001F6F000BF45DF /* AsynchronousOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsynchronousOperation.swift; sourceTree = "<group>"; };
+		48B16BA92001F78400BF45DF /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		48B16BAA2001F78500BF45DF /* ResultGeneratingOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultGeneratingOperation.swift; sourceTree = "<group>"; };
+		48B16BAD2001FA2E00BF45DF /* TripMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripMetadata.swift; sourceTree = "<group>"; };
+		48B16BAF20020B1000BF45DF /* CitySearchTaskWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySearchTaskWrapper.swift; sourceTree = "<group>"; };
+		48B16BB1200228BA00BF45DF /* CityGeocodeTaskWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityGeocodeTaskWrapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +140,15 @@
 				169CE0DFA5645B11B4FC3115 /* Pods_WhereIsBalboa.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		483BA6481FF55930005C9F76 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				48B16BAA2001F78500BF45DF /* ResultGeneratingOperation.swift */,
+				483BA64B1FF55A0A005C9F76 /* LocationSearchTableViewControllerDelegate.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		483E30401FEAAB58006D4512 = {
@@ -133,6 +172,7 @@
 		483E304B1FEAAB58006D4512 /* WhereIsBalboa */ = {
 			isa = PBXGroup;
 			children = (
+				48B16BA42001F6BD00BF45DF /* Operations */,
 				483E304C1FEAAB58006D4512 /* AppDelegate.swift */,
 				483E30531FEAAB58006D4512 /* Assets.xcassets */,
 				483E306F1FEAABC4006D4512 /* Extensions */,
@@ -141,6 +181,7 @@
 				483E30551FEAAB58006D4512 /* LaunchScreen.storyboard */,
 				483E30711FEAABC4006D4512 /* Logic */,
 				483E306D1FEAABC4006D4512 /* Models */,
+				483BA6481FF55930005C9F76 /* Protocols */,
 				483E305E1FEAABC4006D4512 /* ViewControllers */,
 				483E30941FEADF93006D4512 /* Views */,
 			);
@@ -150,6 +191,8 @@
 		483E305E1FEAABC4006D4512 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				483BA6441FF558CD005C9F76 /* LocationSearchTableViewController.swift */,
+				483BA64D1FF55B8C005C9F76 /* LocationSearchTableViewController.xib */,
 				483E30631FEAABC4006D4512 /* EntryGateViewController.swift */,
 				483E30641FEAABC4006D4512 /* EntryGateViewController.xib */,
 				483E30651FEAABC4006D4512 /* HomeViewController.swift */,
@@ -162,8 +205,8 @@
 				483E306C1FEAABC4006D4512 /* TripListTableViewController.xib */,
 				483E30611FEAABC4006D4512 /* TripMapViewController.swift */,
 				483E30621FEAABC4006D4512 /* TripMapViewController.xib */,
-				483E30971FEB7075006D4512 /* UserTripListTableViewController.swift */,
-				483B99121FEF7828009DF029 /* UserTripListTableViewController.xib */,
+				483E30971FEB7075006D4512 /* BalbabeTripListTableViewController.swift */,
+				483B99121FEF7828009DF029 /* BalbabeTripListTableViewController.xib */,
 				483B990E1FEEA017009DF029 /* LoadingViewController.swift */,
 				483B99101FEEA032009DF029 /* LoadingViewController.xib */,
 			);
@@ -174,10 +217,15 @@
 			isa = PBXGroup;
 			children = (
 				483E306E1FEAABC4006D4512 /* TripViewType.swift */,
+				483BA6421FF558C4005C9F76 /* LocationListing.swift */,
 				483E30861FEAB922006D4512 /* Trip.swift */,
+				48B16BA92001F78400BF45DF /* Result.swift */,
 				483E308E1FEADC42006D4512 /* Balbabe.swift */,
 				483B990C1FEE9717009DF029 /* TripsDataConfiguration.swift */,
 				483B991C1FEF8578009DF029 /* TripAnnotation.swift */,
+				483B99241FF003B8009DF029 /* Address.swift */,
+				48B16BA22001F32D00BF45DF /* LoadingViewState.swift */,
+				48B16BAD2001FA2E00BF45DF /* TripMetadata.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -190,6 +238,7 @@
 				483B99221FEFA44B009DF029 /* UIImage.swift */,
 				483B99201FEF90A2009DF029 /* UIView.swift */,
 				483E30701FEAABC4006D4512 /* UIViewAnimationCurve.swift */,
+				483BA6511FF58FCF005C9F76 /* UIViewController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -211,8 +260,20 @@
 				483E30951FEADFA2006D4512 /* TripTableViewCell.xib */,
 				483B99161FEF7934009DF029 /* OwnTripTableViewCell.swift */,
 				483B99181FEF793D009DF029 /* OwnTripTableViewCell.xib */,
+				483BA64F1FF55BEB005C9F76 /* LoadingView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		48B16BA42001F6BD00BF45DF /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				48B16BA72001F6F000BF45DF /* AsynchronousOperation.swift */,
+				48B16BA52001F6C500BF45DF /* TripEditOperation.swift */,
+				48B16BAF20020B1000BF45DF /* CitySearchTaskWrapper.swift */,
+				48B16BB1200228BA00BF45DF /* CityGeocodeTaskWrapper.swift */,
+			);
+			path = Operations;
 			sourceTree = "<group>";
 		};
 		84FEE0789AB3B10807195D79 /* Pods */ = {
@@ -286,7 +347,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				483E30801FEAABC4006D4512 /* TripListTableViewController.xib in Resources */,
-				483B99131FEF7828009DF029 /* UserTripListTableViewController.xib in Resources */,
+				483B99131FEF7828009DF029 /* BalbabeTripListTableViewController.xib in Resources */,
+				483BA64E1FF55B8C005C9F76 /* LocationSearchTableViewController.xib in Resources */,
 				483E307E1FEAABC4006D4512 /* TripEditorTableViewController.xib in Resources */,
 				483B99191FEF793D009DF029 /* OwnTripTableViewCell.xib in Resources */,
 				483E30781FEAABC4006D4512 /* EntryGateViewController.xib in Resources */,
@@ -357,29 +419,43 @@
 			buildActionMask = 2147483647;
 			files = (
 				483E30871FEAB922006D4512 /* Trip.swift in Sources */,
+				48B16BAE2001FA2E00BF45DF /* TripMetadata.swift in Sources */,
 				483E308F1FEADC42006D4512 /* Balbabe.swift in Sources */,
 				483E30821FEAABC4006D4512 /* UIViewAnimationCurve.swift in Sources */,
 				483E30771FEAABC4006D4512 /* EntryGateViewController.swift in Sources */,
-				483E30981FEB7075006D4512 /* UserTripListTableViewController.swift in Sources */,
+				483E30981FEB7075006D4512 /* BalbabeTripListTableViewController.swift in Sources */,
 				483E30891FEABDDF006D4512 /* DateFormatter.swift in Sources */,
 				483B990F1FEEA017009DF029 /* LoadingViewController.swift in Sources */,
 				483B99211FEF90A3009DF029 /* UIView.swift in Sources */,
 				483E30911FEADE5A006D4512 /* TripListTableViewDataSource.swift in Sources */,
+				483B99251FF003B8009DF029 /* Address.swift in Sources */,
 				483B99231FEFA44B009DF029 /* UIImage.swift in Sources */,
 				483E304D1FEAAB58006D4512 /* AppDelegate.swift in Sources */,
+				483BA6451FF558CD005C9F76 /* LocationSearchTableViewController.swift in Sources */,
+				48B16BA32001F32D00BF45DF /* LoadingViewState.swift in Sources */,
+				48B16BAB2001F78500BF45DF /* Result.swift in Sources */,
 				483E307B1FEAABC4006D4512 /* ProfileViewController.swift in Sources */,
+				483BA6521FF58FCF005C9F76 /* UIViewController.swift in Sources */,
 				483B990D1FEE9717009DF029 /* TripsDataConfiguration.swift in Sources */,
+				48B16BAC2001F78500BF45DF /* ResultGeneratingOperation.swift in Sources */,
 				483E30751FEAABC4006D4512 /* TripMapViewController.swift in Sources */,
+				483BA6431FF558C4005C9F76 /* LocationListing.swift in Sources */,
 				483E307F1FEAABC4006D4512 /* TripListTableViewController.swift in Sources */,
+				48B16BB020020B1000BF45DF /* CitySearchTaskWrapper.swift in Sources */,
 				483B991D1FEF8578009DF029 /* TripAnnotation.swift in Sources */,
+				483BA64C1FF55A0A005C9F76 /* LocationSearchTableViewControllerDelegate.swift in Sources */,
 				483E308B1FEAC364006D4512 /* Date.swift in Sources */,
 				483E30831FEAABC4006D4512 /* KeyboardManager.swift in Sources */,
+				48B16BB2200228BA00BF45DF /* CityGeocodeTaskWrapper.swift in Sources */,
 				483B99151FEF7853009DF029 /* UserTripListTableViewDataSource.swift in Sources */,
 				483E307D1FEAABC4006D4512 /* TripEditorTableViewController.swift in Sources */,
 				483E30791FEAABC4006D4512 /* HomeViewController.swift in Sources */,
+				48B16BA62001F6C500BF45DF /* TripEditOperation.swift in Sources */,
+				483BA6501FF55BEB005C9F76 /* LoadingView.swift in Sources */,
 				483B99171FEF7934009DF029 /* OwnTripTableViewCell.swift in Sources */,
 				483E30931FEADF63006D4512 /* TripTableViewCell.swift in Sources */,
 				483E30811FEAABC4006D4512 /* TripViewType.swift in Sources */,
+				48B16BA82001F6F000BF45DF /* AsynchronousOperation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

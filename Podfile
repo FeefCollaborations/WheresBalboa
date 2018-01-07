@@ -11,5 +11,7 @@ target 'WhereIsBalboa' do
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
   pod 'Cluster'
+  pod 'PopupDialog', '~> 0.6'
+  pod 'SwiftyJSON'
 
 end

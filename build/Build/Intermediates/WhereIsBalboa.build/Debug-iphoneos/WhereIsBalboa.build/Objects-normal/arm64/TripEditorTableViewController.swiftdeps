@@ -7,7 +7,10 @@ provides-member:
 - ["13WhereIsBalboa29TripEditorTableViewControllerC", ""]
 provides-dynamic-lookup:
 - "cityTextField"
+- "deleteButton"
+- "deleteTrip"
 - "endDateTextField"
+- "saveTrip"
 - "startDateTextField"
 - "textFieldDidEndEditing"
 - "viewDidLoad"
@@ -22,22 +25,28 @@ depends-top-level:
 - !private "StringLiteralType"
 - "Trip"
 - "TripEditorTableViewController"
+- "UIButton"
 - "UITextField"
 - "UITextFieldDelegate"
 - "UIViewController"
 - !private "fatalError"
 depends-member:
+- !private ["13WhereIsBalboa7AddressV", "city"]
+- !private ["13WhereIsBalboa7AddressV", "country"]
 - !private ["s23BidirectionalCollectionP", "init"]
 - !private ["So15CALayerDelegateP", "delegate"]
+- !private ["So15CALayerDelegateP", "isHidden"]
 - !private ["So15CALayerDelegateP", "text"]
 - !private ["s7CVarArgP", "DateFormatter"]
 - !private ["s7CVarArgP", "balbabe"]
 - !private ["s7CVarArgP", "cityTextField"]
 - !private ["s7CVarArgP", "delegate"]
+- !private ["s7CVarArgP", "deleteButton"]
 - !private ["s7CVarArgP", "endDateTextField"]
 - !private ["s7CVarArgP", "fatalError"]
 - !private ["s7CVarArgP", "fullDate"]
 - !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "isHidden"]
 - !private ["s7CVarArgP", "navigationController"]
 - !private ["s7CVarArgP", "setNavigationBarHidden"]
 - !private ["s7CVarArgP", "startDateTextField"]
@@ -55,17 +64,23 @@ depends-member:
 - !private ["s7CVarArgP", "viewWillAppear"]
 - ["s7CVarArgP", ""]
 - !private ["s10CollectionP", "init"]
+- !private ["s10ComparableP", "end"]
 - !private ["s10ComparableP", "init"]
+- !private ["s10ComparableP", "start"]
 - !private ["s28CustomDebugStringConvertibleP", "DateFormatter"]
 - !private ["s28CustomDebugStringConvertibleP", "balbabe"]
 - !private ["s28CustomDebugStringConvertibleP", "cityTextField"]
 - !private ["s28CustomDebugStringConvertibleP", "delegate"]
+- !private ["s28CustomDebugStringConvertibleP", "deleteButton"]
+- !private ["s28CustomDebugStringConvertibleP", "end"]
 - !private ["s28CustomDebugStringConvertibleP", "endDateTextField"]
 - !private ["s28CustomDebugStringConvertibleP", "fatalError"]
 - !private ["s28CustomDebugStringConvertibleP", "fullDate"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "isHidden"]
 - !private ["s28CustomDebugStringConvertibleP", "navigationController"]
 - !private ["s28CustomDebugStringConvertibleP", "setNavigationBarHidden"]
+- !private ["s28CustomDebugStringConvertibleP", "start"]
 - !private ["s28CustomDebugStringConvertibleP", "startDateTextField"]
 - !private ["s28CustomDebugStringConvertibleP", "string"]
 - !private ["s28CustomDebugStringConvertibleP", "text"]
@@ -81,17 +96,23 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "viewWillAppear"]
 - ["s28CustomDebugStringConvertibleP", ""]
 - !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "end"]
 - !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "start"]
 - !private ["s23CustomStringConvertibleP", "DateFormatter"]
 - !private ["s23CustomStringConvertibleP", "balbabe"]
 - !private ["s23CustomStringConvertibleP", "cityTextField"]
 - !private ["s23CustomStringConvertibleP", "delegate"]
+- !private ["s23CustomStringConvertibleP", "deleteButton"]
+- !private ["s23CustomStringConvertibleP", "end"]
 - !private ["s23CustomStringConvertibleP", "endDateTextField"]
 - !private ["s23CustomStringConvertibleP", "fatalError"]
 - !private ["s23CustomStringConvertibleP", "fullDate"]
 - !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "isHidden"]
 - !private ["s23CustomStringConvertibleP", "navigationController"]
 - !private ["s23CustomStringConvertibleP", "setNavigationBarHidden"]
+- !private ["s23CustomStringConvertibleP", "start"]
 - !private ["s23CustomStringConvertibleP", "startDateTextField"]
 - !private ["s23CustomStringConvertibleP", "string"]
 - !private ["s23CustomStringConvertibleP", "text"]
@@ -108,21 +129,32 @@ depends-member:
 - ["s23CustomStringConvertibleP", ""]
 - !private ["So13DateFormatterC", "fullDate"]
 - !private ["So13DateFormatterC", "string"]
+- !private ["10Foundation12DateIntervalV", "end"]
+- !private ["10Foundation12DateIntervalV", "start"]
+- !private ["s9DecodableP", "end"]
 - !private ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "start"]
+- !private ["s9EncodableP", "end"]
 - !private ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "start"]
 - !private ["s9EquatableP", "DateFormatter"]
+- !private ["s9EquatableP", "address"]
 - !private ["s9EquatableP", "balbabe"]
 - !private ["s9EquatableP", "city"]
 - !private ["s9EquatableP", "cityTextField"]
+- !private ["s9EquatableP", "country"]
+- !private ["s9EquatableP", "dateInterval"]
 - !private ["s9EquatableP", "delegate"]
-- !private ["s9EquatableP", "endDate"]
+- !private ["s9EquatableP", "deleteButton"]
+- !private ["s9EquatableP", "end"]
 - !private ["s9EquatableP", "endDateTextField"]
 - !private ["s9EquatableP", "fatalError"]
 - !private ["s9EquatableP", "fullDate"]
 - !private ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "isHidden"]
 - !private ["s9EquatableP", "navigationController"]
 - !private ["s9EquatableP", "setNavigationBarHidden"]
-- !private ["s9EquatableP", "startDate"]
+- !private ["s9EquatableP", "start"]
 - !private ["s9EquatableP", "startDateTextField"]
 - !private ["s9EquatableP", "string"]
 - !private ["s9EquatableP", "text"]
@@ -143,18 +175,21 @@ depends-member:
 - !private ["So9FormatterC", "fullDate"]
 - !private ["So9FormatterC", "string"]
 - !private ["s8HashableP", "DateFormatter"]
+- !private ["s8HashableP", "address"]
 - !private ["s8HashableP", "balbabe"]
-- !private ["s8HashableP", "city"]
 - !private ["s8HashableP", "cityTextField"]
+- !private ["s8HashableP", "dateInterval"]
 - !private ["s8HashableP", "delegate"]
-- !private ["s8HashableP", "endDate"]
+- !private ["s8HashableP", "deleteButton"]
+- !private ["s8HashableP", "end"]
 - !private ["s8HashableP", "endDateTextField"]
 - !private ["s8HashableP", "fatalError"]
 - !private ["s8HashableP", "fullDate"]
 - !private ["s8HashableP", "init"]
+- !private ["s8HashableP", "isHidden"]
 - !private ["s8HashableP", "navigationController"]
 - !private ["s8HashableP", "setNavigationBarHidden"]
-- !private ["s8HashableP", "startDate"]
+- !private ["s8HashableP", "start"]
 - !private ["s8HashableP", "startDateTextField"]
 - !private ["s8HashableP", "string"]
 - !private ["s8HashableP", "text"]
@@ -175,10 +210,12 @@ depends-member:
 - !private ["So8NSCodingP", "balbabe"]
 - !private ["So8NSCodingP", "cityTextField"]
 - !private ["So8NSCodingP", "delegate"]
+- !private ["So8NSCodingP", "deleteButton"]
 - !private ["So8NSCodingP", "endDateTextField"]
 - !private ["So8NSCodingP", "fatalError"]
 - !private ["So8NSCodingP", "fullDate"]
 - !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "isHidden"]
 - !private ["So8NSCodingP", "navigationController"]
 - !private ["So8NSCodingP", "setNavigationBarHidden"]
 - !private ["So8NSCodingP", "startDateTextField"]
@@ -201,6 +238,7 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "DateFormatter"]
 - !private ["So26NSExtensionRequestHandlingP", "balbabe"]
 - !private ["So26NSExtensionRequestHandlingP", "cityTextField"]
+- !private ["So26NSExtensionRequestHandlingP", "deleteButton"]
 - !private ["So26NSExtensionRequestHandlingP", "endDateTextField"]
 - !private ["So26NSExtensionRequestHandlingP", "fatalError"]
 - !private ["So26NSExtensionRequestHandlingP", "init"]
@@ -226,15 +264,20 @@ depends-member:
 - !private ["So8NSObjectC", "DateFormatter"]
 - ["So8NSObjectC", "NSCoder"]
 - ["So8NSObjectC", "Trip"]
+- ["So8NSObjectC", "UIButton"]
 - ["So8NSObjectC", "UITextField"]
 - ["So8NSObjectC", "balbabe"]
 - ["So8NSObjectC", "cityTextField"]
 - !private ["So8NSObjectC", "delegate"]
+- ["So8NSObjectC", "deleteButton"]
+- ["So8NSObjectC", "deleteTrip"]
 - ["So8NSObjectC", "endDateTextField"]
 - !private ["So8NSObjectC", "fatalError"]
 - !private ["So8NSObjectC", "fullDate"]
 - ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "isHidden"]
 - !private ["So8NSObjectC", "navigationController"]
+- ["So8NSObjectC", "saveTrip"]
 - !private ["So8NSObjectC", "setNavigationBarHidden"]
 - ["So8NSObjectC", "startDateTextField"]
 - !private ["So8NSObjectC", "string"]
@@ -253,10 +296,12 @@ depends-member:
 - !private ["So16NSObjectProtocolP", "balbabe"]
 - !private ["So16NSObjectProtocolP", "cityTextField"]
 - !private ["So16NSObjectProtocolP", "delegate"]
+- !private ["So16NSObjectProtocolP", "deleteButton"]
 - !private ["So16NSObjectProtocolP", "endDateTextField"]
 - !private ["So16NSObjectProtocolP", "fatalError"]
 - !private ["So16NSObjectProtocolP", "fullDate"]
 - !private ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "isHidden"]
 - !private ["So16NSObjectProtocolP", "navigationController"]
 - !private ["So16NSObjectProtocolP", "setNavigationBarHidden"]
 - !private ["So16NSObjectProtocolP", "startDateTextField"]
@@ -276,28 +321,33 @@ depends-member:
 - !private ["So14NSSecureCodingP", "init"]
 - !private ["So8NSStringC", "init"]
 - !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["10Foundation20ReferenceConvertibleP", "end"]
+- !private ["10Foundation20ReferenceConvertibleP", "start"]
 - !private ["s8SequenceP", "init"]
 - !private ["s12StaticStringV", "init"]
 - !private ["SS", "init"]
 - !private ["s14StringProtocolP", "init"]
 - !private ["s16TextOutputStreamP", "init"]
 - !private ["s20TextOutputStreamableP", "init"]
-- !private ["13WhereIsBalboa4TripV", "city"]
-- !private ["13WhereIsBalboa4TripV", "endDate"]
-- !private ["13WhereIsBalboa4TripV", "startDate"]
+- !private ["13WhereIsBalboa4TripV", "address"]
+- !private ["13WhereIsBalboa4TripV", "dateInterval"]
 - ["13WhereIsBalboa29TripEditorTableViewControllerC", "Balbabe"]
 - ["13WhereIsBalboa29TripEditorTableViewControllerC", "Bool"]
 - !private ["13WhereIsBalboa29TripEditorTableViewControllerC", "DateFormatter"]
 - ["13WhereIsBalboa29TripEditorTableViewControllerC", "NSCoder"]
 - ["13WhereIsBalboa29TripEditorTableViewControllerC", "Trip"]
+- ["13WhereIsBalboa29TripEditorTableViewControllerC", "UIButton"]
 - ["13WhereIsBalboa29TripEditorTableViewControllerC", "UITextField"]
 - ["13WhereIsBalboa29TripEditorTableViewControllerC", "balbabe"]
 - !private ["13WhereIsBalboa29TripEditorTableViewControllerC", "cityTextField"]
 - ["13WhereIsBalboa29TripEditorTableViewControllerC", "deinit"]
+- !private ["13WhereIsBalboa29TripEditorTableViewControllerC", "deleteButton"]
+- !private ["13WhereIsBalboa29TripEditorTableViewControllerC", "deleteTrip"]
 - !private ["13WhereIsBalboa29TripEditorTableViewControllerC", "endDateTextField"]
 - !private ["13WhereIsBalboa29TripEditorTableViewControllerC", "fatalError"]
 - ["13WhereIsBalboa29TripEditorTableViewControllerC", "init"]
 - !private ["13WhereIsBalboa29TripEditorTableViewControllerC", "navigationController"]
+- !private ["13WhereIsBalboa29TripEditorTableViewControllerC", "saveTrip"]
 - !private ["13WhereIsBalboa29TripEditorTableViewControllerC", "startDateTextField"]
 - ["13WhereIsBalboa29TripEditorTableViewControllerC", "textField"]
 - ["13WhereIsBalboa29TripEditorTableViewControllerC", "textFieldDidBeginEditing"]
@@ -309,17 +359,22 @@ depends-member:
 - ["13WhereIsBalboa29TripEditorTableViewControllerC", "trip"]
 - ["13WhereIsBalboa29TripEditorTableViewControllerC", "viewDidLoad"]
 - ["13WhereIsBalboa29TripEditorTableViewControllerC", "viewWillAppear"]
+- !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "isHidden"]
 - !private ["So29UIAccessibilityIdentificationP", "delegate"]
+- !private ["So29UIAccessibilityIdentificationP", "isHidden"]
 - !private ["So29UIAccessibilityIdentificationP", "text"]
 - !private ["So12UIAppearanceP", "delegate"]
+- !private ["So12UIAppearanceP", "isHidden"]
 - !private ["So12UIAppearanceP", "text"]
 - !private ["So21UIAppearanceContainerP", "DateFormatter"]
 - !private ["So21UIAppearanceContainerP", "balbabe"]
 - !private ["So21UIAppearanceContainerP", "cityTextField"]
 - !private ["So21UIAppearanceContainerP", "delegate"]
+- !private ["So21UIAppearanceContainerP", "deleteButton"]
 - !private ["So21UIAppearanceContainerP", "endDateTextField"]
 - !private ["So21UIAppearanceContainerP", "fatalError"]
 - !private ["So21UIAppearanceContainerP", "init"]
+- !private ["So21UIAppearanceContainerP", "isHidden"]
 - !private ["So21UIAppearanceContainerP", "navigationController"]
 - !private ["So21UIAppearanceContainerP", "setNavigationBarHidden"]
 - !private ["So21UIAppearanceContainerP", "startDateTextField"]
@@ -335,9 +390,11 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "viewDidLoad"]
 - !private ["So21UIAppearanceContainerP", "viewWillAppear"]
 - ["So21UIAppearanceContainerP", ""]
+- !private ["So8UIButtonC", "isHidden"]
 - !private ["So18UIContentContainerP", "DateFormatter"]
 - !private ["So18UIContentContainerP", "balbabe"]
 - !private ["So18UIContentContainerP", "cityTextField"]
+- !private ["So18UIContentContainerP", "deleteButton"]
 - !private ["So18UIContentContainerP", "endDateTextField"]
 - !private ["So18UIContentContainerP", "fatalError"]
 - !private ["So18UIContentContainerP", "init"]
@@ -358,18 +415,23 @@ depends-member:
 - !private ["So30UIContentSizeCategoryAdjustingP", "delegate"]
 - !private ["So30UIContentSizeCategoryAdjustingP", "text"]
 - !private ["So9UIControlC", "delegate"]
+- !private ["So9UIControlC", "isHidden"]
 - !private ["So9UIControlC", "text"]
 - !private ["So17UICoordinateSpaceP", "delegate"]
+- !private ["So17UICoordinateSpaceP", "isHidden"]
 - !private ["So17UICoordinateSpaceP", "text"]
 - !private ["So13UIDynamicItemP", "delegate"]
+- !private ["So13UIDynamicItemP", "isHidden"]
 - !private ["So13UIDynamicItemP", "text"]
 - !private ["So18UIFocusEnvironmentP", "DateFormatter"]
 - !private ["So18UIFocusEnvironmentP", "balbabe"]
 - !private ["So18UIFocusEnvironmentP", "cityTextField"]
 - !private ["So18UIFocusEnvironmentP", "delegate"]
+- !private ["So18UIFocusEnvironmentP", "deleteButton"]
 - !private ["So18UIFocusEnvironmentP", "endDateTextField"]
 - !private ["So18UIFocusEnvironmentP", "fatalError"]
 - !private ["So18UIFocusEnvironmentP", "init"]
+- !private ["So18UIFocusEnvironmentP", "isHidden"]
 - !private ["So18UIFocusEnvironmentP", "navigationController"]
 - !private ["So18UIFocusEnvironmentP", "setNavigationBarHidden"]
 - !private ["So18UIFocusEnvironmentP", "startDateTextField"]
@@ -386,6 +448,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "viewWillAppear"]
 - ["So18UIFocusEnvironmentP", ""]
 - !private ["So11UIFocusItemP", "delegate"]
+- !private ["So11UIFocusItemP", "isHidden"]
 - !private ["So11UIFocusItemP", "text"]
 - !private ["So10UIKeyInputP", "delegate"]
 - !private ["So10UIKeyInputP", "text"]
@@ -394,9 +457,11 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "balbabe"]
 - !private ["So30UIPasteConfigurationSupportingP", "cityTextField"]
 - !private ["So30UIPasteConfigurationSupportingP", "delegate"]
+- !private ["So30UIPasteConfigurationSupportingP", "deleteButton"]
 - !private ["So30UIPasteConfigurationSupportingP", "endDateTextField"]
 - !private ["So30UIPasteConfigurationSupportingP", "fatalError"]
 - !private ["So30UIPasteConfigurationSupportingP", "init"]
+- !private ["So30UIPasteConfigurationSupportingP", "isHidden"]
 - !private ["So30UIPasteConfigurationSupportingP", "navigationController"]
 - !private ["So30UIPasteConfigurationSupportingP", "setNavigationBarHidden"]
 - !private ["So30UIPasteConfigurationSupportingP", "startDateTextField"]
@@ -417,14 +482,19 @@ depends-member:
 - !private ["So11UIResponderC", "DateFormatter"]
 - ["So11UIResponderC", "NSCoder"]
 - ["So11UIResponderC", "Trip"]
+- ["So11UIResponderC", "UIButton"]
 - ["So11UIResponderC", "UITextField"]
 - ["So11UIResponderC", "balbabe"]
 - ["So11UIResponderC", "cityTextField"]
 - !private ["So11UIResponderC", "delegate"]
+- ["So11UIResponderC", "deleteButton"]
+- ["So11UIResponderC", "deleteTrip"]
 - ["So11UIResponderC", "endDateTextField"]
 - !private ["So11UIResponderC", "fatalError"]
 - ["So11UIResponderC", "init"]
+- !private ["So11UIResponderC", "isHidden"]
 - !private ["So11UIResponderC", "navigationController"]
+- ["So11UIResponderC", "saveTrip"]
 - !private ["So11UIResponderC", "setNavigationBarHidden"]
 - ["So11UIResponderC", "startDateTextField"]
 - !private ["So11UIResponderC", "text"]
@@ -442,9 +512,11 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "balbabe"]
 - !private ["So30UIResponderStandardEditActionsP", "cityTextField"]
 - !private ["So30UIResponderStandardEditActionsP", "delegate"]
+- !private ["So30UIResponderStandardEditActionsP", "deleteButton"]
 - !private ["So30UIResponderStandardEditActionsP", "endDateTextField"]
 - !private ["So30UIResponderStandardEditActionsP", "fatalError"]
 - !private ["So30UIResponderStandardEditActionsP", "init"]
+- !private ["So30UIResponderStandardEditActionsP", "isHidden"]
 - !private ["So30UIResponderStandardEditActionsP", "navigationController"]
 - !private ["So30UIResponderStandardEditActionsP", "setNavigationBarHidden"]
 - !private ["So30UIResponderStandardEditActionsP", "startDateTextField"]
@@ -460,9 +532,11 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "viewDidLoad"]
 - !private ["So30UIResponderStandardEditActionsP", "viewWillAppear"]
 - ["So30UIResponderStandardEditActionsP", ""]
+- !private ["So35UISpringLoadedInteractionSupportingP", "isHidden"]
 - !private ["So16UIStateRestoringP", "DateFormatter"]
 - !private ["So16UIStateRestoringP", "balbabe"]
 - !private ["So16UIStateRestoringP", "cityTextField"]
+- !private ["So16UIStateRestoringP", "deleteButton"]
 - !private ["So16UIStateRestoringP", "endDateTextField"]
 - !private ["So16UIStateRestoringP", "fatalError"]
 - !private ["So16UIStateRestoringP", "init"]
@@ -489,6 +563,7 @@ depends-member:
 - !private ["So19UITextFieldDelegateP", "DateFormatter"]
 - !private ["So19UITextFieldDelegateP", "balbabe"]
 - !private ["So19UITextFieldDelegateP", "cityTextField"]
+- !private ["So19UITextFieldDelegateP", "deleteButton"]
 - !private ["So19UITextFieldDelegateP", "endDateTextField"]
 - !private ["So19UITextFieldDelegateP", "fatalError"]
 - !private ["So19UITextFieldDelegateP", "navigationController"]
@@ -512,9 +587,11 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "balbabe"]
 - !private ["So18UITraitEnvironmentP", "cityTextField"]
 - !private ["So18UITraitEnvironmentP", "delegate"]
+- !private ["So18UITraitEnvironmentP", "deleteButton"]
 - !private ["So18UITraitEnvironmentP", "endDateTextField"]
 - !private ["So18UITraitEnvironmentP", "fatalError"]
 - !private ["So18UITraitEnvironmentP", "init"]
+- !private ["So18UITraitEnvironmentP", "isHidden"]
 - !private ["So18UITraitEnvironmentP", "navigationController"]
 - !private ["So18UITraitEnvironmentP", "setNavigationBarHidden"]
 - !private ["So18UITraitEnvironmentP", "startDateTextField"]
@@ -531,19 +608,24 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "viewWillAppear"]
 - ["So18UITraitEnvironmentP", ""]
 - !private ["So6UIViewC", "delegate"]
+- !private ["So6UIViewC", "isHidden"]
 - !private ["So6UIViewC", "text"]
 - ["So16UIViewControllerC", "Balbabe"]
 - ["So16UIViewControllerC", "Bool"]
 - !private ["So16UIViewControllerC", "DateFormatter"]
 - ["So16UIViewControllerC", "NSCoder"]
 - ["So16UIViewControllerC", "Trip"]
+- ["So16UIViewControllerC", "UIButton"]
 - ["So16UIViewControllerC", "UITextField"]
 - ["So16UIViewControllerC", "balbabe"]
 - ["So16UIViewControllerC", "cityTextField"]
+- ["So16UIViewControllerC", "deleteButton"]
+- ["So16UIViewControllerC", "deleteTrip"]
 - ["So16UIViewControllerC", "endDateTextField"]
 - !private ["So16UIViewControllerC", "fatalError"]
 - ["So16UIViewControllerC", "init"]
 - !private ["So16UIViewControllerC", "navigationController"]
+- ["So16UIViewControllerC", "saveTrip"]
 - !private ["So16UIViewControllerC", "setNavigationBarHidden"]
 - ["So16UIViewControllerC", "startDateTextField"]
 - ["So16UIViewControllerC", "textField"]
@@ -559,6 +641,7 @@ depends-member:
 - ["So16UIViewControllerC", ""]
 - !private ["s23_BidirectionalIndexableP", "init"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "delegate"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "isHidden"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "text"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
@@ -572,10 +655,12 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "balbabe"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "cityTextField"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "delegate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "deleteButton"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "endDateTextField"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "fatalError"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "fullDate"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "isHidden"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "navigationController"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "setNavigationBarHidden"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "startDateTextField"]
@@ -592,10 +677,13 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "viewDidLoad"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "viewWillAppear"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["s21_ObjectiveCBridgeableP", "end"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "start"]
 - !private ["s26_RangeReplaceableIndexableP", "init"]
 - !private ["s16_SwiftStringViewP", "init"]
 depends-nominal:
+- !private "13WhereIsBalboa7AddressV"
 - !private "s23BidirectionalCollectionP"
 - !private "So15CALayerDelegateP"
 - "s7CVarArgP"
@@ -606,6 +694,7 @@ depends-nominal:
 - !private "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
 - !private "So13DateFormatterC"
+- !private "10Foundation12DateIntervalV"
 - !private "s9DecodableP"
 - !private "s9EncodableP"
 - "s9EquatableP"
@@ -627,6 +716,7 @@ depends-nominal:
 - !private "So14NSSecureCodingP"
 - !private "So8NSStringC"
 - !private "s26RangeReplaceableCollectionP"
+- !private "10Foundation20ReferenceConvertibleP"
 - !private "s8SequenceP"
 - !private "s12StaticStringV"
 - !private "SS"
@@ -635,9 +725,11 @@ depends-nominal:
 - !private "s20TextOutputStreamableP"
 - !private "13WhereIsBalboa4TripV"
 - "13WhereIsBalboa29TripEditorTableViewControllerC"
+- !private "So48UIAccessibilityContentSizeCategoryImageAdjustingP"
 - !private "So29UIAccessibilityIdentificationP"
 - !private "So12UIAppearanceP"
 - "So21UIAppearanceContainerP"
+- !private "So8UIButtonC"
 - "So18UIContentContainerP"
 - !private "So30UIContentSizeCategoryAdjustingP"
 - !private "So9UIControlC"
@@ -650,6 +742,7 @@ depends-nominal:
 - "So30UIPasteConfigurationSupportingP"
 - "So11UIResponderC"
 - "So30UIResponderStandardEditActionsP"
+- !private "So35UISpringLoadedInteractionSupportingP"
 - "So16UIStateRestoringP"
 - !private "So15UITextDraggableP"
 - !private "So15UITextDroppableP"
@@ -677,11 +770,14 @@ depends-nominal:
 - !private "s16_SwiftStringViewP"
 depends-dynamic-lookup:
 depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Accelerate.apinotesc"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/PopupDialog/PopupDialog.framework/Modules/PopupDialog.swiftmodule/arm64.swiftmodule"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/Cluster/Cluster.framework/Modules/Cluster.swiftmodule/arm64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Accelerate.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Metal.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
@@ -695,6 +791,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FIRInstanceID.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/PopupDialog/PopupDialog.framework/Headers/PopupDialog-umbrella.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/Cluster/Cluster.framework/Headers/Cluster-umbrella.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRMutableData.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageMetadata.h"
@@ -748,19 +845,22 @@ depends-external:
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIROptions.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthErrors.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageConstants.h"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/PopupDialog/PopupDialog.framework/Headers/PopupDialog-Swift.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/Cluster/Cluster.framework/Headers/Cluster-Swift.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthDataResult.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRTransactionResult.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDataSnapshot.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageTaskSnapshot.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalyticsSwiftNameSupport.h"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/PopupDialog/PopupDialog.framework/Headers/FXBlurView.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabaseQuery.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/Firebase/Core/Sources/module.modulemap"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Modules/module.modulemap"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Modules/module.modulemap"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Modules/module.modulemap"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Modules/module.modulemap"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/PopupDialog/PopupDialog.framework/Modules/module.modulemap"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Modules/module.modulemap"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/Cluster/Cluster.framework/Modules/module.modulemap"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
-interface-hash: "2137f88e95af0f0bb6338bb058fdf2ac"
+interface-hash: "5eb1792c351e24e38a2928e0e3d211fc"

@@ -11,9 +11,13 @@ provides-dynamic-lookup:
 - "signIn"
 - "viewWillAppear"
 depends-top-level:
+- !private "Address"
+- !private "Array"
+- "AssignmentPrecedence"
 - !private "Balbabe"
 - "Bool"
 - !private "BooleanLiteralType"
+- !private "CLLocation"
 - "EntryGateViewController"
 - !private "HomeViewController"
 - "NSCoder"
@@ -22,10 +26,15 @@ depends-top-level:
 - "UIViewController"
 - !private "fatalError"
 depends-member:
+- !private ["13WhereIsBalboa7AddressV", "init"]
 - !private ["13WhereIsBalboa7BalbabeV", "dummy"]
 - !private ["s23BidirectionalCollectionP", "init"]
+- !private ["So10CLLocationC", "init"]
+- !private ["s7CVarArgP", "Address"]
 - !private ["s7CVarArgP", "Balbabe"]
+- !private ["s7CVarArgP", "CLLocation"]
 - !private ["s7CVarArgP", "HomeViewController"]
+- !private ["s7CVarArgP", "edgesForExtendedLayout"]
 - !private ["s7CVarArgP", "fatalError"]
 - !private ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "navigationController"]
@@ -35,8 +44,11 @@ depends-member:
 - ["s7CVarArgP", ""]
 - !private ["s10CollectionP", "init"]
 - !private ["s10ComparableP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "Address"]
 - !private ["s28CustomDebugStringConvertibleP", "Balbabe"]
+- !private ["s28CustomDebugStringConvertibleP", "CLLocation"]
 - !private ["s28CustomDebugStringConvertibleP", "HomeViewController"]
+- !private ["s28CustomDebugStringConvertibleP", "edgesForExtendedLayout"]
 - !private ["s28CustomDebugStringConvertibleP", "fatalError"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "navigationController"]
@@ -46,8 +58,11 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", ""]
 - !private ["s29CustomPlaygroundQuickLookableP", "init"]
 - !private ["s17CustomReflectableP", "init"]
+- !private ["s23CustomStringConvertibleP", "Address"]
 - !private ["s23CustomStringConvertibleP", "Balbabe"]
+- !private ["s23CustomStringConvertibleP", "CLLocation"]
 - !private ["s23CustomStringConvertibleP", "HomeViewController"]
+- !private ["s23CustomStringConvertibleP", "edgesForExtendedLayout"]
 - !private ["s23CustomStringConvertibleP", "fatalError"]
 - !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "navigationController"]
@@ -57,12 +72,15 @@ depends-member:
 - ["s23CustomStringConvertibleP", ""]
 - !private ["s9DecodableP", "init"]
 - !private ["s9EncodableP", "init"]
+- !private ["13WhereIsBalboa23EntryGateViewControllerC", "Address"]
 - !private ["13WhereIsBalboa23EntryGateViewControllerC", "Balbabe"]
 - ["13WhereIsBalboa23EntryGateViewControllerC", "Bool"]
+- !private ["13WhereIsBalboa23EntryGateViewControllerC", "CLLocation"]
 - !private ["13WhereIsBalboa23EntryGateViewControllerC", "HomeViewController"]
 - ["13WhereIsBalboa23EntryGateViewControllerC", "NSCoder"]
 - ["13WhereIsBalboa23EntryGateViewControllerC", "UITextField"]
 - ["13WhereIsBalboa23EntryGateViewControllerC", "deinit"]
+- !private ["13WhereIsBalboa23EntryGateViewControllerC", "edgesForExtendedLayout"]
 - !private ["13WhereIsBalboa23EntryGateViewControllerC", "fatalError"]
 - ["13WhereIsBalboa23EntryGateViewControllerC", "init"]
 - !private ["13WhereIsBalboa23EntryGateViewControllerC", "nameTextField"]
@@ -70,9 +88,12 @@ depends-member:
 - !private ["13WhereIsBalboa23EntryGateViewControllerC", "passwordTextField"]
 - !private ["13WhereIsBalboa23EntryGateViewControllerC", "signIn"]
 - ["13WhereIsBalboa23EntryGateViewControllerC", "viewWillAppear"]
+- !private ["s9EquatableP", "Address"]
 - !private ["s9EquatableP", "Balbabe"]
+- !private ["s9EquatableP", "CLLocation"]
 - !private ["s9EquatableP", "HomeViewController"]
 - !private ["s9EquatableP", "dummy"]
+- !private ["s9EquatableP", "edgesForExtendedLayout"]
 - !private ["s9EquatableP", "fatalError"]
 - !private ["s9EquatableP", "init"]
 - !private ["s9EquatableP", "navigationController"]
@@ -83,8 +104,11 @@ depends-member:
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s26ExpressibleByStringLiteralP", "init"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s8HashableP", "Address"]
 - !private ["s8HashableP", "Balbabe"]
+- !private ["s8HashableP", "CLLocation"]
 - !private ["s8HashableP", "HomeViewController"]
+- !private ["s8HashableP", "edgesForExtendedLayout"]
 - !private ["s8HashableP", "fatalError"]
 - !private ["s8HashableP", "init"]
 - !private ["s8HashableP", "navigationController"]
@@ -94,10 +118,14 @@ depends-member:
 - ["s8HashableP", ""]
 - !private ["13WhereIsBalboa18HomeViewControllerC", "deinit"]
 - !private ["13WhereIsBalboa18HomeViewControllerC", "init"]
+- !private ["10SwiftyJSON17JSONSubscriptTypeP", "init"]
 - !private ["s25LosslessStringConvertibleP", "init"]
 - !private ["s10MirrorPathP", "init"]
+- !private ["So8NSCodingP", "Address"]
 - !private ["So8NSCodingP", "Balbabe"]
+- !private ["So8NSCodingP", "CLLocation"]
 - !private ["So8NSCodingP", "HomeViewController"]
+- !private ["So8NSCodingP", "edgesForExtendedLayout"]
 - !private ["So8NSCodingP", "fatalError"]
 - !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "navigationController"]
@@ -106,8 +134,11 @@ depends-member:
 - !private ["So8NSCodingP", "viewWillAppear"]
 - ["So8NSCodingP", ""]
 - !private ["So9NSCopyingP", "init"]
+- !private ["So26NSExtensionRequestHandlingP", "Address"]
 - !private ["So26NSExtensionRequestHandlingP", "Balbabe"]
+- !private ["So26NSExtensionRequestHandlingP", "CLLocation"]
 - !private ["So26NSExtensionRequestHandlingP", "HomeViewController"]
+- !private ["So26NSExtensionRequestHandlingP", "edgesForExtendedLayout"]
 - !private ["So26NSExtensionRequestHandlingP", "fatalError"]
 - !private ["So26NSExtensionRequestHandlingP", "init"]
 - !private ["So26NSExtensionRequestHandlingP", "navigationController"]
@@ -118,11 +149,14 @@ depends-member:
 - !private ["So21NSItemProviderReadingP", "init"]
 - !private ["So21NSItemProviderWritingP", "init"]
 - !private ["So16NSMutableCopyingP", "init"]
+- !private ["So8NSObjectC", "Address"]
 - !private ["So8NSObjectC", "Balbabe"]
 - ["So8NSObjectC", "Bool"]
+- !private ["So8NSObjectC", "CLLocation"]
 - !private ["So8NSObjectC", "HomeViewController"]
 - ["So8NSObjectC", "NSCoder"]
 - ["So8NSObjectC", "UITextField"]
+- !private ["So8NSObjectC", "edgesForExtendedLayout"]
 - !private ["So8NSObjectC", "fatalError"]
 - ["So8NSObjectC", "init"]
 - ["So8NSObjectC", "nameTextField"]
@@ -132,8 +166,11 @@ depends-member:
 - !private ["So8NSObjectC", "setNavigationBarHidden"]
 - ["So8NSObjectC", "signIn"]
 - ["So8NSObjectC", "viewWillAppear"]
+- !private ["So16NSObjectProtocolP", "Address"]
 - !private ["So16NSObjectProtocolP", "Balbabe"]
+- !private ["So16NSObjectProtocolP", "CLLocation"]
 - !private ["So16NSObjectProtocolP", "HomeViewController"]
+- !private ["So16NSObjectProtocolP", "edgesForExtendedLayout"]
 - !private ["So16NSObjectProtocolP", "fatalError"]
 - !private ["So16NSObjectProtocolP", "init"]
 - !private ["So16NSObjectProtocolP", "navigationController"]
@@ -150,8 +187,11 @@ depends-member:
 - !private ["s14StringProtocolP", "init"]
 - !private ["s16TextOutputStreamP", "init"]
 - !private ["s20TextOutputStreamableP", "init"]
+- !private ["So21UIAppearanceContainerP", "Address"]
 - !private ["So21UIAppearanceContainerP", "Balbabe"]
+- !private ["So21UIAppearanceContainerP", "CLLocation"]
 - !private ["So21UIAppearanceContainerP", "HomeViewController"]
+- !private ["So21UIAppearanceContainerP", "edgesForExtendedLayout"]
 - !private ["So21UIAppearanceContainerP", "fatalError"]
 - !private ["So21UIAppearanceContainerP", "init"]
 - !private ["So21UIAppearanceContainerP", "navigationController"]
@@ -159,8 +199,11 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "setNavigationBarHidden"]
 - !private ["So21UIAppearanceContainerP", "viewWillAppear"]
 - ["So21UIAppearanceContainerP", ""]
+- !private ["So18UIContentContainerP", "Address"]
 - !private ["So18UIContentContainerP", "Balbabe"]
+- !private ["So18UIContentContainerP", "CLLocation"]
 - !private ["So18UIContentContainerP", "HomeViewController"]
+- !private ["So18UIContentContainerP", "edgesForExtendedLayout"]
 - !private ["So18UIContentContainerP", "fatalError"]
 - !private ["So18UIContentContainerP", "init"]
 - !private ["So18UIContentContainerP", "navigationController"]
@@ -168,8 +211,11 @@ depends-member:
 - !private ["So18UIContentContainerP", "setNavigationBarHidden"]
 - !private ["So18UIContentContainerP", "viewWillAppear"]
 - ["So18UIContentContainerP", ""]
+- !private ["So18UIFocusEnvironmentP", "Address"]
 - !private ["So18UIFocusEnvironmentP", "Balbabe"]
+- !private ["So18UIFocusEnvironmentP", "CLLocation"]
 - !private ["So18UIFocusEnvironmentP", "HomeViewController"]
+- !private ["So18UIFocusEnvironmentP", "edgesForExtendedLayout"]
 - !private ["So18UIFocusEnvironmentP", "fatalError"]
 - !private ["So18UIFocusEnvironmentP", "init"]
 - !private ["So18UIFocusEnvironmentP", "navigationController"]
@@ -179,8 +225,11 @@ depends-member:
 - ["So18UIFocusEnvironmentP", ""]
 - !private ["So22UINavigationControllerC", "pushViewController"]
 - !private ["So22UINavigationControllerC", "setNavigationBarHidden"]
+- !private ["So30UIPasteConfigurationSupportingP", "Address"]
 - !private ["So30UIPasteConfigurationSupportingP", "Balbabe"]
+- !private ["So30UIPasteConfigurationSupportingP", "CLLocation"]
 - !private ["So30UIPasteConfigurationSupportingP", "HomeViewController"]
+- !private ["So30UIPasteConfigurationSupportingP", "edgesForExtendedLayout"]
 - !private ["So30UIPasteConfigurationSupportingP", "fatalError"]
 - !private ["So30UIPasteConfigurationSupportingP", "init"]
 - !private ["So30UIPasteConfigurationSupportingP", "navigationController"]
@@ -188,11 +237,14 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "setNavigationBarHidden"]
 - !private ["So30UIPasteConfigurationSupportingP", "viewWillAppear"]
 - ["So30UIPasteConfigurationSupportingP", ""]
+- !private ["So11UIResponderC", "Address"]
 - !private ["So11UIResponderC", "Balbabe"]
 - ["So11UIResponderC", "Bool"]
+- !private ["So11UIResponderC", "CLLocation"]
 - !private ["So11UIResponderC", "HomeViewController"]
 - ["So11UIResponderC", "NSCoder"]
 - ["So11UIResponderC", "UITextField"]
+- !private ["So11UIResponderC", "edgesForExtendedLayout"]
 - !private ["So11UIResponderC", "fatalError"]
 - ["So11UIResponderC", "init"]
 - ["So11UIResponderC", "nameTextField"]
@@ -202,8 +254,11 @@ depends-member:
 - !private ["So11UIResponderC", "setNavigationBarHidden"]
 - ["So11UIResponderC", "signIn"]
 - ["So11UIResponderC", "viewWillAppear"]
+- !private ["So30UIResponderStandardEditActionsP", "Address"]
 - !private ["So30UIResponderStandardEditActionsP", "Balbabe"]
+- !private ["So30UIResponderStandardEditActionsP", "CLLocation"]
 - !private ["So30UIResponderStandardEditActionsP", "HomeViewController"]
+- !private ["So30UIResponderStandardEditActionsP", "edgesForExtendedLayout"]
 - !private ["So30UIResponderStandardEditActionsP", "fatalError"]
 - !private ["So30UIResponderStandardEditActionsP", "init"]
 - !private ["So30UIResponderStandardEditActionsP", "navigationController"]
@@ -211,8 +266,11 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "setNavigationBarHidden"]
 - !private ["So30UIResponderStandardEditActionsP", "viewWillAppear"]
 - ["So30UIResponderStandardEditActionsP", ""]
+- !private ["So16UIStateRestoringP", "Address"]
 - !private ["So16UIStateRestoringP", "Balbabe"]
+- !private ["So16UIStateRestoringP", "CLLocation"]
 - !private ["So16UIStateRestoringP", "HomeViewController"]
+- !private ["So16UIStateRestoringP", "edgesForExtendedLayout"]
 - !private ["So16UIStateRestoringP", "fatalError"]
 - !private ["So16UIStateRestoringP", "init"]
 - !private ["So16UIStateRestoringP", "navigationController"]
@@ -220,8 +278,11 @@ depends-member:
 - !private ["So16UIStateRestoringP", "setNavigationBarHidden"]
 - !private ["So16UIStateRestoringP", "viewWillAppear"]
 - ["So16UIStateRestoringP", ""]
+- !private ["So18UITraitEnvironmentP", "Address"]
 - !private ["So18UITraitEnvironmentP", "Balbabe"]
+- !private ["So18UITraitEnvironmentP", "CLLocation"]
 - !private ["So18UITraitEnvironmentP", "HomeViewController"]
+- !private ["So18UITraitEnvironmentP", "edgesForExtendedLayout"]
 - !private ["So18UITraitEnvironmentP", "fatalError"]
 - !private ["So18UITraitEnvironmentP", "init"]
 - !private ["So18UITraitEnvironmentP", "navigationController"]
@@ -229,11 +290,14 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "setNavigationBarHidden"]
 - !private ["So18UITraitEnvironmentP", "viewWillAppear"]
 - ["So18UITraitEnvironmentP", ""]
+- !private ["So16UIViewControllerC", "Address"]
 - !private ["So16UIViewControllerC", "Balbabe"]
 - ["So16UIViewControllerC", "Bool"]
+- !private ["So16UIViewControllerC", "CLLocation"]
 - !private ["So16UIViewControllerC", "HomeViewController"]
 - ["So16UIViewControllerC", "NSCoder"]
 - ["So16UIViewControllerC", "UITextField"]
+- !private ["So16UIViewControllerC", "edgesForExtendedLayout"]
 - !private ["So16UIViewControllerC", "fatalError"]
 - ["So16UIViewControllerC", "init"]
 - ["So16UIViewControllerC", "nameTextField"]
@@ -253,8 +317,11 @@ depends-member:
 - !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
 - !private ["s10_IndexableP", "init"]
 - !private ["s14_IndexableBaseP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Address"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Balbabe"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CLLocation"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "HomeViewController"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "edgesForExtendedLayout"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "fatalError"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "navigationController"]
@@ -266,8 +333,10 @@ depends-member:
 - !private ["s26_RangeReplaceableIndexableP", "init"]
 - !private ["s16_SwiftStringViewP", "init"]
 depends-nominal:
+- !private "13WhereIsBalboa7AddressV"
 - !private "13WhereIsBalboa7BalbabeV"
 - !private "s23BidirectionalCollectionP"
+- !private "So10CLLocationC"
 - "s7CVarArgP"
 - !private "s10CollectionP"
 - !private "s10ComparableP"
@@ -284,6 +353,7 @@ depends-nominal:
 - !private "s33ExpressibleByUnicodeScalarLiteralP"
 - "s8HashableP"
 - !private "13WhereIsBalboa18HomeViewControllerC"
+- !private "10SwiftyJSON17JSONSubscriptTypeP"
 - !private "s25LosslessStringConvertibleP"
 - !private "s10MirrorPathP"
 - "So8NSCodingP"
@@ -328,11 +398,15 @@ depends-nominal:
 - !private "s16_SwiftStringViewP"
 depends-dynamic-lookup:
 depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Accelerate.apinotesc"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Modules/SwiftyJSON.swiftmodule/x86_64.swiftmodule"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/PopupDialog/PopupDialog.framework/Modules/PopupDialog.swiftmodule/x86_64.swiftmodule"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/Cluster/Cluster.framework/Modules/Cluster.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Accelerate.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
@@ -346,6 +420,8 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FIRInstanceID.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Headers/SwiftyJSON-umbrella.h"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/PopupDialog/PopupDialog.framework/Headers/PopupDialog-umbrella.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/Cluster/Cluster.framework/Headers/Cluster-umbrella.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRMutableData.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageMetadata.h"
@@ -399,19 +475,24 @@ depends-external:
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIROptions.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthErrors.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageConstants.h"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Headers/SwiftyJSON-Swift.h"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/PopupDialog/PopupDialog.framework/Headers/PopupDialog-Swift.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/Cluster/Cluster.framework/Headers/Cluster-Swift.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthDataResult.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRTransactionResult.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDataSnapshot.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageTaskSnapshot.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalyticsSwiftNameSupport.h"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/PopupDialog/PopupDialog.framework/Headers/FXBlurView.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabaseQuery.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/Firebase/Core/Sources/module.modulemap"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Modules/module.modulemap"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Modules/module.modulemap"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Modules/module.modulemap"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Modules/module.modulemap"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Modules/module.modulemap"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/PopupDialog/PopupDialog.framework/Modules/module.modulemap"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Modules/module.modulemap"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/Cluster/Cluster.framework/Modules/module.modulemap"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
-interface-hash: "0083492e6e0969f0e3fa544f397bd347"
+interface-hash: "61fa87a1f289a887b9c1fa257e940c6c"

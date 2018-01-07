@@ -9,8 +9,8 @@ class UserTripListTableViewDataSource: NSObject, UITableViewDataSource {
     // MARK: - Init
     
     init(_ balbabe: Balbabe) {
-        let upcomingTrips = balbabe.trips.filter { $0.startDate > Date() }
-        trips = upcomingTrips.sorted { $0.startDate < $1.startDate }
+        let upcomingTrips = balbabe.trips.filter { $0.metadata.dateInterval.start > Date() }
+        trips = upcomingTrips.sorted { $0.metadata.dateInterval.start < $1.metadata.dateInterval.start }
         super.init()
         
         // TODO: Listen for balbabe changes
@@ -30,8 +30,8 @@ class UserTripListTableViewDataSource: NSObject, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: UserTripListTableViewDataSource.reuseIdentifier, for: indexPath) as! OwnTripTableViewCell
         let trip = tripAt(indexPath)
                 
-        cell.cityLabel.text = "\(trip.city)"
-        cell.dateLabel.text = "from \(DateFormatter.fullDate.string(from: trip.startDate)) to \(DateFormatter.fullDate.string(from: trip.endDate))"
+        cell.cityLabel.text = "\(trip.metadata.address.city), \(trip.metadata.address.country)"
+        cell.dateLabel.text = "from \(DateFormatter.fullDate.string(from: trip.metadata.dateInterval.start)) to \(DateFormatter.fullDate.string(from: trip.metadata.dateInterval.end))"
         
         return cell
     }

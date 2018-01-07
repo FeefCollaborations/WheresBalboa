@@ -91,6 +91,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="cityLabel" destination="Esb-vB-JyX" id="wg5-wF-ljP"/>
+                <outlet property="contactButton" destination="bR4-xB-GHL" id="mVE-GL-z9o"/>
                 <outlet property="dateLabel" destination="b1L-zb-tls" id="Brs-Xj-lXe"/>
                 <outlet property="distanceLabel" destination="LkM-eC-Xah" id="OKb-i2-85B"/>
                 <outlet property="locationImageView" destination="3DX-Dn-ugC" id="0dJ-6A-v75"/>

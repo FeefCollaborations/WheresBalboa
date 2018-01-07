@@ -50,6 +50,8 @@ PODS:
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
+  - PopupDialog (0.6.2)
+  - SwiftyJSON (4.0.0)
 
 DEPENDENCIES:
   - Cluster
@@ -57,6 +59,8 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
   - Firebase/Storage
+  - PopupDialog (~> 0.6)
+  - SwiftyJSON
 
 SPEC CHECKSUMS:
   Cluster: b1b363bb4b6991c73f5da2f4ab175fc7424f9900
@@ -71,7 +75,9 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: ebaa1f79a5366922c1735f1566901f50beba23b7
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  PopupDialog: d4336d7274a6aa3af4cb26d8b6691510eba90cc3
+  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: 05807faaac3c3e8573bd4e530b7e0d2b7f814d2b
+PODFILE CHECKSUM: 7e6a40c54144c6ad8ec1a45ca183a1549e183e68
 
 COCOAPODS: 1.2.0
