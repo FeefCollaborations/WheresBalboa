@@ -13,6 +13,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LocationSearchTableViewController" customModule="WhereIsBalboa" customModuleProvider="target">
             <connections>
                 <outlet property="loadingView" destination="Sy9-LF-CRT" id="pIG-c6-VAn"/>
+                <outlet property="singleResultLabel" destination="bI3-41-d3L" id="EmD-0Q-xCu"/>
+                <outlet property="singleResultView" destination="0az-oC-UrH" id="D3B-GF-JjI"/>
                 <outlet property="tableView" destination="68a-Ac-Kka" id="bIc-pE-79N"/>
                 <outlet property="view" destination="uY8-Wb-15a" id="dGF-s4-5Tp"/>
             </connections>
@@ -26,6 +28,29 @@
                     <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0az-oC-UrH">
+                    <rect key="frame" x="131" y="295" width="113" height="77.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We found" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DNw-Oe-RTj">
+                            <rect key="frame" x="20" y="0.0" width="73.5" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bI3-41-d3L">
+                            <rect key="frame" x="24" y="28.5" width="65.5" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Is this correct?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f1h-WW-tsL">
+                            <rect key="frame" x="0.0" y="57" width="113" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="68a-Ac-Kka">
                     <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -37,7 +62,9 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="0az-oC-UrH" firstAttribute="centerY" secondItem="uY8-Wb-15a" secondAttribute="centerY" id="2Bp-gH-VdX"/>
                 <constraint firstItem="Sy9-LF-CRT" firstAttribute="top" secondItem="5m9-MU-NWe" secondAttribute="top" id="72c-ig-iP2"/>
+                <constraint firstItem="0az-oC-UrH" firstAttribute="centerX" secondItem="uY8-Wb-15a" secondAttribute="centerX" id="752-ax-KnW"/>
                 <constraint firstItem="5m9-MU-NWe" firstAttribute="bottom" secondItem="Sy9-LF-CRT" secondAttribute="bottom" id="CH2-2I-NzP"/>
                 <constraint firstItem="68a-Ac-Kka" firstAttribute="trailing" secondItem="5m9-MU-NWe" secondAttribute="trailing" id="WYe-Ai-qUG"/>
                 <constraint firstItem="Sy9-LF-CRT" firstAttribute="leading" secondItem="5m9-MU-NWe" secondAttribute="leading" id="eZX-JC-WVr"/>

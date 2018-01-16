@@ -6,17 +6,15 @@ class TripListTableViewDataSource: NSObject, UITableViewDataSource {
     
     private static let reuseIdentifier = "cell"
     
-    private let baseUser: Balbabe?
     private var configuration: TripsDataConfiguration
     private var orderedTrips: [(Trip, Balbabe)]
     var onDataChange: DataChangeHandler?
     
     // MARK: - Init
     
-    init(_ configuration: TripsDataConfiguration, relativeToUser baseUser: Balbabe, onDataChange: DataChangeHandler? = nil) {
-        self.baseUser = baseUser
+    init(_ configuration: TripsDataConfiguration, onDataChange: DataChangeHandler? = nil) {
         self.configuration = configuration
-        self.orderedTrips = TripListTableViewDataSource.sortedTrips(from: configuration, relativeToUser: baseUser)
+        self.orderedTrips = TripListTableViewDataSource.sortedTrips(from: configuration)
         self.onDataChange = onDataChange
         super.init()
     }
@@ -42,9 +40,9 @@ class TripListTableViewDataSource: NSObject, UITableViewDataSource {
             return cell
         }
         
-        let isLoggedInUserTrip = balbabe == baseUser
-        cell.nameLabel.text = isLoggedInUserTrip ? "You" : balbabe.name
-        cell.cityLabel.text = "will be in \(trip.metadata.address.city), \(trip.metadata.address.country)"
+        let isLoggedInUserTrip = balbabe == configuration.loggedInBalbabe
+        cell.nameLabel.text = isLoggedInUserTrip ? "You" : balbabe.metadata.name
+        cell.cityLabel.text = "will be in \(trip.metadata.address.name)"
         var durationText = "from \(DateFormatter.fullDate.string(from: trip.metadata.dateInterval.start)) "
         if trip.metadata.dateInterval.end == Date.distantFuture {
             let pronoun = isLoggedInUserTrip ? "you" : "they"
@@ -85,6 +83,10 @@ class TripListTableViewDataSource: NSObject, UITableViewDataSource {
         let image = trip.metadata.isHome ? #imageLiteral(resourceName: "home") : #imageLiteral(resourceName: "plane")
         cell.locationImageView.image = image.withRenderingMode(.alwaysTemplate)
         
+        cell.onContactTapped = { _ in
+            UIApplication.shared.open(balbabe.metadata.whatsappURL, options: [:])
+        }
+        
         return cell
     }
     
@@ -95,7 +97,7 @@ class TripListTableViewDataSource: NSObject, UITableViewDataSource {
             return
         }
         self.configuration = configuration
-        self.orderedTrips = TripListTableViewDataSource.sortedTrips(from: configuration, relativeToUser: baseUser)
+        self.orderedTrips = TripListTableViewDataSource.sortedTrips(from: configuration)
         onDataChange?()
     }
     
@@ -105,9 +107,9 @@ class TripListTableViewDataSource: NSObject, UITableViewDataSource {
     
     // MARK: - Helpers
     
-    private static func sortedTrips(from configuration: TripsDataConfiguration, relativeToUser baseUser: Balbabe?) -> [(Trip, Balbabe)] {
+    private static func sortedTrips(from configuration: TripsDataConfiguration) -> [(Trip, Balbabe)] {
         let trips = Array(configuration.keyedBalbabes.keys).sorted {
-            return $0.metadata.address.location.distance(from: configuration.currentLocation) < $1.metadata.address.location.distance(from: configuration.currentLocation) }
+            return $0.metadata.address.location.distance(from: configuration.currentLocation) < $1.metadata.address.location.distance(from: configuration.currentLocation) || configuration.keyedBalbabes[$0] == configuration.loggedInBalbabe }
         return trips.map { ($0, configuration.keyedBalbabes[$0]!) }
     }
 }

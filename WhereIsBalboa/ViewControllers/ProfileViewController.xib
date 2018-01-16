@@ -12,11 +12,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="WhereIsBalboa" customModuleProvider="target">
             <connections>
-                <outlet property="confirmPasswordTextField" destination="Zek-k0-cbI" id="vPO-mj-WHF"/>
-                <outlet property="hometownTextField" destination="ly6-CE-SzK" id="TMw-Or-pxK"/>
+                <outlet property="hometownButton" destination="juP-Ot-IlM" id="dbt-WI-gy2"/>
+                <outlet property="infoContainerView" destination="0Wg-FF-NLb" id="4Um-Ad-qg8"/>
                 <outlet property="logoutBarButtonItem" destination="2az-W4-ISm" id="6so-Yo-gbt"/>
                 <outlet property="nameTextField" destination="7Kc-pb-aOF" id="e79-9M-iZi"/>
-                <outlet property="newPasswordTextField" destination="tfS-dB-KhK" id="xMV-6h-hBH"/>
+                <outlet property="stackViewVerticalCenterConstraint" destination="1Dv-X2-g1i" id="QRQ-rg-h9V"/>
                 <outlet property="view" destination="eyi-Jf-jOL" id="T63-l5-obi"/>
                 <outlet property="whatsappTextField" destination="ROs-Wc-QxS" id="0hD-82-lpa"/>
             </connections>
@@ -27,55 +27,36 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0Wg-FF-NLb">
-                    <rect key="frame" x="16" y="206.5" width="343" height="254"/>
+                    <rect key="frame" x="16" y="258.5" width="343" height="150"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Kc-pb-aOF">
                             <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="5Xx-tK-j3F"/>
+                            </connections>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Whatsapp" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ROs-Wc-QxS">
                             <rect key="frame" x="0.0" y="40" width="343" height="30"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="MJt-YN-uVm"/>
+                            </connections>
                         </textField>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zon-N8-VD8">
-                            <rect key="frame" x="0.0" y="80" width="343" height="2"/>
-                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="2" id="Ujy-lx-fJP"/>
-                            </constraints>
-                        </view>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Hometown" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ly6-CE-SzK">
-                            <rect key="frame" x="0.0" y="92" width="343" height="30"/>
-                            <nil key="textColor"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
-                        </textField>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GQV-xQ-e8V">
-                            <rect key="frame" x="0.0" y="132" width="343" height="2"/>
-                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="2" id="uNI-C0-jPE"/>
-                            </constraints>
-                        </view>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tfS-dB-KhK">
-                            <rect key="frame" x="0.0" y="144" width="343" height="30"/>
-                            <nil key="textColor"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
-                        </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zek-k0-cbI">
-                            <rect key="frame" x="0.0" y="184" width="343" height="30"/>
-                            <nil key="textColor"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
-                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="juP-Ot-IlM">
+                            <rect key="frame" x="0.0" y="80" width="343" height="30"/>
+                            <state key="normal" title="Hometown"/>
+                            <connections>
+                                <action selector="selectCity" destination="-1" eventType="touchUpInside" id="mpE-iP-efv"/>
+                            </connections>
+                        </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aya-dg-tne">
-                            <rect key="frame" x="0.0" y="224" width="343" height="30"/>
-                            <state key="normal" title="Save Changes"/>
+                            <rect key="frame" x="0.0" y="120" width="343" height="30"/>
+                            <state key="normal" title="Save Profile Changes"/>
                             <connections>
                                 <action selector="saveProfileChanges" destination="-1" eventType="touchUpInside" id="rph-eu-rd9"/>
                             </connections>
@@ -84,30 +65,43 @@
                     <constraints>
                         <constraint firstItem="aya-dg-tne" firstAttribute="trailing" secondItem="7Kc-pb-aOF" secondAttribute="trailing" id="094-Z6-4eP"/>
                         <constraint firstItem="aya-dg-tne" firstAttribute="leading" secondItem="7Kc-pb-aOF" secondAttribute="leading" id="1Bl-rE-A8E"/>
-                        <constraint firstItem="tfS-dB-KhK" firstAttribute="leading" secondItem="Zon-N8-VD8" secondAttribute="leading" id="1zA-b2-hJe"/>
                         <constraint firstAttribute="trailing" secondItem="7Kc-pb-aOF" secondAttribute="trailing" id="2zV-2n-E9p"/>
-                        <constraint firstItem="ly6-CE-SzK" firstAttribute="trailing" secondItem="Zon-N8-VD8" secondAttribute="trailing" id="4iF-zV-qVw"/>
-                        <constraint firstItem="tfS-dB-KhK" firstAttribute="trailing" secondItem="7Kc-pb-aOF" secondAttribute="trailing" id="564-cD-QYk"/>
-                        <constraint firstItem="Zek-k0-cbI" firstAttribute="leading" secondItem="7Kc-pb-aOF" secondAttribute="leading" id="Efr-UD-7Eu"/>
-                        <constraint firstItem="tfS-dB-KhK" firstAttribute="trailing" secondItem="Zon-N8-VD8" secondAttribute="trailing" id="G25-Bq-xa1"/>
+                        <constraint firstItem="juP-Ot-IlM" firstAttribute="leading" secondItem="0Wg-FF-NLb" secondAttribute="leading" id="9uC-H0-TxO"/>
                         <constraint firstItem="ROs-Wc-QxS" firstAttribute="trailing" secondItem="7Kc-pb-aOF" secondAttribute="trailing" id="GCY-Gq-lI4"/>
                         <constraint firstItem="ROs-Wc-QxS" firstAttribute="leading" secondItem="7Kc-pb-aOF" secondAttribute="leading" id="JKL-qa-Y8U"/>
                         <constraint firstItem="7Kc-pb-aOF" firstAttribute="leading" secondItem="0Wg-FF-NLb" secondAttribute="leading" id="NZi-QD-XCb"/>
-                        <constraint firstItem="GQV-xQ-e8V" firstAttribute="leading" secondItem="Zon-N8-VD8" secondAttribute="leading" id="Qh0-Dg-joq"/>
-                        <constraint firstItem="ly6-CE-SzK" firstAttribute="leading" secondItem="Zon-N8-VD8" secondAttribute="leading" id="TKP-pK-9EX"/>
-                        <constraint firstItem="tfS-dB-KhK" firstAttribute="leading" secondItem="7Kc-pb-aOF" secondAttribute="leading" id="XMC-PS-XPt"/>
-                        <constraint firstItem="Zek-k0-cbI" firstAttribute="trailing" secondItem="7Kc-pb-aOF" secondAttribute="trailing" id="bx6-Af-aoZ"/>
-                        <constraint firstItem="GQV-xQ-e8V" firstAttribute="trailing" secondItem="Zon-N8-VD8" secondAttribute="trailing" id="hoK-um-HVu"/>
-                        <constraint firstItem="ly6-CE-SzK" firstAttribute="trailing" secondItem="GQV-xQ-e8V" secondAttribute="trailing" id="uYq-Ze-tK4"/>
-                        <constraint firstItem="ly6-CE-SzK" firstAttribute="leading" secondItem="GQV-xQ-e8V" secondAttribute="leading" id="whq-vj-oGF"/>
+                        <constraint firstAttribute="trailing" secondItem="juP-Ot-IlM" secondAttribute="trailing" id="phH-1U-6xB"/>
                     </constraints>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="WSZ-KB-SQN">
+                    <rect key="frame" x="0.0" y="589" width="375" height="70"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zfn-rn-BFJ">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                            <state key="normal" title="Change Email"/>
+                            <connections>
+                                <action selector="updateEmail" destination="-1" eventType="touchUpInside" id="mMe-KN-0aa"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dFM-aD-j4C">
+                            <rect key="frame" x="0.0" y="40" width="375" height="30"/>
+                            <state key="normal" title="Change Password"/>
+                            <connections>
+                                <action selector="updatePassword" destination="-1" eventType="touchUpInside" id="sjG-qw-EIc"/>
+                            </connections>
+                        </button>
+                    </subviews>
                 </stackView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="0Wg-FF-NLb" firstAttribute="centerY" secondItem="eyi-Jf-jOL" secondAttribute="centerY" id="1Dv-X2-g1i"/>
+                <constraint firstItem="0Wg-FF-NLb" firstAttribute="centerY" secondItem="eyi-Jf-jOL" secondAttribute="centerY" priority="999" id="1Dv-X2-g1i"/>
+                <constraint firstItem="KHA-CA-yTt" firstAttribute="trailing" secondItem="WSZ-KB-SQN" secondAttribute="trailing" id="HHC-g2-sNg"/>
                 <constraint firstItem="0Wg-FF-NLb" firstAttribute="leading" secondItem="KHA-CA-yTt" secondAttribute="leading" constant="16" id="OCm-dJ-Eou"/>
+                <constraint firstItem="WSZ-KB-SQN" firstAttribute="leading" secondItem="KHA-CA-yTt" secondAttribute="leading" id="PI2-xn-NDL"/>
+                <constraint firstItem="KHA-CA-yTt" firstAttribute="bottom" secondItem="WSZ-KB-SQN" secondAttribute="bottom" constant="8" id="RHO-tQ-jX1"/>
                 <constraint firstItem="KHA-CA-yTt" firstAttribute="trailing" secondItem="0Wg-FF-NLb" secondAttribute="trailing" constant="16" id="X8l-7H-E14"/>
+                <constraint firstItem="0Wg-FF-NLb" firstAttribute="top" relation="greaterThanOrEqual" secondItem="KHA-CA-yTt" secondAttribute="top" priority="999" id="c9T-H0-GcI"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="KHA-CA-yTt"/>
             <point key="canvasLocation" x="46.5" y="-47.5"/>

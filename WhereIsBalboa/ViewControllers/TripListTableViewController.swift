@@ -14,7 +14,7 @@ class TripListTableViewController: UIViewController, UITableViewDelegate {
     // MARK: - Init
     
     init(_ configuration: TripsDataConfiguration, relativeToUser baseUser: Balbabe, onTripTap: TripTapHandler? = nil) {
-        dataSource = TripListTableViewDataSource(configuration, relativeToUser: baseUser)
+        dataSource = TripListTableViewDataSource(configuration)
         self.baseUser = baseUser
         self.onTripTap = onTripTap
         super.init(nibName: nil, bundle: nil)

@@ -10,7 +10,7 @@ target 'WhereIsBalboa' do
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
-  pod 'Cluster'
+  pod 'ClusterKit/MapKit'
   pod 'PopupDialog', '~> 0.6'
   pod 'SwiftyJSON'
 

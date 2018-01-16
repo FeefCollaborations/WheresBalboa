@@ -6,12 +6,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TripMapViewController" customModule="WhereIsBalboa" customModuleProvider="target">
             <connections>
+                <outlet property="centerMapButton" destination="Zdm-NI-ubV" id="cPb-oT-iML"/>
                 <outlet property="mapView" destination="uVK-7x-Nny" id="WRd-x4-eDa"/>
                 <outlet property="view" destination="FRI-fZ-uxD" id="V5C-tg-dwP"/>
             </connections>
@@ -24,11 +26,23 @@
                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="uVK-7x-Nny">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 </mapView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zdm-NI-ubV">
+                    <rect key="frame" x="329" y="616.5" width="30" height="30.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="LNR-a9-vn0"/>
+                        <constraint firstAttribute="width" secondItem="Zdm-NI-ubV" secondAttribute="height" multiplier="257:261" id="rvi-cE-B47"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <state key="normal" backgroundImage="centerLocation"/>
+                    <state key="selected" image="centerLocation"/>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="uVK-7x-Nny" firstAttribute="bottom" secondItem="x0z-De-AVW" secondAttribute="bottom" id="0Jb-oz-Ylj"/>
                 <constraint firstItem="uVK-7x-Nny" firstAttribute="trailing" secondItem="x0z-De-AVW" secondAttribute="trailing" id="F0U-bt-E4V"/>
+                <constraint firstItem="x0z-De-AVW" firstAttribute="trailing" secondItem="Zdm-NI-ubV" secondAttribute="trailing" constant="16" id="S4G-80-Ug2"/>
+                <constraint firstItem="x0z-De-AVW" firstAttribute="bottom" secondItem="Zdm-NI-ubV" secondAttribute="bottom" constant="20" id="SIt-N6-n0i"/>
                 <constraint firstItem="uVK-7x-Nny" firstAttribute="top" secondItem="FRI-fZ-uxD" secondAttribute="top" id="biB-II-h1U"/>
                 <constraint firstItem="uVK-7x-Nny" firstAttribute="leading" secondItem="x0z-De-AVW" secondAttribute="leading" id="eM0-H7-MVG"/>
             </constraints>
@@ -36,4 +50,7 @@
             <point key="canvasLocation" x="29.5" y="-11.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="centerLocation" width="257" height="261"/>
+    </resources>
 </document>

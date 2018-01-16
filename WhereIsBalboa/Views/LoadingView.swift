@@ -13,6 +13,7 @@ class LoadingView: UIView {
     
     private lazy var loadingLabel: UILabel = {
         let loadingLabel = UILabel()
+        loadingLabel.textAlignment = .center
         loadingLabel.text = "Loading..."
         loadingLabel.translatesAutoresizingMaskIntoConstraints = false
         return loadingLabel
@@ -21,6 +22,8 @@ class LoadingView: UIView {
     private lazy var loadingStackView: UIStackView = {
         let stackview = UIStackView.init(arrangedSubviews: [loadingIndicator, loadingLabel])
         stackview.backgroundColor = .red
+        stackview.alignment = .center
+        stackview.axis = .vertical
         stackview.translatesAutoresizingMaskIntoConstraints = false
         return stackview
     }()
@@ -28,6 +31,7 @@ class LoadingView: UIView {
     private lazy var failureLabel: UILabel = {
         let failureLabel = UILabel()
         failureLabel.numberOfLines = 0
+        failureLabel.textAlignment = .center
         failureLabel.translatesAutoresizingMaskIntoConstraints = false
         return failureLabel
     }()
@@ -51,7 +55,7 @@ class LoadingView: UIView {
         switch state {
             case .loading:
                 self.addSubview(loadingStackView)
-                loadingStackView.addCenterInParentConstraints()
+                loadingStackView.addCenterInParentConstraints(addBoundingConstraints: false)
             case .failed(let displayText):
                 failureLabel.text = displayText
                 self.addSubview(failureLabel)

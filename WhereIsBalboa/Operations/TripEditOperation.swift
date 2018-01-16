@@ -1,5 +1,6 @@
 import UIKit
 import FirebaseDatabase
+import SwiftyJSON
 
 class TripEditOperation: AsynchronousOperation, ResultGeneratingOperation {
     typealias Completion = (Result<Trip>) -> Void
@@ -13,17 +14,20 @@ class TripEditOperation: AsynchronousOperation, ResultGeneratingOperation {
     struct Builder {
         var balbabe: Balbabe?
         var address: Address?
-        var dateInterval: DateInterval?
+        var startDate: Date?
+        var endDate: Date?
         var tripID: Trip.ID?
         
         func build(onComplete: @escaping Completion) -> TripEditOperation? {
             guard
                 let balbabe = balbabe,
                 let address = address,
-                let dateInterval = dateInterval
+                let startDate = startDate,
+                let endDate = endDate
             else {
                 return nil
             }
+            let dateInterval = DateInterval.init(start: startDate, end: endDate)
             return TripEditOperation.init(balbabe, address, dateInterval, tripID, onComplete: onComplete)
         }
     }
@@ -47,9 +51,13 @@ class TripEditOperation: AsynchronousOperation, ResultGeneratingOperation {
         } else {
             tripReference = Database.database().reference(withPath: "balbabes/\(balbabe.id)/trips").childByAutoId()
         }
-        tripReference.setValue(tripMetadata) { [weak self] error, _ in
+        
+        tripReference.setValue(tripMetadata.dictionaryRepresentation()) { [weak self] error, _ in
             guard let strongSelf = self else {
                 return
+            }
+            defer {
+                strongSelf.state = .finished
             }
             
             if let error = error {

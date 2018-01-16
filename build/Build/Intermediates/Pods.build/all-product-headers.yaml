@@ -4,39 +4,89 @@
   'roots': [
     {
       'type': 'directory',
-      'name': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/Cluster/Cluster.framework/Headers",
+      'name': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Release-iphoneos/ClusterKit/ClusterKit.framework/Headers",
       'contents': [
         {
           'type': 'file',
-          'name': "Cluster-Swift.h",
-          'external-contents': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/Cluster/Cluster.framework/Headers/Cluster-Swift.h"
+          'name': "CKAnnotationTree.h",
+          'external-contents': "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/ClusterKit/ClusterKit/Core/Tree/CKAnnotationTree.h"
         },
         {
           'type': 'file',
-          'name': "Cluster-umbrella.h",
-          'external-contents': "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/Target Support Files/Cluster/Cluster-umbrella.h"
+          'name': "CKCluster.h",
+          'external-contents': "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/ClusterKit/ClusterKit/Core/CKCluster.h"
+        },
+        {
+          'type': 'file',
+          'name': "CKClusterAlgorithm.h",
+          'external-contents': "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/ClusterKit/ClusterKit/Core/Algorithm/CKClusterAlgorithm.h"
+        },
+        {
+          'type': 'file',
+          'name': "CKClusterManager.h",
+          'external-contents': "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/ClusterKit/ClusterKit/Core/CKClusterManager.h"
+        },
+        {
+          'type': 'file',
+          'name': "CKGridBasedAlgorithm.h",
+          'external-contents': "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/ClusterKit/ClusterKit/Core/Algorithm/CKGridBasedAlgorithm.h"
+        },
+        {
+          'type': 'file',
+          'name': "CKMap.h",
+          'external-contents': "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/ClusterKit/ClusterKit/Core/CKMap.h"
+        },
+        {
+          'type': 'file',
+          'name': "CKNonHierarchicalDistanceBasedAlgorithm.h",
+          'external-contents': "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/ClusterKit/ClusterKit/Core/Algorithm/CKNonHierarchicalDistanceBasedAlgorithm.h"
+        },
+        {
+          'type': 'file',
+          'name': "CKQuadTree.h",
+          'external-contents': "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/ClusterKit/ClusterKit/Core/Tree/CKQuadTree.h"
+        },
+        {
+          'type': 'file',
+          'name': "ClusterKit-Swift.h",
+          'external-contents': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Release-iphoneos/ClusterKit/ClusterKit.framework/Headers/ClusterKit-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "ClusterKit-umbrella.h",
+          'external-contents': "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/Target Support Files/ClusterKit/ClusterKit-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "ClusterKit.h",
+          'external-contents': "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/ClusterKit/ClusterKit/ClusterKit.h"
+        },
+        {
+          'type': 'file',
+          'name': "MKMapView+ClusterKit.h",
+          'external-contents': "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/ClusterKit/ClusterKit/MapKit/MKMapView+ClusterKit.h"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/Cluster/Cluster.framework/Modules",
+      'name': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Release-iphoneos/ClusterKit/ClusterKit.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Intermediates/Pods.build/Debug-iphonesimulator/Cluster.build/module.modulemap"
+          'external-contents': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Intermediates/Pods.build/Release-iphoneos/ClusterKit.build/module.modulemap"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/GTMSessionFetcher/GTMSessionFetcher.framework/Headers",
+      'name': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Release-iphoneos/GTMSessionFetcher/GTMSessionFetcher.framework/Headers",
       'contents': [
         {
           'type': 'file',
           'name': "GTMSessionFetcher-Swift.h",
-          'external-contents': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/GTMSessionFetcher/GTMSessionFetcher.framework/Headers/GTMSessionFetcher-Swift.h"
+          'external-contents': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Release-iphoneos/GTMSessionFetcher/GTMSessionFetcher.framework/Headers/GTMSessionFetcher-Swift.h"
         },
         {
           'type': 'file',
@@ -67,18 +117,18 @@
     },
     {
       'type': 'directory',
-      'name': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/GTMSessionFetcher/GTMSessionFetcher.framework/Modules",
+      'name': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Release-iphoneos/GTMSessionFetcher/GTMSessionFetcher.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Intermediates/Pods.build/Debug-iphonesimulator/GTMSessionFetcher.build/module.modulemap"
+          'external-contents': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Intermediates/Pods.build/Release-iphoneos/GTMSessionFetcher.build/module.modulemap"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/GoogleToolboxForMac/GoogleToolboxForMac.framework/Headers",
+      'name': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Release-iphoneos/GoogleToolboxForMac/GoogleToolboxForMac.framework/Headers",
       'contents': [
         {
           'type': 'file',
@@ -118,7 +168,7 @@
         {
           'type': 'file',
           'name': "GoogleToolboxForMac-Swift.h",
-          'external-contents': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/GoogleToolboxForMac/GoogleToolboxForMac.framework/Headers/GoogleToolboxForMac-Swift.h"
+          'external-contents': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Release-iphoneos/GoogleToolboxForMac/GoogleToolboxForMac.framework/Headers/GoogleToolboxForMac-Swift.h"
         },
         {
           'type': 'file',
@@ -129,18 +179,18 @@
     },
     {
       'type': 'directory',
-      'name': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/GoogleToolboxForMac/GoogleToolboxForMac.framework/Modules",
+      'name': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Release-iphoneos/GoogleToolboxForMac/GoogleToolboxForMac.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Intermediates/Pods.build/Debug-iphonesimulator/GoogleToolboxForMac.build/module.modulemap"
+          'external-contents': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Intermediates/Pods.build/Release-iphoneos/GoogleToolboxForMac.build/module.modulemap"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/Pods_WhereIsBalboa.framework/Headers",
+      'name': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Release-iphoneos/Pods_WhereIsBalboa.framework/Headers",
       'contents': [
         {
           'type': 'file',
@@ -150,24 +200,24 @@
         {
           'type': 'file',
           'name': "Pods_WhereIsBalboa-Swift.h",
-          'external-contents': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/Pods_WhereIsBalboa.framework/Headers/Pods_WhereIsBalboa-Swift.h"
+          'external-contents': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Release-iphoneos/Pods_WhereIsBalboa.framework/Headers/Pods_WhereIsBalboa-Swift.h"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/Pods_WhereIsBalboa.framework/Modules",
+      'name': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Release-iphoneos/Pods_WhereIsBalboa.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Intermediates/Pods.build/Debug-iphonesimulator/Pods-WhereIsBalboa.build/module.modulemap"
+          'external-contents': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Intermediates/Pods.build/Release-iphoneos/Pods-WhereIsBalboa.build/module.modulemap"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/PopupDialog/PopupDialog.framework/Headers",
+      'name': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Release-iphoneos/PopupDialog/PopupDialog.framework/Headers",
       'contents': [
         {
           'type': 'file',
@@ -177,7 +227,7 @@
         {
           'type': 'file',
           'name': "PopupDialog-Swift.h",
-          'external-contents': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/PopupDialog/PopupDialog.framework/Headers/PopupDialog-Swift.h"
+          'external-contents': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Release-iphoneos/PopupDialog/PopupDialog.framework/Headers/PopupDialog-Swift.h"
         },
         {
           'type': 'file',
@@ -188,23 +238,23 @@
     },
     {
       'type': 'directory',
-      'name': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/PopupDialog/PopupDialog.framework/Modules",
+      'name': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Release-iphoneos/PopupDialog/PopupDialog.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Intermediates/Pods.build/Debug-iphonesimulator/PopupDialog.build/module.modulemap"
+          'external-contents': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Intermediates/Pods.build/Release-iphoneos/PopupDialog.build/module.modulemap"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Headers",
+      'name': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Release-iphoneos/SwiftyJSON/SwiftyJSON.framework/Headers",
       'contents': [
         {
           'type': 'file',
           'name': "SwiftyJSON-Swift.h",
-          'external-contents': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Headers/SwiftyJSON-Swift.h"
+          'external-contents': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Release-iphoneos/SwiftyJSON/SwiftyJSON.framework/Headers/SwiftyJSON-Swift.h"
         },
         {
           'type': 'file',
@@ -215,18 +265,18 @@
     },
     {
       'type': 'directory',
-      'name': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Modules",
+      'name': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Release-iphoneos/SwiftyJSON/SwiftyJSON.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Intermediates/Pods.build/Debug-iphonesimulator/SwiftyJSON.build/module.modulemap"
+          'external-contents': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Intermediates/Pods.build/Release-iphoneos/SwiftyJSON.build/module.modulemap"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/leveldb-library/leveldb.framework/Headers",
+      'name': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Release-iphoneos/leveldb-library/leveldb.framework/Headers",
       'contents': [
         {
           'type': 'file',
@@ -271,7 +321,7 @@
         {
           'type': 'file',
           'name': "leveldb-Swift.h",
-          'external-contents': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/leveldb-library/leveldb.framework/Headers/leveldb-Swift.h"
+          'external-contents': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Release-iphoneos/leveldb-library/leveldb.framework/Headers/leveldb-Swift.h"
         },
         {
           'type': 'file',
@@ -312,23 +362,23 @@
     },
     {
       'type': 'directory',
-      'name': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/leveldb-library/leveldb.framework/Modules",
+      'name': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Release-iphoneos/leveldb-library/leveldb.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Intermediates/Pods.build/Debug-iphonesimulator/leveldb-library.build/module.modulemap"
+          'external-contents': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Intermediates/Pods.build/Release-iphoneos/leveldb-library.build/module.modulemap"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/nanopb/nanopb.framework/Headers",
+      'name': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Release-iphoneos/nanopb/nanopb.framework/Headers",
       'contents': [
         {
           'type': 'file',
           'name': "nanopb-Swift.h",
-          'external-contents': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/nanopb/nanopb.framework/Headers/nanopb-Swift.h"
+          'external-contents': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Release-iphoneos/nanopb/nanopb.framework/Headers/nanopb-Swift.h"
         },
         {
           'type': 'file',
@@ -359,12 +409,12 @@
     },
     {
       'type': 'directory',
-      'name': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/nanopb/nanopb.framework/Modules",
+      'name': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Release-iphoneos/nanopb/nanopb.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Intermediates/Pods.build/Debug-iphonesimulator/nanopb.build/module.modulemap"
+          'external-contents': "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Intermediates/Pods.build/Release-iphoneos/nanopb.build/module.modulemap"
         }
       ]
     }

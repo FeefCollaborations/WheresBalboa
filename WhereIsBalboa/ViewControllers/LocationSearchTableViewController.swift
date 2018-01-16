@@ -5,6 +5,8 @@ class LocationSearchTableViewController: UIViewController, UITableViewDelegate, 
     static let cellReuseIdentifier = "cell"
     
     @IBOutlet private var tableView: UITableView!
+    @IBOutlet private var singleResultView: UIView!
+    @IBOutlet private var singleResultLabel: UILabel!
     @IBOutlet private var loadingView: LoadingView!
     
     private let searchText: String
@@ -31,6 +33,7 @@ class LocationSearchTableViewController: UIViewController, UITableViewDelegate, 
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.isHidden = true
+        singleResultView.isHidden = true
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: LocationSearchTableViewController.cellReuseIdentifier)
         view.heightAnchor.constraint(equalToConstant: 200).isActive = true
         updateSubviewVisibility()
@@ -76,19 +79,18 @@ class LocationSearchTableViewController: UIViewController, UITableViewDelegate, 
                     return
                 }
                 
-                switch result {
-                    case .success(let locationListing):
-                        DispatchQueue.main.async {
-                            strongSelf.delegate?.locationSearchTableViewController(strongSelf, selectedLocationListing: locationListing)
-                        }
-                    case .failure:
-                        // TODO: Improve this flow
-                        return
+                DispatchQueue.main.async {
+                    switch result {
+                        case .success(let address):
+                            strongSelf.delegate?.locationSearchTableViewController(strongSelf, selectedAddress: address)
+                        case .failure(let error):
+                            strongSelf.delegate?.locationSearchTableViewController(strongSelf, encounteredError: error)
+                    }
                 }
             }
             geocodeTask.resume()
-        } catch {
-            // TODO: Log error
+        } catch let error {
+            delegate?.locationSearchTableViewController(self, encounteredError: error)
         }
     }
     
@@ -100,8 +102,16 @@ class LocationSearchTableViewController: UIViewController, UITableViewDelegate, 
         }
         
         if locationDescriptions?.isEmpty == false {
-            tableView.isHidden = false
-            tableView.reloadData()
+            if
+                locationDescriptions?.count == 1,
+                let foundLocationDescription = locationDescriptions?.first
+            {
+                singleResultLabel.text = foundLocationDescription
+                singleResultView.isHidden = false
+            } else {
+                tableView.isHidden = false
+                tableView.reloadData()
+            }
         } else if currentSearch == nil {
             loadingView.update(to: .failed(displayText: "Failed to find any matching cities. Please try again."))
         }
@@ -121,7 +131,8 @@ class LocationSearchTableViewController: UIViewController, UITableViewDelegate, 
                 switch result {
                     case .success(let locationDescriptions):
                         strongSelf.locationDescriptions = Array(locationDescriptions)
-                    case .failure: ()
+                    case .failure(let error):
+                        strongSelf.delegate?.locationSearchTableViewController(strongSelf, encounteredError: error)
                 }
                 
                 DispatchQueue.main.async {
@@ -130,8 +141,8 @@ class LocationSearchTableViewController: UIViewController, UITableViewDelegate, 
             }
             self.currentSearch = currentSearch
             currentSearch.resume()
-        } catch {
-            // TODO: Log error
+        } catch let error {
+            delegate?.locationSearchTableViewController(self, encounteredError: error)
         }
     }
 }

@@ -12,7 +12,7 @@ extension UIView {
         bottomAnchor.constraint(equalTo: superview.bottomAnchor, constant: -insets.bottom).isActive = true
     }
     
-    func addCenterInParentConstraints(with insets: UIEdgeInsets = .zero) {
+    func addCenterInParentConstraints(with insets: UIEdgeInsets = .zero, addBoundingConstraints: Bool = true) {
         guard let superview = superview else {
             return
         }
@@ -20,10 +20,12 @@ extension UIView {
         centerXAnchor.constraint(equalTo: superview.centerXAnchor).isActive = true
         centerYAnchor.constraint(equalTo: superview.centerYAnchor).isActive = true
         
-        topAnchor.constraint(greaterThanOrEqualTo: superview.topAnchor, constant: insets.top).isActive = true
-        leadingAnchor.constraint(greaterThanOrEqualTo: superview.leadingAnchor, constant: insets.left).isActive = true
-        trailingAnchor.constraint(greaterThanOrEqualTo: superview.trailingAnchor, constant: -insets.right).isActive = true
-        bottomAnchor.constraint(greaterThanOrEqualTo: superview.bottomAnchor, constant: -insets.bottom).isActive = true
+        if addBoundingConstraints {
+            topAnchor.constraint(greaterThanOrEqualTo: superview.topAnchor, constant: insets.top).isActive = true
+            leadingAnchor.constraint(greaterThanOrEqualTo: superview.leadingAnchor, constant: insets.left).isActive = true
+            trailingAnchor.constraint(greaterThanOrEqualTo: superview.trailingAnchor, constant: -insets.right).isActive = true
+            bottomAnchor.constraint(greaterThanOrEqualTo: superview.bottomAnchor, constant: -insets.bottom).isActive = true
+        }
     }
     
     // https://gist.github.com/nazywamsiepawel/0166e8a71d74e96c7898

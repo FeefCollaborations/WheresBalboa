@@ -1,5 +1,7 @@
 PODS:
-  - Cluster (2.1.0)
+  - ClusterKit/Core (0.3.3)
+  - ClusterKit/MapKit (0.3.3):
+    - ClusterKit/Core
   - Firebase/Auth (4.8.0):
     - Firebase/Core
     - FirebaseAuth (= 4.4.1)
@@ -54,7 +56,7 @@ PODS:
   - SwiftyJSON (4.0.0)
 
 DEPENDENCIES:
-  - Cluster
+  - ClusterKit/MapKit
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
@@ -63,7 +65,7 @@ DEPENDENCIES:
   - SwiftyJSON
 
 SPEC CHECKSUMS:
-  Cluster: b1b363bb4b6991c73f5da2f4ab175fc7424f9900
+  ClusterKit: 52177be19bda5d9c09cb172e61842185268e6b5c
   Firebase: 710decbbc6d9d48530e9a5dba3209740c3532e05
   FirebaseAnalytics: 5b02a63ead2c3f0259cfc7f15e053e440587ecf8
   FirebaseAuth: dc0dd403beca5b2b016aac89c2d0b8dad1c81926
@@ -78,6 +80,6 @@ SPEC CHECKSUMS:
   PopupDialog: d4336d7274a6aa3af4cb26d8b6691510eba90cc3
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: 7e6a40c54144c6ad8ec1a45ca183a1549e183e68
+PODFILE CHECKSUM: 7c0df5fb3d577d89f1b6132cc33dba06b768cf9f
 
 COCOAPODS: 1.2.0

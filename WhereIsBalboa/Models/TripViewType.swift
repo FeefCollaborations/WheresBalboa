@@ -13,6 +13,15 @@ enum TripViewType: Equatable {
                 return viewController
         }
     }
+    
+    var isLoading: Bool {
+        switch self {
+            case .loading:
+                return true
+            case .list, .map:
+                return false
+        }
+    }
 }
 
 func ==(lhs: TripViewType, rhs: TripViewType) -> Bool {
