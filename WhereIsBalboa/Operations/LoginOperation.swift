@@ -8,12 +8,10 @@ class LoginOperation: AsynchronousOperation, ResultGeneratingOperation {
     
     typealias Completion = (Result<Balbabe>) -> Void
     let onComplete: Completion
-    let email: String
-    let password: String
-    init(email: String, password: String, onComplete: @escaping Completion) {
+    let loginInfo: LoginInfo
+    init(_ loginInfo: LoginInfo, onComplete: @escaping Completion) {
         self.onComplete = onComplete
-        self.email = email
-        self.password = password
+        self.loginInfo = loginInfo
         super.init()
     }
     
@@ -21,7 +19,7 @@ class LoginOperation: AsynchronousOperation, ResultGeneratingOperation {
     
     override func start() {
         super.start()
-        Auth.auth().signIn(withEmail: email, password: password) { [weak self] user, error in
+        Auth.auth().signIn(withEmail: loginInfo.email, password: loginInfo.password) { [weak self] user, error in
             guard let strongSelf = self else {
                 return
             }

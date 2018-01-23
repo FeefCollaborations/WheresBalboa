@@ -365,6 +365,16 @@ SWIFT_CLASS("_TtC13WhereIsBalboa20SignUpViewController")
 @end
 
 
+SWIFT_CLASS("_TtC13WhereIsBalboa26SplashScreenViewController")
+@interface SplashScreenViewController : UIViewController
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (void)viewWillAppear:(BOOL)animated;
+- (void)viewDidLoad;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
+@end
+
+
 SWIFT_CLASS("_TtC13WhereIsBalboa29TextFieldPromptViewController")
 @interface TextFieldPromptViewController : UIViewController <UITextFieldDelegate>
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -451,6 +461,8 @@ SWIFT_CLASS("_TtC13WhereIsBalboa17TripTableViewCell")
 - (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
+
+
 
 
 

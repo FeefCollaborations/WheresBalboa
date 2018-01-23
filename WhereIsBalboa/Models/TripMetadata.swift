@@ -11,6 +11,8 @@ struct TripMetadata: DatabaseConvertible, Equatable {
     let address: Address
     let dateInterval: DateInterval
     let isHome: Bool
+    let displayStartDate: Date
+    let displayEndDate: Date
     
     init(_ dataSnapshot: DataSnapshot) throws {
         guard
@@ -20,16 +22,16 @@ struct TripMetadata: DatabaseConvertible, Equatable {
         else {
             throw DatabaseConversionError.invalidSnapshot(dataSnapshot)
         }
-
-        self.isHome = isHome
-        self.dateInterval = dateInterval
-        address = try Address(dataSnapshot.childSnapshot(forPath: DBValues.address))
+        
+        self.init(address: try Address(dataSnapshot.childSnapshot(forPath: DBValues.address)), dateInterval: dateInterval, isHome: isHome)
     }
     
     init(address: Address, dateInterval: DateInterval, isHome: Bool) {
         self.address = address
         self.dateInterval = dateInterval
         self.isHome = isHome
+        self.displayStartDate = dateInterval.start
+        self.displayEndDate = dateInterval.end - 1
     }
     
     // MARK: - DatabaseConvertible

@@ -13,5 +13,11 @@ target 'WhereIsBalboa' do
   pod 'ClusterKit/MapKit'
   pod 'PopupDialog', '~> 0.6'
   pod 'SwiftyJSON'
+  pod 'KeychainAccess'
+
+  target 'WhereIsBalboaTests' do
+    inherit! :search_paths
+    pod 'Firebase'
+  end
 
 end

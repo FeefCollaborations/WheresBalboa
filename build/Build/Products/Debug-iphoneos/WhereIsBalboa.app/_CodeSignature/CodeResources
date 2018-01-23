@@ -4,9 +4,53 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>AppIcon20x20@2x.png</key>
+		<data>
+		QoxmxTfz8UBX7RCGY31zCxiA6aA=
+		</data>
+		<key>AppIcon20x20@3x.png</key>
+		<data>
+		aCgfAJJl0kR/MJocRIdhrtNDgXI=
+		</data>
+		<key>AppIcon29x29.png</key>
+		<data>
+		I3x4g5GBOWrQqvn90OtPae2eVPA=
+		</data>
+		<key>AppIcon29x29@2x.png</key>
+		<data>
+		vMMFhB0DsyUFXf2yF1nFyTxs46g=
+		</data>
+		<key>AppIcon29x29@3x.png</key>
+		<data>
+		2RJ6m0TPO1tmlF5FZzScN1zytHU=
+		</data>
+		<key>AppIcon40x40@2x.png</key>
+		<data>
+		ugNQRR6LgItSR+xOexrJxGa9nqY=
+		</data>
+		<key>AppIcon40x40@3x.png</key>
+		<data>
+		NReh38avew/TE2v9FzSepbTRjx8=
+		</data>
+		<key>AppIcon57x57.png</key>
+		<data>
+		yYV4lbL1O4SyXIGoaa3K4P5yM0o=
+		</data>
+		<key>AppIcon57x57@2x.png</key>
+		<data>
+		6gK/nlpwAIokU8SUMbkP7ZHPcIk=
+		</data>
+		<key>AppIcon60x60@2x.png</key>
+		<data>
+		NReh38avew/TE2v9FzSepbTRjx8=
+		</data>
+		<key>AppIcon60x60@3x.png</key>
+		<data>
+		iDHmn4sRPhP6PkvNYa6wDAYR1/s=
+		</data>
 		<key>Assets.car</key>
 		<data>
-		dnw1khXKlauI6gzsWJUb71jrGGI=
+		iDRFn0KWI4K5Bi97ceWpL02hImg=
 		</data>
 		<key>BalbabeTripListTableViewController.nib/objects-11.0+.nib</key>
 		<data>
@@ -28,14 +72,6 @@
 		<data>
 		5RviRhRNewj3rCWPpRgxMMe41Fk=
 		</data>
-		<key>EntryGateViewController.nib/objects-11.0+.nib</key>
-		<data>
-		mo0h2yUQ7/E58QLmSYbanngR7ko=
-		</data>
-		<key>EntryGateViewController.nib/runtime.nib</key>
-		<data>
-		1MNgoSi9BeS9oEVM7XTpbZGMwpw=
-		</data>
 		<key>Frameworks/Cluster.framework/Cluster</key>
 		<data>
 		jHXIOUXopsM5LP/qoNl4Qtb8R7M=
@@ -48,9 +84,21 @@
 		<data>
 		l108as+f1CY1TmMC4cS+kc5a+MI=
 		</data>
+		<key>Frameworks/ClusterKit.framework/ClusterKit</key>
+		<data>
+		3bOdZRog7ejzFVc2tvhS38Cb2FI=
+		</data>
+		<key>Frameworks/ClusterKit.framework/Info.plist</key>
+		<data>
+		vTRV9d2gyIOD55JnlLMow8an6xU=
+		</data>
+		<key>Frameworks/ClusterKit.framework/_CodeSignature/CodeResources</key>
+		<data>
+		lLX40DvgHcjAVgRjvjpxZzYaC4E=
+		</data>
 		<key>Frameworks/GTMSessionFetcher.framework/GTMSessionFetcher</key>
 		<data>
-		RC9526lsqey3i+/s9H7K86fqYzs=
+		p1Tg82/5wDBpBDCa3okUlgzMPW0=
 		</data>
 		<key>Frameworks/GTMSessionFetcher.framework/Info.plist</key>
 		<data>
@@ -62,7 +110,7 @@
 		</data>
 		<key>Frameworks/GoogleToolboxForMac.framework/GoogleToolboxForMac</key>
 		<data>
-		WRl1VZm4M4fepXM7tCtx19ED9hQ=
+		7qxFLTyU/MzIloYWn3UMpeSFfr4=
 		</data>
 		<key>Frameworks/GoogleToolboxForMac.framework/Info.plist</key>
 		<data>
@@ -78,11 +126,23 @@
 		</data>
 		<key>Frameworks/PopupDialog.framework/PopupDialog</key>
 		<data>
-		GCYD1gnaetQjFDljRS8Emni3vNo=
+		hBlWzdz2v2cIPj1UBo7sDGWHNWg=
 		</data>
 		<key>Frameworks/PopupDialog.framework/_CodeSignature/CodeResources</key>
 		<data>
 		t5UwzMZYNrG3jF/s7MDHds3zRw8=
+		</data>
+		<key>Frameworks/SwiftyJSON.framework/Info.plist</key>
+		<data>
+		mm3mfjkIl1gnKj3iTUmSpfFU7R4=
+		</data>
+		<key>Frameworks/SwiftyJSON.framework/SwiftyJSON</key>
+		<data>
+		KwdbX286SC9Flzo2kxHOUAybrUQ=
+		</data>
+		<key>Frameworks/SwiftyJSON.framework/_CodeSignature/CodeResources</key>
+		<data>
+		6Q26trY1ttKKzOLBnVvT+TsAO88=
 		</data>
 		<key>Frameworks/leveldb.framework/Info.plist</key>
 		<data>
@@ -94,7 +154,7 @@
 		</data>
 		<key>Frameworks/leveldb.framework/leveldb</key>
 		<data>
-		K3PKyCu+8Yxbj6Mx4nxPio1xZRc=
+		BfUN28ts+kCieodr0LJqPZXrssY=
 		</data>
 		<key>Frameworks/libswiftAccelerate.dylib</key>
 		<data>
@@ -170,7 +230,7 @@
 		</data>
 		<key>Frameworks/nanopb.framework/nanopb</key>
 		<data>
-		xG7uSOanbRcp6bcxHmIiBop0umA=
+		edS4nk0ypqL/gZN4fGhlCCRiXi8=
 		</data>
 		<key>GoogleService-Info.plist</key>
 		<data>
@@ -186,7 +246,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		CAZytnc8zVqrp40oTqoGioI9V0s=
+		hSDcGMRhthj3+wGX83ZD4Iy/qeU=
 		</data>
 		<key>LoadingViewController.nib/objects-11.0+.nib</key>
 		<data>
@@ -198,11 +258,19 @@
 		</data>
 		<key>LocationSearchTableViewController.nib/objects-11.0+.nib</key>
 		<data>
-		ss9OkO1hPh9NQ+07pcQvEMemJDY=
+		Ci0i6bXQZoMKddxfEhPAssye/BU=
 		</data>
 		<key>LocationSearchTableViewController.nib/runtime.nib</key>
 		<data>
-		XDjVhEfFKVZYOH4jfFNHZYfFJr8=
+		EDtGUSZCJJ/28fYPLBApv+kB09c=
+		</data>
+		<key>LoginViewController.nib/objects-11.0+.nib</key>
+		<data>
+		ETAxYwij5Es01IxAMRO/WErwHfs=
+		</data>
+		<key>LoginViewController.nib/runtime.nib</key>
+		<data>
+		GppFEIYULo3xgg9eKl/HdGAVMD8=
 		</data>
 		<key>OwnTripTableViewCell.nib</key>
 		<data>
@@ -214,19 +282,35 @@
 		</data>
 		<key>ProfileViewController.nib/objects-11.0+.nib</key>
 		<data>
-		6jlTk1bcEoE/fKUNKuHXO9VcgmQ=
+		Wi/LMLncgJPwuOaVcAksxLpTFuM=
 		</data>
 		<key>ProfileViewController.nib/runtime.nib</key>
 		<data>
-		VCmSm+hNfVotREpxO0oeOWcru3w=
+		ktp84X3Zk1SvrHcVOd6Uost9EiU=
 		</data>
-		<key>TripEditorTableViewController.nib/objects-11.0+.nib</key>
+		<key>SignUpViewController.nib/objects-11.0+.nib</key>
 		<data>
-		r7dEew+cPV1x2IOPVxIJ1DcpHJs=
+		c9LbRhxdZk0RLlEQ9I+M/jbNQaw=
 		</data>
-		<key>TripEditorTableViewController.nib/runtime.nib</key>
+		<key>SignUpViewController.nib/runtime.nib</key>
 		<data>
-		LsZ9Axnw3gkugGZXgnReeK1orRY=
+		jsji7gW7gYRnXqQ/suB8Z3cThY0=
+		</data>
+		<key>TextFieldPromptViewController.nib/objects-11.0+.nib</key>
+		<data>
+		m9qRdBvzsfpFkaVvXGra4KRu5VY=
+		</data>
+		<key>TextFieldPromptViewController.nib/runtime.nib</key>
+		<data>
+		ozCgxa79zYjw2HM6TVPemNLIU9M=
+		</data>
+		<key>TripEditorViewController.nib/objects-11.0+.nib</key>
+		<data>
+		mNYT02beMfS5BnoazhbayEFiHRQ=
+		</data>
+		<key>TripEditorViewController.nib/runtime.nib</key>
+		<data>
+		oPzcgwNZ39F3mao5TZHIBW5Rahw=
 		</data>
 		<key>TripListTableViewController.nib/objects-11.0+.nib</key>
 		<data>
@@ -238,11 +322,11 @@
 		</data>
 		<key>TripMapViewController.nib/objects-11.0+.nib</key>
 		<data>
-		uHwzjOOKk+l1Mxu+N+EjYslbhY8=
+		aaNVf28rJVLIMdBI/0CrHFsswRM=
 		</data>
 		<key>TripMapViewController.nib/runtime.nib</key>
 		<data>
-		IFchuGFmeI30GfxayaOFzybzU10=
+		ZFhtXLNSfMoG2PhFnPiBY+sQcrY=
 		</data>
 		<key>TripTableViewCell.nib</key>
 		<data>
@@ -250,7 +334,7 @@
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
-		wR5rRaBMQTzYT/hnT+0Tf/zae/E=
+		M0+btCp2VeFVNxLKSSJmYEG7m0I=
 		</data>
 		<key>libswiftRemoteMirror.dylib</key>
 		<data>
@@ -259,15 +343,136 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>AppIcon20x20@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			QoxmxTfz8UBX7RCGY31zCxiA6aA=
+			</data>
+			<key>hash2</key>
+			<data>
+			OFfgykBgOPHJfF+/6ZvlRYwU4bxOBvmFMKwA+FJ3KFY=
+			</data>
+		</dict>
+		<key>AppIcon20x20@3x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			aCgfAJJl0kR/MJocRIdhrtNDgXI=
+			</data>
+			<key>hash2</key>
+			<data>
+			Qo8hpnqWVg9Lk+uV//c4LOTTySfWR86///gCXnCbQRk=
+			</data>
+		</dict>
+		<key>AppIcon29x29.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			I3x4g5GBOWrQqvn90OtPae2eVPA=
+			</data>
+			<key>hash2</key>
+			<data>
+			4h/kGlshpyf2wkKx+kbmTACVWdtWGgiM2VMur2krQ5c=
+			</data>
+		</dict>
+		<key>AppIcon29x29@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			vMMFhB0DsyUFXf2yF1nFyTxs46g=
+			</data>
+			<key>hash2</key>
+			<data>
+			gSena0svPTUlEiZx2HMQwS/WGuZiWKIfHl8iAMxxDnQ=
+			</data>
+		</dict>
+		<key>AppIcon29x29@3x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			2RJ6m0TPO1tmlF5FZzScN1zytHU=
+			</data>
+			<key>hash2</key>
+			<data>
+			ymspNaOxz/miCgxWxTeRdSBpGtwIo7qzmLRBaAqCehk=
+			</data>
+		</dict>
+		<key>AppIcon40x40@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ugNQRR6LgItSR+xOexrJxGa9nqY=
+			</data>
+			<key>hash2</key>
+			<data>
+			9wC+ZURA3KUp11Ru0cKenMyyjgwuMEkXsmFMg7bTYHs=
+			</data>
+		</dict>
+		<key>AppIcon40x40@3x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			NReh38avew/TE2v9FzSepbTRjx8=
+			</data>
+			<key>hash2</key>
+			<data>
+			nGbnX6u2Y7Wfogyakl3sGhrqBWG3rWoR8McdHH9VKwI=
+			</data>
+		</dict>
+		<key>AppIcon57x57.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			yYV4lbL1O4SyXIGoaa3K4P5yM0o=
+			</data>
+			<key>hash2</key>
+			<data>
+			L0PzllaUcQ5FEWOTImxAv9mWTh0hocVnImR1xwHPPT4=
+			</data>
+		</dict>
+		<key>AppIcon57x57@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			6gK/nlpwAIokU8SUMbkP7ZHPcIk=
+			</data>
+			<key>hash2</key>
+			<data>
+			DjQVU9pWKaszs8rtQiUfSFUMp+YElfowDd1G0dj+Efk=
+			</data>
+		</dict>
+		<key>AppIcon60x60@2x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			NReh38avew/TE2v9FzSepbTRjx8=
+			</data>
+			<key>hash2</key>
+			<data>
+			nGbnX6u2Y7Wfogyakl3sGhrqBWG3rWoR8McdHH9VKwI=
+			</data>
+		</dict>
+		<key>AppIcon60x60@3x.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			iDHmn4sRPhP6PkvNYa6wDAYR1/s=
+			</data>
+			<key>hash2</key>
+			<data>
+			1z15mtOXFODrMkpjds6ry/+9MFK7wI52qhLiH6/aMg4=
+			</data>
+		</dict>
 		<key>Assets.car</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			dnw1khXKlauI6gzsWJUb71jrGGI=
+			iDRFn0KWI4K5Bi97ceWpL02hImg=
 			</data>
 			<key>hash2</key>
 			<data>
-			riwiGFWX6lk1+2RzVDp/vDEpaV2wjCrLDh8kRX0qYhI=
+			RWSKxylli/ZG/AmjJYVjOezIRr5n6L04qpL9v6UDRkc=
 			</data>
 		</dict>
 		<key>BalbabeTripListTableViewController.nib/objects-11.0+.nib</key>
@@ -325,28 +530,6 @@
 			1aVbuUtcEbwNknoEGGet23GydVQfcWgHuaUYt4qhYdw=
 			</data>
 		</dict>
-		<key>EntryGateViewController.nib/objects-11.0+.nib</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			mo0h2yUQ7/E58QLmSYbanngR7ko=
-			</data>
-			<key>hash2</key>
-			<data>
-			2T2GEx1UdRqC6ELTMWgL7k1w9cSFPhfXG4pUzRyzD2E=
-			</data>
-		</dict>
-		<key>EntryGateViewController.nib/runtime.nib</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			1MNgoSi9BeS9oEVM7XTpbZGMwpw=
-			</data>
-			<key>hash2</key>
-			<data>
-			h/DaXqof/Y5kwFsy5q7Ov6d+Y2X6ugYXHZR6CPhdHRI=
-			</data>
-		</dict>
 		<key>Frameworks/Cluster.framework/Cluster</key>
 		<dict>
 			<key>hash</key>
@@ -380,15 +563,48 @@
 			wGvt4dCXSyHRDZ4Nd/L9BpYXGBltZk1564JGXimaJak=
 			</data>
 		</dict>
+		<key>Frameworks/ClusterKit.framework/ClusterKit</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			3bOdZRog7ejzFVc2tvhS38Cb2FI=
+			</data>
+			<key>hash2</key>
+			<data>
+			nAVsfWUSl6e4mfocZV3eidEoNFxM+7MCK6VfpwHmXVQ=
+			</data>
+		</dict>
+		<key>Frameworks/ClusterKit.framework/Info.plist</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			vTRV9d2gyIOD55JnlLMow8an6xU=
+			</data>
+			<key>hash2</key>
+			<data>
+			Rf3jEuUwOnJl+j4Hplp4DO5fYbFbaYMgdP5FbvIvJrI=
+			</data>
+		</dict>
+		<key>Frameworks/ClusterKit.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			lLX40DvgHcjAVgRjvjpxZzYaC4E=
+			</data>
+			<key>hash2</key>
+			<data>
+			tgqvw310Xl350fRMXMi6TRI1vz8tu/624+Ce9fiXULM=
+			</data>
+		</dict>
 		<key>Frameworks/GTMSessionFetcher.framework/GTMSessionFetcher</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			RC9526lsqey3i+/s9H7K86fqYzs=
+			p1Tg82/5wDBpBDCa3okUlgzMPW0=
 			</data>
 			<key>hash2</key>
 			<data>
-			lzFo6faGjIAPgUjEwp5yl2OndriRqHmj+e4D1l6tEjY=
+			OiAaewWcRIjZL1+/7DZ9TVstPeyuet1EYFH8d9OYWko=
 			</data>
 		</dict>
 		<key>Frameworks/GTMSessionFetcher.framework/Info.plist</key>
@@ -417,11 +633,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			WRl1VZm4M4fepXM7tCtx19ED9hQ=
+			7qxFLTyU/MzIloYWn3UMpeSFfr4=
 			</data>
 			<key>hash2</key>
 			<data>
-			H+8jYoH0MnMaAEpQ9u3TBnUBqJtclsV3ubL7H0iTh9Q=
+			lWm/3FOMTIQMnyIy1zc4BTo5ZQoQtI/OzjO9e1XbMhw=
 			</data>
 		</dict>
 		<key>Frameworks/GoogleToolboxForMac.framework/Info.plist</key>
@@ -461,11 +677,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			GCYD1gnaetQjFDljRS8Emni3vNo=
+			hBlWzdz2v2cIPj1UBo7sDGWHNWg=
 			</data>
 			<key>hash2</key>
 			<data>
-			o5qn1syhjq5QaFjFa/DnsHmrNcL1AUqwTcxAsWWq4pU=
+			HofbggXUCtimUUObJvKtlcQ6LOz2pRzQDTdtiozIVLA=
 			</data>
 		</dict>
 		<key>Frameworks/PopupDialog.framework/_CodeSignature/CodeResources</key>
@@ -477,6 +693,39 @@
 			<key>hash2</key>
 			<data>
 			kk74dtAc1PR7XUyZZj7NThNWTjO5aRWQbKwjllJutMs=
+			</data>
+		</dict>
+		<key>Frameworks/SwiftyJSON.framework/Info.plist</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			mm3mfjkIl1gnKj3iTUmSpfFU7R4=
+			</data>
+			<key>hash2</key>
+			<data>
+			Fc94yhLxwaixhN87h80+kqxWz1vKIxQmGCflo5ZCkPY=
+			</data>
+		</dict>
+		<key>Frameworks/SwiftyJSON.framework/SwiftyJSON</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			KwdbX286SC9Flzo2kxHOUAybrUQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			aFODC7ECjB7domQXorvCeTicuX2e3/sHBjT3uJUUT4E=
+			</data>
+		</dict>
+		<key>Frameworks/SwiftyJSON.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			6Q26trY1ttKKzOLBnVvT+TsAO88=
+			</data>
+			<key>hash2</key>
+			<data>
+			nhp8X6LR2H/Od3zIBMN86C4JU/9JKB6xBkesfqJMvHU=
 			</data>
 		</dict>
 		<key>Frameworks/leveldb.framework/Info.plist</key>
@@ -505,11 +754,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			K3PKyCu+8Yxbj6Mx4nxPio1xZRc=
+			BfUN28ts+kCieodr0LJqPZXrssY=
 			</data>
 			<key>hash2</key>
 			<data>
-			f6np9b6E5JFmrQSfp3koSqvAbI1hoaH0bL7k59J2B0M=
+			eWPn2dLgVYAJ501kcCpYNCzGbHVl/tZxLPPxZe4it1s=
 			</data>
 		</dict>
 		<key>Frameworks/libswiftAccelerate.dylib</key>
@@ -714,11 +963,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			xG7uSOanbRcp6bcxHmIiBop0umA=
+			edS4nk0ypqL/gZN4fGhlCCRiXi8=
 			</data>
 			<key>hash2</key>
 			<data>
-			548m+ZiaGfQvEekJYyZbQqBMOXfWT2iNUyqpvR6rY/Q=
+			Bd8YrwNaUcjJNjutREDnPuNH5xYguYHxSeZ0E6b34IM=
 			</data>
 		</dict>
 		<key>GoogleService-Info.plist</key>
@@ -780,22 +1029,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ss9OkO1hPh9NQ+07pcQvEMemJDY=
+			Ci0i6bXQZoMKddxfEhPAssye/BU=
 			</data>
 			<key>hash2</key>
 			<data>
-			hOr6iWdf5sZnA6IhQf4iaKsccqs2HpvN8kc4V5zNulc=
+			e8vFMeNWnktruFD/Snzoe1FJhRmxK3viOZXI4GnvUew=
 			</data>
 		</dict>
 		<key>LocationSearchTableViewController.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			XDjVhEfFKVZYOH4jfFNHZYfFJr8=
+			EDtGUSZCJJ/28fYPLBApv+kB09c=
 			</data>
 			<key>hash2</key>
 			<data>
-			Rbw3HXmRNS514fO/RGPaOCjxlrVpnhEGNn31vgshE0Q=
+			+i1A7cjc3v0FjNxpCnt1CWYKS6xFkQuplbuOlSfPHgE=
+			</data>
+		</dict>
+		<key>LoginViewController.nib/objects-11.0+.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ETAxYwij5Es01IxAMRO/WErwHfs=
+			</data>
+			<key>hash2</key>
+			<data>
+			Ki1OuzpAzGFXQ6rnw0co2y7ukR561xYsy+ZUruPrZH4=
+			</data>
+		</dict>
+		<key>LoginViewController.nib/runtime.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			GppFEIYULo3xgg9eKl/HdGAVMD8=
+			</data>
+			<key>hash2</key>
+			<data>
+			Qcxi9XedFx89Xxfp/sOLAXJHyRvPRINdGTwu0lnwkj8=
 			</data>
 		</dict>
 		<key>OwnTripTableViewCell.nib</key>
@@ -813,44 +1084,88 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			6jlTk1bcEoE/fKUNKuHXO9VcgmQ=
+			Wi/LMLncgJPwuOaVcAksxLpTFuM=
 			</data>
 			<key>hash2</key>
 			<data>
-			c/rH+ugGhLuQVVaFXT9ty9hoj3qbWRezNC3AkcIspSU=
+			RyEKxiXUx+u2U5/TKl4IirXbKWz2lGNep+7bM/c7eSI=
 			</data>
 		</dict>
 		<key>ProfileViewController.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			VCmSm+hNfVotREpxO0oeOWcru3w=
+			ktp84X3Zk1SvrHcVOd6Uost9EiU=
 			</data>
 			<key>hash2</key>
 			<data>
-			N0aHzr9e4E58nYwg9naAYXTXaHxF2YnJBnd8AhI5ODc=
+			2QRjbU+7h2KcI77JnLFkqxylBFt0/FPh50AE6Uf0nZk=
 			</data>
 		</dict>
-		<key>TripEditorTableViewController.nib/objects-11.0+.nib</key>
+		<key>SignUpViewController.nib/objects-11.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			r7dEew+cPV1x2IOPVxIJ1DcpHJs=
+			c9LbRhxdZk0RLlEQ9I+M/jbNQaw=
 			</data>
 			<key>hash2</key>
 			<data>
-			T+0UJO1/rWGgDhRa1OICKghU/0P3+sl93QQ+6V5NTd0=
+			rtpPZdV6iTweY9gfvm8PTKD/j57HlNPdyYHIt1O6Ef8=
 			</data>
 		</dict>
-		<key>TripEditorTableViewController.nib/runtime.nib</key>
+		<key>SignUpViewController.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			LsZ9Axnw3gkugGZXgnReeK1orRY=
+			jsji7gW7gYRnXqQ/suB8Z3cThY0=
 			</data>
 			<key>hash2</key>
 			<data>
-			9vnpmxvphhmK9HzMKEYUUq0S3uMAQDBJMHdkgg0WC/4=
+			gvatRpSZB9dLgLtmZVSlpF4Zthu8xoo/i+efUgwrDZc=
+			</data>
+		</dict>
+		<key>TextFieldPromptViewController.nib/objects-11.0+.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			m9qRdBvzsfpFkaVvXGra4KRu5VY=
+			</data>
+			<key>hash2</key>
+			<data>
+			t+8KwRbc3w3JqJEGN/OESJPITFCSX/PlhGtmCi9c0Lk=
+			</data>
+		</dict>
+		<key>TextFieldPromptViewController.nib/runtime.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ozCgxa79zYjw2HM6TVPemNLIU9M=
+			</data>
+			<key>hash2</key>
+			<data>
+			2B0zJ2dqQZS/N8WcJNobuudOw4rw14yRbDn7IxRBJHU=
+			</data>
+		</dict>
+		<key>TripEditorViewController.nib/objects-11.0+.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			mNYT02beMfS5BnoazhbayEFiHRQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			TBGcsOoK4byeBi2scBT+g+9mTdcGvKo5iFRrpcVcOIo=
+			</data>
+		</dict>
+		<key>TripEditorViewController.nib/runtime.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			oPzcgwNZ39F3mao5TZHIBW5Rahw=
+			</data>
+			<key>hash2</key>
+			<data>
+			SpzLIP3p+66cFWYaFtL6GKdC7IFdM+YMOaz8mf46RWQ=
 			</data>
 		</dict>
 		<key>TripListTableViewController.nib/objects-11.0+.nib</key>
@@ -879,22 +1194,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			uHwzjOOKk+l1Mxu+N+EjYslbhY8=
+			aaNVf28rJVLIMdBI/0CrHFsswRM=
 			</data>
 			<key>hash2</key>
 			<data>
-			hv3gAUwMl2EMxxM9VM328K5JTFQeKeoAlP2pFtAZMm4=
+			9d46ViR2qm014A6KmOD829HCm3DQhjDxADhWi6wmPtc=
 			</data>
 		</dict>
 		<key>TripMapViewController.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			IFchuGFmeI30GfxayaOFzybzU10=
+			ZFhtXLNSfMoG2PhFnPiBY+sQcrY=
 			</data>
 			<key>hash2</key>
 			<data>
-			US20MsJ7HnhXnSxk+SwL8rFy2Xe9BMlmklAQcWeeWcQ=
+			Mz56CiGbYy7o2IqLHB9HaqM24KWkNSwydckpvmhbZ0A=
 			</data>
 		</dict>
 		<key>TripTableViewCell.nib</key>
@@ -912,11 +1227,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			wR5rRaBMQTzYT/hnT+0Tf/zae/E=
+			M0+btCp2VeFVNxLKSSJmYEG7m0I=
 			</data>
 			<key>hash2</key>
 			<data>
-			uj2UqLcFyw7nFiq9g8M/sZeeoUOhuO4EATttSR2RSc8=
+			Au0r3GwKyFTWoZ8O/izE2mxmzKtFVD6i7JQD/e17ErA=
 			</data>
 		</dict>
 		<key>libswiftRemoteMirror.dylib</key>

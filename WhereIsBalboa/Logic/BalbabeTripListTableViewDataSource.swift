@@ -13,7 +13,7 @@ class BalbabeTripListTableViewDataSource: NSObject, UITableViewDataSource {
     
     init(_ balbabe: Balbabe, isLoggedInUser: Bool) {
         self.balbabe = balbabe
-        trips = BalbabeTripListTableViewDataSource.upcomingTrips(from: balbabe.trips)
+        trips = BalbabeTripListTableViewDataSource.sortedTrips(from: balbabe.trips)
         super.init()
         if isLoggedInUser {
             NotificationCenter.default.registerForUserChanges { [weak self] balbabe in
@@ -25,7 +25,7 @@ class BalbabeTripListTableViewDataSource: NSObject, UITableViewDataSource {
                 }
                 
                 strongSelf.balbabe = balbabe
-                strongSelf.trips = BalbabeTripListTableViewDataSource.upcomingTrips(from: balbabe.trips)
+                strongSelf.trips = BalbabeTripListTableViewDataSource.sortedTrips(from: balbabe.trips)
                 DispatchQueue.main.async {
                     strongSelf.dataChangeHandler?()
                 }
@@ -52,16 +52,15 @@ class BalbabeTripListTableViewDataSource: NSObject, UITableViewDataSource {
         let trip = tripAt(indexPath)
                 
         cell.cityLabel.text = "\(trip.metadata.address.name)"
-        cell.dateLabel.text = "from \(DateFormatter.fullDate.string(from: trip.metadata.dateInterval.start)) to \(DateFormatter.fullDate.string(from: trip.metadata.dateInterval.end))"
+        cell.dateLabel.text = "from \(DateFormatter.fullDate.string(from: trip.metadata.displayStartDate)) to \(DateFormatter.fullDate.string(from: trip.metadata.displayEndDate))"
         
         return cell
     }
     
     // MARK: - Helpers
     
-    private static func upcomingTrips(from trips: [Trip]) -> [Trip] {
-        let upcomingTrips = trips.filter { Date().daysSince($0.metadata.dateInterval.end) <= 0 }
-        return upcomingTrips.sorted { $0.metadata.dateInterval.start < $1.metadata.dateInterval.start }
+    private static func sortedTrips(from trips: [Trip]) -> [Trip] {
+        return trips.sorted { $0.metadata.dateInterval.start < $1.metadata.dateInterval.start }
     }
     
     // MARK: - Accessors

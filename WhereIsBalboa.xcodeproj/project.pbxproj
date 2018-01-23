@@ -24,6 +24,12 @@
 		482B2AFD200E07A3009B04C0 /* TextFieldPromptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482B2AFC200E07A3009B04C0 /* TextFieldPromptViewController.swift */; };
 		482B2AFF200E07B1009B04C0 /* TextFieldPromptViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 482B2AFE200E07B1009B04C0 /* TextFieldPromptViewController.xib */; };
 		482B2B01200E2017009B04C0 /* DatabaseConversionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482B2B00200E2017009B04C0 /* DatabaseConversionError.swift */; };
+		483A364820176AA9008D4B6E /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483A364720176AA9008D4B6E /* SplashScreenViewController.swift */; };
+		483A364A20176ACD008D4B6E /* SplashScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 483A364920176ACD008D4B6E /* SplashScreenViewController.xib */; };
+		483A364C20176F39008D4B6E /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483A364B20176F39008D4B6E /* Keychain.swift */; };
+		483A364E20176F4B008D4B6E /* LoginInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483A364D20176F4B008D4B6E /* LoginInfo.swift */; };
+		483A3650201779F3008D4B6E /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483A364F201779F3008D4B6E /* UINavigationController.swift */; };
+		483A365220177CE7008D4B6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 483A365120177CE7008D4B6E /* LaunchScreen.storyboard */; };
 		483B990D1FEE9717009DF029 /* TripsDataConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483B990C1FEE9717009DF029 /* TripsDataConfiguration.swift */; };
 		483B990F1FEEA017009DF029 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483B990E1FEEA017009DF029 /* LoadingViewController.swift */; };
 		483B99111FEEA032009DF029 /* LoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 483B99101FEEA032009DF029 /* LoadingViewController.xib */; };
@@ -42,7 +48,6 @@
 		483BA6521FF58FCF005C9F76 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483BA6511FF58FCF005C9F76 /* UIViewController.swift */; };
 		483E304D1FEAAB58006D4512 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483E304C1FEAAB58006D4512 /* AppDelegate.swift */; };
 		483E30541FEAAB58006D4512 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 483E30531FEAAB58006D4512 /* Assets.xcassets */; };
-		483E30571FEAAB58006D4512 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 483E30551FEAAB58006D4512 /* LaunchScreen.storyboard */; };
 		483E30751FEAABC4006D4512 /* TripMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483E30611FEAABC4006D4512 /* TripMapViewController.swift */; };
 		483E30761FEAABC4006D4512 /* TripMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 483E30621FEAABC4006D4512 /* TripMapViewController.xib */; };
 		483E30791FEAABC4006D4512 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483E30651FEAABC4006D4512 /* HomeViewController.swift */; };
@@ -68,6 +73,7 @@
 		484020FD200274D800EB2EB4 /* DatabaseConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484020FC200274D800EB2EB4 /* DatabaseConvertible.swift */; };
 		484020FF2002775900EB2EB4 /* DateInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484020FE2002775900EB2EB4 /* DateInterval.swift */; };
 		4840210220027C9B00EB2EB4 /* UIToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4840210120027C9B00EB2EB4 /* UIToolbar.swift */; };
+		486F4AB9201727EE00A32777 /* DateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486F4AB8201727EE00A32777 /* DateTests.swift */; };
 		48B16BA32001F32D00BF45DF /* LoadingViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B16BA22001F32D00BF45DF /* LoadingViewState.swift */; };
 		48B16BA62001F6C500BF45DF /* TripEditOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B16BA52001F6C500BF45DF /* TripEditOperation.swift */; };
 		48B16BA82001F6F000BF45DF /* AsynchronousOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B16BA72001F6F000BF45DF /* AsynchronousOperation.swift */; };
@@ -77,11 +83,23 @@
 		48B16BB020020B1000BF45DF /* CitySearchTaskWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B16BAF20020B1000BF45DF /* CitySearchTaskWrapper.swift */; };
 		48B16BB2200228BA00BF45DF /* CityGeocodeTaskWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B16BB1200228BA00BF45DF /* CityGeocodeTaskWrapper.swift */; };
 		48BC2FDF200B51DC0030A41A /* CKClusterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BC2FDE200B51DC0030A41A /* CKClusterView.swift */; };
+		54B5186D6947CA281BB5A85A /* Pods_WhereIsBalboaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CF8CE4CD209F961097D7D4B /* Pods_WhereIsBalboaTests.framework */; };
 		C1721180A29D8C402F48B0E2 /* Pods_WhereIsBalboa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 169CE0DFA5645B11B4FC3115 /* Pods_WhereIsBalboa.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		486F4AB02017272000A32777 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 483E30411FEAAB58006D4512 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 483E30481FEAAB58006D4512;
+			remoteInfo = WhereIsBalboa;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		169CE0DFA5645B11B4FC3115 /* Pods_WhereIsBalboa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhereIsBalboa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CF8CE4CD209F961097D7D4B /* Pods_WhereIsBalboaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhereIsBalboaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		329AEBE3B64A29654C79F38B /* Pods-WhereIsBalboa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhereIsBalboa.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhereIsBalboa/Pods-WhereIsBalboa.debug.xcconfig"; sourceTree = "<group>"; };
 		3764ED0D75B66BD7768C4E19 /* Pods-WhereIsBalboa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhereIsBalboa.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhereIsBalboa/Pods-WhereIsBalboa.release.xcconfig"; sourceTree = "<group>"; };
 		482B2ADA200CF551009B04C0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +120,12 @@
 		482B2AFE200E07B1009B04C0 /* TextFieldPromptViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldPromptViewController.xib; sourceTree = "<group>"; };
 		482B2B00200E2017009B04C0 /* DatabaseConversionError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseConversionError.swift; sourceTree = "<group>"; };
 		482B2B02200E7431009B04C0 /* WhereIsBalboa.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WhereIsBalboa.entitlements; sourceTree = "<group>"; };
+		483A364720176AA9008D4B6E /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
+		483A364920176ACD008D4B6E /* SplashScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashScreenViewController.xib; sourceTree = "<group>"; };
+		483A364B20176F39008D4B6E /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		483A364D20176F4B008D4B6E /* LoginInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInfo.swift; sourceTree = "<group>"; };
+		483A364F201779F3008D4B6E /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
+		483A365120177CE7008D4B6E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		483B990C1FEE9717009DF029 /* TripsDataConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsDataConfiguration.swift; sourceTree = "<group>"; };
 		483B990E1FEEA017009DF029 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		483B99101FEEA032009DF029 /* LoadingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingViewController.xib; sourceTree = "<group>"; };
@@ -121,7 +145,6 @@
 		483E30491FEAAB58006D4512 /* WhereIsBalboa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhereIsBalboa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		483E304C1FEAAB58006D4512 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		483E30531FEAAB58006D4512 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		483E30561FEAAB58006D4512 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		483E30581FEAAB58006D4512 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		483E30611FEAABC4006D4512 /* TripMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripMapViewController.swift; sourceTree = "<group>"; };
 		483E30621FEAABC4006D4512 /* TripMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TripMapViewController.xib; sourceTree = "<group>"; };
@@ -148,6 +171,10 @@
 		484020FC200274D800EB2EB4 /* DatabaseConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseConvertible.swift; sourceTree = "<group>"; };
 		484020FE2002775900EB2EB4 /* DateInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateInterval.swift; sourceTree = "<group>"; };
 		4840210120027C9B00EB2EB4 /* UIToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIToolbar.swift; sourceTree = "<group>"; };
+		486F4AAB2017271F00A32777 /* WhereIsBalboaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhereIsBalboaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		486F4AAF2017272000A32777 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		486F4AB7201727EE00A32777 /* WhereIsBalboaTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WhereIsBalboaTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		486F4AB8201727EE00A32777 /* DateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTests.swift; sourceTree = "<group>"; };
 		48B16BA22001F32D00BF45DF /* LoadingViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewState.swift; sourceTree = "<group>"; };
 		48B16BA52001F6C500BF45DF /* TripEditOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripEditOperation.swift; sourceTree = "<group>"; };
 		48B16BA72001F6F000BF45DF /* AsynchronousOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsynchronousOperation.swift; sourceTree = "<group>"; };
@@ -157,6 +184,8 @@
 		48B16BAF20020B1000BF45DF /* CitySearchTaskWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySearchTaskWrapper.swift; sourceTree = "<group>"; };
 		48B16BB1200228BA00BF45DF /* CityGeocodeTaskWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityGeocodeTaskWrapper.swift; sourceTree = "<group>"; };
 		48BC2FDE200B51DC0030A41A /* CKClusterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKClusterView.swift; sourceTree = "<group>"; };
+		7F247AAFFDD1E8F86965E52D /* Pods-WhereIsBalboaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhereIsBalboaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhereIsBalboaTests/Pods-WhereIsBalboaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C5EA047A67DBB952B920AAAF /* Pods-WhereIsBalboaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhereIsBalboaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhereIsBalboaTests/Pods-WhereIsBalboaTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +197,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		486F4AA82017271F00A32777 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54B5186D6947CA281BB5A85A /* Pods_WhereIsBalboaTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -175,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				169CE0DFA5645B11B4FC3115 /* Pods_WhereIsBalboa.framework */,
+				1CF8CE4CD209F961097D7D4B /* Pods_WhereIsBalboaTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -194,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				483E304B1FEAAB58006D4512 /* WhereIsBalboa */,
+				486F4AAC2017272000A32777 /* WhereIsBalboaTests */,
 				483E304A1FEAAB58006D4512 /* Products */,
 				84FEE0789AB3B10807195D79 /* Pods */,
 				1FF45CF512315A2B188FEDF5 /* Frameworks */,
@@ -204,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				483E30491FEAAB58006D4512 /* WhereIsBalboa.app */,
+				486F4AAB2017271F00A32777 /* WhereIsBalboaTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -215,10 +255,10 @@
 				48B16BA42001F6BD00BF45DF /* Operations */,
 				483E304C1FEAAB58006D4512 /* AppDelegate.swift */,
 				483E30531FEAAB58006D4512 /* Assets.xcassets */,
+				483A365120177CE7008D4B6E /* LaunchScreen.storyboard */,
 				483E306F1FEAABC4006D4512 /* Extensions */,
 				483E30841FEAB2A5006D4512 /* GoogleService-Info.plist */,
 				483E30581FEAAB58006D4512 /* Info.plist */,
-				483E30551FEAAB58006D4512 /* LaunchScreen.storyboard */,
 				483E30711FEAABC4006D4512 /* Logic */,
 				483E306D1FEAABC4006D4512 /* Models */,
 				483BA6481FF55930005C9F76 /* Protocols */,
@@ -231,28 +271,30 @@
 		483E305E1FEAABC4006D4512 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				483BA6441FF558CD005C9F76 /* LocationSearchTableViewController.swift */,
-				483BA64D1FF55B8C005C9F76 /* LocationSearchTableViewController.xib */,
+				483E30971FEB7075006D4512 /* BalbabeTripListTableViewController.swift */,
+				483B99121FEF7828009DF029 /* BalbabeTripListTableViewController.xib */,
 				483E30651FEAABC4006D4512 /* HomeViewController.swift */,
 				483E30661FEAABC4006D4512 /* HomeViewController.xib */,
+				483B990E1FEEA017009DF029 /* LoadingViewController.swift */,
+				483B99101FEEA032009DF029 /* LoadingViewController.xib */,
+				483BA6441FF558CD005C9F76 /* LocationSearchTableViewController.swift */,
+				483BA64D1FF55B8C005C9F76 /* LocationSearchTableViewController.xib */,
+				482B2ADA200CF551009B04C0 /* LoginViewController.swift */,
+				482B2ADC200CF55A009B04C0 /* LoginViewController.xib */,
 				483E30671FEAABC4006D4512 /* ProfileViewController.swift */,
 				483E30681FEAABC4006D4512 /* ProfileViewController.xib */,
+				482B2AF0200D0914009B04C0 /* SignUpViewController.swift */,
+				482B2AF2200D091C009B04C0 /* SignUpViewController.xib */,
+				483A364720176AA9008D4B6E /* SplashScreenViewController.swift */,
+				483A364920176ACD008D4B6E /* SplashScreenViewController.xib */,
+				482B2AFC200E07A3009B04C0 /* TextFieldPromptViewController.swift */,
+				482B2AFE200E07B1009B04C0 /* TextFieldPromptViewController.xib */,
 				483E30691FEAABC4006D4512 /* TripEditorViewController.swift */,
 				483E306A1FEAABC4006D4512 /* TripEditorViewController.xib */,
 				483E306B1FEAABC4006D4512 /* TripListTableViewController.swift */,
 				483E306C1FEAABC4006D4512 /* TripListTableViewController.xib */,
 				483E30611FEAABC4006D4512 /* TripMapViewController.swift */,
 				483E30621FEAABC4006D4512 /* TripMapViewController.xib */,
-				483E30971FEB7075006D4512 /* BalbabeTripListTableViewController.swift */,
-				483B99121FEF7828009DF029 /* BalbabeTripListTableViewController.xib */,
-				483B990E1FEEA017009DF029 /* LoadingViewController.swift */,
-				483B99101FEEA032009DF029 /* LoadingViewController.xib */,
-				482B2ADA200CF551009B04C0 /* LoginViewController.swift */,
-				482B2ADC200CF55A009B04C0 /* LoginViewController.xib */,
-				482B2AF0200D0914009B04C0 /* SignUpViewController.swift */,
-				482B2AF2200D091C009B04C0 /* SignUpViewController.xib */,
-				482B2AFC200E07A3009B04C0 /* TextFieldPromptViewController.swift */,
-				482B2AFE200E07B1009B04C0 /* TextFieldPromptViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -260,19 +302,20 @@
 		483E306D1FEAABC4006D4512 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				482B2AEE200D0603009B04C0 /* OperationBuilderError.swift */,
-				483E306E1FEAABC4006D4512 /* TripViewType.swift */,
-				483E30861FEAB922006D4512 /* Trip.swift */,
-				48B16BA92001F78400BF45DF /* Result.swift */,
+				483B99241FF003B8009DF029 /* Address.swift */,
 				483E308E1FEADC42006D4512 /* Balbabe.swift */,
 				482B2AEC200D04EA009B04C0 /* BalbabeMetadata.swift */,
-				483B990C1FEE9717009DF029 /* TripsDataConfiguration.swift */,
-				483B991C1FEF8578009DF029 /* TripAnnotation.swift */,
-				483B99241FF003B8009DF029 /* Address.swift */,
-				48B16BA22001F32D00BF45DF /* LoadingViewState.swift */,
-				48B16BAD2001FA2E00BF45DF /* TripMetadata.swift */,
-				482B2AF4200D322F009B04C0 /* HomeViewControllerConfiguration.swift */,
 				482B2B00200E2017009B04C0 /* DatabaseConversionError.swift */,
+				482B2AF4200D322F009B04C0 /* HomeViewControllerConfiguration.swift */,
+				48B16BA22001F32D00BF45DF /* LoadingViewState.swift */,
+				483A364D20176F4B008D4B6E /* LoginInfo.swift */,
+				482B2AEE200D0603009B04C0 /* OperationBuilderError.swift */,
+				48B16BA92001F78400BF45DF /* Result.swift */,
+				483E30861FEAB922006D4512 /* Trip.swift */,
+				483B991C1FEF8578009DF029 /* TripAnnotation.swift */,
+				48B16BAD2001FA2E00BF45DF /* TripMetadata.swift */,
+				483B990C1FEE9717009DF029 /* TripsDataConfiguration.swift */,
+				483E306E1FEAABC4006D4512 /* TripViewType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -280,11 +323,13 @@
 		483E306F1FEAABC4006D4512 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				482B2AE8200CFFC4009B04C0 /* NotificationCenter.swift */,
 				483E308A1FEAC364006D4512 /* Date.swift */,
 				483E30881FEABDDF006D4512 /* DateFormatter.swift */,
 				484020FE2002775900EB2EB4 /* DateInterval.swift */,
+				483A364B20176F39008D4B6E /* Keychain.swift */,
+				482B2AE8200CFFC4009B04C0 /* NotificationCenter.swift */,
 				483B99221FEFA44B009DF029 /* UIImage.swift */,
+				483A364F201779F3008D4B6E /* UINavigationController.swift */,
 				4840210120027C9B00EB2EB4 /* UIToolbar.swift */,
 				483B99201FEF90A2009DF029 /* UIView.swift */,
 				483E30701FEAABC4006D4512 /* UIViewAnimationCurve.swift */,
@@ -326,6 +371,16 @@
 			path = TaskWrappers;
 			sourceTree = "<group>";
 		};
+		486F4AAC2017272000A32777 /* WhereIsBalboaTests */ = {
+			isa = PBXGroup;
+			children = (
+				486F4AAF2017272000A32777 /* Info.plist */,
+				486F4AB8201727EE00A32777 /* DateTests.swift */,
+				486F4AB7201727EE00A32777 /* WhereIsBalboaTests-Bridging-Header.h */,
+			);
+			path = WhereIsBalboaTests;
+			sourceTree = "<group>";
+		};
 		48B16BA42001F6BD00BF45DF /* Operations */ = {
 			isa = PBXGroup;
 			children = (
@@ -345,6 +400,8 @@
 			children = (
 				329AEBE3B64A29654C79F38B /* Pods-WhereIsBalboa.debug.xcconfig */,
 				3764ED0D75B66BD7768C4E19 /* Pods-WhereIsBalboa.release.xcconfig */,
+				7F247AAFFDD1E8F86965E52D /* Pods-WhereIsBalboaTests.debug.xcconfig */,
+				C5EA047A67DBB952B920AAAF /* Pods-WhereIsBalboaTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -372,6 +429,27 @@
 			productReference = 483E30491FEAAB58006D4512 /* WhereIsBalboa.app */;
 			productType = "com.apple.product-type.application";
 		};
+		486F4AAA2017271F00A32777 /* WhereIsBalboaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 486F4AB42017272000A32777 /* Build configuration list for PBXNativeTarget "WhereIsBalboaTests" */;
+			buildPhases = (
+				8B3658999D828749350928CE /* [CP] Check Pods Manifest.lock */,
+				486F4AA72017271F00A32777 /* Sources */,
+				486F4AA82017271F00A32777 /* Frameworks */,
+				486F4AA92017271F00A32777 /* Resources */,
+				94B0B70EC15C03271EE70456 /* [CP] Embed Pods Frameworks */,
+				CB1803CA067C2DAF5C4C976C /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				486F4AB12017272000A32777 /* PBXTargetDependency */,
+			);
+			name = WhereIsBalboaTests;
+			productName = WhereIsBalboaTests;
+			productReference = 486F4AAB2017271F00A32777 /* WhereIsBalboaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -390,6 +468,12 @@
 							};
 						};
 					};
+					486F4AAA2017271F00A32777 = {
+						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 483E30481FEAAB58006D4512;
+					};
 				};
 			};
 			buildConfigurationList = 483E30441FEAAB58006D4512 /* Build configuration list for PBXProject "WhereIsBalboa" */;
@@ -406,6 +490,7 @@
 			projectRoot = "";
 			targets = (
 				483E30481FEAAB58006D4512 /* WhereIsBalboa */,
+				486F4AAA2017271F00A32777 /* WhereIsBalboaTests */,
 			);
 		};
 /* End PBXProject section */
@@ -421,16 +506,24 @@
 				483E307E1FEAABC4006D4512 /* TripEditorViewController.xib in Resources */,
 				483B99191FEF793D009DF029 /* OwnTripTableViewCell.xib in Resources */,
 				482B2ADD200CF55A009B04C0 /* LoginViewController.xib in Resources */,
-				483E30571FEAAB58006D4512 /* LaunchScreen.storyboard in Resources */,
 				483E307C1FEAABC4006D4512 /* ProfileViewController.xib in Resources */,
+				483A365220177CE7008D4B6E /* LaunchScreen.storyboard in Resources */,
 				483B99111FEEA032009DF029 /* LoadingViewController.xib in Resources */,
 				483E30541FEAAB58006D4512 /* Assets.xcassets in Resources */,
+				483A364A20176ACD008D4B6E /* SplashScreenViewController.xib in Resources */,
 				483E30761FEAABC4006D4512 /* TripMapViewController.xib in Resources */,
 				483E30961FEADFA2006D4512 /* TripTableViewCell.xib in Resources */,
 				483E30851FEAB2A5006D4512 /* GoogleService-Info.plist in Resources */,
 				482B2AF3200D091C009B04C0 /* SignUpViewController.xib in Resources */,
 				483E307A1FEAABC4006D4512 /* HomeViewController.xib in Resources */,
 				482B2AFF200E07B1009B04C0 /* TextFieldPromptViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		486F4AA92017271F00A32777 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +545,36 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhereIsBalboa/Pods-WhereIsBalboa-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		8B3658999D828749350928CE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		94B0B70EC15C03271EE70456 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhereIsBalboaTests/Pods-WhereIsBalboaTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		CA75BD51878153484E2FA852 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -465,6 +588,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhereIsBalboa/Pods-WhereIsBalboa-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB1803CA067C2DAF5C4C976C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhereIsBalboaTests/Pods-WhereIsBalboaTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F0415A1DDB759DCACB9455BA /* [CP] Check Pods Manifest.lock */ = {
@@ -494,6 +632,7 @@
 				48B16BAE2001FA2E00BF45DF /* TripMetadata.swift in Sources */,
 				483E308F1FEADC42006D4512 /* Balbabe.swift in Sources */,
 				483E30821FEAABC4006D4512 /* UIViewAnimationCurve.swift in Sources */,
+				483A3650201779F3008D4B6E /* UINavigationController.swift in Sources */,
 				483E30981FEB7075006D4512 /* BalbabeTripListTableViewController.swift in Sources */,
 				482B2AE9200CFFC4009B04C0 /* NotificationCenter.swift in Sources */,
 				482B2AEF200D0603009B04C0 /* OperationBuilderError.swift in Sources */,
@@ -501,6 +640,7 @@
 				482B2AF7200D4558009B04C0 /* TripDeleteOperation.swift in Sources */,
 				483B990F1FEEA017009DF029 /* LoadingViewController.swift in Sources */,
 				483B99211FEF90A3009DF029 /* UIView.swift in Sources */,
+				483A364C20176F39008D4B6E /* Keychain.swift in Sources */,
 				483E30911FEADE5A006D4512 /* TripListTableViewDataSource.swift in Sources */,
 				483B99251FF003B8009DF029 /* Address.swift in Sources */,
 				483B99231FEFA44B009DF029 /* UIImage.swift in Sources */,
@@ -527,11 +667,13 @@
 				483E30831FEAABC4006D4512 /* KeyboardManager.swift in Sources */,
 				482B2ADF200CF884009B04C0 /* LoginOperation.swift in Sources */,
 				48BC2FDF200B51DC0030A41A /* CKClusterView.swift in Sources */,
+				483A364820176AA9008D4B6E /* SplashScreenViewController.swift in Sources */,
 				482B2AF1200D0914009B04C0 /* SignUpViewController.swift in Sources */,
 				482B2B01200E2017009B04C0 /* DatabaseConversionError.swift in Sources */,
 				48B16BB2200228BA00BF45DF /* CityGeocodeTaskWrapper.swift in Sources */,
 				483B99151FEF7853009DF029 /* BalbabeTripListTableViewDataSource.swift in Sources */,
 				483E307D1FEAABC4006D4512 /* TripEditorViewController.swift in Sources */,
+				483A364E20176F4B008D4B6E /* LoginInfo.swift in Sources */,
 				482B2AF9200DF51C009B04C0 /* AccountEditor.swift in Sources */,
 				483E30791FEAABC4006D4512 /* HomeViewController.swift in Sources */,
 				48B16BA62001F6C500BF45DF /* TripEditOperation.swift in Sources */,
@@ -546,18 +688,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		486F4AA72017271F00A32777 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				486F4AB9201727EE00A32777 /* DateTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		483E30551FEAAB58006D4512 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				483E30561FEAAB58006D4512 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
+/* Begin PBXTargetDependency section */
+		486F4AB12017272000A32777 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 483E30481FEAAB58006D4512 /* WhereIsBalboa */;
+			targetProxy = 486F4AB02017272000A32777 /* PBXContainerItemProxy */;
 		};
-/* End PBXVariantGroup section */
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		483E30591FEAAB58006D4512 /* Debug */ = {
@@ -703,6 +850,47 @@
 			};
 			name = Release;
 		};
+		486F4AB22017272000A32777 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F247AAFFDD1E8F86965E52D /* Pods-WhereIsBalboaTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 239483289D;
+				INFOPLIST_FILE = WhereIsBalboaTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Feef.Anthony.WhereIsBalboaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WhereIsBalboaTests/WhereIsBalboaTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WhereIsBalboa.app/WhereIsBalboa";
+			};
+			name = Debug;
+		};
+		486F4AB32017272000A32777 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5EA047A67DBB952B920AAAF /* Pods-WhereIsBalboaTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 239483289D;
+				INFOPLIST_FILE = WhereIsBalboaTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Feef.Anthony.WhereIsBalboaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WhereIsBalboaTests/WhereIsBalboaTests-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WhereIsBalboa.app/WhereIsBalboa";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -720,6 +908,15 @@
 			buildConfigurations = (
 				483E305C1FEAAB58006D4512 /* Debug */,
 				483E305D1FEAAB58006D4512 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		486F4AB42017272000A32777 /* Build configuration list for PBXNativeTarget "WhereIsBalboaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				486F4AB22017272000A32777 /* Debug */,
+				486F4AB32017272000A32777 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

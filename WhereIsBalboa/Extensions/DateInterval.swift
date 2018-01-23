@@ -4,7 +4,7 @@ extension DateInterval {
     private static var delimiterString = " * "
     private static var formatter = DateFormatter.fullDate
     
-    init?(_ string: String) {
+    init?(_ string: String, timeZone: TimeZone = .current) {
         let components = string.components(separatedBy: DateInterval.delimiterString)
         guard
             components.count == 2,
@@ -13,7 +13,7 @@ extension DateInterval {
         else {
             return nil
         }
-        self.init(start: start, end: end)
+        self.init(start: start.startOfDay(in: timeZone), end: end.endOfDay(in: timeZone))
     }
     
     var stringRepresentation: String {

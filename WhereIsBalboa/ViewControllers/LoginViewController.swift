@@ -1,6 +1,7 @@
 import UIKit
 import FirebaseAuth
 import PopupDialog
+import KeychainAccess
 
 class LoginViewController: UIViewController, UITextFieldDelegate, AccountEditor {
     @IBOutlet private var emailTextField: UITextField!
@@ -56,7 +57,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate, AccountEditor 
             return
         }
         
-        beginLoginFlowWith(email: email, password: password)
+        let loginInfo = LoginInfo(email: email, password: password)
+        beginLoginFlow(with: loginInfo)
     }
     
     @IBAction private func tappedForgotPassword() {
@@ -84,37 +86,36 @@ class LoginViewController: UIViewController, UITextFieldDelegate, AccountEditor 
     
     // MARK: - Login and signup
     
-    private func beginLoginFlowWith(email: String, password: String) {
-        let operation = LoginOperation(email: email, password: password) { result in
+    private func beginLoginFlow(with loginInfo: LoginInfo) {
+        let operation = LoginOperation(loginInfo) { [weak self] result in
+            guard let strongSelf = self else {
+                return
+            }
+            
             DispatchQueue.main.async {
-                switch result {
-                case .failure(let error):
-                    guard
-                        let authError = error as NSError?,
-                        authError.code == AuthErrorCode.userNotFound.rawValue
-                        else {
-                            self.showAlert(message: error?.localizedDescription)
-                            return
-                    }
-                    
-                    self.dismiss(animated: true, completion: { [weak self] in
-                        guard let strongSelf = self else {
-                            return
-                        }
-                        
-                        let createButton = DefaultButton(title: "Yep!") {
-                            strongSelf.startCreateBalbabeFlowWith(email: email, password: password)
-                        }
-                        let cancelButton = CancelButton(title: "Nope") {
-                            strongSelf.dismiss(animated: true)
-                        }
-                        strongSelf.showAlert(title: "No user found", message: "We didn't find an account with that email. Would you like to create an account?", buttons: [createButton, cancelButton])
-                    })
-                case .success(let balbabe):
-                    UserManager.shared.setCurrentUser(balbabe)
-                    let homeViewController = HomeViewController(balbabe)
-                    self.dismiss(animated: true) {
-                        self.navigationController?.pushViewController(homeViewController, animated: true)
+                strongSelf.dismiss(animated: true) {
+                    switch result {
+                        case .failure(let error):
+                            guard
+                                let authError = error as NSError?,
+                                authError.code == AuthErrorCode.userNotFound.rawValue
+                            else {
+                                    strongSelf.showAlert(message: error?.localizedDescription)
+                                    return
+                            }
+                            
+                            let createButton = DefaultButton(title: "Yep!") {
+                                strongSelf.startCreateBalbabeFlow(with: loginInfo)
+                            }
+                            let cancelButton = CancelButton(title: "Nope") {
+                                strongSelf.dismiss(animated: true)
+                            }
+                            strongSelf.showAlert(title: "No user found", message: "We didn't find an account with that email. Would you like to create an account?", buttons: [createButton, cancelButton])
+                        case .success(let balbabe):
+                            Keychain.standard.setLoginInfo(loginInfo)
+                            UserManager.shared.setCurrentUser(balbabe)
+                            let homeViewController = HomeViewController(balbabe)
+                            strongSelf.navigationController?.pushViewController(homeViewController, animated: true)
                     }
                 }
             }
@@ -123,8 +124,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate, AccountEditor 
         OperationQueue.main.addOperation(operation)
     }
     
-    private func startCreateBalbabeFlowWith(email: String, password: String) {
-        let signUpViewController = SignUpViewController(email: email, password: password)
+    private func startCreateBalbabeFlow(with loginInfo: LoginInfo) {
+        let signUpViewController = SignUpViewController(loginInfo)
         navigationController?.pushViewController(signUpViewController, animated: true)
     }
     

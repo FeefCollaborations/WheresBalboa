@@ -31,8 +31,12 @@ struct BalbabeMetadata: Equatable, DatabaseConvertible {
     
     init(name: String, whatsapp: String, hometown: Address) throws {
         var urlReadyNumber = whatsapp.replacingOccurrences( of:"[^0-9]", with: "", options: .regularExpression)
-        let leadingZerosCheckEndIndex = urlReadyNumber.index(urlReadyNumber.startIndex, offsetBy: 2)
-        if urlReadyNumber[urlReadyNumber.startIndex..<leadingZerosCheckEndIndex] == "00" {
+        guard urlReadyNumber.count > 3 else {
+            throw InitializationError.invalidWhatsapp(whatsapp)
+        }
+        let leadingZeroes = "00"
+        let leadingZerosCheckEndIndex = urlReadyNumber.index(urlReadyNumber.startIndex, offsetBy: leadingZeroes.count)
+        if urlReadyNumber[urlReadyNumber.startIndex..<leadingZerosCheckEndIndex] == leadingZeroes {
             urlReadyNumber = String(urlReadyNumber[leadingZerosCheckEndIndex..<urlReadyNumber.endIndex])
         }
         guard let whatsappURL = URL(string: "https://api.whatsapp.com/send?phone=" + urlReadyNumber) else {

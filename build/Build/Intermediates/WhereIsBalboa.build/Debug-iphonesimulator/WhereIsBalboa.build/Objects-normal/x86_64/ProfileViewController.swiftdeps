@@ -40,6 +40,7 @@ depends-top-level:
 - "BooleanLiteralType"
 - "Error"
 - "KeyboardManager"
+- !private "Keychain"
 - "LocationSearchTableViewController"
 - "LocationSearchTableViewControllerDelegate"
 - "NSCoder"
@@ -67,6 +68,7 @@ depends-member:
 - !private ["13WhereIsBalboa13AccountEditorP", "BalbabeEditOperation"]
 - !private ["13WhereIsBalboa13AccountEditorP", "BalbabeMetadata"]
 - ["13WhereIsBalboa13AccountEditorP", "KeyboardManager"]
+- !private ["13WhereIsBalboa13AccountEditorP", "Keychain"]
 - !private ["13WhereIsBalboa13AccountEditorP", "LocationSearchTableViewController"]
 - !private ["13WhereIsBalboa13AccountEditorP", "OperationQueue"]
 - !private ["13WhereIsBalboa13AccountEditorP", "PopupDialog"]
@@ -141,6 +143,7 @@ depends-member:
 - !private ["s7CVarArgP", "BalbabeEditOperation"]
 - !private ["s7CVarArgP", "BalbabeMetadata"]
 - ["s7CVarArgP", "KeyboardManager"]
+- !private ["s7CVarArgP", "Keychain"]
 - !private ["s7CVarArgP", "LocationSearchTableViewController"]
 - !private ["s7CVarArgP", "OperationQueue"]
 - !private ["s7CVarArgP", "PopupDialog"]
@@ -171,7 +174,7 @@ depends-member:
 - !private ["s7CVarArgP", "navigationItem"]
 - !private ["s7CVarArgP", "onAnyChange"]
 - !private ["s7CVarArgP", "placeholder"]
-- !private ["s7CVarArgP", "popToRootViewController"]
+- !private ["s7CVarArgP", "popToLoginViewController"]
 - ["s7CVarArgP", "position"]
 - ["s7CVarArgP", "positionForBar"]
 - !private ["s7CVarArgP", "present"]
@@ -221,6 +224,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "BalbabeEditOperation"]
 - !private ["s28CustomDebugStringConvertibleP", "BalbabeMetadata"]
 - ["s28CustomDebugStringConvertibleP", "KeyboardManager"]
+- !private ["s28CustomDebugStringConvertibleP", "Keychain"]
 - !private ["s28CustomDebugStringConvertibleP", "LocationSearchTableViewController"]
 - !private ["s28CustomDebugStringConvertibleP", "OperationQueue"]
 - !private ["s28CustomDebugStringConvertibleP", "PopupDialog"]
@@ -253,7 +257,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "navigationItem"]
 - !private ["s28CustomDebugStringConvertibleP", "onAnyChange"]
 - !private ["s28CustomDebugStringConvertibleP", "placeholder"]
-- !private ["s28CustomDebugStringConvertibleP", "popToRootViewController"]
+- !private ["s28CustomDebugStringConvertibleP", "popToLoginViewController"]
 - ["s28CustomDebugStringConvertibleP", "position"]
 - ["s28CustomDebugStringConvertibleP", "positionForBar"]
 - !private ["s28CustomDebugStringConvertibleP", "present"]
@@ -271,12 +275,14 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "searchBarTextDidEndEditing"]
 - !private ["s28CustomDebugStringConvertibleP", "searchController"]
 - !private ["s28CustomDebugStringConvertibleP", "sendPasswordReset"]
+- !private ["s28CustomDebugStringConvertibleP", "setLoginInfo"]
 - !private ["s28CustomDebugStringConvertibleP", "setNavigationBarHidden"]
 - !private ["s28CustomDebugStringConvertibleP", "setTitle"]
 - !private ["s28CustomDebugStringConvertibleP", "showAlert"]
 - !private ["s28CustomDebugStringConvertibleP", "showLoadingAlert"]
 - !private ["s28CustomDebugStringConvertibleP", "showRetryAlert"]
 - !private ["s28CustomDebugStringConvertibleP", "stackViewVerticalCenterConstraint"]
+- !private ["s28CustomDebugStringConvertibleP", "standard"]
 - !private ["s28CustomDebugStringConvertibleP", "text"]
 - ["s28CustomDebugStringConvertibleP", "textField"]
 - ["s28CustomDebugStringConvertibleP", "textFieldDidBeginEditing"]
@@ -309,6 +315,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "BalbabeEditOperation"]
 - !private ["s23CustomStringConvertibleP", "BalbabeMetadata"]
 - ["s23CustomStringConvertibleP", "KeyboardManager"]
+- !private ["s23CustomStringConvertibleP", "Keychain"]
 - !private ["s23CustomStringConvertibleP", "LocationSearchTableViewController"]
 - !private ["s23CustomStringConvertibleP", "OperationQueue"]
 - !private ["s23CustomStringConvertibleP", "PopupDialog"]
@@ -340,7 +347,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "navigationItem"]
 - !private ["s23CustomStringConvertibleP", "onAnyChange"]
 - !private ["s23CustomStringConvertibleP", "placeholder"]
-- !private ["s23CustomStringConvertibleP", "popToRootViewController"]
+- !private ["s23CustomStringConvertibleP", "popToLoginViewController"]
 - ["s23CustomStringConvertibleP", "position"]
 - ["s23CustomStringConvertibleP", "positionForBar"]
 - !private ["s23CustomStringConvertibleP", "present"]
@@ -358,12 +365,14 @@ depends-member:
 - ["s23CustomStringConvertibleP", "searchBarTextDidEndEditing"]
 - !private ["s23CustomStringConvertibleP", "searchController"]
 - !private ["s23CustomStringConvertibleP", "sendPasswordReset"]
+- !private ["s23CustomStringConvertibleP", "setLoginInfo"]
 - !private ["s23CustomStringConvertibleP", "setNavigationBarHidden"]
 - !private ["s23CustomStringConvertibleP", "setTitle"]
 - !private ["s23CustomStringConvertibleP", "showAlert"]
 - !private ["s23CustomStringConvertibleP", "showLoadingAlert"]
 - !private ["s23CustomStringConvertibleP", "showRetryAlert"]
 - !private ["s23CustomStringConvertibleP", "stackViewVerticalCenterConstraint"]
+- !private ["s23CustomStringConvertibleP", "standard"]
 - !private ["s23CustomStringConvertibleP", "text"]
 - ["s23CustomStringConvertibleP", "textField"]
 - ["s23CustomStringConvertibleP", "textFieldDidBeginEditing"]
@@ -400,6 +409,7 @@ depends-member:
 - !private ["s9EquatableP", "BalbabeEditOperation"]
 - !private ["s9EquatableP", "BalbabeMetadata"]
 - ["s9EquatableP", "KeyboardManager"]
+- !private ["s9EquatableP", "Keychain"]
 - !private ["s9EquatableP", "LocationSearchTableViewController"]
 - !private ["s9EquatableP", "OperationQueue"]
 - !private ["s9EquatableP", "PopupDialog"]
@@ -438,7 +448,7 @@ depends-member:
 - !private ["s9EquatableP", "normal"]
 - !private ["s9EquatableP", "onAnyChange"]
 - !private ["s9EquatableP", "placeholder"]
-- !private ["s9EquatableP", "popToRootViewController"]
+- !private ["s9EquatableP", "popToLoginViewController"]
 - ["s9EquatableP", "position"]
 - ["s9EquatableP", "positionForBar"]
 - !private ["s9EquatableP", "present"]
@@ -495,6 +505,7 @@ depends-member:
 - !private ["s8HashableP", "BalbabeEditOperation"]
 - !private ["s8HashableP", "BalbabeMetadata"]
 - ["s8HashableP", "KeyboardManager"]
+- !private ["s8HashableP", "Keychain"]
 - !private ["s8HashableP", "LocationSearchTableViewController"]
 - !private ["s8HashableP", "OperationQueue"]
 - !private ["s8HashableP", "PopupDialog"]
@@ -526,7 +537,7 @@ depends-member:
 - !private ["s8HashableP", "navigationItem"]
 - !private ["s8HashableP", "onAnyChange"]
 - !private ["s8HashableP", "placeholder"]
-- !private ["s8HashableP", "popToRootViewController"]
+- !private ["s8HashableP", "popToLoginViewController"]
 - ["s8HashableP", "position"]
 - ["s8HashableP", "positionForBar"]
 - !private ["s8HashableP", "present"]
@@ -571,12 +582,15 @@ depends-member:
 - !private ["10SwiftyJSON17JSONSubscriptTypeP", "trimmingCharacters"]
 - ["13WhereIsBalboa15KeyboardManagerC", "init"]
 - !private ["13WhereIsBalboa15KeyboardManagerC", "onAnyChange"]
+- !private ["14KeychainAccess0A0C", "setLoginInfo"]
+- !private ["14KeychainAccess0A0C", "standard"]
 - !private ["13WhereIsBalboa33LocationSearchTableViewControllerC", "deinit"]
 - !private ["13WhereIsBalboa33LocationSearchTableViewControllerC", "init"]
 - !private ["13WhereIsBalboa41LocationSearchTableViewControllerDelegateP", "Auth"]
 - !private ["13WhereIsBalboa41LocationSearchTableViewControllerDelegateP", "BalbabeEditOperation"]
 - !private ["13WhereIsBalboa41LocationSearchTableViewControllerDelegateP", "BalbabeMetadata"]
 - ["13WhereIsBalboa41LocationSearchTableViewControllerDelegateP", "KeyboardManager"]
+- !private ["13WhereIsBalboa41LocationSearchTableViewControllerDelegateP", "Keychain"]
 - !private ["13WhereIsBalboa41LocationSearchTableViewControllerDelegateP", "LocationSearchTableViewController"]
 - !private ["13WhereIsBalboa41LocationSearchTableViewControllerDelegateP", "OperationQueue"]
 - !private ["13WhereIsBalboa41LocationSearchTableViewControllerDelegateP", "PopupDialog"]
@@ -634,6 +648,7 @@ depends-member:
 - !private ["So8NSCodingP", "BalbabeEditOperation"]
 - !private ["So8NSCodingP", "BalbabeMetadata"]
 - ["So8NSCodingP", "KeyboardManager"]
+- !private ["So8NSCodingP", "Keychain"]
 - !private ["So8NSCodingP", "LocationSearchTableViewController"]
 - !private ["So8NSCodingP", "OperationQueue"]
 - !private ["So8NSCodingP", "PopupDialog"]
@@ -658,7 +673,7 @@ depends-member:
 - !private ["So8NSCodingP", "navigationController"]
 - !private ["So8NSCodingP", "navigationItem"]
 - !private ["So8NSCodingP", "placeholder"]
-- !private ["So8NSCodingP", "popToRootViewController"]
+- !private ["So8NSCodingP", "popToLoginViewController"]
 - ["So8NSCodingP", "position"]
 - ["So8NSCodingP", "positionForBar"]
 - !private ["So8NSCodingP", "present"]
@@ -703,6 +718,7 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "BalbabeEditOperation"]
 - !private ["So26NSExtensionRequestHandlingP", "BalbabeMetadata"]
 - ["So26NSExtensionRequestHandlingP", "KeyboardManager"]
+- !private ["So26NSExtensionRequestHandlingP", "Keychain"]
 - !private ["So26NSExtensionRequestHandlingP", "LocationSearchTableViewController"]
 - !private ["So26NSExtensionRequestHandlingP", "OperationQueue"]
 - !private ["So26NSExtensionRequestHandlingP", "PopupDialog"]
@@ -722,7 +738,7 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "nameTextField"]
 - !private ["So26NSExtensionRequestHandlingP", "navigationController"]
 - !private ["So26NSExtensionRequestHandlingP", "navigationItem"]
-- !private ["So26NSExtensionRequestHandlingP", "popToRootViewController"]
+- !private ["So26NSExtensionRequestHandlingP", "popToLoginViewController"]
 - ["So26NSExtensionRequestHandlingP", "position"]
 - ["So26NSExtensionRequestHandlingP", "positionForBar"]
 - !private ["So26NSExtensionRequestHandlingP", "present"]
@@ -773,6 +789,7 @@ depends-member:
 - ["So8NSObjectC", "Bool"]
 - ["So8NSObjectC", "Error"]
 - ["So8NSObjectC", "KeyboardManager"]
+- !private ["So8NSObjectC", "Keychain"]
 - ["So8NSObjectC", "LocationSearchTableViewController"]
 - ["So8NSObjectC", "NSCoder"]
 - ["So8NSObjectC", "NSLayoutConstraint"]
@@ -812,7 +829,7 @@ depends-member:
 - !private ["So8NSObjectC", "navigationItem"]
 - !private ["So8NSObjectC", "onAnyChange"]
 - !private ["So8NSObjectC", "placeholder"]
-- !private ["So8NSObjectC", "popToRootViewController"]
+- !private ["So8NSObjectC", "popToLoginViewController"]
 - ["So8NSObjectC", "position"]
 - ["So8NSObjectC", "positionForBar"]
 - !private ["So8NSObjectC", "present"]
@@ -858,6 +875,7 @@ depends-member:
 - !private ["So16NSObjectProtocolP", "BalbabeEditOperation"]
 - !private ["So16NSObjectProtocolP", "BalbabeMetadata"]
 - ["So16NSObjectProtocolP", "KeyboardManager"]
+- !private ["So16NSObjectProtocolP", "Keychain"]
 - !private ["So16NSObjectProtocolP", "LocationSearchTableViewController"]
 - !private ["So16NSObjectProtocolP", "OperationQueue"]
 - !private ["So16NSObjectProtocolP", "PopupDialog"]
@@ -888,7 +906,7 @@ depends-member:
 - !private ["So16NSObjectProtocolP", "navigationItem"]
 - !private ["So16NSObjectProtocolP", "onAnyChange"]
 - !private ["So16NSObjectProtocolP", "placeholder"]
-- !private ["So16NSObjectProtocolP", "popToRootViewController"]
+- !private ["So16NSObjectProtocolP", "popToLoginViewController"]
 - ["So16NSObjectProtocolP", "position"]
 - ["So16NSObjectProtocolP", "positionForBar"]
 - !private ["So16NSObjectProtocolP", "present"]
@@ -946,6 +964,7 @@ depends-member:
 - ["13WhereIsBalboa21ProfileViewControllerC", "Bool"]
 - ["13WhereIsBalboa21ProfileViewControllerC", "Error"]
 - ["13WhereIsBalboa21ProfileViewControllerC", "KeyboardManager"]
+- !private ["13WhereIsBalboa21ProfileViewControllerC", "Keychain"]
 - ["13WhereIsBalboa21ProfileViewControllerC", "LocationSearchTableViewController"]
 - ["13WhereIsBalboa21ProfileViewControllerC", "NSCoder"]
 - ["13WhereIsBalboa21ProfileViewControllerC", "NSLayoutConstraint"]
@@ -1052,6 +1071,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "BalbabeEditOperation"]
 - !private ["So21UIAppearanceContainerP", "BalbabeMetadata"]
 - ["So21UIAppearanceContainerP", "KeyboardManager"]
+- !private ["So21UIAppearanceContainerP", "Keychain"]
 - !private ["So21UIAppearanceContainerP", "LocationSearchTableViewController"]
 - !private ["So21UIAppearanceContainerP", "OperationQueue"]
 - !private ["So21UIAppearanceContainerP", "PopupDialog"]
@@ -1075,7 +1095,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "navigationController"]
 - !private ["So21UIAppearanceContainerP", "navigationItem"]
 - !private ["So21UIAppearanceContainerP", "placeholder"]
-- !private ["So21UIAppearanceContainerP", "popToRootViewController"]
+- !private ["So21UIAppearanceContainerP", "popToLoginViewController"]
 - ["So21UIAppearanceContainerP", "position"]
 - ["So21UIAppearanceContainerP", "positionForBar"]
 - !private ["So21UIAppearanceContainerP", "present"]
@@ -1118,6 +1138,7 @@ depends-member:
 - !private ["So24UIBarPositioningDelegateP", "BalbabeEditOperation"]
 - !private ["So24UIBarPositioningDelegateP", "BalbabeMetadata"]
 - ["So24UIBarPositioningDelegateP", "KeyboardManager"]
+- !private ["So24UIBarPositioningDelegateP", "Keychain"]
 - !private ["So24UIBarPositioningDelegateP", "LocationSearchTableViewController"]
 - !private ["So24UIBarPositioningDelegateP", "OperationQueue"]
 - !private ["So24UIBarPositioningDelegateP", "PopupDialog"]
@@ -1169,6 +1190,7 @@ depends-member:
 - !private ["So18UIContentContainerP", "BalbabeEditOperation"]
 - !private ["So18UIContentContainerP", "BalbabeMetadata"]
 - ["So18UIContentContainerP", "KeyboardManager"]
+- !private ["So18UIContentContainerP", "Keychain"]
 - !private ["So18UIContentContainerP", "LocationSearchTableViewController"]
 - !private ["So18UIContentContainerP", "OperationQueue"]
 - !private ["So18UIContentContainerP", "PopupDialog"]
@@ -1188,7 +1210,7 @@ depends-member:
 - !private ["So18UIContentContainerP", "nameTextField"]
 - !private ["So18UIContentContainerP", "navigationController"]
 - !private ["So18UIContentContainerP", "navigationItem"]
-- !private ["So18UIContentContainerP", "popToRootViewController"]
+- !private ["So18UIContentContainerP", "popToLoginViewController"]
 - ["So18UIContentContainerP", "position"]
 - ["So18UIContentContainerP", "positionForBar"]
 - !private ["So18UIContentContainerP", "present"]
@@ -1245,6 +1267,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "BalbabeEditOperation"]
 - !private ["So18UIFocusEnvironmentP", "BalbabeMetadata"]
 - ["So18UIFocusEnvironmentP", "KeyboardManager"]
+- !private ["So18UIFocusEnvironmentP", "Keychain"]
 - !private ["So18UIFocusEnvironmentP", "LocationSearchTableViewController"]
 - !private ["So18UIFocusEnvironmentP", "OperationQueue"]
 - !private ["So18UIFocusEnvironmentP", "PopupDialog"]
@@ -1268,7 +1291,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "navigationController"]
 - !private ["So18UIFocusEnvironmentP", "navigationItem"]
 - !private ["So18UIFocusEnvironmentP", "placeholder"]
-- !private ["So18UIFocusEnvironmentP", "popToRootViewController"]
+- !private ["So18UIFocusEnvironmentP", "popToLoginViewController"]
 - ["So18UIFocusEnvironmentP", "position"]
 - ["So18UIFocusEnvironmentP", "positionForBar"]
 - !private ["So18UIFocusEnvironmentP", "present"]
@@ -1313,13 +1336,14 @@ depends-member:
 - !private ["So11UIFocusItemP", "text"]
 - !private ["So10UIKeyInputP", "resignFirstResponder"]
 - !private ["So10UIKeyInputP", "text"]
-- !private ["So22UINavigationControllerC", "popToRootViewController"]
+- !private ["So22UINavigationControllerC", "popToLoginViewController"]
 - !private ["So22UINavigationControllerC", "setNavigationBarHidden"]
 - !private ["So16UINavigationItemC", "rightBarButtonItem"]
 - !private ["So30UIPasteConfigurationSupportingP", "Auth"]
 - !private ["So30UIPasteConfigurationSupportingP", "BalbabeEditOperation"]
 - !private ["So30UIPasteConfigurationSupportingP", "BalbabeMetadata"]
 - ["So30UIPasteConfigurationSupportingP", "KeyboardManager"]
+- !private ["So30UIPasteConfigurationSupportingP", "Keychain"]
 - !private ["So30UIPasteConfigurationSupportingP", "LocationSearchTableViewController"]
 - !private ["So30UIPasteConfigurationSupportingP", "OperationQueue"]
 - !private ["So30UIPasteConfigurationSupportingP", "PopupDialog"]
@@ -1343,7 +1367,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "navigationController"]
 - !private ["So30UIPasteConfigurationSupportingP", "navigationItem"]
 - !private ["So30UIPasteConfigurationSupportingP", "placeholder"]
-- !private ["So30UIPasteConfigurationSupportingP", "popToRootViewController"]
+- !private ["So30UIPasteConfigurationSupportingP", "popToLoginViewController"]
 - ["So30UIPasteConfigurationSupportingP", "position"]
 - ["So30UIPasteConfigurationSupportingP", "positionForBar"]
 - !private ["So30UIPasteConfigurationSupportingP", "present"]
@@ -1387,6 +1411,7 @@ depends-member:
 - ["So11UIResponderC", "Bool"]
 - ["So11UIResponderC", "Error"]
 - ["So11UIResponderC", "KeyboardManager"]
+- !private ["So11UIResponderC", "Keychain"]
 - ["So11UIResponderC", "LocationSearchTableViewController"]
 - ["So11UIResponderC", "NSCoder"]
 - ["So11UIResponderC", "NSLayoutConstraint"]
@@ -1419,7 +1444,7 @@ depends-member:
 - !private ["So11UIResponderC", "navigationController"]
 - !private ["So11UIResponderC", "navigationItem"]
 - !private ["So11UIResponderC", "placeholder"]
-- !private ["So11UIResponderC", "popToRootViewController"]
+- !private ["So11UIResponderC", "popToLoginViewController"]
 - ["So11UIResponderC", "position"]
 - ["So11UIResponderC", "positionForBar"]
 - !private ["So11UIResponderC", "present"]
@@ -1462,6 +1487,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "BalbabeEditOperation"]
 - !private ["So30UIResponderStandardEditActionsP", "BalbabeMetadata"]
 - ["So30UIResponderStandardEditActionsP", "KeyboardManager"]
+- !private ["So30UIResponderStandardEditActionsP", "Keychain"]
 - !private ["So30UIResponderStandardEditActionsP", "LocationSearchTableViewController"]
 - !private ["So30UIResponderStandardEditActionsP", "OperationQueue"]
 - !private ["So30UIResponderStandardEditActionsP", "PopupDialog"]
@@ -1485,7 +1511,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "navigationController"]
 - !private ["So30UIResponderStandardEditActionsP", "navigationItem"]
 - !private ["So30UIResponderStandardEditActionsP", "placeholder"]
-- !private ["So30UIResponderStandardEditActionsP", "popToRootViewController"]
+- !private ["So30UIResponderStandardEditActionsP", "popToLoginViewController"]
 - ["So30UIResponderStandardEditActionsP", "position"]
 - ["So30UIResponderStandardEditActionsP", "positionForBar"]
 - !private ["So30UIResponderStandardEditActionsP", "present"]
@@ -1529,6 +1555,7 @@ depends-member:
 - !private ["So19UISearchBarDelegateP", "BalbabeEditOperation"]
 - !private ["So19UISearchBarDelegateP", "BalbabeMetadata"]
 - ["So19UISearchBarDelegateP", "KeyboardManager"]
+- !private ["So19UISearchBarDelegateP", "Keychain"]
 - !private ["So19UISearchBarDelegateP", "LocationSearchTableViewController"]
 - !private ["So19UISearchBarDelegateP", "OperationQueue"]
 - !private ["So19UISearchBarDelegateP", "PopupDialog"]
@@ -1584,6 +1611,7 @@ depends-member:
 - !private ["So16UIStateRestoringP", "BalbabeEditOperation"]
 - !private ["So16UIStateRestoringP", "BalbabeMetadata"]
 - ["So16UIStateRestoringP", "KeyboardManager"]
+- !private ["So16UIStateRestoringP", "Keychain"]
 - !private ["So16UIStateRestoringP", "LocationSearchTableViewController"]
 - !private ["So16UIStateRestoringP", "OperationQueue"]
 - !private ["So16UIStateRestoringP", "PopupDialog"]
@@ -1603,7 +1631,7 @@ depends-member:
 - !private ["So16UIStateRestoringP", "nameTextField"]
 - !private ["So16UIStateRestoringP", "navigationController"]
 - !private ["So16UIStateRestoringP", "navigationItem"]
-- !private ["So16UIStateRestoringP", "popToRootViewController"]
+- !private ["So16UIStateRestoringP", "popToLoginViewController"]
 - ["So16UIStateRestoringP", "position"]
 - ["So16UIStateRestoringP", "positionForBar"]
 - !private ["So16UIStateRestoringP", "present"]
@@ -1648,6 +1676,7 @@ depends-member:
 - !private ["So19UITextFieldDelegateP", "BalbabeEditOperation"]
 - !private ["So19UITextFieldDelegateP", "BalbabeMetadata"]
 - ["So19UITextFieldDelegateP", "KeyboardManager"]
+- !private ["So19UITextFieldDelegateP", "Keychain"]
 - !private ["So19UITextFieldDelegateP", "LocationSearchTableViewController"]
 - !private ["So19UITextFieldDelegateP", "OperationQueue"]
 - !private ["So19UITextFieldDelegateP", "PopupDialog"]
@@ -1707,6 +1736,7 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "BalbabeEditOperation"]
 - !private ["So18UITraitEnvironmentP", "BalbabeMetadata"]
 - ["So18UITraitEnvironmentP", "KeyboardManager"]
+- !private ["So18UITraitEnvironmentP", "Keychain"]
 - !private ["So18UITraitEnvironmentP", "LocationSearchTableViewController"]
 - !private ["So18UITraitEnvironmentP", "OperationQueue"]
 - !private ["So18UITraitEnvironmentP", "PopupDialog"]
@@ -1730,7 +1760,7 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "navigationController"]
 - !private ["So18UITraitEnvironmentP", "navigationItem"]
 - !private ["So18UITraitEnvironmentP", "placeholder"]
-- !private ["So18UITraitEnvironmentP", "popToRootViewController"]
+- !private ["So18UITraitEnvironmentP", "popToLoginViewController"]
 - ["So18UITraitEnvironmentP", "position"]
 - ["So18UITraitEnvironmentP", "positionForBar"]
 - !private ["So18UITraitEnvironmentP", "present"]
@@ -1781,6 +1811,7 @@ depends-member:
 - ["So16UIViewControllerC", "Bool"]
 - ["So16UIViewControllerC", "Error"]
 - ["So16UIViewControllerC", "KeyboardManager"]
+- !private ["So16UIViewControllerC", "Keychain"]
 - ["So16UIViewControllerC", "LocationSearchTableViewController"]
 - ["So16UIViewControllerC", "NSCoder"]
 - ["So16UIViewControllerC", "NSLayoutConstraint"]
@@ -1809,7 +1840,7 @@ depends-member:
 - ["So16UIViewControllerC", "nameTextField"]
 - !private ["So16UIViewControllerC", "navigationController"]
 - !private ["So16UIViewControllerC", "navigationItem"]
-- !private ["So16UIViewControllerC", "popToRootViewController"]
+- !private ["So16UIViewControllerC", "popToLoginViewController"]
 - ["So16UIViewControllerC", "position"]
 - ["So16UIViewControllerC", "positionForBar"]
 - !private ["So16UIViewControllerC", "present"]
@@ -1897,6 +1928,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "BalbabeEditOperation"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "BalbabeMetadata"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "KeyboardManager"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Keychain"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "LocationSearchTableViewController"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "OperationQueue"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "PopupDialog"]
@@ -1927,7 +1959,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "navigationItem"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "onAnyChange"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "placeholder"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "popToRootViewController"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "popToLoginViewController"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "position"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "positionForBar"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "present"]
@@ -2010,6 +2042,7 @@ depends-nominal:
 - "s8HashableP"
 - !private "10SwiftyJSON17JSONSubscriptTypeP"
 - "13WhereIsBalboa15KeyboardManagerC"
+- !private "14KeychainAccess0A0C"
 - !private "13WhereIsBalboa33LocationSearchTableViewControllerC"
 - "13WhereIsBalboa41LocationSearchTableViewControllerDelegateP"
 - !private "s25LosslessStringConvertibleP"
@@ -2106,6 +2139,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Modules/SwiftyJSON.swiftmodule/x86_64.swiftmodule"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/PopupDialog/PopupDialog.framework/Modules/PopupDialog.swiftmodule/x86_64.swiftmodule"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/KeychainAccess/KeychainAccess.framework/Modules/KeychainAccess.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
@@ -2125,6 +2159,7 @@ depends-external:
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Headers/SwiftyJSON-umbrella.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/PopupDialog/PopupDialog.framework/Headers/PopupDialog-umbrella.h"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/KeychainAccess/KeychainAccess.framework/Headers/KeychainAccess-umbrella.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/ClusterKit/ClusterKit.framework/Headers/ClusterKit-umbrella.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRMutableData.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageMetadata.h"
@@ -2188,6 +2223,7 @@ depends-external:
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageConstants.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Headers/SwiftyJSON-Swift.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/PopupDialog/PopupDialog.framework/Headers/PopupDialog-Swift.h"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/KeychainAccess/KeychainAccess.framework/Headers/KeychainAccess-Swift.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/ClusterKit/ClusterKit.framework/Headers/MKMapView+ClusterKit.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/ClusterKit/ClusterKit.framework/Headers/ClusterKit.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthDataResult.h"
@@ -2206,5 +2242,19 @@ depends-external:
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/PopupDialog/PopupDialog.framework/Modules/module.modulemap"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Modules/module.modulemap"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/KeychainAccess/KeychainAccess.framework/Modules/module.modulemap"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/ClusterKit/ClusterKit.framework/Modules/module.modulemap"
-interface-hash: "a674dc08ec40f1ca4d5b515f9e47b296"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/LocalAuthentication.framework/Headers/LocalAuthentication.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/MapKit.framework/Headers/MapKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+interface-hash: "a8d82bc398b121ef48025cf02cec6130"

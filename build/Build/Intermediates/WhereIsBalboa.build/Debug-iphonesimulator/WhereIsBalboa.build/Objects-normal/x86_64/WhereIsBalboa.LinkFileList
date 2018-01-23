@@ -3,6 +3,7 @@
 /Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Intermediates/WhereIsBalboa.build/Debug-iphonesimulator/WhereIsBalboa.build/Objects-normal/x86_64/TripMetadata.o
 /Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Intermediates/WhereIsBalboa.build/Debug-iphonesimulator/WhereIsBalboa.build/Objects-normal/x86_64/Balbabe.o
 /Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Intermediates/WhereIsBalboa.build/Debug-iphonesimulator/WhereIsBalboa.build/Objects-normal/x86_64/UIViewAnimationCurve.o
+/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Intermediates/WhereIsBalboa.build/Debug-iphonesimulator/WhereIsBalboa.build/Objects-normal/x86_64/UINavigationController.o
 /Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Intermediates/WhereIsBalboa.build/Debug-iphonesimulator/WhereIsBalboa.build/Objects-normal/x86_64/BalbabeTripListTableViewController.o
 /Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Intermediates/WhereIsBalboa.build/Debug-iphonesimulator/WhereIsBalboa.build/Objects-normal/x86_64/NotificationCenter.o
 /Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Intermediates/WhereIsBalboa.build/Debug-iphonesimulator/WhereIsBalboa.build/Objects-normal/x86_64/OperationBuilderError.o
@@ -10,6 +11,7 @@
 /Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Intermediates/WhereIsBalboa.build/Debug-iphonesimulator/WhereIsBalboa.build/Objects-normal/x86_64/TripDeleteOperation.o
 /Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Intermediates/WhereIsBalboa.build/Debug-iphonesimulator/WhereIsBalboa.build/Objects-normal/x86_64/LoadingViewController.o
 /Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Intermediates/WhereIsBalboa.build/Debug-iphonesimulator/WhereIsBalboa.build/Objects-normal/x86_64/UIView.o
+/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Intermediates/WhereIsBalboa.build/Debug-iphonesimulator/WhereIsBalboa.build/Objects-normal/x86_64/Keychain.o
 /Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Intermediates/WhereIsBalboa.build/Debug-iphonesimulator/WhereIsBalboa.build/Objects-normal/x86_64/TripListTableViewDataSource.o
 /Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Intermediates/WhereIsBalboa.build/Debug-iphonesimulator/WhereIsBalboa.build/Objects-normal/x86_64/Address.o
 /Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Intermediates/WhereIsBalboa.build/Debug-iphonesimulator/WhereIsBalboa.build/Objects-normal/x86_64/UIImage.o
@@ -36,11 +38,13 @@
 /Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Intermediates/WhereIsBalboa.build/Debug-iphonesimulator/WhereIsBalboa.build/Objects-normal/x86_64/KeyboardManager.o
 /Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Intermediates/WhereIsBalboa.build/Debug-iphonesimulator/WhereIsBalboa.build/Objects-normal/x86_64/LoginOperation.o
 /Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Intermediates/WhereIsBalboa.build/Debug-iphonesimulator/WhereIsBalboa.build/Objects-normal/x86_64/CKClusterView.o
+/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Intermediates/WhereIsBalboa.build/Debug-iphonesimulator/WhereIsBalboa.build/Objects-normal/x86_64/SplashScreenViewController.o
 /Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Intermediates/WhereIsBalboa.build/Debug-iphonesimulator/WhereIsBalboa.build/Objects-normal/x86_64/SignUpViewController.o
 /Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Intermediates/WhereIsBalboa.build/Debug-iphonesimulator/WhereIsBalboa.build/Objects-normal/x86_64/DatabaseConversionError.o
 /Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Intermediates/WhereIsBalboa.build/Debug-iphonesimulator/WhereIsBalboa.build/Objects-normal/x86_64/CityGeocodeTaskWrapper.o
 /Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Intermediates/WhereIsBalboa.build/Debug-iphonesimulator/WhereIsBalboa.build/Objects-normal/x86_64/BalbabeTripListTableViewDataSource.o
 /Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Intermediates/WhereIsBalboa.build/Debug-iphonesimulator/WhereIsBalboa.build/Objects-normal/x86_64/TripEditorViewController.o
+/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Intermediates/WhereIsBalboa.build/Debug-iphonesimulator/WhereIsBalboa.build/Objects-normal/x86_64/LoginInfo.o
 /Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Intermediates/WhereIsBalboa.build/Debug-iphonesimulator/WhereIsBalboa.build/Objects-normal/x86_64/AccountEditor.o
 /Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Intermediates/WhereIsBalboa.build/Debug-iphonesimulator/WhereIsBalboa.build/Objects-normal/x86_64/HomeViewController.o
 /Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Intermediates/WhereIsBalboa.build/Debug-iphonesimulator/WhereIsBalboa.build/Objects-normal/x86_64/TripEditOperation.o

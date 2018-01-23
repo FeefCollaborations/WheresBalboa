@@ -18,10 +18,10 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UISearchBarDe
     
     // MARK: - Init
     
-    init(email: String, password: String) {
+    init(_ loginInfo: LoginInfo) {
         super.init(nibName: nil, bundle: nil)
-        builder.email = email
-        builder.password = password
+        builder.email = loginInfo.email
+        builder.password = loginInfo.password
         guard #available(iOS 11.0, *) else {
             edgesForExtendedLayout = []
             return

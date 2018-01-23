@@ -1,6 +1,7 @@
 import UIKit
 import FirebaseAuth
 import PopupDialog
+import KeychainAccess
 
 class ProfileViewController: UIViewController, UISearchBarDelegate, LocationSearchTableViewControllerDelegate, AccountEditor, UITextFieldDelegate {
     @IBOutlet private var infoContainerView: UIView!
@@ -70,7 +71,8 @@ class ProfileViewController: UIViewController, UISearchBarDelegate, LocationSear
     
     @IBAction private func logout() {
         UserManager.shared.setCurrentUser(nil)
-        navigationController?.popToRootViewController(animated: true)
+        Keychain.standard.setLoginInfo(nil)
+        navigationController?.popToLoginViewController()
     }
     
     @IBAction private func saveProfileChanges() {

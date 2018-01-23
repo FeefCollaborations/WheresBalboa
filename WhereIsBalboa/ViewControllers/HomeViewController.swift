@@ -12,7 +12,7 @@ class HomeViewController: UIViewController {
     @IBOutlet private var dateStepper: UIStepper!
     
     private var tripViewType: TripViewType
-    private var currentDate = Date()
+    private var currentDate = Date().startOfDay()
     
     private let loadingViewController = LoadingViewController()
     private var databaseObservationInfo: (String, UInt)!
@@ -24,7 +24,7 @@ class HomeViewController: UIViewController {
     // MARK: - Init
     
     init(_ balbabe: Balbabe) {
-        configuration = HomeViewControllerConfiguration(loggedInBalbabe: balbabe, balbabes: [], focusedDate: Date())
+        configuration = HomeViewControllerConfiguration(loggedInBalbabe: balbabe, balbabes: [], focusedDate: Date().startOfDay() + 1)
         tripViewType = .loading(loadingViewController)
         super.init(nibName: nil, bundle: nil)
         
@@ -80,17 +80,16 @@ class HomeViewController: UIViewController {
         dateSelectionTextField.inputView = datePicker
         dateSelectionTextField.inputAccessoryView = doneInputAccessory
         addTripViewer(tripViewType.viewController)
-        currentDate = Date()
-        datePicker.minimumDate = currentDate
+        currentDate = Date().startOfDay()
+        dateStepper.minimumValue = -Double.infinity
         updateConfigurationForNewDate(currentDate)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
-        if currentDate.timeIntervalSinceNow > 0 {
-            currentDate = Date()
-            datePicker.minimumDate = currentDate
+        if currentDate.daysSince(Date()) < 0 {
+            currentDate = Date().startOfDay()
             updateConfigurationForNewDate(currentDate)
         }
     }
@@ -139,7 +138,7 @@ class HomeViewController: UIViewController {
     
     @IBAction private func doneTappedOnPicker() {
         dateSelectionTextField.resignFirstResponder()
-        updateConfigurationForNewDate(datePicker.date)
+        updateConfigurationForNewDate(datePicker.date.startOfDay())
     }
     
     @IBAction private func stepDate(_ stepper: UIStepper) {
@@ -174,7 +173,7 @@ class HomeViewController: UIViewController {
     
     private func updateConfigurationForNewDate(_ date: Date) {
         var updatedConfiguration = configuration
-        updatedConfiguration.focusedDate = date
+        updatedConfiguration.focusedDate = date + 1
         updateConfiguration(to: updatedConfiguration)
     }
     

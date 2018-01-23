@@ -67,12 +67,12 @@ class TripEditorViewController: UIViewController, UITextFieldDelegate, LocationS
         
         builder.tripID = trip.id
         builder.address = trip.metadata.address
-        builder.startDate = trip.metadata.dateInterval.start
-        builder.endDate = trip.metadata.dateInterval.end
+        builder.startDate = trip.metadata.displayStartDate
+        builder.endDate = trip.metadata.displayEndDate
         
         cityButton.setTitle(trip.metadata.address.name, for: .normal)
-        startDateTextField.text = DateFormatter.fullDate.string(from: trip.metadata.dateInterval.start)
-        endDateTextField.text = DateFormatter.fullDate.string(from: trip.metadata.dateInterval.end)
+        startDateTextField.text = DateFormatter.fullDate.string(from: trip.metadata.displayStartDate)
+        endDateTextField.text = DateFormatter.fullDate.string(from: trip.metadata.displayEndDate)
     }
     
     // MARK: - LocationSearchTableViewControllerDelegate
@@ -179,7 +179,7 @@ class TripEditorViewController: UIViewController, UITextFieldDelegate, LocationS
         
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if textField == startDateTextField {
-            datePicker.minimumDate = Date()
+            datePicker.minimumDate = nil
             if
                 let dateText = startDateTextField.text,
                 let date = dateFormatter.date(from: dateText)
@@ -200,19 +200,21 @@ class TripEditorViewController: UIViewController, UITextFieldDelegate, LocationS
     }
     
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-        let selectedDate = datePicker.date
-        if startDateTextField == textField {
-            builder.startDate = selectedDate + 1000
+        let selectedDate = datePicker.date.startOfDay()
+        let endDate = selectedDate.endOfDay()
+        let isStart = startDateTextField == textField
+        if isStart {
+            builder.startDate = selectedDate
             if
                 let endDateText = endDateTextField.text,
                 let currentEndDate = dateFormatter.date(from: endDateText),
                 selectedDate.compare(currentEndDate) == ComparisonResult.orderedDescending
             {
-                builder.endDate = selectedDate
+                builder.endDate = endDate
                 endDateTextField.text = dateFormatter.string(from: selectedDate)
             }
         } else {
-            builder.endDate = selectedDate
+            builder.endDate = endDate
         }
         textField.text = dateFormatter.string(from: selectedDate)
         return true

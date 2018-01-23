@@ -29,22 +29,14 @@ struct Balbabe: Equatable {
     }
     
     private static func hometownIntervalsFor(_ trips: [Trip]) -> [DateInterval] {
-        let now = Date()
-        let upcomingTrips = trips.filter { now.daysSince($0.metadata.dateInterval.end) <= 0 }
-        let sortedTrips = upcomingTrips.sorted { $0.metadata.dateInterval.start < $1.metadata.dateInterval.start }
-        guard let firstTrip = sortedTrips.first else {
-            return [DateInterval(start: now - 1000, end: Date.distantFuture)]
+        let past = Date.distantPast
+        guard !trips.isEmpty else {
+            return [DateInterval(start: past, end: Date.distantFuture)]
         }
+        let sortedTrips = trips.sorted { $0.metadata.dateInterval.start < $1.metadata.dateInterval.start }
         var intervals = [DateInterval]()
-        var previousTripEnd: Date
-        var tripsToCheck = sortedTrips
-        if firstTrip.metadata.dateInterval.contains(now) {
-            tripsToCheck.removeFirst()
-            previousTripEnd = firstTrip.metadata.dateInterval.end
-        } else {
-            previousTripEnd = now - 1000
-        }
-        tripsToCheck.forEach {
+        var previousTripEnd = past
+        sortedTrips.forEach {
             intervals.append(DateInterval(start: previousTripEnd, end: $0.metadata.dateInterval.start))
             previousTripEnd = $0.metadata.dateInterval.end
         }

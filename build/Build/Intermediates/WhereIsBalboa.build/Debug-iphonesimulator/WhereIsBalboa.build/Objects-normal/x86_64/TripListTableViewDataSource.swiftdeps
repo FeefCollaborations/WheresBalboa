@@ -139,7 +139,6 @@ depends-member:
 - ["s10ComparableP", "init"]
 - !private ["s10ComparableP", "item"]
 - !private ["s10ComparableP", "metadata"]
-- !private ["s10ComparableP", "start"]
 - !private ["s28CustomDebugStringConvertibleP", "Array"]
 - !private ["s28CustomDebugStringConvertibleP", "Date"]
 - !private ["s28CustomDebugStringConvertibleP", "DateFormatter"]
@@ -186,7 +185,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "shared"]
 - !private ["s28CustomDebugStringConvertibleP", "sorted"]
 - !private ["s28CustomDebugStringConvertibleP", "sortedTrips"]
-- !private ["s28CustomDebugStringConvertibleP", "start"]
 - !private ["s28CustomDebugStringConvertibleP", "string"]
 - !private ["s28CustomDebugStringConvertibleP", "subscript"]
 - ["s28CustomDebugStringConvertibleP", "tableView"]
@@ -208,7 +206,6 @@ depends-member:
 - !private ["s17CustomReflectableP", "keys"]
 - !private ["s17CustomReflectableP", "map"]
 - !private ["s17CustomReflectableP", "sorted"]
-- !private ["s17CustomReflectableP", "start"]
 - !private ["s17CustomReflectableP", "subscript"]
 - !private ["s23CustomStringConvertibleP", "Array"]
 - !private ["s23CustomStringConvertibleP", "Date"]
@@ -257,7 +254,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "shared"]
 - !private ["s23CustomStringConvertibleP", "sorted"]
 - !private ["s23CustomStringConvertibleP", "sortedTrips"]
-- !private ["s23CustomStringConvertibleP", "start"]
 - !private ["s23CustomStringConvertibleP", "string"]
 - !private ["s23CustomStringConvertibleP", "subscript"]
 - ["s23CustomStringConvertibleP", "tableView"]
@@ -269,6 +265,8 @@ depends-member:
 - ["s23CustomStringConvertibleP", ""]
 - !private ["13WhereIsBalboa19DatabaseConvertibleP", "address"]
 - !private ["13WhereIsBalboa19DatabaseConvertibleP", "dateInterval"]
+- !private ["13WhereIsBalboa19DatabaseConvertibleP", "displayEndDate"]
+- !private ["13WhereIsBalboa19DatabaseConvertibleP", "displayStartDate"]
 - !private ["13WhereIsBalboa19DatabaseConvertibleP", "isHome"]
 - !private ["13WhereIsBalboa19DatabaseConvertibleP", "location"]
 - !private ["13WhereIsBalboa19DatabaseConvertibleP", "name"]
@@ -277,7 +275,6 @@ depends-member:
 - !private ["So13DateFormatterC", "fullDate"]
 - !private ["So13DateFormatterC", "string"]
 - !private ["10Foundation12DateIntervalV", "end"]
-- !private ["10Foundation12DateIntervalV", "start"]
 - !private ["s9DecodableP", "_getBuiltinLogicValue"]
 - !private ["s9DecodableP", "count"]
 - !private ["s9DecodableP", "distantFuture"]
@@ -287,7 +284,6 @@ depends-member:
 - !private ["s9DecodableP", "keys"]
 - !private ["s9DecodableP", "map"]
 - !private ["s9DecodableP", "sorted"]
-- !private ["s9DecodableP", "start"]
 - !private ["s9DecodableP", "subscript"]
 - !private ["s10DictionaryV", "keys"]
 - !private ["s10DictionaryV", "subscript"]
@@ -300,7 +296,6 @@ depends-member:
 - !private ["s9EncodableP", "keys"]
 - !private ["s9EncodableP", "map"]
 - !private ["s9EncodableP", "sorted"]
-- !private ["s9EncodableP", "start"]
 - !private ["s9EncodableP", "subscript"]
 - !private ["s9EquatableP", "Array"]
 - !private ["s9EquatableP", "Date"]
@@ -321,6 +316,8 @@ depends-member:
 - !private ["s9EquatableP", "dateInterval"]
 - !private ["s9EquatableP", "dateLabel"]
 - !private ["s9EquatableP", "dequeueReusableCell"]
+- !private ["s9EquatableP", "displayEndDate"]
+- !private ["s9EquatableP", "displayStartDate"]
 - !private ["s9EquatableP", "distance"]
 - !private ["s9EquatableP", "distanceLabel"]
 - !private ["s9EquatableP", "distantFuture"]
@@ -355,7 +352,6 @@ depends-member:
 - ["s9EquatableP", "sectionIndexTitlesForTableView"]
 - !private ["s9EquatableP", "shared"]
 - !private ["s9EquatableP", "sortedTrips"]
-- !private ["s9EquatableP", "start"]
 - !private ["s9EquatableP", "string"]
 - ["s9EquatableP", "tableView"]
 - !private ["s9EquatableP", "text"]
@@ -424,7 +420,6 @@ depends-member:
 - ["s8HashableP", "sectionIndexTitlesForTableView"]
 - !private ["s8HashableP", "shared"]
 - !private ["s8HashableP", "sortedTrips"]
-- !private ["s8HashableP", "start"]
 - !private ["s8HashableP", "string"]
 - ["s8HashableP", "tableView"]
 - !private ["s8HashableP", "text"]
@@ -635,7 +630,6 @@ depends-member:
 - !private ["10Foundation20ReferenceConvertibleP", "distantFuture"]
 - !private ["10Foundation20ReferenceConvertibleP", "end"]
 - !private ["10Foundation20ReferenceConvertibleP", "item"]
-- !private ["10Foundation20ReferenceConvertibleP", "start"]
 - !private ["s8SequenceP", "count"]
 - ["s8SequenceP", "init"]
 - !private ["s8SequenceP", "item"]
@@ -684,6 +678,8 @@ depends-member:
 - ["13WhereIsBalboa27TripListTableViewDataSourceC", "update"]
 - !private ["13WhereIsBalboa12TripMetadataV", "address"]
 - !private ["13WhereIsBalboa12TripMetadataV", "dateInterval"]
+- !private ["13WhereIsBalboa12TripMetadataV", "displayEndDate"]
+- !private ["13WhereIsBalboa12TripMetadataV", "displayStartDate"]
 - !private ["13WhereIsBalboa12TripMetadataV", "isHome"]
 - !private ["13WhereIsBalboa17TripTableViewCellC", "cityLabel"]
 - !private ["13WhereIsBalboa17TripTableViewCellC", "contactButton"]
@@ -1072,7 +1068,6 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "keys"]
 - !private ["s21_ObjectiveCBridgeableP", "map"]
 - !private ["s21_ObjectiveCBridgeableP", "sorted"]
-- !private ["s21_ObjectiveCBridgeableP", "start"]
 - !private ["s21_ObjectiveCBridgeableP", "subscript"]
 - !private ["s22_RandomAccessIndexableP", "count"]
 - !private ["s22_RandomAccessIndexableP", "init"]
@@ -1205,6 +1200,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Modules/SwiftyJSON.swiftmodule/x86_64.swiftmodule"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/PopupDialog/PopupDialog.framework/Modules/PopupDialog.swiftmodule/x86_64.swiftmodule"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/KeychainAccess/KeychainAccess.framework/Modules/KeychainAccess.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
@@ -1224,6 +1220,7 @@ depends-external:
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Headers/SwiftyJSON-umbrella.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/PopupDialog/PopupDialog.framework/Headers/PopupDialog-umbrella.h"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/KeychainAccess/KeychainAccess.framework/Headers/KeychainAccess-umbrella.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/ClusterKit/ClusterKit.framework/Headers/ClusterKit-umbrella.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRMutableData.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageMetadata.h"
@@ -1287,6 +1284,7 @@ depends-external:
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageConstants.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Headers/SwiftyJSON-Swift.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/PopupDialog/PopupDialog.framework/Headers/PopupDialog-Swift.h"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/KeychainAccess/KeychainAccess.framework/Headers/KeychainAccess-Swift.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/ClusterKit/ClusterKit.framework/Headers/MKMapView+ClusterKit.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/ClusterKit/ClusterKit.framework/Headers/ClusterKit.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthDataResult.h"
@@ -1305,5 +1303,19 @@ depends-external:
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/PopupDialog/PopupDialog.framework/Modules/module.modulemap"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Modules/module.modulemap"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/KeychainAccess/KeychainAccess.framework/Modules/module.modulemap"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/ClusterKit/ClusterKit.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/LocalAuthentication.framework/Headers/LocalAuthentication.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/MapKit.framework/Headers/MapKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 interface-hash: "3a394e3b8d2fb1c376f6e85dd5ed2799"

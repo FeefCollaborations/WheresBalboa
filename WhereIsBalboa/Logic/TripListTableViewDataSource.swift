@@ -42,13 +42,14 @@ class TripListTableViewDataSource: NSObject, UITableViewDataSource {
         
         let isLoggedInUserTrip = balbabe == configuration.loggedInBalbabe
         cell.nameLabel.text = isLoggedInUserTrip ? "You" : balbabe.metadata.name
+        
         cell.cityLabel.text = "will be in \(trip.metadata.address.name)"
-        var durationText = "from \(DateFormatter.fullDate.string(from: trip.metadata.dateInterval.start)) "
+        var durationText = "from \(DateFormatter.fullDate.string(from: trip.metadata.displayStartDate)) "
         if trip.metadata.dateInterval.end == Date.distantFuture {
             let pronoun = isLoggedInUserTrip ? "you" : "they"
             durationText += "until \(pronoun) go traveling again!"
         } else {
-            durationText += "to \(DateFormatter.fullDate.string(from: trip.metadata.dateInterval.end))"
+            durationText += "to \(DateFormatter.fullDate.string(from: trip.metadata.displayEndDate))"
         }
         cell.dateLabel.text = durationText
         
