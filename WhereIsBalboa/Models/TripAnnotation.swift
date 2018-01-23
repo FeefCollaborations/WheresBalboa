@@ -10,6 +10,6 @@ class TripAnnotation: MKPointAnnotation {
         super.init()
         coordinate = trip.metadata.address.location.coordinate
         title = isLoggedInUser ? "You" : balbabe.metadata.name
-        subtitle = "\(DateFormatter.fullDate.string(from: trip.metadata.dateInterval.start)) - \(DateFormatter.fullDate.string(from: trip.metadata.dateInterval.end))"
+        subtitle = "\(DateFormatter.fullDate.string(from: trip.metadata.displayStartDate)) - \(DateFormatter.fullDate.string(from: trip.metadata.displayEndDate))"
     }
 }

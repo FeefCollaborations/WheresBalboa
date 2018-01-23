@@ -1,6 +1,6 @@
 version: "Apple Swift version 4.0.3 (swiftlang-900.0.74.1 clang-900.0.39.2)"
 options: "0a8639c7c25c4bc57867e012cc2e5a5b"
-build_time: [1516722979, 514545000]
+build_time: [1516726480, 14424000]
 inputs:
   "/Users/sharifahmed/Desktop/WhereIsBalboa/WhereIsBalboa/ViewControllers/LoginViewController.swift": [1516716177, 0]
   "/Users/sharifahmed/Desktop/WhereIsBalboa/WhereIsBalboa/Models/Trip.swift": [1516699735, 0]
@@ -30,7 +30,7 @@ inputs:
   "/Users/sharifahmed/Desktop/WhereIsBalboa/WhereIsBalboa/ViewControllers/TripMapViewController.swift": [1516114038, 0]
   "/Users/sharifahmed/Desktop/WhereIsBalboa/WhereIsBalboa/ViewControllers/TripListTableViewController.swift": [1516114471, 0]
   "/Users/sharifahmed/Desktop/WhereIsBalboa/WhereIsBalboa/Operations/TaskWrappers/CitySearchTaskWrapper.swift": [1515319154, 0]
-  "/Users/sharifahmed/Desktop/WhereIsBalboa/WhereIsBalboa/Models/TripAnnotation.swift": [1516113941, 0]
+  "/Users/sharifahmed/Desktop/WhereIsBalboa/WhereIsBalboa/Models/TripAnnotation.swift": [1516726436, 0]
   "/Users/sharifahmed/Desktop/WhereIsBalboa/WhereIsBalboa/Models/BalbabeMetadata.swift": [1516618142, 0]
   "/Users/sharifahmed/Desktop/WhereIsBalboa/WhereIsBalboa/Protocols/DatabaseConvertible.swift": [1515339562, 0]
   "/Users/sharifahmed/Desktop/WhereIsBalboa/WhereIsBalboa/Protocols/LocationSearchTableViewControllerDelegate.swift": [1516094702, 0]
