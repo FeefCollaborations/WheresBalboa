@@ -2,7 +2,7 @@ import Foundation
 import CoreLocation
 import FirebaseDatabase
 
-struct BalbabeMetadata: Equatable, DatabaseConvertible {
+struct UserMetadata: Equatable, DatabaseConvertible {
     enum InitializationError: Error {
         case invalidWhatsapp(String)
     }
@@ -10,7 +10,6 @@ struct BalbabeMetadata: Equatable, DatabaseConvertible {
     private struct DBValues {
         static let name = "name"
         static let whatsapp = "whatsapp"
-        static let hometown = "hometown"
     }
     
     let name: String
@@ -25,8 +24,7 @@ struct BalbabeMetadata: Equatable, DatabaseConvertible {
         else {
             throw DatabaseConversionError.invalidSnapshot(dataSnapshot)
         }
-        let hometown = try Address(dataSnapshot.childSnapshot(forPath: "hometown"))
-        try self.init(name: name, whatsapp: whatsapp, hometown: hometown)
+        try self.init(name: name, whatsapp: whatsapp, hometown: try Address(dataSnapshot))
     }
     
     init(name: String, whatsapp: String, hometown: Address) throws {
@@ -50,15 +48,14 @@ struct BalbabeMetadata: Equatable, DatabaseConvertible {
     }
     
     func dictionaryRepresentation() -> [String : Any] {
-        return [
-            DBValues.name: name,
-            DBValues.whatsapp: whatsapp,
-            DBValues.hometown: hometown.dictionaryRepresentation()
-        ]
+        var dictionary = hometown.dictionaryRepresentation()
+        dictionary[DBValues.name] = name
+        dictionary[DBValues.whatsapp] = whatsapp
+        return dictionary
     }
 }
 
-func ==(lhs: BalbabeMetadata, rhs: BalbabeMetadata) -> Bool {
+func ==(lhs: UserMetadata, rhs: UserMetadata) -> Bool {
     return
         lhs.name == rhs.name &&
         lhs.whatsapp == rhs.whatsapp &&

@@ -4,6 +4,7 @@ provides-nominal:
 provides-member:
 - ["So13DateFormatterC", ""]
 - ["So13DateFormatterC", "fullDate"]
+- ["So13DateFormatterC", "fullDateShortenedYear"]
 provides-dynamic-lookup:
 depends-top-level:
 - "AssignmentPrecedence"
@@ -27,6 +28,7 @@ depends-member:
 - ["So13DateFormatterC", "DateFormatter"]
 - ["So13DateFormatterC", "dateFormat"]
 - ["So13DateFormatterC", "fullDate"]
+- ["So13DateFormatterC", "fullDateShortenedYear"]
 - ["So13DateFormatterC", "init"]
 - ["s9DecodableP", "init"]
 - ["s9EncodableP", "init"]
@@ -39,6 +41,7 @@ depends-member:
 - ["So9FormatterC", "DateFormatter"]
 - ["So9FormatterC", "dateFormat"]
 - ["So9FormatterC", "fullDate"]
+- ["So9FormatterC", "fullDateShortenedYear"]
 - ["So9FormatterC", "init"]
 - ["s8HashableP", "DateFormatter"]
 - ["s8HashableP", "dateFormat"]
@@ -58,6 +61,7 @@ depends-member:
 - ["So8NSObjectC", "DateFormatter"]
 - ["So8NSObjectC", "dateFormat"]
 - ["So8NSObjectC", "fullDate"]
+- ["So8NSObjectC", "fullDateShortenedYear"]
 - ["So8NSObjectC", "init"]
 - ["So16NSObjectProtocolP", "DateFormatter"]
 - ["So16NSObjectProtocolP", "dateFormat"]
@@ -245,17 +249,4 @@ depends-external:
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/KeychainAccess/KeychainAccess.framework/Modules/module.modulemap"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/ClusterKit/ClusterKit.framework/Modules/module.modulemap"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/usr/include/objc/ObjectiveC.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/usr/include/Darwin.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/LocalAuthentication.framework/Headers/LocalAuthentication.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/MapKit.framework/Headers/MapKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-interface-hash: "4d3d623dd3756afcfa1de46d4efe1cd1"
+interface-hash: "8bfd63b15e8d101028406e6f7625842a"

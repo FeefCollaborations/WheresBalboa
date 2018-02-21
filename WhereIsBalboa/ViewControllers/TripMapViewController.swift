@@ -3,8 +3,8 @@ import MapKit
 import ClusterKit
 
 class TripMapViewController: UIViewController, MKMapViewDelegate {
-    typealias TripTapHandler = (Trip, Balbabe) -> Void
-    typealias TripGroupTapHandler = ([Trip: Balbabe]) -> Void
+    typealias TripTapHandler = (Trip, User) -> Void
+    typealias TripGroupTapHandler = ([Trip: User]) -> Void
     
     @IBOutlet private var mapView: MKMapView!
     @IBOutlet private var centerMapButton: UIButton!
@@ -70,7 +70,7 @@ class TripMapViewController: UIViewController, MKMapViewDelegate {
         
         if cluster.count > 1 {
             let tripAnnotations = cluster.annotations as! [TripAnnotation]
-            let containsLoggedInUser = tripAnnotations.contains(where: { $0.balbabe == configuration.loggedInBalbabe })
+            let containsLoggedInUser = tripAnnotations.contains(where: { $0.user == configuration.userManager.loggedInUser })
             let annotationColor: UIColor = containsLoggedInUser ? TripMapViewController.loggedInUserAnnotationColor : TripMapViewController.friendAnnotationColor
 
             let identifier = "Cluster"
@@ -84,10 +84,10 @@ class TripMapViewController: UIViewController, MKMapViewDelegate {
             view?.title.text = "\(cluster.count)"
             return view
         } else if let tripAnnotation = cluster.firstAnnotation as? TripAnnotation {
-            let containsLoggedInUser = tripAnnotation.balbabe == configuration.loggedInBalbabe
+            let containsLoggedInUser = tripAnnotation.user == configuration.userManager.loggedInUser
             let annotationColor: UIColor = containsLoggedInUser ? TripMapViewController.loggedInUserAnnotationColor : TripMapViewController.friendAnnotationColor
 
-            let identifier = "Pin"
+            let identifier = containsLoggedInUser ? "UserPin" : "Pin"
             let view: MKPinAnnotationView
             if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKPinAnnotationView {
                 view = dequeuedView
@@ -123,9 +123,9 @@ class TripMapViewController: UIViewController, MKMapViewDelegate {
         }
         
         mapView.deselectAnnotation(view.annotation, animated: true)
-        let keyedBalbabes = tripAnnotations.reduce([Trip: Balbabe]()) { aggregate, tripAnnotation in
+        let keyedBalbabes = tripAnnotations.reduce([Trip: User]()) { aggregate, tripAnnotation in
             var updated = aggregate
-            updated[tripAnnotation.trip] = tripAnnotation.balbabe
+            updated[tripAnnotation.trip] = tripAnnotation.user
             return updated
         }
         onTripGroupTap?(keyedBalbabes)
@@ -139,9 +139,9 @@ class TripMapViewController: UIViewController, MKMapViewDelegate {
             return
         }
         if control == view.rightCalloutAccessoryView {
-            onTripTap?(tripAnnotation.trip, tripAnnotation.balbabe)
+            onTripTap?(tripAnnotation.trip, tripAnnotation.user)
         } else {
-            UIApplication.shared.open(tripAnnotation.balbabe.metadata.whatsappURL, options: [:])
+            UIApplication.shared.open(tripAnnotation.user.metadata.whatsappURL, options: [:])
         }
     }
     
@@ -167,8 +167,14 @@ class TripMapViewController: UIViewController, MKMapViewDelegate {
             return
         }
         
-        let annotations = configuration.keyedBalbabes.map {
-            return TripAnnotation($1, $0, isLoggedInUser: $1 == configuration.loggedInBalbabe)
+        let annotations = configuration.keyedUsers.map {
+            return TripAnnotation($1, $0, isLoggedInUser: $1 == configuration.userManager.loggedInUser)
+        }
+        guard
+            let oldAnnotations = mapView.clusterManager.annotations as? [TripAnnotation],
+            annotations != oldAnnotations
+        else {
+            return
         }
         mapView.clusterManager.annotations = annotations
         
@@ -176,7 +182,7 @@ class TripMapViewController: UIViewController, MKMapViewDelegate {
             mapView.clusterManager.updateClustersIfNeeded()
         }
         
-        guard let currentUserTrip = configuration.keyedBalbabes.first(where: { $0.value == configuration.loggedInBalbabe }).map({ $0.0 }) else {
+        guard let currentUserTrip = configuration.keyedUsers.first(where: { $0.value == configuration.userManager.loggedInUser }).map({ $0.0 }) else {
             return
         }
         

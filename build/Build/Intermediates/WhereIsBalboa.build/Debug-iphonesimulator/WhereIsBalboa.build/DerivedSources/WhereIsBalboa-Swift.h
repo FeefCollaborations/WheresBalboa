@@ -225,13 +225,6 @@ SWIFT_CLASS("_TtC13WhereIsBalboa21AsynchronousOperation")
 @end
 
 
-SWIFT_CLASS("_TtC13WhereIsBalboa22BalbabeCreateOperation")
-@interface BalbabeCreateOperation : AsynchronousOperation
-- (void)start;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-@end
-
-
 SWIFT_CLASS("_TtC13WhereIsBalboa20BalbabeEditOperation")
 @interface BalbabeEditOperation : AsynchronousOperation
 - (void)start;
@@ -325,6 +318,7 @@ SWIFT_CLASS("_TtC13WhereIsBalboa19LoginViewController")
 @interface LoginViewController : UIViewController <UITextFieldDelegate>
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;
 - (void)viewDidDisappear:(BOOL)animated;
 - (BOOL)textFieldShouldReturn:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
@@ -341,6 +335,17 @@ SWIFT_CLASS("_TtC13WhereIsBalboa20OwnTripTableViewCell")
 @property (nonatomic, readonly, strong) IBOutlet UILabel * _Null_unspecified dateLabel;
 - (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UIPickerView;
+
+SWIFT_CLASS("_TtC13WhereIsBalboa17PickerViewWrapper")
+@interface PickerViewWrapper : NSObject <UIPickerViewDataSource, UIPickerViewDelegate>
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView * _Nonnull)pickerView SWIFT_WARN_UNUSED_RESULT;
+- (NSInteger)pickerView:(UIPickerView * _Nonnull)pickerView numberOfRowsInComponent:(NSInteger)component SWIFT_WARN_UNUSED_RESULT;
+- (UIView * _Nonnull)pickerView:(UIPickerView * _Nonnull)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView * _Nullable)view SWIFT_WARN_UNUSED_RESULT;
+- (void)pickerView:(UIPickerView * _Nonnull)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
 @end
 
 @class UISearchBar;
@@ -463,6 +468,18 @@ SWIFT_CLASS("_TtC13WhereIsBalboa17TripTableViewCell")
 @end
 
 
+SWIFT_CLASS("_TtC13WhereIsBalboa25TripsByDateFetchOperation")
+@interface TripsByDateFetchOperation : AsynchronousOperation
+- (void)start;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC13WhereIsBalboa25TripsByUserFetchOperation")
+@interface TripsByUserFetchOperation : AsynchronousOperation
+- (void)start;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
+@end
 
 
 
@@ -471,6 +488,15 @@ SWIFT_CLASS("_TtC13WhereIsBalboa17TripTableViewCell")
 
 
 
+
+
+
+
+SWIFT_CLASS("_TtC13WhereIsBalboa19UserCreateOperation")
+@interface UserCreateOperation : AsynchronousOperation
+- (void)start;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
+@end
 
 SWIFT_MODULE_NAMESPACE_POP
 #pragma clang diagnostic pop

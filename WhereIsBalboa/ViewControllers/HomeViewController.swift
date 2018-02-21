@@ -11,58 +11,65 @@ class HomeViewController: UIViewController {
     @IBOutlet private var doneInputAccessory: UIToolbar!
     @IBOutlet private var dateStepper: UIStepper!
     
-    private var tripViewType: TripViewType
+    private var state = HomeViewControllerState.loading {
+        didSet {
+            guard case let .populated(userManager, trips, _) = state else {
+                // TODO: Populate for loading
+                return
+            }
+            let configuration = TripsDataConfiguration(userManager, trips, focusedDate: focusedDate)
+            updateTripMapViewController(for: configuration)
+            updateTripListViewController(for: configuration)
+        }
+    }
+    private var tripViewType = TripViewType.map
+    private var currentTripFetch: TripsByDateFetchOperation?
     private var currentDate = Date().startOfDay()
+    private var focusedDate = Date().startOfDay() {
+        didSet {
+            dateSelectionTextField.text = DateFormatter.fullDateShortenedYear.string(from: focusedDate)
+            currentTripFetch?.cancel()
+            let tripFetchOperation = TripsByDateFetchOperation(focusedDate, userManager.cohort) { result in
+                DispatchQueue.main.async { [weak self] in
+                    guard let strongSelf = self else {
+                        return
+                    }
+                    
+                    switch result {
+                        case .failure:
+                            // TODO: Log error
+                            return
+                        case .success(let trips):
+                            strongSelf.state = .populated(userManager: strongSelf.userManager, trips: trips, focusedDate: strongSelf.focusedDate)
+                    }
+                }
+            }
+            state = .loading
+            currentTripFetch = tripFetchOperation
+            OperationQueue.main.addOperation(tripFetchOperation)
+        }
+    }
     
     private let loadingViewController = LoadingViewController()
-    private var databaseObservationInfo: (String, UInt)!
     private var tripListTableViewController: TripListTableViewController?
     private var tripMapViewController: TripMapViewController?
-    private var configuration: HomeViewControllerConfiguration
+    private var userManager: UserManager
     private var hasUpdatedWhileViewLoaded = false
     
     // MARK: - Init
     
-    init(_ balbabe: Balbabe) {
-        configuration = HomeViewControllerConfiguration(loggedInBalbabe: balbabe, balbabes: [], focusedDate: Date().startOfDay() + 1)
-        tripViewType = .loading(loadingViewController)
+    init(_ userManager: UserManager) {
+        self.userManager = userManager
         super.init(nibName: nil, bundle: nil)
         
-        let referencePath = "balbabes"
-        let observationIdentifier = Database.database().reference(withPath: referencePath).observe(.value) { [weak self] snapshot in
-            guard let strongSelf = self else {
-                return
-            }
-            
-            guard let balbabeSnapshots = snapshot.children.allObjects as? [DataSnapshot] else {
-                // TODO: Log error
-                return
-            }
-            
-            do {
-                let updatedBalbabes = try balbabeSnapshots.flatMap { try Balbabe($0) }
-                guard let loggedInBalbabe = updatedBalbabes.first(where: { $0.id == strongSelf.configuration.loggedInBalbabe.id }) else {
-                    // TODO: Log error
-                    return
-                }
-                var updatedConfiguration = strongSelf.configuration
-                updatedConfiguration.balbabes = updatedBalbabes
-                updatedConfiguration.loggedInBalbabe = loggedInBalbabe
-                strongSelf.updateConfiguration(to: updatedConfiguration)
-            } catch {
-                // TODO: Log error
-            }
+        userManager.registerForChanges { [weak self] userManager in
+            self?.userManager = userManager
         }
-        databaseObservationInfo = (referencePath, observationIdentifier)
-        
+                
         guard #available(iOS 11.0, *) else {
             edgesForExtendedLayout = []
             return
         }
-    }
-    
-    deinit {
-        Database.database().reference(withPath: databaseObservationInfo.0).removeObserver(withHandle: databaseObservationInfo.1)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -79,18 +86,20 @@ class HomeViewController: UIViewController {
         doneInputAccessory.translatesAutoresizingMaskIntoConstraints = false
         dateSelectionTextField.inputView = datePicker
         dateSelectionTextField.inputAccessoryView = doneInputAccessory
-        addTripViewer(tripViewType.viewController)
         currentDate = Date().startOfDay()
         dateStepper.minimumValue = -Double.infinity
-        updateConfigurationForNewDate(currentDate)
+        focusedDate = currentDate
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
+        let focusedDateIsCurrent = focusedDate == currentDate
         if currentDate.daysSince(Date()) < 0 {
             currentDate = Date().startOfDay()
-            updateConfigurationForNewDate(currentDate)
+            if focusedDateIsCurrent {
+                focusedDate = currentDate
+            }
         }
     }
     
@@ -107,56 +116,51 @@ class HomeViewController: UIViewController {
     // MARK: - Button response
     
     @IBAction private func goToProfile() {
-        let profileViewController = ProfileViewController(configuration.loggedInBalbabe)
+        let profileViewController = ProfileViewController(userManager.loggedInUser)
         navigationController?.pushViewController(profileViewController, animated: true)
     }
     
     @IBAction private func goToTrips() {
-        let tripsViewController = BalbabeTripListTableViewController(configuration.loggedInBalbabe, isLoggedInUser: true)
+        let tripsViewController = BalbabeTripListTableViewController(userManager, userManager.loggedInUser, userManager.loggedInUserTrips)
         navigationController?.pushViewController(tripsViewController, animated: true)
     }
     
     @IBAction private func toggleTripViewType() {
-        guard
-            let tripListTableViewController = tripListTableViewController,
-            let tripMapViewController = tripMapViewController
-        else {
-            return
-        }
-        
         let newTripViewType: TripViewType
         switch tripViewType {
-            case .loading:
-                return
             case .map:
-                newTripViewType = .list(tripListTableViewController)
+                newTripViewType = .list
             case .list:
-                newTripViewType = .map(tripMapViewController)
+                newTripViewType = .map
         }
         updateTripViewType(to: newTripViewType)
     }
     
     @IBAction private func doneTappedOnPicker() {
         dateSelectionTextField.resignFirstResponder()
-        updateConfigurationForNewDate(datePicker.date.startOfDay())
+        focusedDate = datePicker.date.startOfDay()
     }
     
     @IBAction private func stepDate(_ stepper: UIStepper) {
-        updateConfigurationForNewDate(currentDate.date(daysLater: Int(stepper.value)))
+        focusedDate = currentDate.date(daysLater: Int(stepper.value)).startOfDay()
     }
     
     // MARK: - Trip view management
     
     private func updateTripViewType(to tripViewType: TripViewType) {
-        guard self.tripViewType != tripViewType else {
+        guard
+            self.tripViewType != tripViewType,
+            let mapViewController = tripMapViewController,
+            let listViewController = tripListTableViewController
+        else {
             return
         }
         
-        let currentChildViewController = self.tripViewType.viewController
+        let currentChildViewController: UIViewController = self.tripViewType == .map ? mapViewController : listViewController
         currentChildViewController.willMove(toParentViewController: nil)
         currentChildViewController.view.removeFromSuperview()
         self.tripViewType = tripViewType
-        addTripViewer(tripViewType.viewController)
+        addTripViewer(tripViewType == .map ? mapViewController : listViewController)
     }
     
     private func addTripViewer(_ viewController: UIViewController) {
@@ -171,106 +175,60 @@ class HomeViewController: UIViewController {
     
     // MARK: - Date management
     
-    private func updateConfigurationForNewDate(_ date: Date) {
-        var updatedConfiguration = configuration
-        updatedConfiguration.focusedDate = date + 1
-        updateConfiguration(to: updatedConfiguration)
-    }
-    
-    private func updateConfiguration(to configuration: HomeViewControllerConfiguration) {
-        guard self.configuration != configuration || !hasUpdatedWhileViewLoaded else {
-            return
-        }
-        self.configuration = configuration
-        
-        if
-            isViewLoaded,
-            !hasUpdatedWhileViewLoaded
-        {
-            hasUpdatedWhileViewLoaded = true
-        }
-        
-        let focusedDate = configuration.focusedDate
-        let balbabes = configuration.balbabes
-        let loggedInBalbabe = configuration.loggedInBalbabe
-        
-        if isViewLoaded {
-            dateStepper.value = Double(focusedDate.daysSince(currentDate))
-            datePicker.date = focusedDate
-            dateSelectionTextField.text = DateFormatter.fullDate.string(from: focusedDate)
-        }
-        
-        let keyedBalbabes = balbabes.reduce([Trip: Balbabe]()) { aggregate, balbabe in
-            var updated = aggregate
-            let trip = tripOf(balbabe, for: focusedDate)
-            updated[trip] = balbabe
-            return updated
-        }
-        let configuration = TripsDataConfiguration(loggedInBalbabe: loggedInBalbabe, keyedBalbabes: keyedBalbabes, currentLocation: tripOf(loggedInBalbabe, for: focusedDate).metadata.address.location)
-        
+    private func updateTripListViewController(for configuration: TripsDataConfiguration) {
         if let tripListTableViewController = tripListTableViewController {
             tripListTableViewController.update(configuration)
         } else {
-            tripListTableViewController = TripListTableViewController(configuration, relativeToUser: loggedInBalbabe) { [weak self] _, balbabe in
-                guard let strongSelf = self else {
-                    return
-                }
-                let loggedInBalbabe = strongSelf.configuration.loggedInBalbabe
-                let balbabeTripListViewController = BalbabeTripListTableViewController.init(balbabe, isLoggedInUser: balbabe == loggedInBalbabe)
-                strongSelf.navigationController?.pushViewController(balbabeTripListViewController, animated: true)
+            tripListTableViewController = TripListTableViewController(configuration, relativeToUser: userManager.loggedInUser) { [weak self] _, user in
+                self?.showTripListViewController(for: user)
             }
         }
-        
+    }
+    
+    private func updateTripMapViewController(for configuration: TripsDataConfiguration) {
         if let tripMapViewController = tripMapViewController {
             tripMapViewController.update(configuration)
         } else {
-            let tripMapViewController = TripMapViewController(configuration,
-                onTripTap: { [weak self] _, balbabe in
-                    guard let strongSelf = self else {
-                        return
-                    }
-                    let loggedInBalbabe = strongSelf.configuration.loggedInBalbabe
-                
-                    let balbabeTripListViewController = BalbabeTripListTableViewController.init(balbabe, isLoggedInUser: balbabe == loggedInBalbabe)
-                    strongSelf.navigationController?.pushViewController(balbabeTripListViewController, animated: true)
+            let tripMapViewController = TripMapViewController(
+                configuration,
+                onTripTap: { [weak self] _, user in
+                    self?.showTripListViewController(for: user)
                 }, onTripGroupTap: { [weak self] keyedBalbabes in
                     guard let strongSelf = self else {
                         return
                     }
-                    let focusedDate = strongSelf.configuration.focusedDate
-                    let loggedInBalbabe = strongSelf.configuration.loggedInBalbabe
-                    let configuration = TripsDataConfiguration(loggedInBalbabe: loggedInBalbabe, keyedBalbabes: keyedBalbabes, currentLocation: strongSelf.tripOf(loggedInBalbabe, for: focusedDate).metadata.address.location)
-                    let tripListTableViewController = TripListTableViewController(configuration, relativeToUser: loggedInBalbabe) { _, balbabe in
-                        let balbabeTripListViewController = BalbabeTripListTableViewController.init(balbabe, isLoggedInUser: balbabe == loggedInBalbabe)
-                        self?.navigationController?.pushViewController(balbabeTripListViewController, animated: true)
+                    let userManager = strongSelf.userManager
+                    let loggedInUser = userManager.loggedInUser
+                    let configuration = TripsDataConfiguration(userManager, keyedBalbabes.keys.map { $0 }, focusedDate: strongSelf.focusedDate)
+                    let tripListTableViewController = TripListTableViewController(configuration, relativeToUser: loggedInUser) { _, user in
+                        strongSelf.showTripListViewController(for: user)
                     }
                     strongSelf.navigationController?.pushViewController(tripListTableViewController, animated: true)
             })
             self.tripMapViewController = tripMapViewController
         }
-        
-        if
-            isViewLoaded,
-            tripViewType.isLoading,
-            let tripMapViewController = tripMapViewController
-        {
-            updateTripViewType(to: .map(tripMapViewController))
-        }
     }
     
-    private func tripOf(_ balbabe: Balbabe, for date: Date) -> Trip {
-        if let trip = balbabe.trips.first(where: { $0.metadata.dateInterval.contains(date) }) {
-            return trip
+    private func showTripListViewController(for user: User) {
+        let tripsFetchOperation = TripsByUserFetchOperation(user, userManager.cohort) { [weak self] result in
+            guard let strongSelf = self else {
+                return
+            }
+            
+            DispatchQueue.main.async {
+                strongSelf.dismiss(animated: true) {
+                    switch result {
+                    case .failure:
+                        // TODO: Log error
+                        strongSelf.showRetryAlert(message: "Failed to load all of that user's trips. Retry?", retryHandler: { strongSelf.showTripListViewController(for: user) })
+                    case .success(let trips):
+                        let balbabeTripListViewController = BalbabeTripListTableViewController(strongSelf.userManager, user, trips)
+                        strongSelf.navigationController?.pushViewController(balbabeTripListViewController, animated: true)
+                    }
+                }
+            }
         }
-        let hometown = balbabe.metadata.hometown
-        let homeInterval: DateInterval
-        if let interval = balbabe.hometownIntervals.first(where: { $0.contains(date) }) {
-            homeInterval = interval
-        } else {
-            // TODO: Log error
-            homeInterval = DateInterval(start: Date(), end: Date.distantFuture)
-        }
-        let metadata = TripMetadata(address: hometown, dateInterval: homeInterval, isHome: true)
-        return Trip(id: balbabe.id, metadata: metadata)
+        showLoadingAlert()
+        OperationQueue.main.addOperation(tripsFetchOperation)
     }
 }

@@ -4,8 +4,11 @@ import PopupDialog
 import KeychainAccess
 
 class LoginViewController: UIViewController, UITextFieldDelegate, AccountEditor {
+    @IBOutlet private var cohortTextField: UITextField!
     @IBOutlet private var emailTextField: UITextField!
     @IBOutlet private var passwordTextField: UITextField!
+    
+    let cohortPicker = PickerViewWrapper(Cohort.all.map { PickerItem($0.rawValue) }, currentlySelectedIndex: Cohort.all.index(of: .balboa)!)!
     
     // MARK: - Init
     
@@ -22,6 +25,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate, AccountEditor 
     }
     
     // MARK: - Lifecycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        cohortTextField.text = cohortPicker.currentlySelectedItem.value
+        cohortTextField.inputView = cohortPicker.pickerView
+        cohortTextField.inputAccessoryView = UIToolbar.newDoneToolbar(withTarget: self, andSelector: #selector(tappedDoneOnCohortPicker))
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -42,9 +52,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate, AccountEditor 
         
         guard
             let email = emailTextField.text,
-            let password = passwordTextField.text
-            else {
-                return
+            let password = passwordTextField.text,
+            let cohortText = cohortTextField.text,
+            let cohort = Cohort(rawValue: cohortText)
+        else {
+            return
         }
         
         guard isValid(email: email) else {
@@ -57,7 +69,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, AccountEditor 
             return
         }
         
-        let loginInfo = LoginInfo(email: email, password: password)
+        let loginInfo = LoginInfo(email: email, password: password, cohort: cohort)
         beginLoginFlow(with: loginInfo)
     }
     
@@ -84,6 +96,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate, AccountEditor 
         }
     }
     
+    @objc private func tappedDoneOnCohortPicker() {
+        cohortTextField.text = cohortPicker.currentlySelectedItem.value
+        cohortTextField.resignFirstResponder()
+    }
+    
     // MARK: - Login and signup
     
     private func beginLoginFlow(with loginInfo: LoginInfo) {
@@ -92,30 +109,41 @@ class LoginViewController: UIViewController, UITextFieldDelegate, AccountEditor 
                 return
             }
             
-            DispatchQueue.main.async {
-                strongSelf.dismiss(animated: true) {
-                    switch result {
-                        case .failure(let error):
-                            guard
-                                let authError = error as NSError?,
-                                authError.code == AuthErrorCode.userNotFound.rawValue
+            switch result {
+            case .failure(let error):
+                DispatchQueue.main.async {
+                    strongSelf.dismiss(animated: true) {
+                        guard
+                            let authError = error as NSError?,
+                            authError.code == AuthErrorCode.userNotFound.rawValue
                             else {
-                                    strongSelf.showAlert(message: error?.localizedDescription)
+                                strongSelf.showAlert(message: error?.localizedDescription)
+                                return
+                        }
+                        
+                        let createButton = DefaultButton(title: "Yep!") {
+                            strongSelf.startCreateBalbabeFlow(with: loginInfo)
+                        }
+                        let cancelButton = CancelButton(title: "Nope") {
+                            strongSelf.dismiss(animated: true)
+                        }
+                        strongSelf.showAlert(title: "No user found", message: "We didn't find an account with that email. Would you like to create an account?", buttons: [createButton, cancelButton])
+                    }
+                }
+            case .success(let loggedInUser):
+                Keychain.standard.setLoginInfo(loginInfo)
+                UserManager.new(for: loginInfo.cohort, withLoggedInUser: loggedInUser) { result in
+                    DispatchQueue.main.async {
+                        strongSelf.dismiss(animated: true) {
+                            switch result {
+                                case .failure:
+                                    // TODO: Log error
                                     return
+                                case .success(let userManager):
+                                    let homeViewController = HomeViewController(userManager)
+                                    strongSelf.navigationController?.pushViewController(homeViewController, animated: true)
                             }
-                            
-                            let createButton = DefaultButton(title: "Yep!") {
-                                strongSelf.startCreateBalbabeFlow(with: loginInfo)
-                            }
-                            let cancelButton = CancelButton(title: "Nope") {
-                                strongSelf.dismiss(animated: true)
-                            }
-                            strongSelf.showAlert(title: "No user found", message: "We didn't find an account with that email. Would you like to create an account?", buttons: [createButton, cancelButton])
-                        case .success(let balbabe):
-                            Keychain.standard.setLoginInfo(loginInfo)
-                            UserManager.shared.setCurrentUser(balbabe)
-                            let homeViewController = HomeViewController(balbabe)
-                            strongSelf.navigationController?.pushViewController(homeViewController, animated: true)
+                        }
                     }
                 }
             }

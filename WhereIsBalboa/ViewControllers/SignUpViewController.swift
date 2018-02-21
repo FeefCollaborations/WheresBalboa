@@ -14,14 +14,15 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UISearchBarDe
         return searchController
     }()
     
-    private var builder = BalbabeCreateOperation.Builder()
+    private let loginInfo: LoginInfo
+    private var builder = UserCreateOperation.Builder()
     
     // MARK: - Init
     
     init(_ loginInfo: LoginInfo) {
+        self.loginInfo = loginInfo
         super.init(nibName: nil, bundle: nil)
-        builder.email = loginInfo.email
-        builder.password = loginInfo.password
+        builder.loginInfo = loginInfo
         guard #available(iOS 11.0, *) else {
             edgesForExtendedLayout = []
             return
@@ -44,7 +45,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UISearchBarDe
     func locationSearchTableViewController(_ locationSearchTableViewController: LocationSearchTableViewController, selectedAddress address: Address) {
         dismiss(animated: true)
         builder.hometown = address
-        hometownButton.setTitle(address.name, for: .normal)
+        hometownButton.setTitle(address.cityName, for: .normal)
     }
     
     func locationSearchTableViewController(_ locationSearchTableViewController: LocationSearchTableViewController, encounteredError: Error?) {
@@ -87,22 +88,35 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UISearchBarDe
                     return
                 }
                 
-                DispatchQueue.main.async {
-                    strongSelf.dismiss(animated: true) {
-                        switch result {
-                            case .failure:
+                switch result {
+                    case .failure:
+                        DispatchQueue.main.async {
+                            strongSelf.dismiss(animated: true) {
                                 strongSelf.showRetryAlert(message: "We encountered an error. Please try again.", retryHandler: strongSelf.createBalbabe)
-                            case .success(let balbabe):
-                                let okButton = DefaultButton.init(title: "YAY!!") {
-                                    UserManager.shared.setCurrentUser(balbabe)
-                                    let homeViewController = HomeViewController(balbabe)
-                                    strongSelf.navigationController?.pushViewController(homeViewController, animated: true)
-                                }
-                                strongSelf.showAlert(title: "Success!", message: "Welcome to the app :)", buttons: [okButton])
+                            }
                         }
-                    }
+                    case .success(let user):
+                        UserManager.new(for: strongSelf.loginInfo.cohort, withLoggedInUser: user) { result in
+                            DispatchQueue.main.async {
+                                strongSelf.dismiss(animated: true) {
+                                    switch result {
+                                        case .failure:
+                                            // TODO: Log error
+                                            strongSelf.showOneOptionAlert(title: "Error", message: "We encountered an unexpected error. Please try to login a little later.", action: {
+                                                strongSelf.navigationController?.popToRootViewController(animated: true)
+                                            })
+                                            return
+                                        case .success(let userManager):
+                                            let okButton = DefaultButton(title: "YAY!!") {
+                                                let homeViewController = HomeViewController(userManager)
+                                                strongSelf.navigationController?.pushViewController(homeViewController, animated: true)
+                                            }
+                                            strongSelf.showAlert(title: "Success!", message: "Welcome to the app :)", buttons: [okButton])
+                                    }
+                                }
+                            }
+                        }
                 }
-
             }
             showLoadingAlert()
             OperationQueue.main.addOperation(createOperation)

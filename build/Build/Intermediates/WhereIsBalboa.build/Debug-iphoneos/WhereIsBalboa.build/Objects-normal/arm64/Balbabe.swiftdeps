@@ -8,8 +8,8 @@ provides-member:
 - ["13WhereIsBalboa7BalbabeV", ""]
 provides-dynamic-lookup:
 depends-top-level:
+- !private "!"
 - !private "&&"
-- !private "-"
 - !private "<"
 - "=="
 - !private "Array"
@@ -17,26 +17,29 @@ depends-top-level:
 - "Balbabe"
 - "BalbabeMetadata"
 - "Bool"
+- "CLLocation"
 - "CastingPrecedence"
 - "DataSnapshot"
-- !private "Date"
+- "Date"
 - "DateInterval"
 - "Equatable"
 - "String"
 - !private "StringLiteralType"
 - "Trip"
 depends-member:
+- !private ["13WhereIsBalboa7AddressV", "location"]
 - !private ["Sa", "append"]
 - !private ["Sa", "first"]
 - !private ["Sa", "flatMap"]
 - !private ["Sa", "forEach"]
 - !private ["Sa", "init"]
-- !private ["Sa", "removeFirst"]
+- !private ["Sa", "isEmpty"]
 - !private ["Sa", "sorted"]
 - !private ["13WhereIsBalboa7BalbabeV", "Balbabe"]
 - ["13WhereIsBalboa7BalbabeV", "BalbabeMetadata"]
+- ["13WhereIsBalboa7BalbabeV", "CLLocation"]
 - ["13WhereIsBalboa7BalbabeV", "DataSnapshot"]
-- !private ["13WhereIsBalboa7BalbabeV", "Date"]
+- ["13WhereIsBalboa7BalbabeV", "Date"]
 - ["13WhereIsBalboa7BalbabeV", "DateInterval"]
 - ["13WhereIsBalboa7BalbabeV", "ID"]
 - ["13WhereIsBalboa7BalbabeV", "String"]
@@ -46,15 +49,17 @@ depends-member:
 - !private ["13WhereIsBalboa7BalbabeV", "hometownIntervalsFor"]
 - ["13WhereIsBalboa7BalbabeV", "id"]
 - ["13WhereIsBalboa7BalbabeV", "init"]
+- ["13WhereIsBalboa7BalbabeV", "location"]
 - ["13WhereIsBalboa7BalbabeV", "metadata"]
 - ["13WhereIsBalboa7BalbabeV", "trips"]
+- !private ["13WhereIsBalboa15BalbabeMetadataV", "hometown"]
 - !private ["13WhereIsBalboa15BalbabeMetadataV", "init"]
 - !private ["s23BidirectionalCollectionP", "append"]
 - !private ["s23BidirectionalCollectionP", "first"]
 - !private ["s23BidirectionalCollectionP", "flatMap"]
 - !private ["s23BidirectionalCollectionP", "forEach"]
 - !private ["s23BidirectionalCollectionP", "init"]
-- !private ["s23BidirectionalCollectionP", "removeFirst"]
+- !private ["s23BidirectionalCollectionP", "isEmpty"]
 - !private ["s23BidirectionalCollectionP", "sorted"]
 - !private ["Sb", "_getBuiltinLogicValue"]
 - !private ["s7CVarArgP", "allObjects"]
@@ -65,15 +70,15 @@ depends-member:
 - !private ["s7CVarArgP", "flatMap"]
 - !private ["s7CVarArgP", "forEach"]
 - !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "isEmpty"]
 - !private ["s7CVarArgP", "key"]
-- !private ["s7CVarArgP", "removeFirst"]
 - !private ["s7CVarArgP", "sorted"]
 - !private ["s10CollectionP", "append"]
 - !private ["s10CollectionP", "first"]
 - !private ["s10CollectionP", "flatMap"]
 - !private ["s10CollectionP", "forEach"]
 - !private ["s10CollectionP", "init"]
-- !private ["s10CollectionP", "removeFirst"]
+- !private ["s10CollectionP", "isEmpty"]
 - !private ["s10CollectionP", "sorted"]
 - !private ["s10ComparableP", "contains"]
 - !private ["s10ComparableP", "distantFuture"]
@@ -93,8 +98,8 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "flatMap"]
 - !private ["s28CustomDebugStringConvertibleP", "forEach"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "isEmpty"]
 - !private ["s28CustomDebugStringConvertibleP", "key"]
-- !private ["s28CustomDebugStringConvertibleP", "removeFirst"]
 - !private ["s28CustomDebugStringConvertibleP", "sorted"]
 - !private ["s28CustomDebugStringConvertibleP", "start"]
 - !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
@@ -111,7 +116,7 @@ depends-member:
 - !private ["s17CustomReflectableP", "flatMap"]
 - !private ["s17CustomReflectableP", "forEach"]
 - !private ["s17CustomReflectableP", "init"]
-- !private ["s17CustomReflectableP", "removeFirst"]
+- !private ["s17CustomReflectableP", "isEmpty"]
 - !private ["s17CustomReflectableP", "sorted"]
 - !private ["s17CustomReflectableP", "start"]
 - !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
@@ -127,15 +132,18 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "flatMap"]
 - !private ["s23CustomStringConvertibleP", "forEach"]
 - !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "isEmpty"]
 - !private ["s23CustomStringConvertibleP", "key"]
-- !private ["s23CustomStringConvertibleP", "removeFirst"]
 - !private ["s23CustomStringConvertibleP", "sorted"]
 - !private ["s23CustomStringConvertibleP", "start"]
 - !private ["So12DataSnapshotC", "childSnapshot"]
 - !private ["So12DataSnapshotC", "children"]
 - !private ["So12DataSnapshotC", "key"]
+- !private ["13WhereIsBalboa19DatabaseConvertibleP", "address"]
 - !private ["13WhereIsBalboa19DatabaseConvertibleP", "dateInterval"]
+- !private ["13WhereIsBalboa19DatabaseConvertibleP", "hometown"]
 - !private ["13WhereIsBalboa19DatabaseConvertibleP", "init"]
+- !private ["13WhereIsBalboa19DatabaseConvertibleP", "location"]
 - !private ["10Foundation4DateV", "distantFuture"]
 - !private ["10Foundation4DateV", "distantPast"]
 - !private ["10Foundation12DateIntervalV", "contains"]
@@ -152,7 +160,7 @@ depends-member:
 - !private ["s9DecodableP", "flatMap"]
 - !private ["s9DecodableP", "forEach"]
 - !private ["s9DecodableP", "init"]
-- !private ["s9DecodableP", "removeFirst"]
+- !private ["s9DecodableP", "isEmpty"]
 - !private ["s9DecodableP", "sorted"]
 - !private ["s9DecodableP", "start"]
 - !private ["s9EncodableP", "_getBuiltinLogicValue"]
@@ -165,7 +173,7 @@ depends-member:
 - !private ["s9EncodableP", "flatMap"]
 - !private ["s9EncodableP", "forEach"]
 - !private ["s9EncodableP", "init"]
-- !private ["s9EncodableP", "removeFirst"]
+- !private ["s9EncodableP", "isEmpty"]
 - !private ["s9EncodableP", "sorted"]
 - !private ["s9EncodableP", "start"]
 - !private ["s9EquatableP", "Balbabe"]
@@ -174,6 +182,7 @@ depends-member:
 - !private ["s9EquatableP", "DateInterval"]
 - !private ["s9EquatableP", "Trip"]
 - !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "address"]
 - !private ["s9EquatableP", "allObjects"]
 - !private ["s9EquatableP", "childSnapshot"]
 - !private ["s9EquatableP", "children"]
@@ -182,11 +191,13 @@ depends-member:
 - !private ["s9EquatableP", "distantFuture"]
 - !private ["s9EquatableP", "distantPast"]
 - !private ["s9EquatableP", "end"]
+- !private ["s9EquatableP", "hometown"]
 - !private ["s9EquatableP", "hometownIntervals"]
 - !private ["s9EquatableP", "hometownIntervalsFor"]
 - !private ["s9EquatableP", "id"]
 - !private ["s9EquatableP", "init"]
 - !private ["s9EquatableP", "key"]
+- !private ["s9EquatableP", "location"]
 - !private ["s9EquatableP", "metadata"]
 - !private ["s9EquatableP", "start"]
 - !private ["s9EquatableP", "trips"]
@@ -196,7 +207,7 @@ depends-member:
 - !private ["s25ExpressibleByArrayLiteralP", "flatMap"]
 - !private ["s25ExpressibleByArrayLiteralP", "forEach"]
 - !private ["s25ExpressibleByArrayLiteralP", "init"]
-- !private ["s25ExpressibleByArrayLiteralP", "removeFirst"]
+- !private ["s25ExpressibleByArrayLiteralP", "isEmpty"]
 - !private ["s25ExpressibleByArrayLiteralP", "sorted"]
 - !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
@@ -223,7 +234,7 @@ depends-member:
 - !private ["s17MutableCollectionP", "flatMap"]
 - !private ["s17MutableCollectionP", "forEach"]
 - !private ["s17MutableCollectionP", "init"]
-- !private ["s17MutableCollectionP", "removeFirst"]
+- !private ["s17MutableCollectionP", "isEmpty"]
 - !private ["s17MutableCollectionP", "sorted"]
 - !private ["So8NSCodingP", "init"]
 - !private ["So9NSCopyingP", "init"]
@@ -248,14 +259,14 @@ depends-member:
 - !private ["s22RandomAccessCollectionP", "flatMap"]
 - !private ["s22RandomAccessCollectionP", "forEach"]
 - !private ["s22RandomAccessCollectionP", "init"]
-- !private ["s22RandomAccessCollectionP", "removeFirst"]
+- !private ["s22RandomAccessCollectionP", "isEmpty"]
 - !private ["s22RandomAccessCollectionP", "sorted"]
 - !private ["s26RangeReplaceableCollectionP", "append"]
 - !private ["s26RangeReplaceableCollectionP", "first"]
 - !private ["s26RangeReplaceableCollectionP", "flatMap"]
 - !private ["s26RangeReplaceableCollectionP", "forEach"]
 - !private ["s26RangeReplaceableCollectionP", "init"]
-- !private ["s26RangeReplaceableCollectionP", "removeFirst"]
+- !private ["s26RangeReplaceableCollectionP", "isEmpty"]
 - !private ["s26RangeReplaceableCollectionP", "sorted"]
 - !private ["10Foundation20ReferenceConvertibleP", "contains"]
 - !private ["10Foundation20ReferenceConvertibleP", "distantFuture"]
@@ -269,7 +280,7 @@ depends-member:
 - !private ["s8SequenceP", "flatMap"]
 - !private ["s8SequenceP", "forEach"]
 - !private ["s8SequenceP", "init"]
-- !private ["s8SequenceP", "removeFirst"]
+- !private ["s8SequenceP", "isEmpty"]
 - !private ["s8SequenceP", "sorted"]
 - !private ["SS", "init"]
 - !private ["s14StringProtocolP", "init"]
@@ -278,27 +289,28 @@ depends-member:
 - !private ["13WhereIsBalboa4TripV", "deinit"]
 - !private ["13WhereIsBalboa4TripV", "init"]
 - !private ["13WhereIsBalboa4TripV", "metadata"]
+- !private ["13WhereIsBalboa12TripMetadataV", "address"]
 - !private ["13WhereIsBalboa12TripMetadataV", "dateInterval"]
 - !private ["s14_ArrayProtocolP", "append"]
 - !private ["s14_ArrayProtocolP", "first"]
 - !private ["s14_ArrayProtocolP", "flatMap"]
 - !private ["s14_ArrayProtocolP", "forEach"]
 - !private ["s14_ArrayProtocolP", "init"]
-- !private ["s14_ArrayProtocolP", "removeFirst"]
+- !private ["s14_ArrayProtocolP", "isEmpty"]
 - !private ["s14_ArrayProtocolP", "sorted"]
 - !private ["s23_BidirectionalIndexableP", "append"]
 - !private ["s23_BidirectionalIndexableP", "first"]
 - !private ["s23_BidirectionalIndexableP", "flatMap"]
 - !private ["s23_BidirectionalIndexableP", "forEach"]
 - !private ["s23_BidirectionalIndexableP", "init"]
-- !private ["s23_BidirectionalIndexableP", "removeFirst"]
+- !private ["s23_BidirectionalIndexableP", "isEmpty"]
 - !private ["s23_BidirectionalIndexableP", "sorted"]
 - !private ["s24_DestructorSafeContainerP", "append"]
 - !private ["s24_DestructorSafeContainerP", "first"]
 - !private ["s24_DestructorSafeContainerP", "flatMap"]
 - !private ["s24_DestructorSafeContainerP", "forEach"]
 - !private ["s24_DestructorSafeContainerP", "init"]
-- !private ["s24_DestructorSafeContainerP", "removeFirst"]
+- !private ["s24_DestructorSafeContainerP", "isEmpty"]
 - !private ["s24_DestructorSafeContainerP", "sorted"]
 - !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
@@ -312,14 +324,14 @@ depends-member:
 - !private ["s10_IndexableP", "flatMap"]
 - !private ["s10_IndexableP", "forEach"]
 - !private ["s10_IndexableP", "init"]
-- !private ["s10_IndexableP", "removeFirst"]
+- !private ["s10_IndexableP", "isEmpty"]
 - !private ["s10_IndexableP", "sorted"]
 - !private ["s14_IndexableBaseP", "append"]
 - !private ["s14_IndexableBaseP", "first"]
 - !private ["s14_IndexableBaseP", "flatMap"]
 - !private ["s14_IndexableBaseP", "forEach"]
 - !private ["s14_IndexableBaseP", "init"]
-- !private ["s14_IndexableBaseP", "removeFirst"]
+- !private ["s14_IndexableBaseP", "isEmpty"]
 - !private ["s14_IndexableBaseP", "sorted"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "allObjects"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "childSnapshot"]
@@ -331,7 +343,7 @@ depends-member:
 - !private ["s17_MutableIndexableP", "flatMap"]
 - !private ["s17_MutableIndexableP", "forEach"]
 - !private ["s17_MutableIndexableP", "init"]
-- !private ["s17_MutableIndexableP", "removeFirst"]
+- !private ["s17_MutableIndexableP", "isEmpty"]
 - !private ["s17_MutableIndexableP", "sorted"]
 - !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
 - !private ["s21_ObjectiveCBridgeableP", "append"]
@@ -343,7 +355,7 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "flatMap"]
 - !private ["s21_ObjectiveCBridgeableP", "forEach"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
-- !private ["s21_ObjectiveCBridgeableP", "removeFirst"]
+- !private ["s21_ObjectiveCBridgeableP", "isEmpty"]
 - !private ["s21_ObjectiveCBridgeableP", "sorted"]
 - !private ["s21_ObjectiveCBridgeableP", "start"]
 - !private ["s22_RandomAccessIndexableP", "append"]
@@ -351,17 +363,18 @@ depends-member:
 - !private ["s22_RandomAccessIndexableP", "flatMap"]
 - !private ["s22_RandomAccessIndexableP", "forEach"]
 - !private ["s22_RandomAccessIndexableP", "init"]
-- !private ["s22_RandomAccessIndexableP", "removeFirst"]
+- !private ["s22_RandomAccessIndexableP", "isEmpty"]
 - !private ["s22_RandomAccessIndexableP", "sorted"]
 - !private ["s26_RangeReplaceableIndexableP", "append"]
 - !private ["s26_RangeReplaceableIndexableP", "first"]
 - !private ["s26_RangeReplaceableIndexableP", "flatMap"]
 - !private ["s26_RangeReplaceableIndexableP", "forEach"]
 - !private ["s26_RangeReplaceableIndexableP", "init"]
-- !private ["s26_RangeReplaceableIndexableP", "removeFirst"]
+- !private ["s26_RangeReplaceableIndexableP", "isEmpty"]
 - !private ["s26_RangeReplaceableIndexableP", "sorted"]
 - !private ["s16_SwiftStringViewP", "init"]
 depends-nominal:
+- !private "13WhereIsBalboa7AddressV"
 - !private "Sa"
 - "13WhereIsBalboa7BalbabeV"
 - !private "13WhereIsBalboa15BalbabeMetadataV"
@@ -436,6 +449,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework/Modules/SwiftyJSON.swiftmodule/arm64.swiftmodule"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/PopupDialog/PopupDialog.framework/Modules/PopupDialog.swiftmodule/arm64.swiftmodule"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/KeychainAccess/KeychainAccess.framework/Modules/KeychainAccess.swiftmodule/arm64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/QuartzCore.swiftmodule"
@@ -537,4 +551,4 @@ depends-external:
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Modules/module.modulemap"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/ClusterKit/ClusterKit.framework/Modules/module.modulemap"
-interface-hash: "319ebf131596adc7e6b4307d97b239fe"
+interface-hash: "c5297eac988fca537518b4ea3bb5ef47"

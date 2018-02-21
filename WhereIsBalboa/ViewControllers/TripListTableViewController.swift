@@ -3,17 +3,17 @@ import Firebase
 import CoreLocation
 
 class TripListTableViewController: UIViewController, UITableViewDelegate {
-    typealias TripTapHandler = (Trip, Balbabe) -> Void
+    typealias TripTapHandler = (Trip, User) -> Void
     
     @IBOutlet private var tableView: UITableView!
     
     private let dataSource: TripListTableViewDataSource
-    private let baseUser: Balbabe
+    private let baseUser: User
     var onTripTap: TripTapHandler?
     
     // MARK: - Init
     
-    init(_ configuration: TripsDataConfiguration, relativeToUser baseUser: Balbabe, onTripTap: TripTapHandler? = nil) {
+    init(_ configuration: TripsDataConfiguration, relativeToUser baseUser: User, onTripTap: TripTapHandler? = nil) {
         dataSource = TripListTableViewDataSource(configuration)
         self.baseUser = baseUser
         self.onTripTap = onTripTap
@@ -38,11 +38,12 @@ class TripListTableViewController: UIViewController, UITableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         automaticallyAdjustsScrollViewInsets = false
-        dataSource.onDataChange = { [weak tableView] in
+        dataSource.dataChangeHandler = { [weak tableView] in
             tableView?.reloadData()
         }
         dataSource.registerCells(with: tableView)
         tableView.dataSource = dataSource
+        tableView.reloadData()
         tableView.delegate = self
     }
     

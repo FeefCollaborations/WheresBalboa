@@ -3,45 +3,42 @@ import FirebaseDatabase
 
 struct TripMetadata: DatabaseConvertible, Equatable {
     private struct DBValues {
-        static let address = "address"
-        static let dateInterval = "dateInterval"
-        static let isHome = "isHome"
+        static let startDate = "startTimestamp"
+        static let endDate = "endTimestamp"
     }
     
     let address: Address
-    let dateInterval: DateInterval
+    var dateInterval: DateInterval {
+        return DateInterval(dateIntervalString)!
+    }
     let isHome: Bool
-    let displayStartDate: Date
-    let displayEndDate: Date
+    let dateIntervalString: String
     
     init(_ dataSnapshot: DataSnapshot) throws {
         guard
-            let isHome = dataSnapshot.childSnapshot(forPath: DBValues.isHome).value as? Bool,
-            let dateIntervalString = dataSnapshot.childSnapshot(forPath: DBValues.dateInterval).value as? String,
-            let dateInterval = DateInterval(dateIntervalString)
+            let startTimestamp = dataSnapshot.childSnapshot(forPath: DBValues.startDate).value as? TimeInterval,
+            let endTimestamp = dataSnapshot.childSnapshot(forPath: DBValues.endDate).value as? TimeInterval
         else {
             throw DatabaseConversionError.invalidSnapshot(dataSnapshot)
         }
         
-        self.init(address: try Address(dataSnapshot.childSnapshot(forPath: DBValues.address)), dateInterval: dateInterval, isHome: isHome)
+        let dateInterval = DateInterval(start: Date(timeIntervalSince1970: startTimestamp), end: Date(timeIntervalSince1970: endTimestamp))
+        self.init(address: try Address(dataSnapshot), dateInterval: dateInterval)
     }
     
-    init(address: Address, dateInterval: DateInterval, isHome: Bool) {
+    init(address: Address, dateInterval: DateInterval, isHome: Bool = false) {
         self.address = address
-        self.dateInterval = dateInterval
+        self.dateIntervalString = dateInterval.stringRepresentation
         self.isHome = isHome
-        self.displayStartDate = dateInterval.start
-        self.displayEndDate = dateInterval.end - 1
     }
     
     // MARK: - DatabaseConvertible
     
     func dictionaryRepresentation() -> [String : Any] {
-        return [
-            DBValues.address: address.dictionaryRepresentation(),
-            DBValues.dateInterval: dateInterval.stringRepresentation,
-            DBValues.isHome: isHome
-        ]
+        var dictionary = address.dictionaryRepresentation()
+        dictionary[DBValues.startDate] = dateInterval.start.timeIntervalSince1970
+        dictionary[DBValues.endDate] = dateInterval.end.timeIntervalSince1970
+        return dictionary
     }
 }
 

@@ -6,17 +6,17 @@ struct Address: DatabaseConvertible, Equatable {
     private struct DBValues {
         static let latitude = "latitude"
         static let longitude = "longitude"
-        static let name = "name"
+        static let cityName = "cityName"
     }
     
     let location: CLLocation
-    let name: String
+    let cityName: String
     
     // MARK: - Init
     
     init(location: CLLocation, name: String) {
         self.location = location
-        self.name = name
+        self.cityName = name
     }
     
     init?(_ googlePayload: JSON) {
@@ -33,13 +33,13 @@ struct Address: DatabaseConvertible, Equatable {
     
     init(_ dataSnapshot: DataSnapshot) throws {
         guard
-            let name = dataSnapshot.childSnapshot(forPath: DBValues.name).value as? String,
+            let name = dataSnapshot.childSnapshot(forPath: DBValues.cityName).value as? String,
             let latitude = dataSnapshot.childSnapshot(forPath: DBValues.latitude).value as? Double,
             let longitude = dataSnapshot.childSnapshot(forPath: DBValues.longitude).value as? Double
         else {
             throw DatabaseConversionError.invalidSnapshot(dataSnapshot)
         }
-        self.name = name
+        self.cityName = name
         self.location = CLLocation(latitude: latitude, longitude: longitude)
     }
     
@@ -49,7 +49,7 @@ struct Address: DatabaseConvertible, Equatable {
         return [
             DBValues.latitude: location.coordinate.latitude,
             DBValues.longitude: location.coordinate.longitude,
-            DBValues.name: name
+            DBValues.cityName: cityName
         ]
     }
 }
@@ -58,5 +58,5 @@ func ==(lhs: Address, rhs: Address) -> Bool {
     return
         lhs.location.coordinate.latitude == rhs.location.coordinate.latitude &&
         lhs.location.coordinate.longitude == rhs.location.coordinate.longitude &&
-        lhs.name == rhs.name
+        lhs.cityName == rhs.cityName
 }

@@ -7,16 +7,50 @@ class TripListTableViewDataSource: NSObject, UITableViewDataSource {
     private static let reuseIdentifier = "cell"
     
     private var configuration: TripsDataConfiguration
-    private var orderedTrips: [(Trip, Balbabe)]
-    var onDataChange: DataChangeHandler?
+    private var orderedTrips: [(Trip, User)] {
+        didSet {
+
+        }
+    }
+    var dataChangeHandler: DataChangeHandler?
     
     // MARK: - Init
     
-    init(_ configuration: TripsDataConfiguration, onDataChange: DataChangeHandler? = nil) {
+    init(_ configuration: TripsDataConfiguration, dataChangeHandler: DataChangeHandler? = nil) {
         self.configuration = configuration
         self.orderedTrips = TripListTableViewDataSource.sortedTrips(from: configuration)
-        self.onDataChange = onDataChange
+        self.dataChangeHandler = dataChangeHandler
         super.init()
+        
+        configuration.userManager.registerForChanges { [weak self] userManager in
+            guard let strongSelf = self else {
+                return
+            }
+            
+            let loggedInUser = userManager.loggedInUser
+            
+            var updatedConfiguration = strongSelf.configuration
+            updatedConfiguration.currentLocation = userManager.loggedInUserLocation(at: updatedConfiguration.focusedDate)
+            let loggedInUserTrips = userManager.loggedInUserTrips
+            let visibleTrip = loggedInUserTrips.first(where: { $0.metadata.dateInterval.contains(updatedConfiguration.focusedDate) })
+            if
+                let oldTrip = updatedConfiguration.keyedUsers.first(where: { $1.id == loggedInUser.id })?.0,
+                oldTrip != visibleTrip
+            {
+                updatedConfiguration.keyedUsers[oldTrip] = nil
+            }
+            
+            if let visibleTrip = visibleTrip {
+                updatedConfiguration.keyedUsers[visibleTrip] = loggedInUser
+            }
+            
+            strongSelf.configuration = updatedConfiguration
+            strongSelf.orderedTrips = TripListTableViewDataSource.sortedTrips(from: updatedConfiguration)
+            
+            DispatchQueue.main.async {
+                strongSelf.dataChangeHandler?()
+            }
+        }
     }
     
     func registerCells(with tableView: UITableView) {
@@ -32,7 +66,7 @@ class TripListTableViewDataSource: NSObject, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TripListTableViewDataSource.reuseIdentifier, for: indexPath) as! TripTableViewCell
         let trip = tripInfoAt(indexPath).0
-        guard let balbabe = configuration.keyedBalbabes[trip] else {
+        guard let user = configuration.keyedUsers[trip] else {
             // TODO: Log error
             cell.nameLabel.text = "Encountered an error"
             cell.cityLabel.text = "We're working on fixing it"
@@ -40,16 +74,19 @@ class TripListTableViewDataSource: NSObject, UITableViewDataSource {
             return cell
         }
         
-        let isLoggedInUserTrip = balbabe == configuration.loggedInBalbabe
-        cell.nameLabel.text = isLoggedInUserTrip ? "You" : balbabe.metadata.name
+        let isLoggedInUserTrip = user == configuration.userManager.loggedInUser
+        cell.nameLabel.text = isLoggedInUserTrip ? "You" : user.metadata.name
         
-        cell.cityLabel.text = "will be in \(trip.metadata.address.name)"
-        var durationText = "from \(DateFormatter.fullDate.string(from: trip.metadata.displayStartDate)) "
-        if trip.metadata.dateInterval.end == Date.distantFuture {
+        let verb = self.verb(for: trip.metadata.dateInterval, isLoggedInUser: isLoggedInUserTrip)
+        cell.cityLabel.text = "\(verb) in \(trip.metadata.address.cityName)"
+        let startDate = trip.metadata.dateInterval.start
+        let endDate = trip.metadata.dateInterval.end
+        var durationText = startDate.isDistantPast ? "since ages ago " : "from \(DateFormatter.fullDateShortenedYear.string(from: startDate)) "
+        if endDate.isDistantFuture {
             let pronoun = isLoggedInUserTrip ? "you" : "they"
             durationText += "until \(pronoun) go traveling again!"
         } else {
-            durationText += "to \(DateFormatter.fullDate.string(from: trip.metadata.displayEndDate))"
+            durationText += "to \(DateFormatter.fullDateShortenedYear.string(from: endDate))"
         }
         cell.dateLabel.text = durationText
         
@@ -85,7 +122,7 @@ class TripListTableViewDataSource: NSObject, UITableViewDataSource {
         cell.locationImageView.image = image.withRenderingMode(.alwaysTemplate)
         
         cell.onContactTapped = { _ in
-            UIApplication.shared.open(balbabe.metadata.whatsappURL, options: [:])
+            UIApplication.shared.open(user.metadata.whatsappURL, options: [:])
         }
         
         return cell
@@ -99,18 +136,29 @@ class TripListTableViewDataSource: NSObject, UITableViewDataSource {
         }
         self.configuration = configuration
         self.orderedTrips = TripListTableViewDataSource.sortedTrips(from: configuration)
-        onDataChange?()
+        dataChangeHandler?()
     }
     
-    func tripInfoAt(_ indexPath: IndexPath) -> (Trip, Balbabe) {
+    func tripInfoAt(_ indexPath: IndexPath) -> (Trip, User) {
         return orderedTrips[indexPath.item]
     }
     
     // MARK: - Helpers
     
-    private static func sortedTrips(from configuration: TripsDataConfiguration) -> [(Trip, Balbabe)] {
-        let trips = Array(configuration.keyedBalbabes.keys).sorted {
-            return $0.metadata.address.location.distance(from: configuration.currentLocation) < $1.metadata.address.location.distance(from: configuration.currentLocation) || configuration.keyedBalbabes[$0] == configuration.loggedInBalbabe }
-        return trips.map { ($0, configuration.keyedBalbabes[$0]!) }
+    private func verb(for dateInterval: DateInterval, isLoggedInUser: Bool) -> String {
+        let currentDate = Date()
+        if dateInterval.contains(currentDate) {
+            return isLoggedInUser ? "are" : "is"
+        } else if currentDate.compare(dateInterval.end) == ComparisonResult.orderedDescending {
+            return isLoggedInUser ? "were" : "was"
+        } else {
+            return "will be"
+        }
+    }
+    
+    private static func sortedTrips(from configuration: TripsDataConfiguration) -> [(Trip, User)] {
+        let trips = Array(configuration.keyedUsers.keys).sorted {
+            return $0.metadata.address.location.distance(from: configuration.currentLocation) < $1.metadata.address.location.distance(from: configuration.currentLocation) || configuration.keyedUsers[$0] == configuration.userManager.loggedInUser }
+        return trips.map { ($0, configuration.keyedUsers[$0]!) }
     }
 }

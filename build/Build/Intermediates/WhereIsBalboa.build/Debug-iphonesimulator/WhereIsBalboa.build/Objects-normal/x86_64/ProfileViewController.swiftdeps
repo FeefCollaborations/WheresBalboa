@@ -33,9 +33,7 @@ depends-top-level:
 - !private "Array"
 - "AssignmentPrecedence"
 - !private "Auth"
-- "Balbabe"
 - !private "BalbabeEditOperation"
-- !private "BalbabeMetadata"
 - "Bool"
 - "BooleanLiteralType"
 - "Error"
@@ -61,12 +59,12 @@ depends-top-level:
 - "UIView"
 - "UIViewController"
 - !private "UnicodeScalarType"
-- !private "UserManager"
+- "User"
+- !private "UserMetadata"
 - !private "fatalError"
 depends-member:
 - !private ["13WhereIsBalboa13AccountEditorP", "Auth"]
 - !private ["13WhereIsBalboa13AccountEditorP", "BalbabeEditOperation"]
-- !private ["13WhereIsBalboa13AccountEditorP", "BalbabeMetadata"]
 - ["13WhereIsBalboa13AccountEditorP", "KeyboardManager"]
 - !private ["13WhereIsBalboa13AccountEditorP", "Keychain"]
 - !private ["13WhereIsBalboa13AccountEditorP", "LocationSearchTableViewController"]
@@ -74,7 +72,7 @@ depends-member:
 - !private ["13WhereIsBalboa13AccountEditorP", "PopupDialog"]
 - !private ["13WhereIsBalboa13AccountEditorP", "TextFieldPromptViewController"]
 - !private ["13WhereIsBalboa13AccountEditorP", "UISearchController"]
-- !private ["13WhereIsBalboa13AccountEditorP", "UserManager"]
+- !private ["13WhereIsBalboa13AccountEditorP", "UserMetadata"]
 - !private ["13WhereIsBalboa13AccountEditorP", "balbabe"]
 - !private ["13WhereIsBalboa13AccountEditorP", "dismiss"]
 - !private ["13WhereIsBalboa13AccountEditorP", "edgesForExtendedLayout"]
@@ -115,17 +113,11 @@ depends-member:
 - !private ["13WhereIsBalboa13AccountEditorP", "view"]
 - !private ["13WhereIsBalboa13AccountEditorP", "whatsappTextField"]
 - ["13WhereIsBalboa13AccountEditorP", ""]
-- !private ["13WhereIsBalboa7AddressV", "name"]
+- !private ["13WhereIsBalboa7AddressV", "cityName"]
 - !private ["So4AuthC", "auth"]
 - !private ["So4AuthC", "currentUser"]
 - !private ["So4AuthC", "sendPasswordReset"]
-- !private ["13WhereIsBalboa7BalbabeV", "id"]
-- !private ["13WhereIsBalboa7BalbabeV", "metadata"]
 - !private ["13WhereIsBalboa20BalbabeEditOperationC", "init"]
-- !private ["13WhereIsBalboa15BalbabeMetadataV", "hometown"]
-- !private ["13WhereIsBalboa15BalbabeMetadataV", "init"]
-- !private ["13WhereIsBalboa15BalbabeMetadataV", "name"]
-- !private ["13WhereIsBalboa15BalbabeMetadataV", "whatsapp"]
 - !private ["s23BidirectionalCollectionP", "init"]
 - !private ["s23BidirectionalCollectionP", "isEmpty"]
 - !private ["s23BidirectionalCollectionP", "trimmingCharacters"]
@@ -141,7 +133,6 @@ depends-member:
 - !private ["SC6CGRectV", "intersection"]
 - !private ["s7CVarArgP", "Auth"]
 - !private ["s7CVarArgP", "BalbabeEditOperation"]
-- !private ["s7CVarArgP", "BalbabeMetadata"]
 - ["s7CVarArgP", "KeyboardManager"]
 - !private ["s7CVarArgP", "Keychain"]
 - !private ["s7CVarArgP", "LocationSearchTableViewController"]
@@ -149,7 +140,7 @@ depends-member:
 - !private ["s7CVarArgP", "PopupDialog"]
 - !private ["s7CVarArgP", "TextFieldPromptViewController"]
 - !private ["s7CVarArgP", "UISearchController"]
-- !private ["s7CVarArgP", "UserManager"]
+- !private ["s7CVarArgP", "UserMetadata"]
 - !private ["s7CVarArgP", "addOperation"]
 - !private ["s7CVarArgP", "auth"]
 - !private ["s7CVarArgP", "balbabe"]
@@ -222,7 +213,6 @@ depends-member:
 - !private ["s10ComparableP", "trimmingCharacters"]
 - !private ["s28CustomDebugStringConvertibleP", "Auth"]
 - !private ["s28CustomDebugStringConvertibleP", "BalbabeEditOperation"]
-- !private ["s28CustomDebugStringConvertibleP", "BalbabeMetadata"]
 - ["s28CustomDebugStringConvertibleP", "KeyboardManager"]
 - !private ["s28CustomDebugStringConvertibleP", "Keychain"]
 - !private ["s28CustomDebugStringConvertibleP", "LocationSearchTableViewController"]
@@ -230,7 +220,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "PopupDialog"]
 - !private ["s28CustomDebugStringConvertibleP", "TextFieldPromptViewController"]
 - !private ["s28CustomDebugStringConvertibleP", "UISearchController"]
-- !private ["s28CustomDebugStringConvertibleP", "UserManager"]
+- !private ["s28CustomDebugStringConvertibleP", "UserMetadata"]
 - !private ["s28CustomDebugStringConvertibleP", "addOperation"]
 - !private ["s28CustomDebugStringConvertibleP", "auth"]
 - !private ["s28CustomDebugStringConvertibleP", "balbabe"]
@@ -313,7 +303,6 @@ depends-member:
 - !private ["s17CustomReflectableP", "trimmingCharacters"]
 - !private ["s23CustomStringConvertibleP", "Auth"]
 - !private ["s23CustomStringConvertibleP", "BalbabeEditOperation"]
-- !private ["s23CustomStringConvertibleP", "BalbabeMetadata"]
 - ["s23CustomStringConvertibleP", "KeyboardManager"]
 - !private ["s23CustomStringConvertibleP", "Keychain"]
 - !private ["s23CustomStringConvertibleP", "LocationSearchTableViewController"]
@@ -321,7 +310,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "PopupDialog"]
 - !private ["s23CustomStringConvertibleP", "TextFieldPromptViewController"]
 - !private ["s23CustomStringConvertibleP", "UISearchController"]
-- !private ["s23CustomStringConvertibleP", "UserManager"]
+- !private ["s23CustomStringConvertibleP", "UserMetadata"]
 - !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
 - !private ["s23CustomStringConvertibleP", "addOperation"]
 - !private ["s23CustomStringConvertibleP", "auth"]
@@ -389,6 +378,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "viewWillAppear"]
 - !private ["s23CustomStringConvertibleP", "whatsappTextField"]
 - ["s23CustomStringConvertibleP", ""]
+- !private ["13WhereIsBalboa19DatabaseConvertibleP", "cityName"]
 - !private ["13WhereIsBalboa19DatabaseConvertibleP", "hometown"]
 - !private ["13WhereIsBalboa19DatabaseConvertibleP", "init"]
 - !private ["13WhereIsBalboa19DatabaseConvertibleP", "name"]
@@ -407,7 +397,6 @@ depends-member:
 - !private ["s9EncodableP", "trimmingCharacters"]
 - !private ["s9EquatableP", "Auth"]
 - !private ["s9EquatableP", "BalbabeEditOperation"]
-- !private ["s9EquatableP", "BalbabeMetadata"]
 - ["s9EquatableP", "KeyboardManager"]
 - !private ["s9EquatableP", "Keychain"]
 - !private ["s9EquatableP", "LocationSearchTableViewController"]
@@ -415,11 +404,12 @@ depends-member:
 - !private ["s9EquatableP", "PopupDialog"]
 - !private ["s9EquatableP", "TextFieldPromptViewController"]
 - !private ["s9EquatableP", "UISearchController"]
-- !private ["s9EquatableP", "UserManager"]
+- !private ["s9EquatableP", "UserMetadata"]
 - !private ["s9EquatableP", "_getBuiltinLogicValue"]
 - !private ["s9EquatableP", "addOperation"]
 - !private ["s9EquatableP", "auth"]
 - !private ["s9EquatableP", "balbabe"]
+- !private ["s9EquatableP", "cityName"]
 - !private ["s9EquatableP", "constant"]
 - !private ["s9EquatableP", "currentUser"]
 - !private ["s9EquatableP", "delegate"]
@@ -503,7 +493,6 @@ depends-member:
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "trimmingCharacters"]
 - !private ["s8HashableP", "Auth"]
 - !private ["s8HashableP", "BalbabeEditOperation"]
-- !private ["s8HashableP", "BalbabeMetadata"]
 - ["s8HashableP", "KeyboardManager"]
 - !private ["s8HashableP", "Keychain"]
 - !private ["s8HashableP", "LocationSearchTableViewController"]
@@ -511,7 +500,7 @@ depends-member:
 - !private ["s8HashableP", "PopupDialog"]
 - !private ["s8HashableP", "TextFieldPromptViewController"]
 - !private ["s8HashableP", "UISearchController"]
-- !private ["s8HashableP", "UserManager"]
+- !private ["s8HashableP", "UserMetadata"]
 - !private ["s8HashableP", "_getBuiltinLogicValue"]
 - !private ["s8HashableP", "addOperation"]
 - !private ["s8HashableP", "auth"]
@@ -588,7 +577,6 @@ depends-member:
 - !private ["13WhereIsBalboa33LocationSearchTableViewControllerC", "init"]
 - !private ["13WhereIsBalboa41LocationSearchTableViewControllerDelegateP", "Auth"]
 - !private ["13WhereIsBalboa41LocationSearchTableViewControllerDelegateP", "BalbabeEditOperation"]
-- !private ["13WhereIsBalboa41LocationSearchTableViewControllerDelegateP", "BalbabeMetadata"]
 - ["13WhereIsBalboa41LocationSearchTableViewControllerDelegateP", "KeyboardManager"]
 - !private ["13WhereIsBalboa41LocationSearchTableViewControllerDelegateP", "Keychain"]
 - !private ["13WhereIsBalboa41LocationSearchTableViewControllerDelegateP", "LocationSearchTableViewController"]
@@ -596,7 +584,7 @@ depends-member:
 - !private ["13WhereIsBalboa41LocationSearchTableViewControllerDelegateP", "PopupDialog"]
 - !private ["13WhereIsBalboa41LocationSearchTableViewControllerDelegateP", "TextFieldPromptViewController"]
 - !private ["13WhereIsBalboa41LocationSearchTableViewControllerDelegateP", "UISearchController"]
-- !private ["13WhereIsBalboa41LocationSearchTableViewControllerDelegateP", "UserManager"]
+- !private ["13WhereIsBalboa41LocationSearchTableViewControllerDelegateP", "UserMetadata"]
 - !private ["13WhereIsBalboa41LocationSearchTableViewControllerDelegateP", "balbabe"]
 - !private ["13WhereIsBalboa41LocationSearchTableViewControllerDelegateP", "dismiss"]
 - !private ["13WhereIsBalboa41LocationSearchTableViewControllerDelegateP", "edgesForExtendedLayout"]
@@ -646,7 +634,6 @@ depends-member:
 - !private ["s10MirrorPathP", "trimmingCharacters"]
 - !private ["So8NSCodingP", "Auth"]
 - !private ["So8NSCodingP", "BalbabeEditOperation"]
-- !private ["So8NSCodingP", "BalbabeMetadata"]
 - ["So8NSCodingP", "KeyboardManager"]
 - !private ["So8NSCodingP", "Keychain"]
 - !private ["So8NSCodingP", "LocationSearchTableViewController"]
@@ -654,7 +641,7 @@ depends-member:
 - !private ["So8NSCodingP", "PopupDialog"]
 - !private ["So8NSCodingP", "TextFieldPromptViewController"]
 - !private ["So8NSCodingP", "UISearchController"]
-- !private ["So8NSCodingP", "UserManager"]
+- !private ["So8NSCodingP", "UserMetadata"]
 - !private ["So8NSCodingP", "balbabe"]
 - !private ["So8NSCodingP", "delegate"]
 - !private ["So8NSCodingP", "dimsBackgroundDuringPresentation"]
@@ -716,7 +703,6 @@ depends-member:
 - !private ["So9NSCopyingP", "trimmingCharacters"]
 - !private ["So26NSExtensionRequestHandlingP", "Auth"]
 - !private ["So26NSExtensionRequestHandlingP", "BalbabeEditOperation"]
-- !private ["So26NSExtensionRequestHandlingP", "BalbabeMetadata"]
 - ["So26NSExtensionRequestHandlingP", "KeyboardManager"]
 - !private ["So26NSExtensionRequestHandlingP", "Keychain"]
 - !private ["So26NSExtensionRequestHandlingP", "LocationSearchTableViewController"]
@@ -724,7 +710,7 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "PopupDialog"]
 - !private ["So26NSExtensionRequestHandlingP", "TextFieldPromptViewController"]
 - !private ["So26NSExtensionRequestHandlingP", "UISearchController"]
-- !private ["So26NSExtensionRequestHandlingP", "UserManager"]
+- !private ["So26NSExtensionRequestHandlingP", "UserMetadata"]
 - !private ["So26NSExtensionRequestHandlingP", "balbabe"]
 - !private ["So26NSExtensionRequestHandlingP", "dimsBackgroundDuringPresentation"]
 - !private ["So26NSExtensionRequestHandlingP", "dismiss"]
@@ -783,9 +769,7 @@ depends-member:
 - !private ["So16NSMutableCopyingP", "trimmingCharacters"]
 - ["So8NSObjectC", "Address"]
 - !private ["So8NSObjectC", "Auth"]
-- ["So8NSObjectC", "Balbabe"]
 - !private ["So8NSObjectC", "BalbabeEditOperation"]
-- !private ["So8NSObjectC", "BalbabeMetadata"]
 - ["So8NSObjectC", "Bool"]
 - ["So8NSObjectC", "Error"]
 - ["So8NSObjectC", "KeyboardManager"]
@@ -802,7 +786,8 @@ depends-member:
 - ["So8NSObjectC", "UISearchController"]
 - ["So8NSObjectC", "UITextField"]
 - ["So8NSObjectC", "UIView"]
-- !private ["So8NSObjectC", "UserManager"]
+- ["So8NSObjectC", "User"]
+- !private ["So8NSObjectC", "UserMetadata"]
 - !private ["So8NSObjectC", "addOperation"]
 - !private ["So8NSObjectC", "auth"]
 - ["So8NSObjectC", "balbabe"]
@@ -873,7 +858,6 @@ depends-member:
 - ["So8NSObjectC", "whatsappTextField"]
 - !private ["So16NSObjectProtocolP", "Auth"]
 - !private ["So16NSObjectProtocolP", "BalbabeEditOperation"]
-- !private ["So16NSObjectProtocolP", "BalbabeMetadata"]
 - ["So16NSObjectProtocolP", "KeyboardManager"]
 - !private ["So16NSObjectProtocolP", "Keychain"]
 - !private ["So16NSObjectProtocolP", "LocationSearchTableViewController"]
@@ -881,7 +865,7 @@ depends-member:
 - !private ["So16NSObjectProtocolP", "PopupDialog"]
 - !private ["So16NSObjectProtocolP", "TextFieldPromptViewController"]
 - !private ["So16NSObjectProtocolP", "UISearchController"]
-- !private ["So16NSObjectProtocolP", "UserManager"]
+- !private ["So16NSObjectProtocolP", "UserMetadata"]
 - !private ["So16NSObjectProtocolP", "addOperation"]
 - !private ["So16NSObjectProtocolP", "auth"]
 - !private ["So16NSObjectProtocolP", "balbabe"]
@@ -958,9 +942,7 @@ depends-member:
 - !private ["11PopupDialogAAC", "init"]
 - ["13WhereIsBalboa21ProfileViewControllerC", "Address"]
 - !private ["13WhereIsBalboa21ProfileViewControllerC", "Auth"]
-- ["13WhereIsBalboa21ProfileViewControllerC", "Balbabe"]
 - !private ["13WhereIsBalboa21ProfileViewControllerC", "BalbabeEditOperation"]
-- !private ["13WhereIsBalboa21ProfileViewControllerC", "BalbabeMetadata"]
 - ["13WhereIsBalboa21ProfileViewControllerC", "Bool"]
 - ["13WhereIsBalboa21ProfileViewControllerC", "Error"]
 - ["13WhereIsBalboa21ProfileViewControllerC", "KeyboardManager"]
@@ -977,7 +959,8 @@ depends-member:
 - ["13WhereIsBalboa21ProfileViewControllerC", "UISearchController"]
 - ["13WhereIsBalboa21ProfileViewControllerC", "UITextField"]
 - ["13WhereIsBalboa21ProfileViewControllerC", "UIView"]
-- !private ["13WhereIsBalboa21ProfileViewControllerC", "UserManager"]
+- ["13WhereIsBalboa21ProfileViewControllerC", "User"]
+- !private ["13WhereIsBalboa21ProfileViewControllerC", "UserMetadata"]
 - ["13WhereIsBalboa21ProfileViewControllerC", "balbabe"]
 - ["13WhereIsBalboa21ProfileViewControllerC", "deinit"]
 - !private ["13WhereIsBalboa21ProfileViewControllerC", "dismiss"]
@@ -1069,7 +1052,6 @@ depends-member:
 - !private ["So12UIAppearanceP", "text"]
 - !private ["So21UIAppearanceContainerP", "Auth"]
 - !private ["So21UIAppearanceContainerP", "BalbabeEditOperation"]
-- !private ["So21UIAppearanceContainerP", "BalbabeMetadata"]
 - ["So21UIAppearanceContainerP", "KeyboardManager"]
 - !private ["So21UIAppearanceContainerP", "Keychain"]
 - !private ["So21UIAppearanceContainerP", "LocationSearchTableViewController"]
@@ -1077,7 +1059,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "PopupDialog"]
 - !private ["So21UIAppearanceContainerP", "TextFieldPromptViewController"]
 - !private ["So21UIAppearanceContainerP", "UISearchController"]
-- !private ["So21UIAppearanceContainerP", "UserManager"]
+- !private ["So21UIAppearanceContainerP", "UserMetadata"]
 - !private ["So21UIAppearanceContainerP", "balbabe"]
 - !private ["So21UIAppearanceContainerP", "delegate"]
 - !private ["So21UIAppearanceContainerP", "dimsBackgroundDuringPresentation"]
@@ -1136,7 +1118,6 @@ depends-member:
 - !private ["So16UIBarPositioningP", "text"]
 - !private ["So24UIBarPositioningDelegateP", "Auth"]
 - !private ["So24UIBarPositioningDelegateP", "BalbabeEditOperation"]
-- !private ["So24UIBarPositioningDelegateP", "BalbabeMetadata"]
 - ["So24UIBarPositioningDelegateP", "KeyboardManager"]
 - !private ["So24UIBarPositioningDelegateP", "Keychain"]
 - !private ["So24UIBarPositioningDelegateP", "LocationSearchTableViewController"]
@@ -1144,7 +1125,7 @@ depends-member:
 - !private ["So24UIBarPositioningDelegateP", "PopupDialog"]
 - !private ["So24UIBarPositioningDelegateP", "TextFieldPromptViewController"]
 - !private ["So24UIBarPositioningDelegateP", "UISearchController"]
-- !private ["So24UIBarPositioningDelegateP", "UserManager"]
+- !private ["So24UIBarPositioningDelegateP", "UserMetadata"]
 - !private ["So24UIBarPositioningDelegateP", "balbabe"]
 - !private ["So24UIBarPositioningDelegateP", "dismiss"]
 - !private ["So24UIBarPositioningDelegateP", "edgesForExtendedLayout"]
@@ -1188,7 +1169,6 @@ depends-member:
 - !private ["So8UIButtonC", "setTitle"]
 - !private ["So18UIContentContainerP", "Auth"]
 - !private ["So18UIContentContainerP", "BalbabeEditOperation"]
-- !private ["So18UIContentContainerP", "BalbabeMetadata"]
 - ["So18UIContentContainerP", "KeyboardManager"]
 - !private ["So18UIContentContainerP", "Keychain"]
 - !private ["So18UIContentContainerP", "LocationSearchTableViewController"]
@@ -1196,7 +1176,7 @@ depends-member:
 - !private ["So18UIContentContainerP", "PopupDialog"]
 - !private ["So18UIContentContainerP", "TextFieldPromptViewController"]
 - !private ["So18UIContentContainerP", "UISearchController"]
-- !private ["So18UIContentContainerP", "UserManager"]
+- !private ["So18UIContentContainerP", "UserMetadata"]
 - !private ["So18UIContentContainerP", "balbabe"]
 - !private ["So18UIContentContainerP", "dimsBackgroundDuringPresentation"]
 - !private ["So18UIContentContainerP", "dismiss"]
@@ -1265,7 +1245,6 @@ depends-member:
 - !private ["So13UIDynamicItemP", "text"]
 - !private ["So18UIFocusEnvironmentP", "Auth"]
 - !private ["So18UIFocusEnvironmentP", "BalbabeEditOperation"]
-- !private ["So18UIFocusEnvironmentP", "BalbabeMetadata"]
 - ["So18UIFocusEnvironmentP", "KeyboardManager"]
 - !private ["So18UIFocusEnvironmentP", "Keychain"]
 - !private ["So18UIFocusEnvironmentP", "LocationSearchTableViewController"]
@@ -1273,7 +1252,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "PopupDialog"]
 - !private ["So18UIFocusEnvironmentP", "TextFieldPromptViewController"]
 - !private ["So18UIFocusEnvironmentP", "UISearchController"]
-- !private ["So18UIFocusEnvironmentP", "UserManager"]
+- !private ["So18UIFocusEnvironmentP", "UserMetadata"]
 - !private ["So18UIFocusEnvironmentP", "balbabe"]
 - !private ["So18UIFocusEnvironmentP", "delegate"]
 - !private ["So18UIFocusEnvironmentP", "dimsBackgroundDuringPresentation"]
@@ -1341,7 +1320,6 @@ depends-member:
 - !private ["So16UINavigationItemC", "rightBarButtonItem"]
 - !private ["So30UIPasteConfigurationSupportingP", "Auth"]
 - !private ["So30UIPasteConfigurationSupportingP", "BalbabeEditOperation"]
-- !private ["So30UIPasteConfigurationSupportingP", "BalbabeMetadata"]
 - ["So30UIPasteConfigurationSupportingP", "KeyboardManager"]
 - !private ["So30UIPasteConfigurationSupportingP", "Keychain"]
 - !private ["So30UIPasteConfigurationSupportingP", "LocationSearchTableViewController"]
@@ -1349,7 +1327,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "PopupDialog"]
 - !private ["So30UIPasteConfigurationSupportingP", "TextFieldPromptViewController"]
 - !private ["So30UIPasteConfigurationSupportingP", "UISearchController"]
-- !private ["So30UIPasteConfigurationSupportingP", "UserManager"]
+- !private ["So30UIPasteConfigurationSupportingP", "UserMetadata"]
 - !private ["So30UIPasteConfigurationSupportingP", "balbabe"]
 - !private ["So30UIPasteConfigurationSupportingP", "delegate"]
 - !private ["So30UIPasteConfigurationSupportingP", "dimsBackgroundDuringPresentation"]
@@ -1405,9 +1383,7 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", ""]
 - ["So11UIResponderC", "Address"]
 - !private ["So11UIResponderC", "Auth"]
-- ["So11UIResponderC", "Balbabe"]
 - !private ["So11UIResponderC", "BalbabeEditOperation"]
-- !private ["So11UIResponderC", "BalbabeMetadata"]
 - ["So11UIResponderC", "Bool"]
 - ["So11UIResponderC", "Error"]
 - ["So11UIResponderC", "KeyboardManager"]
@@ -1424,7 +1400,8 @@ depends-member:
 - ["So11UIResponderC", "UISearchController"]
 - ["So11UIResponderC", "UITextField"]
 - ["So11UIResponderC", "UIView"]
-- !private ["So11UIResponderC", "UserManager"]
+- ["So11UIResponderC", "User"]
+- !private ["So11UIResponderC", "UserMetadata"]
 - ["So11UIResponderC", "balbabe"]
 - !private ["So11UIResponderC", "delegate"]
 - !private ["So11UIResponderC", "dimsBackgroundDuringPresentation"]
@@ -1485,7 +1462,6 @@ depends-member:
 - ["So11UIResponderC", "whatsappTextField"]
 - !private ["So30UIResponderStandardEditActionsP", "Auth"]
 - !private ["So30UIResponderStandardEditActionsP", "BalbabeEditOperation"]
-- !private ["So30UIResponderStandardEditActionsP", "BalbabeMetadata"]
 - ["So30UIResponderStandardEditActionsP", "KeyboardManager"]
 - !private ["So30UIResponderStandardEditActionsP", "Keychain"]
 - !private ["So30UIResponderStandardEditActionsP", "LocationSearchTableViewController"]
@@ -1493,7 +1469,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "PopupDialog"]
 - !private ["So30UIResponderStandardEditActionsP", "TextFieldPromptViewController"]
 - !private ["So30UIResponderStandardEditActionsP", "UISearchController"]
-- !private ["So30UIResponderStandardEditActionsP", "UserManager"]
+- !private ["So30UIResponderStandardEditActionsP", "UserMetadata"]
 - !private ["So30UIResponderStandardEditActionsP", "balbabe"]
 - !private ["So30UIResponderStandardEditActionsP", "delegate"]
 - !private ["So30UIResponderStandardEditActionsP", "dimsBackgroundDuringPresentation"]
@@ -1553,7 +1529,6 @@ depends-member:
 - !private ["So11UISearchBarC", "text"]
 - !private ["So19UISearchBarDelegateP", "Auth"]
 - !private ["So19UISearchBarDelegateP", "BalbabeEditOperation"]
-- !private ["So19UISearchBarDelegateP", "BalbabeMetadata"]
 - ["So19UISearchBarDelegateP", "KeyboardManager"]
 - !private ["So19UISearchBarDelegateP", "Keychain"]
 - !private ["So19UISearchBarDelegateP", "LocationSearchTableViewController"]
@@ -1561,7 +1536,7 @@ depends-member:
 - !private ["So19UISearchBarDelegateP", "PopupDialog"]
 - !private ["So19UISearchBarDelegateP", "TextFieldPromptViewController"]
 - !private ["So19UISearchBarDelegateP", "UISearchController"]
-- !private ["So19UISearchBarDelegateP", "UserManager"]
+- !private ["So19UISearchBarDelegateP", "UserMetadata"]
 - !private ["So19UISearchBarDelegateP", "balbabe"]
 - !private ["So19UISearchBarDelegateP", "dismiss"]
 - !private ["So19UISearchBarDelegateP", "edgesForExtendedLayout"]
@@ -1609,7 +1584,6 @@ depends-member:
 - !private ["So35UISpringLoadedInteractionSupportingP", "setTitle"]
 - !private ["So16UIStateRestoringP", "Auth"]
 - !private ["So16UIStateRestoringP", "BalbabeEditOperation"]
-- !private ["So16UIStateRestoringP", "BalbabeMetadata"]
 - ["So16UIStateRestoringP", "KeyboardManager"]
 - !private ["So16UIStateRestoringP", "Keychain"]
 - !private ["So16UIStateRestoringP", "LocationSearchTableViewController"]
@@ -1617,7 +1591,7 @@ depends-member:
 - !private ["So16UIStateRestoringP", "PopupDialog"]
 - !private ["So16UIStateRestoringP", "TextFieldPromptViewController"]
 - !private ["So16UIStateRestoringP", "UISearchController"]
-- !private ["So16UIStateRestoringP", "UserManager"]
+- !private ["So16UIStateRestoringP", "UserMetadata"]
 - !private ["So16UIStateRestoringP", "balbabe"]
 - !private ["So16UIStateRestoringP", "dimsBackgroundDuringPresentation"]
 - !private ["So16UIStateRestoringP", "dismiss"]
@@ -1674,7 +1648,6 @@ depends-member:
 - !private ["So11UITextFieldC", "text"]
 - !private ["So19UITextFieldDelegateP", "Auth"]
 - !private ["So19UITextFieldDelegateP", "BalbabeEditOperation"]
-- !private ["So19UITextFieldDelegateP", "BalbabeMetadata"]
 - ["So19UITextFieldDelegateP", "KeyboardManager"]
 - !private ["So19UITextFieldDelegateP", "Keychain"]
 - !private ["So19UITextFieldDelegateP", "LocationSearchTableViewController"]
@@ -1682,7 +1655,7 @@ depends-member:
 - !private ["So19UITextFieldDelegateP", "PopupDialog"]
 - !private ["So19UITextFieldDelegateP", "TextFieldPromptViewController"]
 - !private ["So19UITextFieldDelegateP", "UISearchController"]
-- !private ["So19UITextFieldDelegateP", "UserManager"]
+- !private ["So19UITextFieldDelegateP", "UserMetadata"]
 - !private ["So19UITextFieldDelegateP", "balbabe"]
 - !private ["So19UITextFieldDelegateP", "dismiss"]
 - !private ["So19UITextFieldDelegateP", "edgesForExtendedLayout"]
@@ -1734,7 +1707,6 @@ depends-member:
 - !private ["So34UITextPasteConfigurationSupportingP", "text"]
 - !private ["So18UITraitEnvironmentP", "Auth"]
 - !private ["So18UITraitEnvironmentP", "BalbabeEditOperation"]
-- !private ["So18UITraitEnvironmentP", "BalbabeMetadata"]
 - ["So18UITraitEnvironmentP", "KeyboardManager"]
 - !private ["So18UITraitEnvironmentP", "Keychain"]
 - !private ["So18UITraitEnvironmentP", "LocationSearchTableViewController"]
@@ -1742,7 +1714,7 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "PopupDialog"]
 - !private ["So18UITraitEnvironmentP", "TextFieldPromptViewController"]
 - !private ["So18UITraitEnvironmentP", "UISearchController"]
-- !private ["So18UITraitEnvironmentP", "UserManager"]
+- !private ["So18UITraitEnvironmentP", "UserMetadata"]
 - !private ["So18UITraitEnvironmentP", "balbabe"]
 - !private ["So18UITraitEnvironmentP", "delegate"]
 - !private ["So18UITraitEnvironmentP", "dimsBackgroundDuringPresentation"]
@@ -1805,9 +1777,7 @@ depends-member:
 - !private ["So6UIViewC", "text"]
 - ["So16UIViewControllerC", "Address"]
 - !private ["So16UIViewControllerC", "Auth"]
-- ["So16UIViewControllerC", "Balbabe"]
 - !private ["So16UIViewControllerC", "BalbabeEditOperation"]
-- !private ["So16UIViewControllerC", "BalbabeMetadata"]
 - ["So16UIViewControllerC", "Bool"]
 - ["So16UIViewControllerC", "Error"]
 - ["So16UIViewControllerC", "KeyboardManager"]
@@ -1824,7 +1794,8 @@ depends-member:
 - ["So16UIViewControllerC", "UISearchController"]
 - ["So16UIViewControllerC", "UITextField"]
 - ["So16UIViewControllerC", "UIView"]
-- !private ["So16UIViewControllerC", "UserManager"]
+- ["So16UIViewControllerC", "User"]
+- !private ["So16UIViewControllerC", "UserMetadata"]
 - ["So16UIViewControllerC", "balbabe"]
 - !private ["So16UIViewControllerC", "dimsBackgroundDuringPresentation"]
 - !private ["So16UIViewControllerC", "dismiss"]
@@ -1885,10 +1856,14 @@ depends-member:
 - !private ["So37UIViewControllerTransitioningDelegateP", "init"]
 - !private ["So37UIViewControllerTransitioningDelegateP", "present"]
 - !private ["So37UIViewControllerTransitioningDelegateP", "searchBar"]
+- !private ["13WhereIsBalboa4UserV", "id"]
+- !private ["13WhereIsBalboa4UserV", "metadata"]
 - !private ["So4UserC", "updateEmail"]
 - !private ["So8UserInfoP", "updateEmail"]
-- !private ["13WhereIsBalboa11UserManagerC", "setCurrentUser"]
-- !private ["13WhereIsBalboa11UserManagerC", "shared"]
+- !private ["13WhereIsBalboa12UserMetadataV", "hometown"]
+- !private ["13WhereIsBalboa12UserMetadataV", "init"]
+- !private ["13WhereIsBalboa12UserMetadataV", "name"]
+- !private ["13WhereIsBalboa12UserMetadataV", "whatsapp"]
 - !private ["s23_BidirectionalIndexableP", "init"]
 - !private ["s23_BidirectionalIndexableP", "isEmpty"]
 - !private ["s23_BidirectionalIndexableP", "trimmingCharacters"]
@@ -1926,7 +1901,6 @@ depends-member:
 - !private ["s14_IndexableBaseP", "trimmingCharacters"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Auth"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "BalbabeEditOperation"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "BalbabeMetadata"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "KeyboardManager"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Keychain"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "LocationSearchTableViewController"]
@@ -1934,7 +1908,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "PopupDialog"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "TextFieldPromptViewController"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UISearchController"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "UserManager"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UserMetadata"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "addOperation"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "auth"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "balbabe"]
@@ -2015,9 +1989,7 @@ depends-nominal:
 - "13WhereIsBalboa13AccountEditorP"
 - !private "13WhereIsBalboa7AddressV"
 - !private "So4AuthC"
-- !private "13WhereIsBalboa7BalbabeV"
 - !private "13WhereIsBalboa20BalbabeEditOperationC"
-- !private "13WhereIsBalboa15BalbabeMetadataV"
 - !private "s23BidirectionalCollectionP"
 - !private "Sb"
 - !private "So15CALayerDelegateP"
@@ -2115,9 +2087,10 @@ depends-nominal:
 - "So16UIViewControllerC"
 - !private "So37UIViewControllerAnimatedTransitioningP"
 - !private "So37UIViewControllerTransitioningDelegateP"
+- !private "13WhereIsBalboa4UserV"
 - !private "So4UserC"
 - !private "So8UserInfoP"
-- !private "13WhereIsBalboa11UserManagerC"
+- !private "13WhereIsBalboa12UserMetadataV"
 - !private "s23_BidirectionalIndexableP"
 - !private "s37_DefaultCustomPlaygroundQuickLookableP"
 - !private "s35_ExpressibleByBuiltinBooleanLiteralP"
@@ -2244,17 +2217,4 @@ depends-external:
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/KeychainAccess/KeychainAccess.framework/Modules/module.modulemap"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphonesimulator/ClusterKit/ClusterKit.framework/Modules/module.modulemap"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/usr/include/objc/ObjectiveC.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/usr/include/Darwin.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/LocalAuthentication.framework/Headers/LocalAuthentication.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/MapKit.framework/Headers/MapKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-interface-hash: "a8d82bc398b121ef48025cf02cec6130"
+interface-hash: "23be80e28f5be3bcf3856cd7f8e924d5"

@@ -5,21 +5,35 @@ fileprivate struct Constants {
 }
 
 extension Date {
-    func daysSince(_ date: Date = Date(), in timeZone: TimeZone = .current) -> Int {
-        return Int(startOfDay(in: timeZone).timeIntervalSince1970 - date.startOfDay(in: timeZone).timeIntervalSince1970) / Int(Constants.dayInterval)
+    func daysSince(_ date: Date = Date(), using calendar: Calendar = .current) -> Int {
+        guard let daysSince = calendar.dateComponents(Set([.day]), from: date, to: self).day else {
+            // TODO: Log error
+            fatalError()
+        }
+        return daysSince
     }
     
-    func date(daysLater days: Int) -> Date {
-        return self + Constants.dayInterval * TimeInterval(days)
+    func date(daysLater days: Int, using calendar: Calendar = .current) -> Date {
+        guard let date = calendar.date(byAdding: .day, value: days, to: self) else {
+            // TODO: Log error
+            fatalError()
+        }
+        return date
     }
     
-    func startOfDay(in timeZone: TimeZone = .current) -> Date {
-        let seconds = TimeInterval(timeZone.secondsFromGMT())
-        let timeIntoDay = (timeIntervalSince1970 + seconds).truncatingRemainder(dividingBy: Constants.dayInterval)
-        return self - timeIntoDay
+    func startOfDay(using calendar: Calendar = .current) -> Date {
+        return calendar.startOfDay(for: self)
     }
     
-    func endOfDay(in timeZone: TimeZone = .current) -> Date {
-        return startOfDay(in: timeZone).date(daysLater: 1)
+    func endOfDay(using calendar: Calendar = .current) -> Date {
+        return startOfDay(using: calendar).date(daysLater: 1, using: calendar)
+    }
+    
+    var isDistantFuture: Bool {
+        return daysSince(Date.distantFuture) == 0
+    }
+    
+    var isDistantPast: Bool {
+        return daysSince(Date.distantPast) == 0
     }
 }

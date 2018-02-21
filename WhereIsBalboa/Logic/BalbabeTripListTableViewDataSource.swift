@@ -7,25 +7,22 @@ class BalbabeTripListTableViewDataSource: NSObject, UITableViewDataSource {
     typealias DataChangeHandler = () -> Void
     var dataChangeHandler: DataChangeHandler?
     private var trips: [Trip]
-    private(set) var balbabe: Balbabe
+    private(set) var user: User
     
     // MARK: - Init
     
-    init(_ balbabe: Balbabe, isLoggedInUser: Bool) {
-        self.balbabe = balbabe
-        trips = BalbabeTripListTableViewDataSource.sortedTrips(from: balbabe.trips)
+    init(_ userManager: UserManager, _ user: User, _ trips: [Trip]) {
+        self.user = user
+        self.trips = BalbabeTripListTableViewDataSource.sortedTrips(from: trips)
         super.init()
-        if isLoggedInUser {
-            NotificationCenter.default.registerForUserChanges { [weak self] balbabe in
-                guard
-                    let strongSelf = self,
-                    let balbabe = balbabe
-                else {
+        if userManager.loggedInUser == user {
+            userManager.registerForChanges { [weak self] userManager in
+                guard let strongSelf = self else {
                     return
                 }
                 
-                strongSelf.balbabe = balbabe
-                strongSelf.trips = BalbabeTripListTableViewDataSource.sortedTrips(from: balbabe.trips)
+                strongSelf.user = userManager.loggedInUser
+                strongSelf.trips = BalbabeTripListTableViewDataSource.sortedTrips(from: userManager.loggedInUserTrips)
                 DispatchQueue.main.async {
                     strongSelf.dataChangeHandler?()
                 }
@@ -51,8 +48,12 @@ class BalbabeTripListTableViewDataSource: NSObject, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: BalbabeTripListTableViewDataSource.reuseIdentifier, for: indexPath) as! OwnTripTableViewCell
         let trip = tripAt(indexPath)
                 
-        cell.cityLabel.text = "\(trip.metadata.address.name)"
-        cell.dateLabel.text = "from \(DateFormatter.fullDate.string(from: trip.metadata.displayStartDate)) to \(DateFormatter.fullDate.string(from: trip.metadata.displayEndDate))"
+        cell.cityLabel.text = "\(trip.metadata.address.cityName)"
+        let startDate = trip.metadata.dateInterval.start
+        let endDate = trip.metadata.dateInterval.end
+        let startDateString = startDate.isDistantPast ? "∞" : DateFormatter.fullDateShortenedYear.string(from: startDate)
+        let endDateString = endDate.isDistantFuture ? "∞" : DateFormatter.fullDateShortenedYear.string(from: endDate)
+        cell.dateLabel.text = "from " + startDateString + " to " + endDateString
         
         return cell
     }

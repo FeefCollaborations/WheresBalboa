@@ -4,7 +4,7 @@ import SwiftyJSON
 
 class TripEditOperation: AsynchronousOperation, ResultGeneratingOperation {
     typealias Completion = (Result<Trip>) -> Void
-    let balbabe: Balbabe
+    let userManager: UserManager
     let tripMetadata: TripMetadata
     let onComplete: Completion
     let tripID: Trip.ID?
@@ -12,7 +12,7 @@ class TripEditOperation: AsynchronousOperation, ResultGeneratingOperation {
     // MARK: - Builder
     
     struct Builder {
-        var balbabe: Balbabe?
+        var userManager: UserManager?
         var address: Address?
         var startDate: Date?
         var endDate: Date?
@@ -20,7 +20,7 @@ class TripEditOperation: AsynchronousOperation, ResultGeneratingOperation {
         
         func build(onComplete: @escaping Completion) -> TripEditOperation? {
             guard
-                let balbabe = balbabe,
+                let userManager = userManager,
                 let address = address,
                 let startDate = startDate,
                 let endDate = endDate
@@ -28,14 +28,14 @@ class TripEditOperation: AsynchronousOperation, ResultGeneratingOperation {
                 return nil
             }
             let dateInterval = DateInterval.init(start: startDate, end: endDate)
-            return TripEditOperation.init(balbabe, address, dateInterval, tripID, onComplete: onComplete)
+            return TripEditOperation(userManager, address, dateInterval, tripID, onComplete: onComplete)
         }
     }
     
     // MARK: - Init
     
-    init(_ balbabe: Balbabe, _ address: Address, _ dateInterval: DateInterval, _ tripID: Trip.ID? = nil, onComplete: @escaping Completion) {
-        self.balbabe = balbabe
+    init(_ userManager: UserManager, _ address: Address, _ dateInterval: DateInterval, _ tripID: Trip.ID? = nil, onComplete: @escaping Completion) {
+        self.userManager = userManager
         self.tripMetadata = TripMetadata(address: address, dateInterval: dateInterval, isHome: false)
         self.tripID = tripID
         self.onComplete = onComplete
@@ -46,13 +46,14 @@ class TripEditOperation: AsynchronousOperation, ResultGeneratingOperation {
     override func start() {
         super.start()
         let tripReference: DatabaseReference
+        let pathRoot = "\(userManager.cohort.rawValue)/trips"
         if let tripID = tripID {
-            tripReference = Database.database().reference(withPath: "balbabes/\(balbabe.id)/trips/\(tripID)")
+            tripReference = Database.database().reference(withPath: pathRoot + "/" + tripID)
         } else {
-            tripReference = Database.database().reference(withPath: "balbabes/\(balbabe.id)/trips").childByAutoId()
+            tripReference = Database.database().reference(withPath: pathRoot).childByAutoId()
         }
-        
-        tripReference.setValue(tripMetadata.dictionaryRepresentation()) { [weak self] error, _ in
+        let trip = Trip(id: tripReference.key, metadata: tripMetadata, userID: userManager.loggedInUser.id)
+        tripReference.setValue(trip.dictionaryRepresentation()) { [weak self] error, _ in
             guard let strongSelf = self else {
                 return
             }
@@ -64,7 +65,6 @@ class TripEditOperation: AsynchronousOperation, ResultGeneratingOperation {
                 strongSelf.onComplete(.failure(error))
                 return
             }
-            let trip = Trip(id: tripReference.key, metadata: strongSelf.tripMetadata)
             strongSelf.onComplete(.success(trip))
         }
     }

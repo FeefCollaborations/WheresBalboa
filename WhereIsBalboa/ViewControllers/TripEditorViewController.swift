@@ -10,6 +10,7 @@ class TripEditorViewController: UIViewController, UITextFieldDelegate, LocationS
     
     private var builder = TripEditOperation.Builder()
     let trip: Trip?
+    private let userManager: UserManager
     
     private lazy var searchController: UISearchController = {
         let searchController = UISearchController(searchResultsController: nil)
@@ -21,20 +22,22 @@ class TripEditorViewController: UIViewController, UITextFieldDelegate, LocationS
     
     private let datePicker: UIDatePicker = {
         let datePicker = UIDatePicker()
+        datePicker.timeZone = .current
         datePicker.datePickerMode = .date
         return datePicker
     }()
     private let doneToolbar: UIToolbar = {
-        return UIToolbar.new(withTarget: self, andSelector: #selector(doneTappedOnDateToolbar))
+        return UIToolbar.newDoneToolbar(withTarget: self, andSelector: #selector(doneTappedOnDateToolbar))
     }()
-    private let dateFormatter = DateFormatter.fullDate
+    private let dateFormatter = DateFormatter.fullDateShortenedYear
     
     // MARK: - Init
     
-    init(_ balbabe: Balbabe, _ trip: Trip? = nil) {
+    init(_ userManager: UserManager, _ trip: Trip? = nil) {
         self.trip = trip
+        self.userManager = userManager
         super.init(nibName: nil, bundle: nil)
-        builder.balbabe = balbabe
+        builder.userManager = userManager
         guard #available(iOS 11.0, *) else {
             edgesForExtendedLayout = []
             return
@@ -67,12 +70,14 @@ class TripEditorViewController: UIViewController, UITextFieldDelegate, LocationS
         
         builder.tripID = trip.id
         builder.address = trip.metadata.address
-        builder.startDate = trip.metadata.displayStartDate
-        builder.endDate = trip.metadata.displayEndDate
+        let startDate = trip.metadata.dateInterval.start
+        let endDate = trip.metadata.dateInterval.end
+        builder.startDate = startDate
+        builder.endDate = endDate
         
-        cityButton.setTitle(trip.metadata.address.name, for: .normal)
-        startDateTextField.text = DateFormatter.fullDate.string(from: trip.metadata.displayStartDate)
-        endDateTextField.text = DateFormatter.fullDate.string(from: trip.metadata.displayEndDate)
+        cityButton.setTitle(trip.metadata.address.cityName, for: .normal)
+        startDateTextField.text = dateFormatter.string(from: startDate)
+        endDateTextField.text = dateFormatter.string(from: endDate)
     }
     
     // MARK: - LocationSearchTableViewControllerDelegate
@@ -80,7 +85,7 @@ class TripEditorViewController: UIViewController, UITextFieldDelegate, LocationS
     func locationSearchTableViewController(_ locationSearchTableViewController: LocationSearchTableViewController, selectedAddress address: Address) {
         dismiss(animated: true)
         builder.address = address
-        cityButton.setTitle(address.name, for: .normal)
+        cityButton.setTitle(address.cityName, for: .normal)
     }
     
     func locationSearchTableViewController(_ locationSearchTableViewController: LocationSearchTableViewController, encounteredError: Error?) {
@@ -101,7 +106,7 @@ class TripEditorViewController: UIViewController, UITextFieldDelegate, LocationS
         }
         
         let interval = DateInterval(start: startDate, end: endDate)
-        let overlappingTrip = builder.balbabe?.trips.first(where: { $0.metadata.dateInterval.intersects(interval) && builder.tripID != $0.id })
+        let overlappingTrip = userManager.loggedInUserTrips.first(where: { $0.metadata.dateInterval.intersects(interval) && builder.tripID != $0.id })
         guard overlappingTrip == nil else {
             showOneOptionAlert(title: "Failed!", message: "This trip overlaps with one of your other trips. Please edit the other one first.")
             return
@@ -139,31 +144,31 @@ class TripEditorViewController: UIViewController, UITextFieldDelegate, LocationS
     }
     
     @IBAction private func deleteTrip() {
-        guard
-            let trip = trip,
-            let balbabe = builder.balbabe
-        else {
+        guard let tripID = trip?.id else {
             return
         }
         
-        let deleteTripOperation = TripDeleteOperation(tripID: trip.id, balbabeID: balbabe.id) { [weak self] result in
+        let confirmButton = DestructiveButton(title: "Yes") { [weak self] in
             guard let strongSelf = self else {
                 return
             }
-            
-            strongSelf.dismiss(animated: true) {
-                switch result {
+            let deleteTripOperation = TripDeleteOperation(tripID, strongSelf.userManager.loggedInUser.id) { result in
+                strongSelf.dismiss(animated: true) {
+                    switch result {
                     case .success:
                         strongSelf.showOneOptionAlert(title: "Poof!", message: "Deleted your trip") {
                             strongSelf.navigationController?.popViewController(animated: true)
                         }
                     case .failure:
                         strongSelf.showRetryAlert(message: "Something went wrong, please try again", retryHandler: strongSelf.deleteTrip)
+                    }
                 }
             }
+            strongSelf.showLoadingAlert()
+            OperationQueue.main.addOperation(deleteTripOperation)
         }
-        showLoadingAlert()
-        OperationQueue.main.addOperation(deleteTripOperation)
+        let cancelButton = CancelButton(title: "Cancel") {}
+        showAlert(title: "Are you sure?", message: "This will completely delete the trip from your profile. Are you sure you want to do this?", buttons: [confirmButton, cancelButton])
     }
     
     @IBAction private func selectCity() {
@@ -201,7 +206,7 @@ class TripEditorViewController: UIViewController, UITextFieldDelegate, LocationS
     
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
         let selectedDate = datePicker.date.startOfDay()
-        let endDate = selectedDate.endOfDay()
+        let endDate = selectedDate.endOfDay() - 1
         let isStart = startDateTextField == textField
         if isStart {
             builder.startDate = selectedDate

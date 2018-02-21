@@ -22,11 +22,11 @@ class ProfileViewController: UIViewController, UISearchBarDelegate, LocationSear
     }()
     
     let keyboardManager = KeyboardManager()
-    let balbabe: Balbabe
+    let balbabe: User
     
     // MARK: - Init
     
-    init(_ balbabe: Balbabe) {
+    init(_ balbabe: User) {
         self.balbabe = balbabe
         super.init(nibName: nil, bundle: nil)
         guard #available(iOS 11.0, *) else {
@@ -51,7 +51,7 @@ class ProfileViewController: UIViewController, UISearchBarDelegate, LocationSear
         navigationItem.rightBarButtonItem = logoutBarButtonItem
         nameTextField.text = balbabe.metadata.name
         whatsappTextField.text = balbabe.metadata.whatsapp
-        hometownButton.setTitle(balbabe.metadata.hometown.name, for: .normal)
+        hometownButton.setTitle(balbabe.metadata.hometown.cityName, for: .normal)
         keyboardManager.onAnyChange = { [weak self] frame in
             guard let strongSelf = self else {
                 return
@@ -70,7 +70,6 @@ class ProfileViewController: UIViewController, UISearchBarDelegate, LocationSear
     // MARK: - Button response
     
     @IBAction private func logout() {
-        UserManager.shared.setCurrentUser(nil)
         Keychain.standard.setLoginInfo(nil)
         navigationController?.popToLoginViewController()
     }
@@ -88,7 +87,7 @@ class ProfileViewController: UIViewController, UISearchBarDelegate, LocationSear
         
         let hometown = updatedAddress ?? balbabe.metadata.hometown
         do {
-            let metadata = try BalbabeMetadata(name: name, whatsapp: whatsapp, hometown: hometown)
+            let metadata = try UserMetadata(name: name, whatsapp: whatsapp, hometown: hometown)
             let editOperation = BalbabeEditOperation(balbabeMetadata: metadata, balbabeID: balbabe.id) { [weak self] result in
                 guard let strongSelf = self else {
                     return
@@ -139,7 +138,7 @@ class ProfileViewController: UIViewController, UISearchBarDelegate, LocationSear
     func locationSearchTableViewController(_ locationSearchTableViewController: LocationSearchTableViewController, selectedAddress address: Address) {
         dismiss(animated: true)
         updatedAddress = address
-        hometownButton.setTitle(address.name, for: .normal)
+        hometownButton.setTitle(address.cityName, for: .normal)
     }
     
     func locationSearchTableViewController(_ locationSearchTableViewController: LocationSearchTableViewController, encounteredError: Error?) {

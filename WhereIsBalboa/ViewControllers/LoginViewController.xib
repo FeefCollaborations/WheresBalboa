@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="WhereIsBalboa" customModuleProvider="target">
             <connections>
+                <outlet property="cohortTextField" destination="7zz-dR-xeA" id="n06-cJ-thi"/>
                 <outlet property="emailTextField" destination="A2P-iu-PHv" id="vdB-8R-YAF"/>
                 <outlet property="passwordTextField" destination="hsZ-HU-RVy" id="rWU-e1-Knx"/>
                 <outlet property="view" destination="j21-0r-8p1" id="spB-b0-CUb"/>
@@ -23,7 +24,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Lgb-4L-vHU">
-                    <rect key="frame" x="16" y="272.5" width="343" height="122"/>
+                    <rect key="frame" x="16" y="249.5" width="343" height="168"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A2P-iu-PHv">
                             <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
@@ -43,8 +44,14 @@
                                 <outlet property="delegate" destination="-1" id="GWg-K6-FBa"/>
                             </connections>
                         </textField>
-                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="pzT-zg-Nvp">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7zz-dR-xeA">
                             <rect key="frame" x="0.0" y="92" width="343" height="30"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="pzT-zg-Nvp">
+                            <rect key="frame" x="0.0" y="138" width="343" height="30"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2WL-9W-xVU">
                                     <rect key="frame" x="0.0" y="0.0" width="171.5" height="30"/>

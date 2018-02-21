@@ -11,13 +11,12 @@
 		482B2ADD200CF55A009B04C0 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 482B2ADC200CF55A009B04C0 /* LoginViewController.xib */; };
 		482B2ADF200CF884009B04C0 /* LoginOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482B2ADE200CF884009B04C0 /* LoginOperation.swift */; };
 		482B2AE6200CFEDC009B04C0 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482B2AE4200CFEDB009B04C0 /* UserManager.swift */; };
-		482B2AE9200CFFC4009B04C0 /* NotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482B2AE8200CFFC4009B04C0 /* NotificationCenter.swift */; };
-		482B2AEB200D0449009B04C0 /* BalbabeCreateOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482B2AEA200D0449009B04C0 /* BalbabeCreateOperation.swift */; };
-		482B2AED200D04EB009B04C0 /* BalbabeMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482B2AEC200D04EA009B04C0 /* BalbabeMetadata.swift */; };
+		482B2AEB200D0449009B04C0 /* UserCreateOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482B2AEA200D0449009B04C0 /* UserCreateOperation.swift */; };
+		482B2AED200D04EB009B04C0 /* UserMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482B2AEC200D04EA009B04C0 /* UserMetadata.swift */; };
 		482B2AEF200D0603009B04C0 /* OperationBuilderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482B2AEE200D0603009B04C0 /* OperationBuilderError.swift */; };
 		482B2AF1200D0914009B04C0 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482B2AF0200D0914009B04C0 /* SignUpViewController.swift */; };
 		482B2AF3200D091C009B04C0 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 482B2AF2200D091C009B04C0 /* SignUpViewController.xib */; };
-		482B2AF5200D322F009B04C0 /* HomeViewControllerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482B2AF4200D322F009B04C0 /* HomeViewControllerConfiguration.swift */; };
+		482B2AF5200D322F009B04C0 /* HomeViewControllerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482B2AF4200D322F009B04C0 /* HomeViewControllerState.swift */; };
 		482B2AF7200D4558009B04C0 /* TripDeleteOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482B2AF6200D4558009B04C0 /* TripDeleteOperation.swift */; };
 		482B2AF9200DF51C009B04C0 /* AccountEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482B2AF8200DF51C009B04C0 /* AccountEditor.swift */; };
 		482B2AFB200DFEA0009B04C0 /* BalbabeEditOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482B2AFA200DFEA0009B04C0 /* BalbabeEditOperation.swift */; };
@@ -65,7 +64,7 @@
 		483E30871FEAB922006D4512 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483E30861FEAB922006D4512 /* Trip.swift */; };
 		483E30891FEABDDF006D4512 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483E30881FEABDDF006D4512 /* DateFormatter.swift */; };
 		483E308B1FEAC364006D4512 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483E308A1FEAC364006D4512 /* Date.swift */; };
-		483E308F1FEADC42006D4512 /* Balbabe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483E308E1FEADC42006D4512 /* Balbabe.swift */; };
+		483E308F1FEADC42006D4512 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483E308E1FEADC42006D4512 /* User.swift */; };
 		483E30911FEADE5A006D4512 /* TripListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483E30901FEADE5A006D4512 /* TripListTableViewDataSource.swift */; };
 		483E30931FEADF63006D4512 /* TripTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483E30921FEADF63006D4512 /* TripTableViewCell.swift */; };
 		483E30961FEADFA2006D4512 /* TripTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 483E30951FEADFA2006D4512 /* TripTableViewCell.xib */; };
@@ -73,6 +72,8 @@
 		484020FD200274D800EB2EB4 /* DatabaseConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484020FC200274D800EB2EB4 /* DatabaseConvertible.swift */; };
 		484020FF2002775900EB2EB4 /* DateInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484020FE2002775900EB2EB4 /* DateInterval.swift */; };
 		4840210220027C9B00EB2EB4 /* UIToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4840210120027C9B00EB2EB4 /* UIToolbar.swift */; };
+		484181FF203DD9D900E76FC7 /* PickerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484181FE203DD9D800E76FC7 /* PickerItem.swift */; };
+		48418201203DD9E000E76FC7 /* PickerViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48418200203DD9E000E76FC7 /* PickerViewWrapper.swift */; };
 		486F4AB9201727EE00A32777 /* DateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486F4AB8201727EE00A32777 /* DateTests.swift */; };
 		48B16BA32001F32D00BF45DF /* LoadingViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B16BA22001F32D00BF45DF /* LoadingViewState.swift */; };
 		48B16BA62001F6C500BF45DF /* TripEditOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B16BA52001F6C500BF45DF /* TripEditOperation.swift */; };
@@ -83,6 +84,9 @@
 		48B16BB020020B1000BF45DF /* CitySearchTaskWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B16BAF20020B1000BF45DF /* CitySearchTaskWrapper.swift */; };
 		48B16BB2200228BA00BF45DF /* CityGeocodeTaskWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B16BB1200228BA00BF45DF /* CityGeocodeTaskWrapper.swift */; };
 		48BC2FDF200B51DC0030A41A /* CKClusterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BC2FDE200B51DC0030A41A /* CKClusterView.swift */; };
+		48F0230F203743230039E861 /* Cohort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F0230E203743230039E861 /* Cohort.swift */; };
+		48F02311203794B20039E861 /* TripsByDateFetchOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F02310203794B20039E861 /* TripsByDateFetchOperation.swift */; };
+		48F02313203B2CFA0039E861 /* TripsByUserFetchOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F02312203B2CFA0039E861 /* TripsByUserFetchOperation.swift */; };
 		54B5186D6947CA281BB5A85A /* Pods_WhereIsBalboaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CF8CE4CD209F961097D7D4B /* Pods_WhereIsBalboaTests.framework */; };
 		C1721180A29D8C402F48B0E2 /* Pods_WhereIsBalboa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 169CE0DFA5645B11B4FC3115 /* Pods_WhereIsBalboa.framework */; };
 /* End PBXBuildFile section */
@@ -106,13 +110,12 @@
 		482B2ADC200CF55A009B04C0 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		482B2ADE200CF884009B04C0 /* LoginOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginOperation.swift; sourceTree = "<group>"; };
 		482B2AE4200CFEDB009B04C0 /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
-		482B2AE8200CFFC4009B04C0 /* NotificationCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCenter.swift; sourceTree = "<group>"; };
-		482B2AEA200D0449009B04C0 /* BalbabeCreateOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalbabeCreateOperation.swift; sourceTree = "<group>"; };
-		482B2AEC200D04EA009B04C0 /* BalbabeMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalbabeMetadata.swift; sourceTree = "<group>"; };
+		482B2AEA200D0449009B04C0 /* UserCreateOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCreateOperation.swift; sourceTree = "<group>"; };
+		482B2AEC200D04EA009B04C0 /* UserMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMetadata.swift; sourceTree = "<group>"; };
 		482B2AEE200D0603009B04C0 /* OperationBuilderError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationBuilderError.swift; sourceTree = "<group>"; };
 		482B2AF0200D0914009B04C0 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		482B2AF2200D091C009B04C0 /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
-		482B2AF4200D322F009B04C0 /* HomeViewControllerConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerConfiguration.swift; sourceTree = "<group>"; };
+		482B2AF4200D322F009B04C0 /* HomeViewControllerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerState.swift; sourceTree = "<group>"; };
 		482B2AF6200D4558009B04C0 /* TripDeleteOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDeleteOperation.swift; sourceTree = "<group>"; };
 		482B2AF8200DF51C009B04C0 /* AccountEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountEditor.swift; sourceTree = "<group>"; };
 		482B2AFA200DFEA0009B04C0 /* BalbabeEditOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalbabeEditOperation.swift; sourceTree = "<group>"; };
@@ -163,7 +166,7 @@
 		483E30861FEAB922006D4512 /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		483E30881FEABDDF006D4512 /* DateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateFormatter.swift; path = WhereIsBalboa/Extensions/DateFormatter.swift; sourceTree = SOURCE_ROOT; };
 		483E308A1FEAC364006D4512 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
-		483E308E1FEADC42006D4512 /* Balbabe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Balbabe.swift; sourceTree = "<group>"; };
+		483E308E1FEADC42006D4512 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		483E30901FEADE5A006D4512 /* TripListTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListTableViewDataSource.swift; sourceTree = "<group>"; };
 		483E30921FEADF63006D4512 /* TripTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTableViewCell.swift; sourceTree = "<group>"; };
 		483E30951FEADFA2006D4512 /* TripTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TripTableViewCell.xib; sourceTree = "<group>"; };
@@ -171,6 +174,8 @@
 		484020FC200274D800EB2EB4 /* DatabaseConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseConvertible.swift; sourceTree = "<group>"; };
 		484020FE2002775900EB2EB4 /* DateInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateInterval.swift; sourceTree = "<group>"; };
 		4840210120027C9B00EB2EB4 /* UIToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIToolbar.swift; sourceTree = "<group>"; };
+		484181FE203DD9D800E76FC7 /* PickerItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerItem.swift; sourceTree = "<group>"; };
+		48418200203DD9E000E76FC7 /* PickerViewWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewWrapper.swift; sourceTree = "<group>"; };
 		486F4AAB2017271F00A32777 /* WhereIsBalboaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhereIsBalboaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		486F4AAF2017272000A32777 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		486F4AB7201727EE00A32777 /* WhereIsBalboaTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WhereIsBalboaTests-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -184,6 +189,9 @@
 		48B16BAF20020B1000BF45DF /* CitySearchTaskWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySearchTaskWrapper.swift; sourceTree = "<group>"; };
 		48B16BB1200228BA00BF45DF /* CityGeocodeTaskWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityGeocodeTaskWrapper.swift; sourceTree = "<group>"; };
 		48BC2FDE200B51DC0030A41A /* CKClusterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKClusterView.swift; sourceTree = "<group>"; };
+		48F0230E203743230039E861 /* Cohort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cohort.swift; sourceTree = "<group>"; };
+		48F02310203794B20039E861 /* TripsByDateFetchOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsByDateFetchOperation.swift; sourceTree = "<group>"; };
+		48F02312203B2CFA0039E861 /* TripsByUserFetchOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsByUserFetchOperation.swift; sourceTree = "<group>"; };
 		7F247AAFFDD1E8F86965E52D /* Pods-WhereIsBalboaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhereIsBalboaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhereIsBalboaTests/Pods-WhereIsBalboaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C5EA047A67DBB952B920AAAF /* Pods-WhereIsBalboaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhereIsBalboaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhereIsBalboaTests/Pods-WhereIsBalboaTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -303,19 +311,21 @@
 			isa = PBXGroup;
 			children = (
 				483B99241FF003B8009DF029 /* Address.swift */,
-				483E308E1FEADC42006D4512 /* Balbabe.swift */,
-				482B2AEC200D04EA009B04C0 /* BalbabeMetadata.swift */,
+				48F0230E203743230039E861 /* Cohort.swift */,
 				482B2B00200E2017009B04C0 /* DatabaseConversionError.swift */,
-				482B2AF4200D322F009B04C0 /* HomeViewControllerConfiguration.swift */,
+				482B2AF4200D322F009B04C0 /* HomeViewControllerState.swift */,
 				48B16BA22001F32D00BF45DF /* LoadingViewState.swift */,
 				483A364D20176F4B008D4B6E /* LoginInfo.swift */,
 				482B2AEE200D0603009B04C0 /* OperationBuilderError.swift */,
+				484181FE203DD9D800E76FC7 /* PickerItem.swift */,
 				48B16BA92001F78400BF45DF /* Result.swift */,
 				483E30861FEAB922006D4512 /* Trip.swift */,
 				483B991C1FEF8578009DF029 /* TripAnnotation.swift */,
 				48B16BAD2001FA2E00BF45DF /* TripMetadata.swift */,
 				483B990C1FEE9717009DF029 /* TripsDataConfiguration.swift */,
 				483E306E1FEAABC4006D4512 /* TripViewType.swift */,
+				483E308E1FEADC42006D4512 /* User.swift */,
+				482B2AEC200D04EA009B04C0 /* UserMetadata.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -327,7 +337,6 @@
 				483E30881FEABDDF006D4512 /* DateFormatter.swift */,
 				484020FE2002775900EB2EB4 /* DateInterval.swift */,
 				483A364B20176F39008D4B6E /* Keychain.swift */,
-				482B2AE8200CFFC4009B04C0 /* NotificationCenter.swift */,
 				483B99221FEFA44B009DF029 /* UIImage.swift */,
 				483A364F201779F3008D4B6E /* UINavigationController.swift */,
 				4840210120027C9B00EB2EB4 /* UIToolbar.swift */,
@@ -341,10 +350,11 @@
 		483E30711FEAABC4006D4512 /* Logic */ = {
 			isa = PBXGroup;
 			children = (
-				482B2AE4200CFEDB009B04C0 /* UserManager.swift */,
-				483E30721FEAABC4006D4512 /* KeyboardManager.swift */,
 				483B99141FEF7853009DF029 /* BalbabeTripListTableViewDataSource.swift */,
+				483E30721FEAABC4006D4512 /* KeyboardManager.swift */,
+				48418200203DD9E000E76FC7 /* PickerViewWrapper.swift */,
 				483E30901FEADE5A006D4512 /* TripListTableViewDataSource.swift */,
+				482B2AE4200CFEDB009B04C0 /* UserManager.swift */,
 			);
 			path = Logic;
 			sourceTree = "<group>";
@@ -384,13 +394,15 @@
 		48B16BA42001F6BD00BF45DF /* Operations */ = {
 			isa = PBXGroup;
 			children = (
-				482B2AEA200D0449009B04C0 /* BalbabeCreateOperation.swift */,
+				482B2AEA200D0449009B04C0 /* UserCreateOperation.swift */,
 				482B2AFA200DFEA0009B04C0 /* BalbabeEditOperation.swift */,
 				48B16BA72001F6F000BF45DF /* AsynchronousOperation.swift */,
 				482B2ADE200CF884009B04C0 /* LoginOperation.swift */,
 				4840210020027B0300EB2EB4 /* TaskWrappers */,
 				48B16BA52001F6C500BF45DF /* TripEditOperation.swift */,
 				482B2AF6200D4558009B04C0 /* TripDeleteOperation.swift */,
+				48F02310203794B20039E861 /* TripsByDateFetchOperation.swift */,
+				48F02312203B2CFA0039E861 /* TripsByUserFetchOperation.swift */,
 			);
 			path = Operations;
 			sourceTree = "<group>";
@@ -628,13 +640,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				482B2ADB200CF551009B04C0 /* LoginViewController.swift in Sources */,
+				48F02313203B2CFA0039E861 /* TripsByUserFetchOperation.swift in Sources */,
 				483E30871FEAB922006D4512 /* Trip.swift in Sources */,
 				48B16BAE2001FA2E00BF45DF /* TripMetadata.swift in Sources */,
-				483E308F1FEADC42006D4512 /* Balbabe.swift in Sources */,
+				483E308F1FEADC42006D4512 /* User.swift in Sources */,
 				483E30821FEAABC4006D4512 /* UIViewAnimationCurve.swift in Sources */,
+				48418201203DD9E000E76FC7 /* PickerViewWrapper.swift in Sources */,
 				483A3650201779F3008D4B6E /* UINavigationController.swift in Sources */,
 				483E30981FEB7075006D4512 /* BalbabeTripListTableViewController.swift in Sources */,
-				482B2AE9200CFFC4009B04C0 /* NotificationCenter.swift in Sources */,
 				482B2AEF200D0603009B04C0 /* OperationBuilderError.swift in Sources */,
 				483E30891FEABDDF006D4512 /* DateFormatter.swift in Sources */,
 				482B2AF7200D4558009B04C0 /* TripDeleteOperation.swift in Sources */,
@@ -656,11 +669,13 @@
 				483E307F1FEAABC4006D4512 /* TripListTableViewController.swift in Sources */,
 				48B16BB020020B1000BF45DF /* CitySearchTaskWrapper.swift in Sources */,
 				483B991D1FEF8578009DF029 /* TripAnnotation.swift in Sources */,
-				482B2AED200D04EB009B04C0 /* BalbabeMetadata.swift in Sources */,
+				482B2AED200D04EB009B04C0 /* UserMetadata.swift in Sources */,
 				484020FD200274D800EB2EB4 /* DatabaseConvertible.swift in Sources */,
+				48F0230F203743230039E861 /* Cohort.swift in Sources */,
 				483BA64C1FF55A0A005C9F76 /* LocationSearchTableViewControllerDelegate.swift in Sources */,
-				482B2AF5200D322F009B04C0 /* HomeViewControllerConfiguration.swift in Sources */,
+				482B2AF5200D322F009B04C0 /* HomeViewControllerState.swift in Sources */,
 				482B2AFB200DFEA0009B04C0 /* BalbabeEditOperation.swift in Sources */,
+				484181FF203DD9D900E76FC7 /* PickerItem.swift in Sources */,
 				483E308B1FEAC364006D4512 /* Date.swift in Sources */,
 				4840210220027C9B00EB2EB4 /* UIToolbar.swift in Sources */,
 				482B2AE6200CFEDC009B04C0 /* UserManager.swift in Sources */,
@@ -677,8 +692,9 @@
 				482B2AF9200DF51C009B04C0 /* AccountEditor.swift in Sources */,
 				483E30791FEAABC4006D4512 /* HomeViewController.swift in Sources */,
 				48B16BA62001F6C500BF45DF /* TripEditOperation.swift in Sources */,
+				48F02311203794B20039E861 /* TripsByDateFetchOperation.swift in Sources */,
 				483BA6501FF55BEB005C9F76 /* LoadingView.swift in Sources */,
-				482B2AEB200D0449009B04C0 /* BalbabeCreateOperation.swift in Sources */,
+				482B2AEB200D0449009B04C0 /* UserCreateOperation.swift in Sources */,
 				482B2AFD200E07A3009B04C0 /* TextFieldPromptViewController.swift in Sources */,
 				484020FF2002775900EB2EB4 /* DateInterval.swift in Sources */,
 				483B99171FEF7934009DF029 /* OwnTripTableViewCell.swift in Sources */,

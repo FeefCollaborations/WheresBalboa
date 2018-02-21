@@ -3,15 +3,20 @@ import UIKit
 class BalbabeTripListTableViewController: UIViewController, UITableViewDelegate {
     private lazy var newTripBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewTrip))
     
+    private let userManager: UserManager
     private let isLoggedInUser: Bool
+    private let trips: [Trip]
     private let dataSource: BalbabeTripListTableViewDataSource
     @IBOutlet private var tableView: UITableView!
     
     // MARK: - Init
     
-    init(_ balbabe: Balbabe, isLoggedInUser: Bool) {
+    init(_ userManager: UserManager, _ user: User, _ trips: [Trip]) {
+        self.trips = trips
+        self.userManager = userManager
+        let isLoggedInUser = user.id == userManager.loggedInUser.id
         self.isLoggedInUser = isLoggedInUser
-        dataSource = BalbabeTripListTableViewDataSource(balbabe, isLoggedInUser: isLoggedInUser)
+        dataSource = BalbabeTripListTableViewDataSource(userManager, user, trips)
         super.init(nibName: nil, bundle: nil)
         guard #available(iOS 11.0, *) else {
             edgesForExtendedLayout = []
@@ -43,27 +48,27 @@ class BalbabeTripListTableViewController: UIViewController, UITableViewDelegate 
         dataSource.registerCells(with: tableView)
         tableView.dataSource = dataSource
         tableView.delegate = self
-        let titleText = isLoggedInUser ? "Your trips" : "\(dataSource.balbabe.metadata.name)'s trips"
-        navigationItem.titleView = UIView.viewControllerTitleView(title: titleText, subtitle: "based out of \(dataSource.balbabe.metadata.hometown.name)")
+        let titleText = isLoggedInUser ? "Your trips" : "\(dataSource.user.metadata.name)'s trips"
+        navigationItem.titleView = UIView.viewControllerTitleView(title: titleText, subtitle: "based out of \(dataSource.user.metadata.hometown.cityName)")
         tableView.allowsSelection = isLoggedInUser
     }
     
     // MARK: - Button response
     
     @objc private func addNewTrip() {
-        let tripEditorViewController = TripEditorViewController(dataSource.balbabe)
+        let tripEditorViewController = TripEditorViewController(userManager)
         navigationController?.pushViewController(tripEditorViewController, animated: true)
     }
     
     @objc private func tappedContact() {
-        UIApplication.shared.open(dataSource.balbabe.metadata.whatsappURL, options: [:])
+        UIApplication.shared.open(dataSource.user.metadata.whatsappURL, options: [:])
     }
     
     // MARK: - UITableViewDelegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let tripEditorViewController = TripEditorViewController(dataSource.balbabe, dataSource.tripAt(indexPath))
+        let tripEditorViewController = TripEditorViewController(userManager, dataSource.tripAt(indexPath))
         navigationController?.pushViewController(tripEditorViewController, animated: true)
     }
 }

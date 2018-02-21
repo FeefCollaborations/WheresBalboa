@@ -8,13 +8,13 @@ class BalbabeEditOperation: AsynchronousOperation {
     }
     
     typealias Completion = (Result) -> Void
-    let balbabeMetadata: BalbabeMetadata
-    let balbabeID: Balbabe.ID
+    let balbabeMetadata: UserMetadata
+    let balbabeID: User.ID
     let onComplete: Completion
     
     // MARK: - Init
     
-    init(balbabeMetadata: BalbabeMetadata, balbabeID: Balbabe.ID, onComplete: @escaping Completion) {
+    init(balbabeMetadata: UserMetadata, balbabeID: User.ID, onComplete: @escaping Completion) {
         self.balbabeMetadata = balbabeMetadata
         self.balbabeID = balbabeID
         self.onComplete = onComplete

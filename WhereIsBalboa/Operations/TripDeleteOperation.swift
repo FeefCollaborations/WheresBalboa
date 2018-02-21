@@ -9,13 +9,13 @@ class TripDeleteOperation: AsynchronousOperation {
     
     typealias Completion = (Result) -> Void
     let onComplete: Completion
-    let balbabeID: Balbabe.ID
+    let userID: User.ID
     let tripID: Trip.ID
     
     // MARK: - Init
     
-    init(tripID: Trip.ID, balbabeID: Balbabe.ID, onComplete: @escaping Completion) {
-        self.balbabeID = balbabeID
+    init(_ tripID: Trip.ID, _ userID: User.ID, onComplete: @escaping Completion) {
+        self.userID = userID
         self.tripID = tripID
         self.onComplete = onComplete
     }
@@ -24,7 +24,7 @@ class TripDeleteOperation: AsynchronousOperation {
     
     override func start() {
         super.start()
-        let tripReference = Database.database().reference(withPath: "balbabes/\(balbabeID)/trips/\(tripID)")
+        let tripReference = Database.database().reference(withPath: "balbabes/\(userID)/trips/\(tripID)")
         tripReference.removeValue() { [weak self] error, _ in
             guard let strongSelf = self else {
                 return

@@ -6,7 +6,7 @@ class LoginOperation: AsynchronousOperation, ResultGeneratingOperation {
     
     // MARK: - Initialization
     
-    typealias Completion = (Result<Balbabe>) -> Void
+    typealias Completion = (Result<User>) -> Void
     let onComplete: Completion
     let loginInfo: LoginInfo
     init(_ loginInfo: LoginInfo, onComplete: @escaping Completion) {
@@ -30,10 +30,10 @@ class LoginOperation: AsynchronousOperation, ResultGeneratingOperation {
                 return
             }
             
-            Database.database().reference(withPath: "balbabes/\(user.uid)").observeSingleEvent(of: .value) { snapshot in
+            Database.database().reference(withPath: "\(strongSelf.loginInfo.cohort.rawValue)/users/\(user.uid)").observeSingleEvent(of: .value) { snapshot in
                 DispatchQueue.main.async {
                     do {
-                        let balbabe = try Balbabe(snapshot)
+                        let balbabe = try User(snapshot)
                         strongSelf.onComplete(.success(balbabe))
                         strongSelf.state = .finished
                     } catch let error {

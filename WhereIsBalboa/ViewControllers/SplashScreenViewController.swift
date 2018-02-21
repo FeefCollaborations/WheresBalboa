@@ -40,10 +40,17 @@ class SplashScreenViewController: UIViewController {
                 switch result {
                     case .failure:
                         strongSelf.showLoginViewController()
-                    case .success(let balbabe):
-                        UserManager.shared.setCurrentUser(balbabe)
-                        let homeViewController = HomeViewController(balbabe)
-                        strongSelf.navigationController?.setViewControllers([LoginViewController(), homeViewController], animated: true)
+                    case .success(let user):
+                        UserManager.new(for: loginInfo.cohort, withLoggedInUser: user) { [weak self] result in
+                            switch result {
+                                case .success(let userManager):
+                                    let homeViewController = HomeViewController(userManager)
+                                    self?.navigationController?.setViewControllers([LoginViewController(), homeViewController], animated: true)
+                                case .failure:
+                                    self?.showLoginViewController()
+                                    return
+                            }
+                        }
                 }
             }
         }
