@@ -51,8 +51,8 @@ class TripListTableViewController: UIViewController, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let (trip, balbabe) = dataSource.tripInfoAt(indexPath)
-        onTripTap?(trip, balbabe)
+        let (trip, user) = dataSource.tripInfoAt(indexPath)
+        onTripTap?(trip, user)
     }
     
     // MARK: - Accessors

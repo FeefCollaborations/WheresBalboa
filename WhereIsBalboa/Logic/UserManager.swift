@@ -112,7 +112,7 @@ class UserManager: Equatable {
             throw DatabaseConversionError.invalidSnapshot(snapshot)
         }
         
-        let allUsers = try userSnapshots.flatMap { try User($0) }
+        let allUsers = userSnapshots.flatMap { try? User($0) }
         guard let loggedInUser = allUsers.first(where: { $0.id == loggedInUser.id }) else {
             throw DatabaseConversionError.invalidSnapshot(snapshot)
         }

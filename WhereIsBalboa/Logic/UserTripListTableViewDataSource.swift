@@ -1,29 +1,31 @@
 import UIKit
 import CoreLocation
 
-class BalbabeTripListTableViewDataSource: NSObject, UITableViewDataSource {
+class UserTripListTableViewDataSource: NSObject, UITableViewDataSource {
     private static let reuseIdentifier = "tripTableViewCell"
     
     typealias DataChangeHandler = () -> Void
     var dataChangeHandler: DataChangeHandler?
     private var trips: [Trip]
+    private(set) var user: User
     
     // MARK: - Init
     
-    init(_ balbabe: Balbabe) {
-        trips = BalbabeTripListTableViewDataSource.upcomingTrips(from: balbabe.trips)
+    init(_ userManager: UserManager, _ user: User, _ trips: [Trip]) {
+        self.user = user
+        self.trips = UserTripListTableViewDataSource.sortedTrips(from: trips)
         super.init()
-        NotificationCenter.default.registerForUserChanges { [weak self] balbabe in
-            guard
-                let strongSelf = self,
-                let balbabe = balbabe
-            else {
-                return
-            }
-            
-            strongSelf.trips = BalbabeTripListTableViewDataSource.upcomingTrips(from: balbabe.trips)
-            DispatchQueue.main.async {
-                strongSelf.dataChangeHandler?()
+        if userManager.loggedInUser == user {
+            userManager.registerForChanges { [weak self] userManager in
+                guard let strongSelf = self else {
+                    return
+                }
+                
+                strongSelf.user = userManager.loggedInUser
+                strongSelf.trips = UserTripListTableViewDataSource.sortedTrips(from: userManager.loggedInUserTrips)
+                DispatchQueue.main.async {
+                    strongSelf.dataChangeHandler?()
+                }
             }
         }
     }
@@ -33,7 +35,7 @@ class BalbabeTripListTableViewDataSource: NSObject, UITableViewDataSource {
     }
     
     func registerCells(with tableView: UITableView) {
-        tableView.register(OwnTripTableViewCell.nib, forCellReuseIdentifier: BalbabeTripListTableViewDataSource.reuseIdentifier)
+        tableView.register(OwnTripTableViewCell.nib, forCellReuseIdentifier: UserTripListTableViewDataSource.reuseIdentifier)
     }
     
     // MARK: - UITableViewDataSource
@@ -43,20 +45,23 @@ class BalbabeTripListTableViewDataSource: NSObject, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: BalbabeTripListTableViewDataSource.reuseIdentifier, for: indexPath) as! OwnTripTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: UserTripListTableViewDataSource.reuseIdentifier, for: indexPath) as! OwnTripTableViewCell
         let trip = tripAt(indexPath)
                 
-        cell.cityLabel.text = "\(trip.metadata.address.name)"
-        cell.dateLabel.text = "from \(DateFormatter.fullDate.string(from: trip.metadata.dateInterval.start)) to \(DateFormatter.fullDate.string(from: trip.metadata.dateInterval.end))"
+        cell.cityLabel.text = "\(trip.metadata.address.cityName)"
+        let startDate = trip.metadata.dateInterval.start
+        let endDate = trip.metadata.dateInterval.end
+        let startDateString = startDate.isDistantPast ? "∞" : DateFormatter.fullDateShortenedYear.string(from: startDate)
+        let endDateString = endDate.isDistantFuture ? "∞" : DateFormatter.fullDateShortenedYear.string(from: endDate)
+        cell.dateLabel.text = "from " + startDateString + " to " + endDateString
         
         return cell
     }
     
     // MARK: - Helpers
     
-    private static func upcomingTrips(from trips: [Trip]) -> [Trip] {
-        let upcomingTrips = trips.filter { Date().daysSince($0.metadata.dateInterval.start) <= 0 }
-        return upcomingTrips.sorted { $0.metadata.dateInterval.start < $1.metadata.dateInterval.start }
+    private static func sortedTrips(from trips: [Trip]) -> [Trip] {
+        return trips.sorted { $0.metadata.dateInterval.start < $1.metadata.dateInterval.start }
     }
     
     // MARK: - Accessors

@@ -152,7 +152,7 @@ class TripEditorViewController: UIViewController, UITextFieldDelegate, LocationS
             guard let strongSelf = self else {
                 return
             }
-            let deleteTripOperation = TripDeleteOperation(tripID, strongSelf.userManager.loggedInUser.id) { result in
+            let deleteTripOperation = TripDeleteOperation(strongSelf.userManager.cohort, tripID) { result in
                 strongSelf.dismiss(animated: true) {
                     switch result {
                     case .success:

@@ -123,12 +123,12 @@ class TripMapViewController: UIViewController, MKMapViewDelegate {
         }
         
         mapView.deselectAnnotation(view.annotation, animated: true)
-        let keyedBalbabes = tripAnnotations.reduce([Trip: User]()) { aggregate, tripAnnotation in
+        let keyedUsers = tripAnnotations.reduce([Trip: User]()) { aggregate, tripAnnotation in
             var updated = aggregate
             updated[tripAnnotation.trip] = tripAnnotation.user
             return updated
         }
-        onTripGroupTap?(keyedBalbabes)
+        onTripGroupTap?(keyedUsers)
     }
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {

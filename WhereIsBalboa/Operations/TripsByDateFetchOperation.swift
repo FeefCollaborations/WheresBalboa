@@ -17,7 +17,7 @@ class TripsByDateFetchOperation: AsynchronousOperation, ResultGeneratingOperatio
     
     override func start() {
         super.start()
-        Database.database().reference(withPath: cohort.rawValue + "/trips").queryEnding(atValue: date.date(daysLater: 1).timeIntervalSince1970 - 1, childKey: "endTimestamp").observeSingleEvent(of: .value, with: { [weak self, date] snapshot in
+        Database.database().reference(withPath: cohort.rawValue + "/trips").queryEnding(atValue: date.endOfDay().timeIntervalSince1970 - 1, childKey: "endTimestamp").observeSingleEvent(of: .value, with: { [weak self, date] snapshot in
             defer {
                 self?.state = .finished
             }
@@ -26,7 +26,15 @@ class TripsByDateFetchOperation: AsynchronousOperation, ResultGeneratingOperatio
                     throw DatabaseConversionError.invalidSnapshot(snapshot)
                 }
                 let trips = tripSnapshots.flatMap { try? Trip($0) }
-                let currentTrips = trips.filter { $0.metadata.dateInterval.contains(date) }
+                let currentTrips = trips.filter { trip in
+                    guard trip.metadata.dateInterval.contains(date) else {
+                        return false
+                    }
+                    if trip.metadata.dateInterval.end.endOfDay() == date.endOfDay() {
+                        return trip.metadata.dateInterval.start.startOfDay() == date.startOfDay()
+                    }
+                    return true
+                }
                 self?.onComplete(.success(currentTrips))
             } catch let error {
                 self?.onComplete(.failure(error))

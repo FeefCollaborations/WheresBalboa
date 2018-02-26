@@ -73,33 +73,11 @@
                         <constraint firstAttribute="trailing" secondItem="juP-Ot-IlM" secondAttribute="trailing" id="phH-1U-6xB"/>
                     </constraints>
                 </stackView>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="WSZ-KB-SQN">
-                    <rect key="frame" x="0.0" y="589" width="375" height="70"/>
-                    <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zfn-rn-BFJ">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
-                            <state key="normal" title="Change Email"/>
-                            <connections>
-                                <action selector="updateEmail" destination="-1" eventType="touchUpInside" id="mMe-KN-0aa"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dFM-aD-j4C">
-                            <rect key="frame" x="0.0" y="40" width="375" height="30"/>
-                            <state key="normal" title="Change Password"/>
-                            <connections>
-                                <action selector="updatePassword" destination="-1" eventType="touchUpInside" id="sjG-qw-EIc"/>
-                            </connections>
-                        </button>
-                    </subviews>
-                </stackView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="0Wg-FF-NLb" firstAttribute="centerY" secondItem="eyi-Jf-jOL" secondAttribute="centerY" priority="999" id="1Dv-X2-g1i"/>
-                <constraint firstItem="KHA-CA-yTt" firstAttribute="trailing" secondItem="WSZ-KB-SQN" secondAttribute="trailing" id="HHC-g2-sNg"/>
                 <constraint firstItem="0Wg-FF-NLb" firstAttribute="leading" secondItem="KHA-CA-yTt" secondAttribute="leading" constant="16" id="OCm-dJ-Eou"/>
-                <constraint firstItem="WSZ-KB-SQN" firstAttribute="leading" secondItem="KHA-CA-yTt" secondAttribute="leading" id="PI2-xn-NDL"/>
-                <constraint firstItem="KHA-CA-yTt" firstAttribute="bottom" secondItem="WSZ-KB-SQN" secondAttribute="bottom" constant="8" id="RHO-tQ-jX1"/>
                 <constraint firstItem="KHA-CA-yTt" firstAttribute="trailing" secondItem="0Wg-FF-NLb" secondAttribute="trailing" constant="16" id="X8l-7H-E14"/>
                 <constraint firstItem="0Wg-FF-NLb" firstAttribute="top" relation="greaterThanOrEqual" secondItem="KHA-CA-yTt" secondAttribute="top" priority="999" id="c9T-H0-GcI"/>
             </constraints>

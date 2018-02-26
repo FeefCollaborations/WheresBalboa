@@ -6,7 +6,7 @@ fileprivate struct Constants {
 
 extension Date {
     func daysSince(_ date: Date = Date(), using calendar: Calendar = .current) -> Int {
-        guard let daysSince = calendar.dateComponents(Set([.day]), from: date, to: self).day else {
+        guard let daysSince = calendar.dateComponents(Set([.day]), from: date.startOfDay(), to: self.startOfDay()).day else {
             // TODO: Log error
             fatalError()
         }

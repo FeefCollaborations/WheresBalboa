@@ -28,7 +28,7 @@ class CityGeocodeTaskWrapper {
                 let json = try JSON.init(data: data)
                 guard
                     let foundPlace = json.dictionaryValue["results"]?.array?.first,
-                    let locationListing = Address.init(foundPlace)
+                    let locationListing = Address(foundPlace)
                 else {
                     // TODO: Log error
                     let error = SearchError.badResponse(json)

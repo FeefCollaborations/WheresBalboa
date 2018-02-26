@@ -31,7 +31,7 @@ class SplashScreenViewController: UIViewController {
     // MARK: - Helpers
     
     private func attemptLogin(with loginInfo: LoginInfo) {
-        let operation = LoginOperation(loginInfo) { [weak self] result in
+        let operation = LoginOperation(loginInfo.signUpCode) { [weak self] result in
             guard let strongSelf = self else {
                 return
             }
@@ -40,8 +40,8 @@ class SplashScreenViewController: UIViewController {
                 switch result {
                     case .failure:
                         strongSelf.showLoginViewController()
-                    case .success(let user):
-                        UserManager.new(for: loginInfo.cohort, withLoggedInUser: user) { [weak self] result in
+                    case .success(let user, let cohort):
+                        UserManager.new(for: cohort, withLoggedInUser: user) { [weak self] result in
                             switch result {
                                 case .success(let userManager):
                                     let homeViewController = HomeViewController(userManager)

@@ -174,8 +174,8 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_feature(modules)
 @import UIKit;
 @import Foundation;
-@import ObjectiveC;
 @import MapKit;
+@import ObjectiveC;
 @import CoreGraphics;
 #endif
 
@@ -224,36 +224,8 @@ SWIFT_CLASS("_TtC13WhereIsBalboa21AsynchronousOperation")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-
-SWIFT_CLASS("_TtC13WhereIsBalboa20BalbabeEditOperation")
-@interface BalbabeEditOperation : AsynchronousOperation
-- (void)start;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-@end
-
-@class NSCoder;
-@class UITableView;
-@class NSBundle;
-
-SWIFT_CLASS("_TtC13WhereIsBalboa34BalbabeTripListTableViewController")
-@interface BalbabeTripListTableViewController : UIViewController <UITableViewDelegate>
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-- (void)viewWillAppear:(BOOL)animated;
-- (void)viewDidLoad;
-- (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
-@end
-
-@class UITableViewCell;
-
-SWIFT_CLASS("_TtC13WhereIsBalboa34BalbabeTripListTableViewDataSource")
-@interface BalbabeTripListTableViewDataSource : NSObject <UITableViewDataSource>
-- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
-- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-@end
-
 @protocol MKAnnotation;
+@class NSCoder;
 
 SWIFT_CLASS("_TtC13WhereIsBalboa13CKClusterView")
 @interface CKClusterView : MKAnnotationView
@@ -263,6 +235,7 @@ SWIFT_CLASS("_TtC13WhereIsBalboa13CKClusterView")
 
 
 
+@class NSBundle;
 
 SWIFT_CLASS("_TtC13WhereIsBalboa18HomeViewController")
 @interface HomeViewController : UIViewController
@@ -294,6 +267,8 @@ SWIFT_CLASS("_TtC13WhereIsBalboa21LoadingViewController")
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
 
+@class UITableView;
+@class UITableViewCell;
 
 SWIFT_CLASS("_TtC13WhereIsBalboa33LocationSearchTableViewController")
 @interface LocationSearchTableViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
@@ -318,7 +293,6 @@ SWIFT_CLASS("_TtC13WhereIsBalboa19LoginViewController")
 @interface LoginViewController : UIViewController <UITextFieldDelegate>
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-- (void)viewDidLoad;
 - (void)viewWillAppear:(BOOL)animated;
 - (void)viewDidDisappear:(BOOL)animated;
 - (BOOL)textFieldShouldReturn:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
@@ -335,6 +309,13 @@ SWIFT_CLASS("_TtC13WhereIsBalboa20OwnTripTableViewCell")
 @property (nonatomic, readonly, strong) IBOutlet UILabel * _Null_unspecified dateLabel;
 - (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC13WhereIsBalboa23PasswordUploadOperation")
+@interface PasswordUploadOperation : NSOperation
+- (void)start;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
 @end
 
 @class UIPickerView;
@@ -364,6 +345,7 @@ SWIFT_CLASS("_TtC13WhereIsBalboa21ProfileViewController")
 SWIFT_CLASS("_TtC13WhereIsBalboa20SignUpViewController")
 @interface SignUpViewController : UIViewController <UISearchBarDelegate, UITextFieldDelegate>
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (void)viewDidLoad;
 - (BOOL)textFieldShouldReturn:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
 - (void)searchBarSearchButtonClicked:(UISearchBar * _Nonnull)searchBar;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
@@ -418,6 +400,13 @@ SWIFT_CLASS("_TtC13WhereIsBalboa24TripEditorViewController")
 - (BOOL)textFieldShouldEndEditing:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
 - (void)searchBarSearchButtonClicked:(UISearchBar * _Nonnull)searchBar;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC13WhereIsBalboa24TripGroupCreateOperation")
+@interface TripGroupCreateOperation : AsynchronousOperation
+- (void)start;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
 @end
 
 
@@ -495,6 +484,31 @@ SWIFT_CLASS("_TtC13WhereIsBalboa25TripsByUserFetchOperation")
 SWIFT_CLASS("_TtC13WhereIsBalboa19UserCreateOperation")
 @interface UserCreateOperation : AsynchronousOperation
 - (void)start;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC13WhereIsBalboa17UserEditOperation")
+@interface UserEditOperation : AsynchronousOperation
+- (void)start;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC13WhereIsBalboa31UserTripListTableViewController")
+@interface UserTripListTableViewController : UIViewController <UITableViewDelegate>
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (void)viewWillAppear:(BOOL)animated;
+- (void)viewDidLoad;
+- (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
+@end
+
+
+SWIFT_CLASS("_TtC13WhereIsBalboa31UserTripListTableViewDataSource")
+@interface UserTripListTableViewDataSource : NSObject <UITableViewDataSource>
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 @end
 

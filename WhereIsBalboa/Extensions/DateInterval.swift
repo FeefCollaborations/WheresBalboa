@@ -3,7 +3,7 @@ import Foundation
 extension DateInterval {
     private static var distantPastString = "distantPast"
     private static var distantFutureString = "distantFuture"
-    private static var delimiterString = " * "
+    static var delimiterString = " * "
     private static var formatter = DateFormatter.fullDate
     
     init?(_ string: String, calendar: Calendar = .current) {

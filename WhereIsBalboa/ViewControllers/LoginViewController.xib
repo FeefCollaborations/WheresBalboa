@@ -12,9 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="WhereIsBalboa" customModuleProvider="target">
             <connections>
-                <outlet property="cohortTextField" destination="7zz-dR-xeA" id="n06-cJ-thi"/>
-                <outlet property="emailTextField" destination="A2P-iu-PHv" id="vdB-8R-YAF"/>
-                <outlet property="passwordTextField" destination="hsZ-HU-RVy" id="rWU-e1-Knx"/>
+                <outlet property="passcodeTextField" destination="A2P-iu-PHv" id="LnJ-Zc-Q1A"/>
                 <outlet property="view" destination="j21-0r-8p1" id="spB-b0-CUb"/>
             </connections>
         </placeholder>
@@ -24,9 +22,9 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Lgb-4L-vHU">
-                    <rect key="frame" x="16" y="249.5" width="343" height="168"/>
+                    <rect key="frame" x="16" y="295.5" width="343" height="76"/>
                     <subviews>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A2P-iu-PHv">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sign up code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A2P-iu-PHv">
                             <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -35,40 +33,13 @@
                                 <outlet property="delegate" destination="-1" id="zkf-p9-4b0"/>
                             </connections>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hsZ-HU-RVy">
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2WL-9W-xVU">
                             <rect key="frame" x="0.0" y="46" width="343" height="30"/>
-                            <nil key="textColor"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            <state key="normal" title="Log in / sign up"/>
                             <connections>
-                                <outlet property="delegate" destination="-1" id="GWg-K6-FBa"/>
+                                <action selector="tappedLoginOrSignUp" destination="-1" eventType="touchUpInside" id="QTA-Om-cn7"/>
                             </connections>
-                        </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7zz-dR-xeA">
-                            <rect key="frame" x="0.0" y="92" width="343" height="30"/>
-                            <nil key="textColor"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
-                        </textField>
-                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="pzT-zg-Nvp">
-                            <rect key="frame" x="0.0" y="138" width="343" height="30"/>
-                            <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2WL-9W-xVU">
-                                    <rect key="frame" x="0.0" y="0.0" width="171.5" height="30"/>
-                                    <state key="normal" title="Log in / sign up"/>
-                                    <connections>
-                                        <action selector="tappedLoginOrSignUp" destination="-1" eventType="touchUpInside" id="QTA-Om-cn7"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ppa-v3-Z95">
-                                    <rect key="frame" x="171.5" y="0.0" width="171.5" height="30"/>
-                                    <state key="normal" title="Forgot my password"/>
-                                    <connections>
-                                        <action selector="tappedForgotPassword" destination="-1" eventType="touchUpInside" id="qUp-SM-bHx"/>
-                                    </connections>
-                                </button>
-                            </subviews>
-                        </stackView>
+                        </button>
                     </subviews>
                 </stackView>
             </subviews>

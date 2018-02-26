@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignUpViewController">
             <connections>
+                <outlet property="cohortTextField" destination="tqm-xn-0OD" id="36D-1R-BFD"/>
                 <outlet property="hometownButton" destination="tCl-Bn-kJ9" id="5TV-Ql-GKJ"/>
                 <outlet property="nameTextField" destination="2hW-Kg-y6w" id="tK8-Fa-hyh"/>
                 <outlet property="view" destination="tdv-iR-Oft" id="9KD-3E-PnP"/>
@@ -24,10 +25,16 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="j5k-HO-X8U">
-                    <rect key="frame" x="16" y="249.5" width="343" height="168"/>
+                    <rect key="frame" x="16" y="226.5" width="343" height="214"/>
                     <subviews>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2hW-Kg-y6w">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tqm-xn-0OD">
                             <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2hW-Kg-y6w">
+                            <rect key="frame" x="0.0" y="46" width="343" height="30"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
@@ -36,7 +43,7 @@
                             </connections>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Whatsapp" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="afX-XW-s41">
-                            <rect key="frame" x="0.0" y="46" width="343" height="30"/>
+                            <rect key="frame" x="0.0" y="92" width="343" height="30"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
@@ -45,14 +52,14 @@
                             </connections>
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tCl-Bn-kJ9">
-                            <rect key="frame" x="0.0" y="92" width="343" height="30"/>
+                            <rect key="frame" x="0.0" y="138" width="343" height="30"/>
                             <state key="normal" title="Tap to add hometown"/>
                             <connections>
                                 <action selector="tappedAddHometown" destination="-1" eventType="touchUpInside" id="xj1-Ff-F0u"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZP-TP-yHq">
-                            <rect key="frame" x="0.0" y="138" width="343" height="30"/>
+                            <rect key="frame" x="0.0" y="184" width="343" height="30"/>
                             <state key="normal" title="Create!"/>
                             <connections>
                                 <action selector="tappedCreate" destination="-1" eventType="touchUpInside" id="g3x-jx-5eK"/>

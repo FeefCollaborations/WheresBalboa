@@ -4,149 +4,268 @@ provides-top-level:
 - "=="
 provides-nominal:
 - "13WhereIsBalboa4TripV"
+- "13WhereIsBalboa4TripV8DBValuesV"
 provides-member:
 - ["13WhereIsBalboa4TripV", ""]
+- ["13WhereIsBalboa4TripV8DBValuesV", ""]
 provides-dynamic-lookup:
 depends-top-level:
 - !private "&&"
 - "=="
 - "AssignmentPrecedence"
 - "Bool"
+- "CastingPrecedence"
 - "DataSnapshot"
+- !private "DatabaseConversionError"
+- "DatabaseConvertible"
 - "Equatable"
 - "Hashable"
 - "Int"
 - "String"
+- "StringLiteralType"
 - "Trip"
 - "TripMetadata"
+- "User"
 depends-member:
 - !private ["s23BidirectionalCollectionP", "hashValue"]
+- ["s23BidirectionalCollectionP", "init"]
+- !private ["s7CVarArgP", "childSnapshot"]
 - !private ["s7CVarArgP", "hashValue"]
+- ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "key"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["s7CVarArgP", "value"]
 - !private ["s10CollectionP", "hashValue"]
+- ["s10CollectionP", "init"]
+- !private ["s10CollectionP", "subscript"]
 - !private ["s10ComparableP", "hashValue"]
+- ["s10ComparableP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "childSnapshot"]
 - !private ["s28CustomDebugStringConvertibleP", "hashValue"]
+- ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "key"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "value"]
 - !private ["s29CustomPlaygroundQuickLookableP", "hashValue"]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
 - !private ["s17CustomReflectableP", "hashValue"]
+- ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "childSnapshot"]
 - !private ["s23CustomStringConvertibleP", "hashValue"]
+- ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "key"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "value"]
+- ["13WhereIsBalboa4TripV8DBValuesV", "init"]
+- ["13WhereIsBalboa4TripV8DBValuesV", "userID"]
+- !private ["So12DataSnapshotC", "childSnapshot"]
 - !private ["So12DataSnapshotC", "key"]
+- !private ["So12DataSnapshotC", "value"]
+- !private ["13WhereIsBalboa23DatabaseConversionErrorO", "deinit"]
+- !private ["13WhereIsBalboa23DatabaseConversionErrorO", "invalidSnapshot"]
+- !private ["13WhereIsBalboa19DatabaseConvertibleP", "DBValues"]
+- !private ["13WhereIsBalboa19DatabaseConvertibleP", "DatabaseConversionError"]
+- !private ["13WhereIsBalboa19DatabaseConvertibleP", "TripMetadata"]
+- ["13WhereIsBalboa19DatabaseConvertibleP", "dictionaryRepresentation"]
+- ["13WhereIsBalboa19DatabaseConvertibleP", "hashValue"]
+- !private ["13WhereIsBalboa19DatabaseConvertibleP", "id"]
 - !private ["13WhereIsBalboa19DatabaseConvertibleP", "init"]
+- !private ["13WhereIsBalboa19DatabaseConvertibleP", "metadata"]
+- !private ["13WhereIsBalboa19DatabaseConvertibleP", "userID"]
+- ["13WhereIsBalboa19DatabaseConvertibleP", ""]
 - !private ["s9DecodableP", "hashValue"]
+- ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "subscript"]
+- !private ["s10DictionaryV", "subscript"]
 - !private ["s9EncodableP", "hashValue"]
+- ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "subscript"]
+- !private ["s9EquatableP", "DBValues"]
+- !private ["s9EquatableP", "DatabaseConversionError"]
+- ["s9EquatableP", "ID"]
 - !private ["s9EquatableP", "TripMetadata"]
+- !private ["s9EquatableP", "childSnapshot"]
+- ["s9EquatableP", "dictionaryRepresentation"]
 - ["s9EquatableP", "hashValue"]
 - !private ["s9EquatableP", "id"]
-- !private ["s9EquatableP", "init"]
+- ["s9EquatableP", "init"]
 - !private ["s9EquatableP", "key"]
 - !private ["s9EquatableP", "metadata"]
+- !private ["s9EquatableP", "userID"]
+- !private ["s9EquatableP", "value"]
 - ["s9EquatableP", ""]
+- !private ["s5ErrorP", "invalidSnapshot"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "hashValue"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s26ExpressibleByStringLiteralP", "hashValue"]
+- ["s26ExpressibleByStringLiteralP", "init"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "hashValue"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s8HashableP", "DBValues"]
+- !private ["s8HashableP", "DatabaseConversionError"]
 - !private ["s8HashableP", "TripMetadata"]
+- !private ["s8HashableP", "childSnapshot"]
+- ["s8HashableP", "dictionaryRepresentation"]
 - ["s8HashableP", "hashValue"]
 - !private ["s8HashableP", "id"]
+- ["s8HashableP", "init"]
 - !private ["s8HashableP", "key"]
 - !private ["s8HashableP", "metadata"]
+- !private ["s8HashableP", "userID"]
+- !private ["s8HashableP", "value"]
 - ["s8HashableP", ""]
 - !private ["10SwiftyJSON17JSONSubscriptTypeP", "hashValue"]
+- ["10SwiftyJSON17JSONSubscriptTypeP", "init"]
 - !private ["s25LosslessStringConvertibleP", "hashValue"]
+- ["s25LosslessStringConvertibleP", "init"]
 - !private ["s10MirrorPathP", "hashValue"]
+- ["s10MirrorPathP", "init"]
 - !private ["So8NSCodingP", "hashValue"]
+- ["So8NSCodingP", "init"]
 - !private ["So9NSCopyingP", "hashValue"]
+- ["So9NSCopyingP", "init"]
 - !private ["So21NSItemProviderReadingP", "hashValue"]
+- ["So21NSItemProviderReadingP", "init"]
 - !private ["So21NSItemProviderWritingP", "hashValue"]
+- ["So21NSItemProviderWritingP", "init"]
 - !private ["So16NSMutableCopyingP", "hashValue"]
+- ["So16NSMutableCopyingP", "init"]
+- !private ["So8NSObjectC", "childSnapshot"]
 - !private ["So8NSObjectC", "hashValue"]
 - !private ["So8NSObjectC", "key"]
+- !private ["So8NSObjectC", "value"]
+- !private ["So16NSObjectProtocolP", "childSnapshot"]
 - !private ["So16NSObjectProtocolP", "hashValue"]
+- ["So16NSObjectProtocolP", "init"]
 - !private ["So16NSObjectProtocolP", "key"]
+- !private ["So16NSObjectProtocolP", "value"]
 - !private ["So14NSSecureCodingP", "hashValue"]
+- ["So14NSSecureCodingP", "init"]
 - !private ["So8NSStringC", "hashValue"]
+- ["So8NSStringC", "init"]
 - !private ["s26RangeReplaceableCollectionP", "hashValue"]
+- ["s26RangeReplaceableCollectionP", "init"]
 - !private ["s8SequenceP", "hashValue"]
+- ["s8SequenceP", "init"]
+- !private ["s8SequenceP", "subscript"]
 - !private ["SS", "hashValue"]
+- ["SS", "init"]
 - !private ["s14StringProtocolP", "hashValue"]
+- ["s14StringProtocolP", "init"]
 - !private ["s16TextOutputStreamP", "hashValue"]
+- ["s16TextOutputStreamP", "init"]
 - !private ["s20TextOutputStreamableP", "hashValue"]
+- ["s20TextOutputStreamableP", "init"]
+- ["13WhereIsBalboa4TripV", "DBValues"]
 - ["13WhereIsBalboa4TripV", "DataSnapshot"]
+- !private ["13WhereIsBalboa4TripV", "DatabaseConversionError"]
 - ["13WhereIsBalboa4TripV", "ID"]
 - ["13WhereIsBalboa4TripV", "Int"]
 - ["13WhereIsBalboa4TripV", "String"]
 - ["13WhereIsBalboa4TripV", "TripMetadata"]
+- ["13WhereIsBalboa4TripV", "User"]
 - ["13WhereIsBalboa4TripV", "deinit"]
+- ["13WhereIsBalboa4TripV", "dictionaryRepresentation"]
 - ["13WhereIsBalboa4TripV", "hashValue"]
 - ["13WhereIsBalboa4TripV", "id"]
 - ["13WhereIsBalboa4TripV", "init"]
 - ["13WhereIsBalboa4TripV", "metadata"]
+- ["13WhereIsBalboa4TripV", "userID"]
+- !private ["13WhereIsBalboa12TripMetadataV", "deinit"]
+- !private ["13WhereIsBalboa12TripMetadataV", "dictionaryRepresentation"]
 - !private ["13WhereIsBalboa12TripMetadataV", "init"]
+- ["13WhereIsBalboa4UserV", "ID"]
 - !private ["s23_BidirectionalIndexableP", "hashValue"]
+- ["s23_BidirectionalIndexableP", "init"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "hashValue"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "hashValue"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "hashValue"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
 - !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "hashValue"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
 - !private ["s33_ExpressibleByStringInterpolationP", "hashValue"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "hashValue"]
+- ["s35_HasCustomAnyHashableRepresentationP", "init"]
 - !private ["s10_IndexableP", "hashValue"]
+- ["s10_IndexableP", "init"]
+- !private ["s10_IndexableP", "subscript"]
 - !private ["s14_IndexableBaseP", "hashValue"]
+- ["s14_IndexableBaseP", "init"]
+- !private ["s14_IndexableBaseP", "subscript"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "childSnapshot"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "hashValue"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "key"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "value"]
 - !private ["s21_ObjectiveCBridgeableP", "hashValue"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
 - !private ["s26_RangeReplaceableIndexableP", "hashValue"]
+- ["s26_RangeReplaceableIndexableP", "init"]
 - !private ["s16_SwiftStringViewP", "hashValue"]
+- ["s16_SwiftStringViewP", "init"]
 depends-nominal:
-- !private "s23BidirectionalCollectionP"
-- !private "s7CVarArgP"
-- !private "s10CollectionP"
-- !private "s10ComparableP"
-- !private "s28CustomDebugStringConvertibleP"
-- !private "s29CustomPlaygroundQuickLookableP"
-- !private "s17CustomReflectableP"
-- !private "s23CustomStringConvertibleP"
+- "s23BidirectionalCollectionP"
+- "s7CVarArgP"
+- "s10CollectionP"
+- "s10ComparableP"
+- "s28CustomDebugStringConvertibleP"
+- "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "13WhereIsBalboa4TripV8DBValuesV"
 - !private "So12DataSnapshotC"
-- !private "13WhereIsBalboa19DatabaseConvertibleP"
-- !private "s9DecodableP"
-- !private "s9EncodableP"
+- !private "13WhereIsBalboa23DatabaseConversionErrorO"
+- "13WhereIsBalboa19DatabaseConvertibleP"
+- "s9DecodableP"
+- !private "s10DictionaryV"
+- "s9EncodableP"
 - "s9EquatableP"
-- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
-- !private "s26ExpressibleByStringLiteralP"
-- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "s5ErrorP"
+- !private "s30ExpressibleByDictionaryLiteralP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
 - "s8HashableP"
-- !private "10SwiftyJSON17JSONSubscriptTypeP"
-- !private "s25LosslessStringConvertibleP"
-- !private "s10MirrorPathP"
-- !private "So8NSCodingP"
-- !private "So9NSCopyingP"
-- !private "So21NSItemProviderReadingP"
-- !private "So21NSItemProviderWritingP"
-- !private "So16NSMutableCopyingP"
+- "10SwiftyJSON17JSONSubscriptTypeP"
+- "s25LosslessStringConvertibleP"
+- "s10MirrorPathP"
+- "So8NSCodingP"
+- "So9NSCopyingP"
+- "So21NSItemProviderReadingP"
+- "So21NSItemProviderWritingP"
+- "So16NSMutableCopyingP"
 - !private "So8NSObjectC"
-- !private "So16NSObjectProtocolP"
-- !private "So14NSSecureCodingP"
-- !private "So8NSStringC"
-- !private "s26RangeReplaceableCollectionP"
-- !private "s8SequenceP"
-- !private "SS"
-- !private "s14StringProtocolP"
-- !private "s16TextOutputStreamP"
-- !private "s20TextOutputStreamableP"
+- "So16NSObjectProtocolP"
+- "So14NSSecureCodingP"
+- "So8NSStringC"
+- "s26RangeReplaceableCollectionP"
+- "s8SequenceP"
+- "SS"
+- "s14StringProtocolP"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
 - "13WhereIsBalboa4TripV"
 - !private "13WhereIsBalboa12TripMetadataV"
-- !private "s23_BidirectionalIndexableP"
-- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
-- !private "s34_ExpressibleByBuiltinStringLiteralP"
-- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
-- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
-- !private "s33_ExpressibleByStringInterpolationP"
-- !private "s35_HasCustomAnyHashableRepresentationP"
-- !private "s10_IndexableP"
-- !private "s14_IndexableBaseP"
-- !private "10Foundation27_KeyValueCodingAndObservingP"
-- !private "s21_ObjectiveCBridgeableP"
-- !private "s26_RangeReplaceableIndexableP"
-- !private "s16_SwiftStringViewP"
+- "13WhereIsBalboa4UserV"
+- "s23_BidirectionalIndexableP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "s33_ExpressibleByStringInterpolationP"
+- "s35_HasCustomAnyHashableRepresentationP"
+- "s10_IndexableP"
+- "s14_IndexableBaseP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "s21_ObjectiveCBridgeableP"
+- "s26_RangeReplaceableIndexableP"
+- "s16_SwiftStringViewP"
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Accelerate.apinotesc"
@@ -255,4 +374,4 @@ depends-external:
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Modules/module.modulemap"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/ClusterKit/ClusterKit.framework/Modules/module.modulemap"
-interface-hash: "f3f7455fb7fa9becb02a0fbe798f5ca1"
+interface-hash: "c506732fdc0b3a9c3667353be99e8454"

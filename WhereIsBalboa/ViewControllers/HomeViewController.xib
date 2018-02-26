@@ -12,13 +12,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="WhereIsBalboa" customModuleProvider="target">
             <connections>
-                <outlet property="balbabeViewControllerContainer" destination="k0E-Uv-t8T" id="tcu-qQ-qzz"/>
                 <outlet property="datePicker" destination="Nai-A9-RdF" id="Xld-D2-XSK"/>
                 <outlet property="dateSelectionTextField" destination="rsI-3V-mv2" id="vJo-Vh-s5b"/>
-                <outlet property="dateStepper" destination="kCQ-z2-zFG" id="ofc-H4-ecg"/>
                 <outlet property="doneInputAccessory" destination="xnu-il-3cm" id="u82-Jp-VG5"/>
                 <outlet property="profileBarButtonItem" destination="HiJ-4M-JXx" id="teb-vK-gA8"/>
                 <outlet property="tripsBarButtonItem" destination="0Vx-sk-vYi" id="VHh-1b-UoR"/>
+                <outlet property="userViewControllerContainer" destination="k0E-Uv-t8T" id="Fq5-98-ZeO"/>
                 <outlet property="view" destination="T9y-Ee-Khw" id="3PE-kU-8KW"/>
             </connections>
         </placeholder>
@@ -34,41 +33,40 @@
                             <rect key="frame" x="8" y="0.0" width="359" height="60"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jkn-nh-457">
-                                    <rect key="frame" x="0.0" y="15" width="94" height="30"/>
+                                    <rect key="frame" x="0.0" y="15" width="47" height="30"/>
                                     <state key="normal" title="Toggle"/>
                                     <connections>
                                         <action selector="toggleTripViewType" destination="-1" eventType="touchUpInside" id="hKe-Wk-tvb"/>
                                     </connections>
                                 </button>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EAF-r9-M2L">
-                                    <rect key="frame" x="102" y="0.0" width="1" height="60"/>
+                                    <rect key="frame" x="55" y="0.0" width="1" height="60"/>
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="1" id="xzS-9b-AVx"/>
                                     </constraints>
                                 </view>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Select Date" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rsI-3V-mv2">
-                                    <rect key="frame" x="111" y="21.5" width="137" height="17"/>
+                                    <rect key="frame" x="64" y="21.5" width="231" height="17"/>
                                     <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jVJ-Tg-RXz">
-                                    <rect key="frame" x="256" y="0.0" width="1" height="60"/>
+                                    <rect key="frame" x="303" y="0.0" width="1" height="60"/>
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="1" id="AVc-BF-5Al"/>
                                     </constraints>
                                 </view>
-                                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="9.2233720368547758e+18" translatesAutoresizingMaskIntoConstraints="NO" id="kCQ-z2-zFG">
-                                    <rect key="frame" x="265" y="15.5" width="94" height="29"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="94" id="8b6-qR-QCL"/>
-                                    </constraints>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="35E-Sn-qqN">
+                                    <rect key="frame" x="312" y="4.5" width="47" height="51"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                    <state key="normal" title="+"/>
                                     <connections>
-                                        <action selector="stepDate:" destination="-1" eventType="valueChanged" id="iqh-9X-oLM"/>
+                                        <action selector="tappedAddNewTrip" destination="-1" eventType="touchUpInside" id="XyA-ff-Xph"/>
                                     </connections>
-                                </stepper>
+                                </button>
                             </subviews>
                             <constraints>
                                 <constraint firstItem="rsI-3V-mv2" firstAttribute="centerX" secondItem="0ca-uH-kZt" secondAttribute="centerX" id="a30-W2-0UB"/>

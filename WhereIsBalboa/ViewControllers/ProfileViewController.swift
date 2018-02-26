@@ -22,12 +22,12 @@ class ProfileViewController: UIViewController, UISearchBarDelegate, LocationSear
     }()
     
     let keyboardManager = KeyboardManager()
-    let balbabe: User
+    let userManager: UserManager
     
     // MARK: - Init
     
-    init(_ balbabe: User) {
-        self.balbabe = balbabe
+    init(_ userManager: UserManager) {
+        self.userManager = userManager
         super.init(nibName: nil, bundle: nil)
         guard #available(iOS 11.0, *) else {
             edgesForExtendedLayout = []
@@ -49,9 +49,10 @@ class ProfileViewController: UIViewController, UISearchBarDelegate, LocationSear
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.rightBarButtonItem = logoutBarButtonItem
-        nameTextField.text = balbabe.metadata.name
-        whatsappTextField.text = balbabe.metadata.whatsapp
-        hometownButton.setTitle(balbabe.metadata.hometown.cityName, for: .normal)
+        let user = userManager.loggedInUser
+        nameTextField.text = user.metadata.name
+        whatsappTextField.text = user.metadata.whatsapp
+        hometownButton.setTitle(user.metadata.hometown.cityName, for: .normal)
         keyboardManager.onAnyChange = { [weak self] frame in
             guard let strongSelf = self else {
                 return
@@ -71,6 +72,7 @@ class ProfileViewController: UIViewController, UISearchBarDelegate, LocationSear
     
     @IBAction private func logout() {
         Keychain.standard.setLoginInfo(nil)
+        try? Auth.auth().signOut()
         navigationController?.popToLoginViewController()
     }
     
@@ -85,10 +87,10 @@ class ProfileViewController: UIViewController, UISearchBarDelegate, LocationSear
             return
         }
         
-        let hometown = updatedAddress ?? balbabe.metadata.hometown
+        let hometown = updatedAddress ?? userManager.loggedInUser.metadata.hometown
         do {
             let metadata = try UserMetadata(name: name, whatsapp: whatsapp, hometown: hometown)
-            let editOperation = BalbabeEditOperation(balbabeMetadata: metadata, balbabeID: balbabe.id) { [weak self] result in
+            let editOperation = UserEditOperation(metadata, userManager) { [weak self] result in
                 guard let strongSelf = self else {
                     return
                 }
@@ -111,26 +113,6 @@ class ProfileViewController: UIViewController, UISearchBarDelegate, LocationSear
     
     @IBAction private func selectCity() {
         present(searchController, animated: true)
-    }
-    
-    @IBAction private func updateEmail() {
-        let promptViewController = TextFieldPromptViewController.init(promptText: "Update to what email?", placeholderText: "Email") { inputText, onComplete in
-            Auth.auth().currentUser!.updateEmail(to: inputText, completion: { error in
-                onComplete(error?.localizedDescription ?? "Succesfully updated your email!")
-            })
-        }
-        let alert = PopupDialog(viewController: promptViewController)
-        present(alert, animated: true)
-    }
-    
-    @IBAction private func updatePassword() {
-        let promptViewController = TextFieldPromptViewController.init(promptText: "Where to send a password reset email?", placeholderText: "Email") { inputText, onComplete in
-            Auth.auth().sendPasswordReset(withEmail: inputText, completion: { error in
-                onComplete(error?.localizedDescription ?? "Sent! Check your email.")
-            })
-        }
-        let alert = PopupDialog(viewController: promptViewController)
-        present(alert, animated: true)
     }
     
     // MARK: - LocationSearchTableViewControllerDelegate

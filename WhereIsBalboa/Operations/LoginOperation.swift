@@ -3,15 +3,18 @@ import FirebaseAuth
 import FirebaseDatabase
 
 class LoginOperation: AsynchronousOperation, ResultGeneratingOperation {
+    enum LoginError: Error {
+        case userMustCreateAccount(UserProxy)
+    }
     
     // MARK: - Initialization
     
-    typealias Completion = (Result<User>) -> Void
+    typealias Completion = (Result<(User, Cohort)>) -> Void
     let onComplete: Completion
-    let loginInfo: LoginInfo
-    init(_ loginInfo: LoginInfo, onComplete: @escaping Completion) {
+    let signUpCode: String
+    init(_ signUpCode: String, onComplete: @escaping Completion) {
         self.onComplete = onComplete
-        self.loginInfo = loginInfo
+        self.signUpCode = signUpCode
         super.init()
     }
     
@@ -19,27 +22,39 @@ class LoginOperation: AsynchronousOperation, ResultGeneratingOperation {
     
     override func start() {
         super.start()
-        Auth.auth().signIn(withEmail: loginInfo.email, password: loginInfo.password) { [weak self] user, error in
+        Auth.auth().signInAnonymously { [weak self] user, error in
             guard let strongSelf = self else {
                 return
             }
             
-            guard let user = user else {
+            if let error = error {
                 strongSelf.onComplete(.failure(error))
                 strongSelf.state = .finished
                 return
             }
             
-            Database.database().reference(withPath: "\(strongSelf.loginInfo.cohort.rawValue)/users/\(user.uid)").observeSingleEvent(of: .value) { snapshot in
-                DispatchQueue.main.async {
-                    do {
-                        let balbabe = try User(snapshot)
-                        strongSelf.onComplete(.success(balbabe))
-                        strongSelf.state = .finished
-                    } catch let error {
-                        strongSelf.onComplete(.failure(error))
+            Database.database().reference(withPath: "signUpCodes/" + strongSelf.signUpCode).observeSingleEvent(of: .value) { snapshot in
+                do {
+                    let userProxy = try UserProxy(snapshot)
+                    if let cohort = userProxy.cohort {
+                        Database.database().reference(withPath: cohort.rawValue + "/users/" + strongSelf.signUpCode).observeSingleEvent(of: .value) { snapshot in
+                            do {
+                                let user = try User(snapshot)
+                                strongSelf.onComplete(.success((user, cohort)))
+                                strongSelf.state = .finished
+                            } catch {
+                                strongSelf.onComplete(.failure(LoginError.userMustCreateAccount(userProxy)))
+                                strongSelf.state = .finished
+                            }
+                        }
+                    } else {
+                        // User must be signing up
+                        strongSelf.onComplete(.failure(LoginError.userMustCreateAccount(userProxy)))
                         strongSelf.state = .finished
                     }
+                } catch let error {
+                    strongSelf.onComplete(.failure(error))
+                    strongSelf.state = .finished
                 }
             }
         }

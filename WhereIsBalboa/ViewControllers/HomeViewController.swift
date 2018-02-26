@@ -3,23 +3,30 @@ import CoreLocation
 import FirebaseDatabase
 
 class HomeViewController: UIViewController {
-    @IBOutlet private var balbabeViewControllerContainer: UIView!
+    @IBOutlet private var userViewControllerContainer: UIView!
     @IBOutlet private var profileBarButtonItem: UIBarButtonItem!
     @IBOutlet private var tripsBarButtonItem: UIBarButtonItem!
     @IBOutlet private var dateSelectionTextField: UITextField!
     @IBOutlet private var datePicker: UIDatePicker!
     @IBOutlet private var doneInputAccessory: UIToolbar!
-    @IBOutlet private var dateStepper: UIStepper!
     
     private var state = HomeViewControllerState.loading {
         didSet {
             guard case let .populated(userManager, trips, _) = state else {
-                // TODO: Populate for loading
+                navigationItem.titleView = loadingIndicator
                 return
             }
+            navigationItem.titleView = nil
             let configuration = TripsDataConfiguration(userManager, trips, focusedDate: focusedDate)
             updateTripMapViewController(for: configuration)
             updateTripListViewController(for: configuration)
+            guard
+                let mapViewController = tripMapViewController,
+                let listViewController = tripListTableViewController
+            else {
+                return
+            }
+            updateToForegroundChildViewController(tripViewType == .map ? mapViewController : listViewController)
         }
     }
     private var tripViewType = TripViewType.map
@@ -50,6 +57,12 @@ class HomeViewController: UIViewController {
         }
     }
     
+    private let loadingIndicator: UIActivityIndicatorView = {
+        let loadingIndicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+        loadingIndicator.color = .black
+        loadingIndicator.startAnimating()
+        return loadingIndicator
+    }()
     private let loadingViewController = LoadingViewController()
     private var tripListTableViewController: TripListTableViewController?
     private var tripMapViewController: TripMapViewController?
@@ -63,7 +76,24 @@ class HomeViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
         
         userManager.registerForChanges { [weak self] userManager in
-            self?.userManager = userManager
+            guard
+                let strongSelf = self,
+                case let .populated(_, trips, _) = strongSelf.state
+            else {
+                return
+            }
+            
+            let focusedDate = strongSelf.focusedDate
+            
+            var updatedTrips = trips.filter {
+                !($0.userID == userManager.loggedInUser.id && !userManager.loggedInUserTrips.contains($0))
+            }
+            if let newTrip = userManager.loggedInUserTrips.first(where: { $0.metadata.dateInterval.contains(focusedDate) }) {
+                updatedTrips.append(newTrip)
+            }
+            if updatedTrips != trips {
+                strongSelf.state = HomeViewControllerState.populated(userManager: userManager, trips: updatedTrips, focusedDate: focusedDate)
+            }
         }
                 
         guard #available(iOS 11.0, *) else {
@@ -87,7 +117,6 @@ class HomeViewController: UIViewController {
         dateSelectionTextField.inputView = datePicker
         dateSelectionTextField.inputAccessoryView = doneInputAccessory
         currentDate = Date().startOfDay()
-        dateStepper.minimumValue = -Double.infinity
         focusedDate = currentDate
     }
     
@@ -116,12 +145,12 @@ class HomeViewController: UIViewController {
     // MARK: - Button response
     
     @IBAction private func goToProfile() {
-        let profileViewController = ProfileViewController(userManager.loggedInUser)
+        let profileViewController = ProfileViewController(userManager)
         navigationController?.pushViewController(profileViewController, animated: true)
     }
     
     @IBAction private func goToTrips() {
-        let tripsViewController = BalbabeTripListTableViewController(userManager, userManager.loggedInUser, userManager.loggedInUserTrips)
+        let tripsViewController = UserTripListTableViewController(userManager, userManager.loggedInUser, userManager.loggedInUserTrips)
         navigationController?.pushViewController(tripsViewController, animated: true)
     }
     
@@ -141,8 +170,9 @@ class HomeViewController: UIViewController {
         focusedDate = datePicker.date.startOfDay()
     }
     
-    @IBAction private func stepDate(_ stepper: UIStepper) {
-        focusedDate = currentDate.date(daysLater: Int(stepper.value)).startOfDay()
+    @IBAction private func tappedAddNewTrip() {
+        let addTripViewController = TripEditorViewController(userManager)
+        navigationController?.pushViewController(addTripViewController, animated: true)
     }
     
     // MARK: - Trip view management
@@ -155,19 +185,23 @@ class HomeViewController: UIViewController {
         else {
             return
         }
-        
-        let currentChildViewController: UIViewController = self.tripViewType == .map ? mapViewController : listViewController
-        currentChildViewController.willMove(toParentViewController: nil)
-        currentChildViewController.view.removeFromSuperview()
         self.tripViewType = tripViewType
-        addTripViewer(tripViewType == .map ? mapViewController : listViewController)
+        updateToForegroundChildViewController(tripViewType == .map ? mapViewController : listViewController)
+    }
+    
+    private func updateToForegroundChildViewController(_ viewController: UIViewController) {
+        if let currentChildViewController = childViewControllers.first {
+            currentChildViewController.willMove(toParentViewController: nil)
+            currentChildViewController.view.removeFromSuperview()
+        }
+        addTripViewer(viewController)
     }
     
     private func addTripViewer(_ viewController: UIViewController) {
         let containedView: UIView = viewController.view
-        containedView.frame = balbabeViewControllerContainer.bounds
+        containedView.frame = userViewControllerContainer.bounds
         containedView.translatesAutoresizingMaskIntoConstraints = false
-        balbabeViewControllerContainer.addSubview(containedView)
+        userViewControllerContainer.addSubview(containedView)
         containedView.addFitToParentContraints()
         viewController.didMove(toParentViewController: self)
         containedView.layoutIfNeeded()
@@ -193,13 +227,13 @@ class HomeViewController: UIViewController {
                 configuration,
                 onTripTap: { [weak self] _, user in
                     self?.showTripListViewController(for: user)
-                }, onTripGroupTap: { [weak self] keyedBalbabes in
+                }, onTripGroupTap: { [weak self] keyedUsers in
                     guard let strongSelf = self else {
                         return
                     }
                     let userManager = strongSelf.userManager
                     let loggedInUser = userManager.loggedInUser
-                    let configuration = TripsDataConfiguration(userManager, keyedBalbabes.keys.map { $0 }, focusedDate: strongSelf.focusedDate)
+                    let configuration = TripsDataConfiguration(userManager, keyedUsers.keys.map { $0 }, focusedDate: strongSelf.focusedDate)
                     let tripListTableViewController = TripListTableViewController(configuration, relativeToUser: loggedInUser) { _, user in
                         strongSelf.showTripListViewController(for: user)
                     }
@@ -218,12 +252,12 @@ class HomeViewController: UIViewController {
             DispatchQueue.main.async {
                 strongSelf.dismiss(animated: true) {
                     switch result {
-                    case .failure:
-                        // TODO: Log error
-                        strongSelf.showRetryAlert(message: "Failed to load all of that user's trips. Retry?", retryHandler: { strongSelf.showTripListViewController(for: user) })
-                    case .success(let trips):
-                        let balbabeTripListViewController = BalbabeTripListTableViewController(strongSelf.userManager, user, trips)
-                        strongSelf.navigationController?.pushViewController(balbabeTripListViewController, animated: true)
+                        case .failure:
+                            // TODO: Log error
+                            strongSelf.showRetryAlert(message: "Failed to load all of that user's trips. Retry?", retryHandler: { strongSelf.showTripListViewController(for: user) })
+                        case .success(let trips):
+                            let userTripListViewController = UserTripListTableViewController(strongSelf.userManager, user, trips)
+                            strongSelf.navigationController?.pushViewController(userTripListViewController, animated: true)
                     }
                 }
             }
