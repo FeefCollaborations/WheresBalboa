@@ -4,24 +4,22 @@ import FirebaseDatabase
 
 class UserCreateOperation: AsynchronousOperation, ResultGeneratingOperation {
     struct Builder {
+        var name: String?
         var hometown: Address?
         var whatsapp: String?
-        var userID: String?
-        var name: String?
-        var cohort: Cohort?
+        var loginInfo: LoginInfo?
         
         func build(onComplete: @escaping Completion) throws -> UserCreateOperation {
             guard
+                let name = name,
                 let hometown = hometown,
                 let whatsapp = whatsapp,
-                let userID = userID,
-                let cohort = cohort,
-                let name = name
+                let loginInfo = loginInfo
             else {
                 throw OperationBuilderError.missingValues
             }
-            let userMetadata = try UserMetadata(name: name, whatsapp: whatsapp, hometown: hometown)
-            return UserCreateOperation(userMetadata, cohort, userID: userID, onComplete: onComplete)
+            let balbabeMetadata = try UserMetadata(name: name, whatsapp: whatsapp, hometown: hometown)
+            return UserCreateOperation(balbabeMetadata: balbabeMetadata, loginInfo: loginInfo, onComplete: onComplete)
         }
     }
     
@@ -29,13 +27,11 @@ class UserCreateOperation: AsynchronousOperation, ResultGeneratingOperation {
     
     typealias Completion = (Result<User>) -> Void
     let onComplete: Completion
-    let userMetadata: UserMetadata
-    let userID: String
-    let databaseReference: DatabaseReference
-    init(_ userMetadata: UserMetadata, _ cohort: Cohort, userID: String, onComplete: @escaping Completion) {
-        self.userMetadata = userMetadata
-        self.userID = userID
-        databaseReference = Database.database().reference(withPath: cohort.rawValue + "/users/" + userID)
+    let loginInfo: LoginInfo
+    let balbabeMetadata: UserMetadata
+    init(balbabeMetadata: UserMetadata, loginInfo: LoginInfo, onComplete: @escaping Completion) {
+        self.balbabeMetadata = balbabeMetadata
+        self.loginInfo = loginInfo
         self.onComplete = onComplete
         super.init()
     }
@@ -44,21 +40,27 @@ class UserCreateOperation: AsynchronousOperation, ResultGeneratingOperation {
     
     override func start() {
         super.start()
-        // TODO: Also update signUpCodes payload here
-        databaseReference.setValue(userMetadata.dictionaryRepresentation()) { [weak self] error, reference in
+        Auth.auth().createUser(withEmail: loginInfo.email.lowercased(), password: loginInfo.password) { [weak self] (user, error) in
             guard let strongSelf = self else {
                 return
             }
             
-            if let error = error {
+            guard let user = user else {
                 strongSelf.onComplete(.failure(error))
                 strongSelf.state = .finished
                 return
             }
-            
-            let user = User(id: strongSelf.userID, metadata: strongSelf.userMetadata)
-            strongSelf.onComplete(.success(user))
-            strongSelf.state = .finished
+            Database.database().reference(withPath: strongSelf.loginInfo.cohort.rawValue + "/users/" + user.uid).setValue(strongSelf.balbabeMetadata.dictionaryRepresentation()) { error, reference in
+                if let error = error {
+                    strongSelf.onComplete(.failure(error))
+                    strongSelf.state = .finished
+                    return
+                }
+                
+                let balbabe = User(id: user.uid, metadata: strongSelf.balbabeMetadata)
+                strongSelf.onComplete(.success(balbabe))
+                strongSelf.state = .finished
+            }
         }
     }
 }

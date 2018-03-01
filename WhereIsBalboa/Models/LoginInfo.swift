@@ -5,25 +5,28 @@ struct LoginInfo {
     private static let encoding = String.Encoding.utf8
     
     let cohort: Cohort
-    let signUpCode: String
+    let email: String
+    let password: String
     
     var dataRespresentation: Data? {
-        return (signUpCode + LoginInfo.delimiter + cohort.rawValue).data(using: LoginInfo.encoding)
+        return (email + LoginInfo.delimiter + password + LoginInfo.delimiter + cohort.rawValue).data(using: LoginInfo.encoding)
     }
     
-    init(signUpCode: String, cohort: Cohort) {
-        self.signUpCode = signUpCode
+    init(email: String, password: String, cohort: Cohort) {
+        self.email = email
+        self.password = password
         self.cohort = cohort
     }
     
     init?(dataRepresentation: Data) {
         guard
             let components = String(data: dataRepresentation, encoding: LoginInfo.encoding)?.components(separatedBy: LoginInfo.delimiter),
-            components.count == 2,
-            let cohort = Cohort(rawValue: components[1])
+            components.count == 3,
+            let cohort = Cohort(rawValue: components[2])
         else {
             return nil
         }
-        self.init(signUpCode: components[0], cohort: cohort)
+        self.init(email: components[0], password: components[1], cohort: cohort)
     }
 }
+

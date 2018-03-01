@@ -8,100 +8,119 @@ provides-member:
 provides-dynamic-lookup:
 - "tableView"
 depends-top-level:
+- !private "+"
 - !private "<"
-- !private ">"
+- !private "=="
 - "AssignmentPrecedence"
-- "Balbabe"
 - "CastingPrecedence"
-- !private "Date"
 - !private "DateFormatter"
+- !private "DispatchQueue"
 - "IndexPath"
 - "Int"
 - "NSObject"
+- !private "NotificationCenter"
 - !private "OwnTripTableViewCell"
 - "StringLiteralType"
+- "TernaryPrecedence"
 - "Trip"
 - "UITableView"
 - "UITableViewCell"
 - "UITableViewDataSource"
+- !private "UnicodeScalarType"
+- "User"
+- "UserManager"
 - "UserTripListTableViewDataSource"
+- "Void"
 depends-member:
-- !private ["13WhereIsBalboa7AddressV", "city"]
-- !private ["13WhereIsBalboa7AddressV", "country"]
+- !private ["13WhereIsBalboa7AddressV", "cityName"]
 - !private ["Sa", "count"]
-- !private ["Sa", "filter"]
 - !private ["Sa", "sorted"]
 - !private ["Sa", "subscript"]
-- !private ["13WhereIsBalboa7BalbabeV", "trips"]
 - !private ["s23BidirectionalCollectionP", "count"]
-- !private ["s23BidirectionalCollectionP", "filter"]
 - ["s23BidirectionalCollectionP", "init"]
 - !private ["s23BidirectionalCollectionP", "item"]
 - !private ["s23BidirectionalCollectionP", "sorted"]
 - !private ["s23BidirectionalCollectionP", "subscript"]
+- !private ["Sb", "_getBuiltinLogicValue"]
 - !private ["So15CALayerDelegateP", "cityLabel"]
 - !private ["So15CALayerDelegateP", "dateLabel"]
 - !private ["So15CALayerDelegateP", "dequeueReusableCell"]
 - !private ["So15CALayerDelegateP", "nib"]
 - !private ["So15CALayerDelegateP", "register"]
 - !private ["So15CALayerDelegateP", "text"]
-- !private ["s7CVarArgP", "Date"]
 - !private ["s7CVarArgP", "DateFormatter"]
+- !private ["s7CVarArgP", "DispatchQueue"]
+- !private ["s7CVarArgP", "NotificationCenter"]
 - !private ["s7CVarArgP", "OwnTripTableViewCell"]
 - !private ["s7CVarArgP", "UserTripListTableViewDataSource"]
+- !private ["s7CVarArgP", "async"]
 - !private ["s7CVarArgP", "cityLabel"]
 - !private ["s7CVarArgP", "count"]
+- !private ["s7CVarArgP", "dataChangeHandler"]
 - !private ["s7CVarArgP", "dateLabel"]
+- !private ["s7CVarArgP", "default"]
 - !private ["s7CVarArgP", "dequeueReusableCell"]
-- !private ["s7CVarArgP", "filter"]
-- !private ["s7CVarArgP", "fullDate"]
+- !private ["s7CVarArgP", "fullDateShortenedYear"]
 - ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "main"]
 - !private ["s7CVarArgP", "nib"]
 - ["s7CVarArgP", "numberOfSections"]
 - ["s7CVarArgP", "numberOfSectionsInTableView"]
 - !private ["s7CVarArgP", "register"]
+- !private ["s7CVarArgP", "removeObserver"]
 - !private ["s7CVarArgP", "reuseIdentifier"]
 - ["s7CVarArgP", "sectionIndexTitles"]
 - ["s7CVarArgP", "sectionIndexTitlesForTableView"]
 - !private ["s7CVarArgP", "sorted"]
+- !private ["s7CVarArgP", "sortedTrips"]
 - !private ["s7CVarArgP", "string"]
 - !private ["s7CVarArgP", "subscript"]
 - ["s7CVarArgP", "tableView"]
 - !private ["s7CVarArgP", "text"]
 - !private ["s7CVarArgP", "tripAt"]
 - !private ["s7CVarArgP", "trips"]
+- !private ["s7CVarArgP", "user"]
 - ["s7CVarArgP", ""]
 - !private ["s10CollectionP", "count"]
-- !private ["s10CollectionP", "filter"]
 - ["s10CollectionP", "init"]
 - !private ["s10CollectionP", "item"]
 - !private ["s10CollectionP", "sorted"]
 - !private ["s10CollectionP", "subscript"]
 - !private ["s10ComparableP", "end"]
 - ["s10ComparableP", "init"]
+- !private ["s10ComparableP", "isDistantFuture"]
+- !private ["s10ComparableP", "isDistantPast"]
 - !private ["s10ComparableP", "item"]
 - !private ["s10ComparableP", "start"]
-- !private ["s28CustomDebugStringConvertibleP", "Date"]
 - !private ["s28CustomDebugStringConvertibleP", "DateFormatter"]
+- !private ["s28CustomDebugStringConvertibleP", "DispatchQueue"]
+- !private ["s28CustomDebugStringConvertibleP", "NotificationCenter"]
 - !private ["s28CustomDebugStringConvertibleP", "OwnTripTableViewCell"]
 - !private ["s28CustomDebugStringConvertibleP", "UserTripListTableViewDataSource"]
+- !private ["s28CustomDebugStringConvertibleP", "async"]
 - !private ["s28CustomDebugStringConvertibleP", "cityLabel"]
 - !private ["s28CustomDebugStringConvertibleP", "count"]
+- !private ["s28CustomDebugStringConvertibleP", "dataChangeHandler"]
 - !private ["s28CustomDebugStringConvertibleP", "dateLabel"]
+- !private ["s28CustomDebugStringConvertibleP", "default"]
 - !private ["s28CustomDebugStringConvertibleP", "dequeueReusableCell"]
 - !private ["s28CustomDebugStringConvertibleP", "end"]
-- !private ["s28CustomDebugStringConvertibleP", "filter"]
-- !private ["s28CustomDebugStringConvertibleP", "fullDate"]
+- !private ["s28CustomDebugStringConvertibleP", "fullDateShortenedYear"]
 - ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "isDistantFuture"]
+- !private ["s28CustomDebugStringConvertibleP", "isDistantPast"]
 - !private ["s28CustomDebugStringConvertibleP", "item"]
+- !private ["s28CustomDebugStringConvertibleP", "main"]
 - !private ["s28CustomDebugStringConvertibleP", "nib"]
 - ["s28CustomDebugStringConvertibleP", "numberOfSections"]
 - ["s28CustomDebugStringConvertibleP", "numberOfSectionsInTableView"]
 - !private ["s28CustomDebugStringConvertibleP", "register"]
+- !private ["s28CustomDebugStringConvertibleP", "removeObserver"]
 - !private ["s28CustomDebugStringConvertibleP", "reuseIdentifier"]
 - ["s28CustomDebugStringConvertibleP", "sectionIndexTitles"]
 - ["s28CustomDebugStringConvertibleP", "sectionIndexTitlesForTableView"]
 - !private ["s28CustomDebugStringConvertibleP", "sorted"]
+- !private ["s28CustomDebugStringConvertibleP", "sortedTrips"]
 - !private ["s28CustomDebugStringConvertibleP", "start"]
 - !private ["s28CustomDebugStringConvertibleP", "string"]
 - !private ["s28CustomDebugStringConvertibleP", "subscript"]
@@ -109,37 +128,52 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "text"]
 - !private ["s28CustomDebugStringConvertibleP", "tripAt"]
 - !private ["s28CustomDebugStringConvertibleP", "trips"]
+- !private ["s28CustomDebugStringConvertibleP", "user"]
 - ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
 - ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "isDistantFuture"]
+- !private ["s29CustomPlaygroundQuickLookableP", "isDistantPast"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
 - !private ["s17CustomReflectableP", "count"]
 - !private ["s17CustomReflectableP", "end"]
-- !private ["s17CustomReflectableP", "filter"]
 - ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "isDistantFuture"]
+- !private ["s17CustomReflectableP", "isDistantPast"]
 - !private ["s17CustomReflectableP", "item"]
 - !private ["s17CustomReflectableP", "sorted"]
 - !private ["s17CustomReflectableP", "start"]
 - !private ["s17CustomReflectableP", "subscript"]
-- !private ["s23CustomStringConvertibleP", "Date"]
 - !private ["s23CustomStringConvertibleP", "DateFormatter"]
+- !private ["s23CustomStringConvertibleP", "DispatchQueue"]
+- !private ["s23CustomStringConvertibleP", "NotificationCenter"]
 - !private ["s23CustomStringConvertibleP", "OwnTripTableViewCell"]
 - !private ["s23CustomStringConvertibleP", "UserTripListTableViewDataSource"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "async"]
 - !private ["s23CustomStringConvertibleP", "cityLabel"]
 - !private ["s23CustomStringConvertibleP", "count"]
+- !private ["s23CustomStringConvertibleP", "dataChangeHandler"]
 - !private ["s23CustomStringConvertibleP", "dateLabel"]
+- !private ["s23CustomStringConvertibleP", "default"]
 - !private ["s23CustomStringConvertibleP", "dequeueReusableCell"]
 - !private ["s23CustomStringConvertibleP", "end"]
-- !private ["s23CustomStringConvertibleP", "filter"]
-- !private ["s23CustomStringConvertibleP", "fullDate"]
+- !private ["s23CustomStringConvertibleP", "fullDateShortenedYear"]
 - ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "isDistantFuture"]
+- !private ["s23CustomStringConvertibleP", "isDistantPast"]
 - !private ["s23CustomStringConvertibleP", "item"]
+- !private ["s23CustomStringConvertibleP", "main"]
 - !private ["s23CustomStringConvertibleP", "nib"]
 - ["s23CustomStringConvertibleP", "numberOfSections"]
 - ["s23CustomStringConvertibleP", "numberOfSectionsInTableView"]
 - !private ["s23CustomStringConvertibleP", "register"]
+- !private ["s23CustomStringConvertibleP", "removeObserver"]
 - !private ["s23CustomStringConvertibleP", "reuseIdentifier"]
 - ["s23CustomStringConvertibleP", "sectionIndexTitles"]
 - ["s23CustomStringConvertibleP", "sectionIndexTitlesForTableView"]
 - !private ["s23CustomStringConvertibleP", "sorted"]
+- !private ["s23CustomStringConvertibleP", "sortedTrips"]
 - !private ["s23CustomStringConvertibleP", "start"]
 - !private ["s23CustomStringConvertibleP", "string"]
 - !private ["s23CustomStringConvertibleP", "subscript"]
@@ -147,189 +181,249 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "text"]
 - !private ["s23CustomStringConvertibleP", "tripAt"]
 - !private ["s23CustomStringConvertibleP", "trips"]
+- !private ["s23CustomStringConvertibleP", "user"]
 - ["s23CustomStringConvertibleP", ""]
-- !private ["10Foundation4DateV", "init"]
-- !private ["So13DateFormatterC", "fullDate"]
+- !private ["13WhereIsBalboa19DatabaseConvertibleP", "address"]
+- !private ["13WhereIsBalboa19DatabaseConvertibleP", "cityName"]
+- !private ["13WhereIsBalboa19DatabaseConvertibleP", "dateInterval"]
+- !private ["13WhereIsBalboa19DatabaseConvertibleP", "metadata"]
+- !private ["10Foundation4DateV", "isDistantFuture"]
+- !private ["10Foundation4DateV", "isDistantPast"]
+- !private ["So13DateFormatterC", "fullDateShortenedYear"]
 - !private ["So13DateFormatterC", "string"]
 - !private ["10Foundation12DateIntervalV", "end"]
 - !private ["10Foundation12DateIntervalV", "start"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
 - !private ["s9DecodableP", "count"]
 - !private ["s9DecodableP", "end"]
-- !private ["s9DecodableP", "filter"]
 - ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "isDistantFuture"]
+- !private ["s9DecodableP", "isDistantPast"]
 - !private ["s9DecodableP", "item"]
 - !private ["s9DecodableP", "sorted"]
 - !private ["s9DecodableP", "start"]
 - !private ["s9DecodableP", "subscript"]
+- !private ["So14DispatchObjectC", "async"]
+- !private ["So14DispatchObjectC", "main"]
+- !private ["So13DispatchQueueC", "async"]
+- !private ["So13DispatchQueueC", "main"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
 - !private ["s9EncodableP", "count"]
 - !private ["s9EncodableP", "end"]
-- !private ["s9EncodableP", "filter"]
 - ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "isDistantFuture"]
+- !private ["s9EncodableP", "isDistantPast"]
 - !private ["s9EncodableP", "item"]
 - !private ["s9EncodableP", "sorted"]
 - !private ["s9EncodableP", "start"]
 - !private ["s9EncodableP", "subscript"]
-- !private ["s9EquatableP", "Date"]
 - !private ["s9EquatableP", "DateFormatter"]
+- !private ["s9EquatableP", "DispatchQueue"]
+- !private ["s9EquatableP", "NotificationCenter"]
 - !private ["s9EquatableP", "OwnTripTableViewCell"]
 - !private ["s9EquatableP", "UserTripListTableViewDataSource"]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
 - !private ["s9EquatableP", "address"]
-- !private ["s9EquatableP", "city"]
+- !private ["s9EquatableP", "async"]
 - !private ["s9EquatableP", "cityLabel"]
-- !private ["s9EquatableP", "country"]
+- !private ["s9EquatableP", "cityName"]
+- !private ["s9EquatableP", "dataChangeHandler"]
 - !private ["s9EquatableP", "dateInterval"]
 - !private ["s9EquatableP", "dateLabel"]
+- !private ["s9EquatableP", "default"]
 - !private ["s9EquatableP", "dequeueReusableCell"]
 - !private ["s9EquatableP", "end"]
-- !private ["s9EquatableP", "fullDate"]
+- !private ["s9EquatableP", "fullDateShortenedYear"]
 - ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "isDistantFuture"]
+- !private ["s9EquatableP", "isDistantPast"]
 - !private ["s9EquatableP", "item"]
+- !private ["s9EquatableP", "loggedInUser"]
+- !private ["s9EquatableP", "loggedInUserTrips"]
+- !private ["s9EquatableP", "main"]
+- !private ["s9EquatableP", "metadata"]
 - !private ["s9EquatableP", "nib"]
 - ["s9EquatableP", "numberOfSections"]
 - ["s9EquatableP", "numberOfSectionsInTableView"]
 - !private ["s9EquatableP", "register"]
+- !private ["s9EquatableP", "registerForChanges"]
+- !private ["s9EquatableP", "removeObserver"]
 - !private ["s9EquatableP", "reuseIdentifier"]
 - ["s9EquatableP", "sectionIndexTitles"]
 - ["s9EquatableP", "sectionIndexTitlesForTableView"]
+- !private ["s9EquatableP", "sortedTrips"]
 - !private ["s9EquatableP", "start"]
 - !private ["s9EquatableP", "string"]
 - ["s9EquatableP", "tableView"]
 - !private ["s9EquatableP", "text"]
 - !private ["s9EquatableP", "tripAt"]
 - !private ["s9EquatableP", "trips"]
+- !private ["s9EquatableP", "user"]
 - ["s9EquatableP", ""]
 - !private ["s25ExpressibleByArrayLiteralP", "count"]
-- !private ["s25ExpressibleByArrayLiteralP", "filter"]
 - !private ["s25ExpressibleByArrayLiteralP", "item"]
 - !private ["s25ExpressibleByArrayLiteralP", "sorted"]
 - !private ["s25ExpressibleByArrayLiteralP", "subscript"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
 - ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
 - ["s26ExpressibleByStringLiteralP", "init"]
 - ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
-- !private ["So9FormatterC", "fullDate"]
+- !private ["So9FormatterC", "fullDateShortenedYear"]
 - !private ["So9FormatterC", "string"]
-- !private ["s8HashableP", "Date"]
 - !private ["s8HashableP", "DateFormatter"]
+- !private ["s8HashableP", "DispatchQueue"]
+- !private ["s8HashableP", "NotificationCenter"]
 - !private ["s8HashableP", "OwnTripTableViewCell"]
 - !private ["s8HashableP", "UserTripListTableViewDataSource"]
-- !private ["s8HashableP", "address"]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "async"]
 - !private ["s8HashableP", "cityLabel"]
-- !private ["s8HashableP", "dateInterval"]
+- !private ["s8HashableP", "dataChangeHandler"]
 - !private ["s8HashableP", "dateLabel"]
+- !private ["s8HashableP", "default"]
 - !private ["s8HashableP", "dequeueReusableCell"]
 - !private ["s8HashableP", "end"]
-- !private ["s8HashableP", "fullDate"]
+- !private ["s8HashableP", "fullDateShortenedYear"]
 - ["s8HashableP", "init"]
+- !private ["s8HashableP", "isDistantFuture"]
+- !private ["s8HashableP", "isDistantPast"]
 - !private ["s8HashableP", "item"]
+- !private ["s8HashableP", "main"]
+- !private ["s8HashableP", "metadata"]
 - !private ["s8HashableP", "nib"]
 - ["s8HashableP", "numberOfSections"]
 - ["s8HashableP", "numberOfSectionsInTableView"]
 - !private ["s8HashableP", "register"]
+- !private ["s8HashableP", "removeObserver"]
 - !private ["s8HashableP", "reuseIdentifier"]
 - ["s8HashableP", "sectionIndexTitles"]
 - ["s8HashableP", "sectionIndexTitlesForTableView"]
+- !private ["s8HashableP", "sortedTrips"]
 - !private ["s8HashableP", "start"]
 - !private ["s8HashableP", "string"]
 - ["s8HashableP", "tableView"]
 - !private ["s8HashableP", "text"]
 - !private ["s8HashableP", "tripAt"]
 - !private ["s8HashableP", "trips"]
+- !private ["s8HashableP", "user"]
 - ["s8HashableP", ""]
 - !private ["10Foundation9IndexPathV", "item"]
+- ["10SwiftyJSON17JSONSubscriptTypeP", "init"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
 - ["s25LosslessStringConvertibleP", "init"]
 - ["s10MirrorPathP", "init"]
 - !private ["s17MutableCollectionP", "count"]
-- !private ["s17MutableCollectionP", "filter"]
 - !private ["s17MutableCollectionP", "item"]
 - !private ["s17MutableCollectionP", "sorted"]
 - !private ["s17MutableCollectionP", "subscript"]
 - !private ["So8NSCodingP", "cityLabel"]
 - !private ["So8NSCodingP", "dateLabel"]
 - !private ["So8NSCodingP", "dequeueReusableCell"]
-- !private ["So8NSCodingP", "fullDate"]
+- !private ["So8NSCodingP", "fullDateShortenedYear"]
 - ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "nib"]
 - !private ["So8NSCodingP", "register"]
 - !private ["So8NSCodingP", "string"]
 - !private ["So8NSCodingP", "text"]
-- !private ["So9NSCopyingP", "fullDate"]
+- !private ["So9NSCopyingP", "fullDateShortenedYear"]
 - ["So9NSCopyingP", "init"]
 - !private ["So9NSCopyingP", "string"]
 - ["So21NSItemProviderReadingP", "init"]
 - ["So21NSItemProviderWritingP", "init"]
 - ["So16NSMutableCopyingP", "init"]
-- ["So8NSObjectC", "Balbabe"]
-- !private ["So8NSObjectC", "Date"]
+- ["So8NSObjectC", "DataChangeHandler"]
 - !private ["So8NSObjectC", "DateFormatter"]
+- !private ["So8NSObjectC", "DispatchQueue"]
 - ["So8NSObjectC", "IndexPath"]
 - ["So8NSObjectC", "Int"]
+- !private ["So8NSObjectC", "NotificationCenter"]
 - !private ["So8NSObjectC", "OwnTripTableViewCell"]
 - ["So8NSObjectC", "Trip"]
 - ["So8NSObjectC", "UITableView"]
 - ["So8NSObjectC", "UITableViewCell"]
+- ["So8NSObjectC", "User"]
+- ["So8NSObjectC", "UserManager"]
 - !private ["So8NSObjectC", "UserTripListTableViewDataSource"]
+- ["So8NSObjectC", "Void"]
+- !private ["So8NSObjectC", "async"]
 - !private ["So8NSObjectC", "cityLabel"]
+- ["So8NSObjectC", "dataChangeHandler"]
 - !private ["So8NSObjectC", "dateLabel"]
+- !private ["So8NSObjectC", "default"]
 - !private ["So8NSObjectC", "dequeueReusableCell"]
-- !private ["So8NSObjectC", "fullDate"]
+- !private ["So8NSObjectC", "fullDateShortenedYear"]
 - ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "main"]
 - !private ["So8NSObjectC", "nib"]
 - ["So8NSObjectC", "numberOfSections"]
 - ["So8NSObjectC", "numberOfSectionsInTableView"]
 - !private ["So8NSObjectC", "register"]
 - ["So8NSObjectC", "registerCells"]
+- !private ["So8NSObjectC", "removeObserver"]
 - ["So8NSObjectC", "reuseIdentifier"]
 - ["So8NSObjectC", "sectionIndexTitles"]
 - ["So8NSObjectC", "sectionIndexTitlesForTableView"]
+- ["So8NSObjectC", "sortedTrips"]
 - !private ["So8NSObjectC", "string"]
 - ["So8NSObjectC", "tableView"]
 - !private ["So8NSObjectC", "text"]
 - ["So8NSObjectC", "tripAt"]
 - ["So8NSObjectC", "trips"]
+- ["So8NSObjectC", "user"]
 - ["So8NSObjectC", ""]
-- !private ["So16NSObjectProtocolP", "Date"]
 - !private ["So16NSObjectProtocolP", "DateFormatter"]
+- !private ["So16NSObjectProtocolP", "DispatchQueue"]
+- !private ["So16NSObjectProtocolP", "NotificationCenter"]
 - !private ["So16NSObjectProtocolP", "OwnTripTableViewCell"]
 - !private ["So16NSObjectProtocolP", "UserTripListTableViewDataSource"]
+- !private ["So16NSObjectProtocolP", "async"]
 - !private ["So16NSObjectProtocolP", "cityLabel"]
+- !private ["So16NSObjectProtocolP", "dataChangeHandler"]
 - !private ["So16NSObjectProtocolP", "dateLabel"]
+- !private ["So16NSObjectProtocolP", "default"]
 - !private ["So16NSObjectProtocolP", "dequeueReusableCell"]
-- !private ["So16NSObjectProtocolP", "fullDate"]
+- !private ["So16NSObjectProtocolP", "fullDateShortenedYear"]
 - ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "main"]
 - !private ["So16NSObjectProtocolP", "nib"]
 - ["So16NSObjectProtocolP", "numberOfSections"]
 - ["So16NSObjectProtocolP", "numberOfSectionsInTableView"]
 - !private ["So16NSObjectProtocolP", "register"]
+- !private ["So16NSObjectProtocolP", "removeObserver"]
 - !private ["So16NSObjectProtocolP", "reuseIdentifier"]
 - ["So16NSObjectProtocolP", "sectionIndexTitles"]
 - ["So16NSObjectProtocolP", "sectionIndexTitlesForTableView"]
+- !private ["So16NSObjectProtocolP", "sortedTrips"]
 - !private ["So16NSObjectProtocolP", "string"]
 - ["So16NSObjectProtocolP", "tableView"]
 - !private ["So16NSObjectProtocolP", "text"]
 - !private ["So16NSObjectProtocolP", "tripAt"]
 - !private ["So16NSObjectProtocolP", "trips"]
+- !private ["So16NSObjectProtocolP", "user"]
 - ["So16NSObjectProtocolP", ""]
 - ["So14NSSecureCodingP", "init"]
 - ["So8NSStringC", "init"]
+- !private ["So18NotificationCenterC", "default"]
+- !private ["So18NotificationCenterC", "removeObserver"]
+- !private ["So9OS_objectC", "async"]
+- !private ["So9OS_objectC", "main"]
 - !private ["13WhereIsBalboa20OwnTripTableViewCellC", "cityLabel"]
 - !private ["13WhereIsBalboa20OwnTripTableViewCellC", "dateLabel"]
 - !private ["13WhereIsBalboa20OwnTripTableViewCellC", "nib"]
 - !private ["s22RandomAccessCollectionP", "count"]
-- !private ["s22RandomAccessCollectionP", "filter"]
 - !private ["s22RandomAccessCollectionP", "item"]
 - !private ["s22RandomAccessCollectionP", "sorted"]
 - !private ["s22RandomAccessCollectionP", "subscript"]
 - !private ["s26RangeReplaceableCollectionP", "count"]
-- !private ["s26RangeReplaceableCollectionP", "filter"]
 - ["s26RangeReplaceableCollectionP", "init"]
 - !private ["s26RangeReplaceableCollectionP", "sorted"]
 - !private ["s26RangeReplaceableCollectionP", "subscript"]
 - !private ["10Foundation20ReferenceConvertibleP", "end"]
-- !private ["10Foundation20ReferenceConvertibleP", "init"]
+- !private ["10Foundation20ReferenceConvertibleP", "isDistantFuture"]
+- !private ["10Foundation20ReferenceConvertibleP", "isDistantPast"]
 - !private ["10Foundation20ReferenceConvertibleP", "item"]
 - !private ["10Foundation20ReferenceConvertibleP", "start"]
 - !private ["s8SequenceP", "count"]
-- !private ["s8SequenceP", "filter"]
 - ["s8SequenceP", "init"]
 - !private ["s8SequenceP", "item"]
 - !private ["s8SequenceP", "sorted"]
@@ -339,8 +433,9 @@ depends-member:
 - ["s14StringProtocolP", "init"]
 - ["s16TextOutputStreamP", "init"]
 - ["s20TextOutputStreamableP", "init"]
-- !private ["13WhereIsBalboa4TripV", "address"]
-- !private ["13WhereIsBalboa4TripV", "dateInterval"]
+- !private ["13WhereIsBalboa4TripV", "metadata"]
+- !private ["13WhereIsBalboa12TripMetadataV", "address"]
+- !private ["13WhereIsBalboa12TripMetadataV", "dateInterval"]
 - !private ["So29UIAccessibilityIdentificationP", "cityLabel"]
 - !private ["So29UIAccessibilityIdentificationP", "dateLabel"]
 - !private ["So29UIAccessibilityIdentificationP", "dequeueReusableCell"]
@@ -417,18 +512,22 @@ depends-member:
 - !private ["So15UITableViewCellC", "cityLabel"]
 - !private ["So15UITableViewCellC", "dateLabel"]
 - !private ["So15UITableViewCellC", "nib"]
-- !private ["So21UITableViewDataSourceP", "Date"]
 - !private ["So21UITableViewDataSourceP", "DateFormatter"]
+- !private ["So21UITableViewDataSourceP", "DispatchQueue"]
+- !private ["So21UITableViewDataSourceP", "NotificationCenter"]
 - !private ["So21UITableViewDataSourceP", "OwnTripTableViewCell"]
 - !private ["So21UITableViewDataSourceP", "UserTripListTableViewDataSource"]
+- !private ["So21UITableViewDataSourceP", "dataChangeHandler"]
 - ["So21UITableViewDataSourceP", "numberOfSections"]
 - ["So21UITableViewDataSourceP", "numberOfSectionsInTableView"]
 - !private ["So21UITableViewDataSourceP", "reuseIdentifier"]
 - ["So21UITableViewDataSourceP", "sectionIndexTitles"]
 - ["So21UITableViewDataSourceP", "sectionIndexTitlesForTableView"]
+- !private ["So21UITableViewDataSourceP", "sortedTrips"]
 - ["So21UITableViewDataSourceP", "tableView"]
 - !private ["So21UITableViewDataSourceP", "tripAt"]
 - !private ["So21UITableViewDataSourceP", "trips"]
+- !private ["So21UITableViewDataSourceP", "user"]
 - ["So21UITableViewDataSourceP", ""]
 - !private ["So18UITraitEnvironmentP", "cityLabel"]
 - !private ["So18UITraitEnvironmentP", "dateLabel"]
@@ -442,16 +541,24 @@ depends-member:
 - !private ["So6UIViewC", "nib"]
 - !private ["So6UIViewC", "register"]
 - !private ["So6UIViewC", "text"]
-- ["13WhereIsBalboa31UserTripListTableViewDataSourceC", "Balbabe"]
-- !private ["13WhereIsBalboa31UserTripListTableViewDataSourceC", "Date"]
+- !private ["13WhereIsBalboa11UserManagerC", "loggedInUser"]
+- !private ["13WhereIsBalboa11UserManagerC", "loggedInUserTrips"]
+- !private ["13WhereIsBalboa11UserManagerC", "registerForChanges"]
+- ["13WhereIsBalboa31UserTripListTableViewDataSourceC", "DataChangeHandler"]
 - !private ["13WhereIsBalboa31UserTripListTableViewDataSourceC", "DateFormatter"]
+- !private ["13WhereIsBalboa31UserTripListTableViewDataSourceC", "DispatchQueue"]
 - ["13WhereIsBalboa31UserTripListTableViewDataSourceC", "IndexPath"]
 - ["13WhereIsBalboa31UserTripListTableViewDataSourceC", "Int"]
+- !private ["13WhereIsBalboa31UserTripListTableViewDataSourceC", "NotificationCenter"]
 - !private ["13WhereIsBalboa31UserTripListTableViewDataSourceC", "OwnTripTableViewCell"]
 - ["13WhereIsBalboa31UserTripListTableViewDataSourceC", "Trip"]
 - ["13WhereIsBalboa31UserTripListTableViewDataSourceC", "UITableView"]
 - ["13WhereIsBalboa31UserTripListTableViewDataSourceC", "UITableViewCell"]
+- ["13WhereIsBalboa31UserTripListTableViewDataSourceC", "User"]
+- ["13WhereIsBalboa31UserTripListTableViewDataSourceC", "UserManager"]
 - !private ["13WhereIsBalboa31UserTripListTableViewDataSourceC", "UserTripListTableViewDataSource"]
+- ["13WhereIsBalboa31UserTripListTableViewDataSourceC", "Void"]
+- ["13WhereIsBalboa31UserTripListTableViewDataSourceC", "dataChangeHandler"]
 - ["13WhereIsBalboa31UserTripListTableViewDataSourceC", "deinit"]
 - ["13WhereIsBalboa31UserTripListTableViewDataSourceC", "init"]
 - ["13WhereIsBalboa31UserTripListTableViewDataSourceC", "numberOfSections"]
@@ -460,15 +567,15 @@ depends-member:
 - !private ["13WhereIsBalboa31UserTripListTableViewDataSourceC", "reuseIdentifier"]
 - ["13WhereIsBalboa31UserTripListTableViewDataSourceC", "sectionIndexTitles"]
 - ["13WhereIsBalboa31UserTripListTableViewDataSourceC", "sectionIndexTitlesForTableView"]
+- !private ["13WhereIsBalboa31UserTripListTableViewDataSourceC", "sortedTrips"]
 - ["13WhereIsBalboa31UserTripListTableViewDataSourceC", "tableView"]
 - ["13WhereIsBalboa31UserTripListTableViewDataSourceC", "tripAt"]
 - !private ["13WhereIsBalboa31UserTripListTableViewDataSourceC", "trips"]
+- ["13WhereIsBalboa31UserTripListTableViewDataSourceC", "user"]
 - !private ["s14_ArrayProtocolP", "count"]
-- !private ["s14_ArrayProtocolP", "filter"]
 - !private ["s14_ArrayProtocolP", "sorted"]
 - !private ["s14_ArrayProtocolP", "subscript"]
 - !private ["s23_BidirectionalIndexableP", "count"]
-- !private ["s23_BidirectionalIndexableP", "filter"]
 - ["s23_BidirectionalIndexableP", "init"]
 - !private ["s23_BidirectionalIndexableP", "item"]
 - !private ["s23_BidirectionalIndexableP", "sorted"]
@@ -480,9 +587,9 @@ depends-member:
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "register"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "text"]
 - !private ["s24_DestructorSafeContainerP", "count"]
-- !private ["s24_DestructorSafeContainerP", "filter"]
 - !private ["s24_DestructorSafeContainerP", "sorted"]
 - !private ["s24_DestructorSafeContainerP", "subscript"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
 - ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
 - ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
@@ -490,59 +597,64 @@ depends-member:
 - ["s33_ExpressibleByStringInterpolationP", "init"]
 - ["s35_HasCustomAnyHashableRepresentationP", "init"]
 - !private ["s10_IndexableP", "count"]
-- !private ["s10_IndexableP", "filter"]
 - ["s10_IndexableP", "init"]
 - !private ["s10_IndexableP", "item"]
 - !private ["s10_IndexableP", "sorted"]
 - !private ["s10_IndexableP", "subscript"]
 - !private ["s14_IndexableBaseP", "count"]
-- !private ["s14_IndexableBaseP", "filter"]
 - ["s14_IndexableBaseP", "init"]
 - !private ["s14_IndexableBaseP", "item"]
 - !private ["s14_IndexableBaseP", "sorted"]
 - !private ["s14_IndexableBaseP", "subscript"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "Date"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "DateFormatter"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "DispatchQueue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NotificationCenter"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "OwnTripTableViewCell"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UserTripListTableViewDataSource"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "async"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "cityLabel"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "dataChangeHandler"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "dateLabel"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "default"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "dequeueReusableCell"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "fullDate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "fullDateShortenedYear"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "main"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "nib"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "numberOfSections"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "numberOfSectionsInTableView"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "register"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "removeObserver"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "reuseIdentifier"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "sectionIndexTitles"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "sectionIndexTitlesForTableView"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "sortedTrips"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "string"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "tableView"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "text"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "tripAt"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "trips"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "user"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
 - !private ["s17_MutableIndexableP", "count"]
-- !private ["s17_MutableIndexableP", "filter"]
 - !private ["s17_MutableIndexableP", "item"]
 - !private ["s17_MutableIndexableP", "sorted"]
 - !private ["s17_MutableIndexableP", "subscript"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
 - !private ["s21_ObjectiveCBridgeableP", "count"]
 - !private ["s21_ObjectiveCBridgeableP", "end"]
-- !private ["s21_ObjectiveCBridgeableP", "filter"]
 - ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "isDistantFuture"]
+- !private ["s21_ObjectiveCBridgeableP", "isDistantPast"]
 - !private ["s21_ObjectiveCBridgeableP", "item"]
 - !private ["s21_ObjectiveCBridgeableP", "sorted"]
 - !private ["s21_ObjectiveCBridgeableP", "start"]
 - !private ["s21_ObjectiveCBridgeableP", "subscript"]
 - !private ["s22_RandomAccessIndexableP", "count"]
-- !private ["s22_RandomAccessIndexableP", "filter"]
 - !private ["s22_RandomAccessIndexableP", "item"]
 - !private ["s22_RandomAccessIndexableP", "sorted"]
 - !private ["s22_RandomAccessIndexableP", "subscript"]
 - !private ["s26_RangeReplaceableIndexableP", "count"]
-- !private ["s26_RangeReplaceableIndexableP", "filter"]
 - ["s26_RangeReplaceableIndexableP", "init"]
 - !private ["s26_RangeReplaceableIndexableP", "sorted"]
 - !private ["s26_RangeReplaceableIndexableP", "subscript"]
@@ -550,8 +662,8 @@ depends-member:
 depends-nominal:
 - !private "13WhereIsBalboa7AddressV"
 - !private "Sa"
-- !private "13WhereIsBalboa7BalbabeV"
 - "s23BidirectionalCollectionP"
+- !private "Sb"
 - !private "So15CALayerDelegateP"
 - "s7CVarArgP"
 - "s10CollectionP"
@@ -560,19 +672,24 @@ depends-nominal:
 - "s29CustomPlaygroundQuickLookableP"
 - "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
+- !private "13WhereIsBalboa19DatabaseConvertibleP"
 - !private "10Foundation4DateV"
 - !private "So13DateFormatterC"
 - !private "10Foundation12DateIntervalV"
 - "s9DecodableP"
+- !private "So14DispatchObjectC"
+- !private "So13DispatchQueueC"
 - "s9EncodableP"
 - "s9EquatableP"
 - !private "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByBooleanLiteralP"
 - "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - "s26ExpressibleByStringLiteralP"
 - "s33ExpressibleByUnicodeScalarLiteralP"
 - !private "So9FormatterC"
 - "s8HashableP"
 - !private "10Foundation9IndexPathV"
+- "10SwiftyJSON17JSONSubscriptTypeP"
 - "s25LosslessStringConvertibleP"
 - "s10MirrorPathP"
 - !private "s17MutableCollectionP"
@@ -585,6 +702,8 @@ depends-nominal:
 - "So16NSObjectProtocolP"
 - "So14NSSecureCodingP"
 - "So8NSStringC"
+- !private "So18NotificationCenterC"
+- !private "So9OS_objectC"
 - !private "13WhereIsBalboa20OwnTripTableViewCellC"
 - !private "s22RandomAccessCollectionP"
 - "s26RangeReplaceableCollectionP"
@@ -596,6 +715,7 @@ depends-nominal:
 - "s16TextOutputStreamP"
 - "s20TextOutputStreamableP"
 - !private "13WhereIsBalboa4TripV"
+- !private "13WhereIsBalboa12TripMetadataV"
 - !private "So29UIAccessibilityIdentificationP"
 - !private "So12UIAppearanceP"
 - !private "So21UIAppearanceContainerP"
@@ -617,11 +737,13 @@ depends-nominal:
 - "So21UITableViewDataSourceP"
 - !private "So18UITraitEnvironmentP"
 - !private "So6UIViewC"
+- !private "13WhereIsBalboa11UserManagerC"
 - "13WhereIsBalboa31UserTripListTableViewDataSourceC"
 - !private "s14_ArrayProtocolP"
 - "s23_BidirectionalIndexableP"
 - !private "s37_DefaultCustomPlaygroundQuickLookableP"
 - !private "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
 - "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - "s34_ExpressibleByBuiltinStringLiteralP"
 - "s39_ExpressibleByBuiltinUTF16StringLiteralP"
@@ -640,8 +762,9 @@ depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Accelerate.apinotesc"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework/Modules/SwiftyJSON.swiftmodule/arm64.swiftmodule"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/PopupDialog/PopupDialog.framework/Modules/PopupDialog.swiftmodule/arm64.swiftmodule"
-- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/Cluster/Cluster.framework/Modules/Cluster.swiftmodule/arm64.swiftmodule"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/KeychainAccess/KeychainAccess.framework/Modules/KeychainAccess.swiftmodule/arm64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/QuartzCore.swiftmodule"
@@ -659,13 +782,17 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FIRInstanceID.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework/Headers/SwiftyJSON-umbrella.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/PopupDialog/PopupDialog.framework/Headers/PopupDialog-umbrella.h"
-- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/Cluster/Cluster.framework/Headers/Cluster-umbrella.h"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/KeychainAccess/KeychainAccess.framework/Headers/KeychainAccess-umbrella.h"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/ClusterKit/ClusterKit.framework/Headers/ClusterKit-umbrella.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRMutableData.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageMetadata.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRUserMetadata.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageReference.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabaseReference.h"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/ClusterKit/ClusterKit.framework/Headers/CKQuadTree.h"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/ClusterKit/ClusterKit.framework/Headers/CKAnnotationTree.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorage.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FirebaseStorage.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthAPNSTokenType.h"
@@ -686,6 +813,9 @@ depends-external:
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthCredential.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRPhoneAuthCredential.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIRLoggerLevel.h"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/ClusterKit/ClusterKit.framework/Headers/CKGridBasedAlgorithm.h"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/ClusterKit/ClusterKit.framework/Headers/CKNonHierarchicalDistanceBasedAlgorithm.h"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/ClusterKit/ClusterKit.framework/Headers/CKClusterAlgorithm.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FirebaseAuthVersion.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIRConfiguration.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRConfiguration.h"
@@ -693,6 +823,7 @@ depends-external:
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalyticsConfiguration.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRUserInfo.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAdditionalUserInfo.h"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/ClusterKit/ClusterKit.framework/Headers/CKMap.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Headers/FIRApp.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRApp.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIROAuthProvider.h"
@@ -702,7 +833,9 @@ depends-external:
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRFacebookAuthProvider.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIREmailAuthProvider.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRTwitterAuthProvider.h"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/ClusterKit/ClusterKit.framework/Headers/CKClusterManager.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRUser.h"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/ClusterKit/ClusterKit.framework/Headers/CKCluster.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FirebaseAnalytics.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRParameterNames.h"
@@ -713,8 +846,11 @@ depends-external:
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIROptions.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthErrors.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageConstants.h"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework/Headers/SwiftyJSON-Swift.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/PopupDialog/PopupDialog.framework/Headers/PopupDialog-Swift.h"
-- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/Cluster/Cluster.framework/Headers/Cluster-Swift.h"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/KeychainAccess/KeychainAccess.framework/Headers/KeychainAccess-Swift.h"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/ClusterKit/ClusterKit.framework/Headers/MKMapView+ClusterKit.h"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/ClusterKit/ClusterKit.framework/Headers/ClusterKit.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthDataResult.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRTransactionResult.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDataSnapshot.h"
@@ -724,11 +860,13 @@ depends-external:
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRDatabaseQuery.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/Firebase/Core/Sources/module.modulemap"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Modules/module.modulemap"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework/Modules/module.modulemap"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Modules/module.modulemap"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseCore/Frameworks/FirebaseCore.framework/Modules/module.modulemap"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Modules/module.modulemap"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/PopupDialog/PopupDialog.framework/Modules/module.modulemap"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Modules/module.modulemap"
-- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/Cluster/Cluster.framework/Modules/module.modulemap"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
-interface-hash: "37512aa552c987d2fa0a8a30fab3cd47"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/KeychainAccess/KeychainAccess.framework/Modules/module.modulemap"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/ClusterKit/ClusterKit.framework/Modules/module.modulemap"
+interface-hash: "9adaac9c16a789a6b776f8b20d181330"

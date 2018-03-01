@@ -127,7 +127,7 @@ class UserManager: Equatable {
         guard let tripSnapshots = snapshot.children.allObjects as? [DataSnapshot] else {
             throw DatabaseConversionError.invalidSnapshot(snapshot)
         }
-        return try tripSnapshots.map { try Trip($0) }
+        return tripSnapshots.flatMap { try? Trip($0) }
     }
     
     func registerForChanges(onUpdate: @escaping UserManager.OnUpdate) {

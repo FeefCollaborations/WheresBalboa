@@ -97,21 +97,6 @@ class TripEditorViewController: UIViewController, UITextFieldDelegate, LocationS
     // MARK: - Button response
     
     @IBAction private func saveTrip() {
-        guard
-            let startDate = builder.startDate,
-            let endDate = builder.endDate
-        else {
-            showOneOptionAlert(title: "Failed!", message: "Please ensure all fields are filled in")
-            return
-        }
-        
-        let interval = DateInterval(start: startDate, end: endDate)
-        let overlappingTrip = userManager.loggedInUserTrips.first(where: { $0.metadata.dateInterval.intersects(interval) && builder.tripID != $0.id })
-        guard overlappingTrip == nil else {
-            showOneOptionAlert(title: "Failed!", message: "This trip overlaps with one of your other trips. Please edit the other one first.")
-            return
-        }
-        
         let tripEditOperation = builder.build() { [weak self] result in
             guard let strongSelf = self else {
                 return

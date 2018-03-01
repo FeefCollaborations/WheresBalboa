@@ -90,7 +90,6 @@
 		48F0230F203743230039E861 /* Cohort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F0230E203743230039E861 /* Cohort.swift */; };
 		48F02311203794B20039E861 /* TripsByDateFetchOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F02310203794B20039E861 /* TripsByDateFetchOperation.swift */; };
 		48F02313203B2CFA0039E861 /* TripsByUserFetchOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F02312203B2CFA0039E861 /* TripsByUserFetchOperation.swift */; };
-		48FC62E720411C2B00B3D270 /* userPasswords.json in Resources */ = {isa = PBXBuildFile; fileRef = 48FC62E620411C2B00B3D270 /* userPasswords.json */; };
 		48FC62E920411C4600B3D270 /* PasswordUploadOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FC62E820411C4600B3D270 /* PasswordUploadOperation.swift */; };
 		48FC62EB20431B6A00B3D270 /* UserProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FC62EA20431B6A00B3D270 /* UserProxy.swift */; };
 		54B5186D6947CA281BB5A85A /* Pods_WhereIsBalboaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CF8CE4CD209F961097D7D4B /* Pods_WhereIsBalboaTests.framework */; };
@@ -201,7 +200,6 @@
 		48F0230E203743230039E861 /* Cohort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cohort.swift; sourceTree = "<group>"; };
 		48F02310203794B20039E861 /* TripsByDateFetchOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsByDateFetchOperation.swift; sourceTree = "<group>"; };
 		48F02312203B2CFA0039E861 /* TripsByUserFetchOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsByUserFetchOperation.swift; sourceTree = "<group>"; };
-		48FC62E620411C2B00B3D270 /* userPasswords.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = userPasswords.json; sourceTree = "<group>"; };
 		48FC62E820411C4600B3D270 /* PasswordUploadOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordUploadOperation.swift; sourceTree = "<group>"; };
 		48FC62EA20431B6A00B3D270 /* UserProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProxy.swift; sourceTree = "<group>"; };
 		7F247AAFFDD1E8F86965E52D /* Pods-WhereIsBalboaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhereIsBalboaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhereIsBalboaTests/Pods-WhereIsBalboaTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -281,7 +279,6 @@
 				483E306D1FEAABC4006D4512 /* Models */,
 				48B16BA42001F6BD00BF45DF /* Operations */,
 				483BA6481FF55930005C9F76 /* Protocols */,
-				48FC62E620411C2B00B3D270 /* userPasswords.json */,
 				483E305E1FEAABC4006D4512 /* ViewControllers */,
 				483E30941FEADF93006D4512 /* Views */,
 				482B2B02200E7431009B04C0 /* WhereIsBalboa.entitlements */,
@@ -547,7 +544,6 @@
 				482B2AF3200D091C009B04C0 /* SignUpViewController.xib in Resources */,
 				483E307A1FEAABC4006D4512 /* HomeViewController.xib in Resources */,
 				482B2AFF200E07B1009B04C0 /* TextFieldPromptViewController.xib in Resources */,
-				48FC62E720411C2B00B3D270 /* userPasswords.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

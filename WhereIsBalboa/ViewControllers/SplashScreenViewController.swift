@@ -31,26 +31,25 @@ class SplashScreenViewController: UIViewController {
     // MARK: - Helpers
     
     private func attemptLogin(with loginInfo: LoginInfo) {
-        let operation = LoginOperation(loginInfo.signUpCode) { [weak self] result in
+        let operation = LoginOperation(loginInfo) { [weak self] result in
             guard let strongSelf = self else {
                 return
             }
             
             DispatchQueue.main.async {
                 switch result {
-                    case .failure:
-                        strongSelf.showLoginViewController()
-                    case .success(let user, let cohort):
-                        UserManager.new(for: cohort, withLoggedInUser: user) { [weak self] result in
-                            switch result {
-                                case .success(let userManager):
-                                    let homeViewController = HomeViewController(userManager)
-                                    self?.navigationController?.setViewControllers([LoginViewController(), homeViewController], animated: true)
-                                case .failure:
-                                    self?.showLoginViewController()
-                                    return
-                            }
+                case .failure:
+                    strongSelf.showLoginViewController()
+                case .success(let user):
+                    UserManager.new(for: loginInfo.cohort, withLoggedInUser: user) { [weak self] result in
+                        switch result {
+                            case .success(let userManager):
+                                let homeViewController = HomeViewController(userManager)
+                                self?.navigationController?.setViewControllers([LoginViewController(), homeViewController], animated: true)
+                            case .failure:
+                                self?.showLoginViewController()
                         }
+                    }
                 }
             }
         }
@@ -62,3 +61,4 @@ class SplashScreenViewController: UIViewController {
         navigationController?.pushViewController(LoginViewController(), animated: animated)
     }
 }
+

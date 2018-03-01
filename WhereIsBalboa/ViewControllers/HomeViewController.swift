@@ -85,11 +85,12 @@ class HomeViewController: UIViewController {
             
             let focusedDate = strongSelf.focusedDate
             
-            var updatedTrips = trips.filter {
-                !($0.userID == userManager.loggedInUser.id && !userManager.loggedInUserTrips.contains($0))
-            }
-            if let newTrip = userManager.loggedInUserTrips.first(where: { $0.metadata.dateInterval.contains(focusedDate) }) {
-                updatedTrips.append(newTrip)
+            var updatedTrips = trips
+            userManager.loggedInUserTrips.filter({ $0.metadata.dateInterval.contains(focusedDate) }).forEach { updatedTrip in
+                if let oldTripIndex = updatedTrips.index(where: { updatedTrip.id == $0.id && updatedTrip != $0 }) {
+                    updatedTrips.remove(at: oldTripIndex)
+                }
+                updatedTrips.append(updatedTrip)
             }
             if updatedTrips != trips {
                 strongSelf.state = HomeViewControllerState.populated(userManager: userManager, trips: updatedTrips, focusedDate: focusedDate)

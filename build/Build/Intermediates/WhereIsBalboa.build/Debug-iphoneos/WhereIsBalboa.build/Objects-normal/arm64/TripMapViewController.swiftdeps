@@ -18,7 +18,6 @@ depends-top-level:
 - !private ">"
 - !private "Array"
 - "AssignmentPrecedence"
-- "Balbabe"
 - "Bool"
 - "BooleanLiteralType"
 - !private "CGSize"
@@ -44,6 +43,7 @@ depends-top-level:
 - "UIColor"
 - "UIControl"
 - "UIViewController"
+- "User"
 - "Void"
 - !private "_ImageLiteralType"
 - !private "fatalError"
@@ -51,8 +51,6 @@ depends-member:
 - !private ["13WhereIsBalboa7AddressV", "location"]
 - !private ["Sa", "contains"]
 - !private ["Sa", "reduce"]
-- !private ["13WhereIsBalboa7BalbabeV", "metadata"]
-- !private ["13WhereIsBalboa15BalbabeMetadataV", "whatsappURL"]
 - !private ["s23BidirectionalCollectionP", "contains"]
 - !private ["s23BidirectionalCollectionP", "init"]
 - !private ["s23BidirectionalCollectionP", "reduce"]
@@ -104,7 +102,6 @@ depends-member:
 - !private ["So10CLLocationC", "coordinate"]
 - !private ["SC22CLLocationCoordinate2DV", "latitude"]
 - !private ["SC22CLLocationCoordinate2DV", "longitude"]
-- !private ["s7CVarArgP", "Balbabe"]
 - !private ["s7CVarArgP", "CGSize"]
 - !private ["s7CVarArgP", "CKClusterView"]
 - !private ["s7CVarArgP", "CKNonHierarchicalDistanceBasedAlgorithm"]
@@ -115,11 +112,11 @@ depends-member:
 - !private ["s7CVarArgP", "UIApplication"]
 - !private ["s7CVarArgP", "UIButton"]
 - ["s7CVarArgP", "UIColor"]
+- !private ["s7CVarArgP", "User"]
 - !private ["s7CVarArgP", "addTarget"]
 - !private ["s7CVarArgP", "algorithm"]
 - !private ["s7CVarArgP", "annotation"]
 - !private ["s7CVarArgP", "annotations"]
-- !private ["s7CVarArgP", "balbabe"]
 - ["s7CVarArgP", "blue"]
 - !private ["s7CVarArgP", "canShowCallout"]
 - !private ["s7CVarArgP", "cellSize"]
@@ -175,6 +172,7 @@ depends-member:
 - !private ["s7CVarArgP", "updateBorderColor"]
 - !private ["s7CVarArgP", "updateClustersIfNeeded"]
 - !private ["s7CVarArgP", "updateShouldCenterOnUser"]
+- !private ["s7CVarArgP", "user"]
 - !private ["s7CVarArgP", "viewDidLoad"]
 - !private ["s7CVarArgP", "white"]
 - !private ["s7CVarArgP", "withRenderingMode"]
@@ -186,7 +184,6 @@ depends-member:
 - !private ["s10CollectionP", "reduce"]
 - !private ["s10CollectionP", "subscript"]
 - !private ["s10ComparableP", "init"]
-- !private ["s28CustomDebugStringConvertibleP", "Balbabe"]
 - !private ["s28CustomDebugStringConvertibleP", "CGSize"]
 - !private ["s28CustomDebugStringConvertibleP", "CKClusterView"]
 - !private ["s28CustomDebugStringConvertibleP", "CKNonHierarchicalDistanceBasedAlgorithm"]
@@ -197,11 +194,11 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "UIApplication"]
 - !private ["s28CustomDebugStringConvertibleP", "UIButton"]
 - ["s28CustomDebugStringConvertibleP", "UIColor"]
+- !private ["s28CustomDebugStringConvertibleP", "User"]
 - !private ["s28CustomDebugStringConvertibleP", "addTarget"]
 - !private ["s28CustomDebugStringConvertibleP", "algorithm"]
 - !private ["s28CustomDebugStringConvertibleP", "annotation"]
 - !private ["s28CustomDebugStringConvertibleP", "annotations"]
-- !private ["s28CustomDebugStringConvertibleP", "balbabe"]
 - ["s28CustomDebugStringConvertibleP", "blue"]
 - !private ["s28CustomDebugStringConvertibleP", "canShowCallout"]
 - !private ["s28CustomDebugStringConvertibleP", "cellSize"]
@@ -257,6 +254,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "updateBorderColor"]
 - !private ["s28CustomDebugStringConvertibleP", "updateClustersIfNeeded"]
 - !private ["s28CustomDebugStringConvertibleP", "updateShouldCenterOnUser"]
+- !private ["s28CustomDebugStringConvertibleP", "user"]
 - !private ["s28CustomDebugStringConvertibleP", "viewDidLoad"]
 - !private ["s28CustomDebugStringConvertibleP", "white"]
 - !private ["s28CustomDebugStringConvertibleP", "withRenderingMode"]
@@ -270,7 +268,6 @@ depends-member:
 - !private ["s17CustomReflectableP", "map"]
 - !private ["s17CustomReflectableP", "reduce"]
 - !private ["s17CustomReflectableP", "subscript"]
-- !private ["s23CustomStringConvertibleP", "Balbabe"]
 - !private ["s23CustomStringConvertibleP", "CGSize"]
 - !private ["s23CustomStringConvertibleP", "CKClusterView"]
 - !private ["s23CustomStringConvertibleP", "CKNonHierarchicalDistanceBasedAlgorithm"]
@@ -281,12 +278,12 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "UIApplication"]
 - !private ["s23CustomStringConvertibleP", "UIButton"]
 - ["s23CustomStringConvertibleP", "UIColor"]
+- !private ["s23CustomStringConvertibleP", "User"]
 - !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
 - !private ["s23CustomStringConvertibleP", "addTarget"]
 - !private ["s23CustomStringConvertibleP", "algorithm"]
 - !private ["s23CustomStringConvertibleP", "annotation"]
 - !private ["s23CustomStringConvertibleP", "annotations"]
-- !private ["s23CustomStringConvertibleP", "balbabe"]
 - ["s23CustomStringConvertibleP", "blue"]
 - !private ["s23CustomStringConvertibleP", "canShowCallout"]
 - !private ["s23CustomStringConvertibleP", "cellSize"]
@@ -342,12 +339,14 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "updateBorderColor"]
 - !private ["s23CustomStringConvertibleP", "updateClustersIfNeeded"]
 - !private ["s23CustomStringConvertibleP", "updateShouldCenterOnUser"]
+- !private ["s23CustomStringConvertibleP", "user"]
 - !private ["s23CustomStringConvertibleP", "viewDidLoad"]
 - !private ["s23CustomStringConvertibleP", "white"]
 - !private ["s23CustomStringConvertibleP", "withRenderingMode"]
 - ["s23CustomStringConvertibleP", ""]
 - !private ["13WhereIsBalboa19DatabaseConvertibleP", "address"]
 - !private ["13WhereIsBalboa19DatabaseConvertibleP", "location"]
+- !private ["13WhereIsBalboa19DatabaseConvertibleP", "metadata"]
 - !private ["13WhereIsBalboa19DatabaseConvertibleP", "whatsappURL"]
 - !private ["s9DecodableP", "_getBuiltinLogicValue"]
 - !private ["s9DecodableP", "contains"]
@@ -367,7 +366,6 @@ depends-member:
 - !private ["s9EncodableP", "map"]
 - !private ["s9EncodableP", "reduce"]
 - !private ["s9EncodableP", "subscript"]
-- !private ["s9EquatableP", "Balbabe"]
 - !private ["s9EquatableP", "CGSize"]
 - !private ["s9EquatableP", "CKClusterView"]
 - !private ["s9EquatableP", "CKNonHierarchicalDistanceBasedAlgorithm"]
@@ -378,6 +376,7 @@ depends-member:
 - !private ["s9EquatableP", "UIApplication"]
 - !private ["s9EquatableP", "UIButton"]
 - ["s9EquatableP", "UIColor"]
+- !private ["s9EquatableP", "User"]
 - !private ["s9EquatableP", "_getBuiltinLogicValue"]
 - !private ["s9EquatableP", "addTarget"]
 - !private ["s9EquatableP", "address"]
@@ -385,7 +384,6 @@ depends-member:
 - !private ["s9EquatableP", "alwaysTemplate"]
 - !private ["s9EquatableP", "annotation"]
 - !private ["s9EquatableP", "annotations"]
-- !private ["s9EquatableP", "balbabe"]
 - ["s9EquatableP", "blue"]
 - !private ["s9EquatableP", "canShowCallout"]
 - !private ["s9EquatableP", "cellSize"]
@@ -408,10 +406,10 @@ depends-member:
 - !private ["s9EquatableP", "init"]
 - !private ["s9EquatableP", "isSelected"]
 - !private ["s9EquatableP", "isViewLoaded"]
-- !private ["s9EquatableP", "keyedBalbabes"]
+- !private ["s9EquatableP", "keyedUsers"]
 - !private ["s9EquatableP", "leftCalloutAccessoryView"]
 - !private ["s9EquatableP", "location"]
-- !private ["s9EquatableP", "loggedInBalbabe"]
+- !private ["s9EquatableP", "loggedInUser"]
 - !private ["s9EquatableP", "loggedInUserAnnotationColor"]
 - ["s9EquatableP", "mapView"]
 - ["s9EquatableP", "mapViewDidFailLoadingMap"]
@@ -445,6 +443,8 @@ depends-member:
 - !private ["s9EquatableP", "updateBorderColor"]
 - !private ["s9EquatableP", "updateClustersIfNeeded"]
 - !private ["s9EquatableP", "updateShouldCenterOnUser"]
+- !private ["s9EquatableP", "user"]
+- !private ["s9EquatableP", "userManager"]
 - !private ["s9EquatableP", "viewDidLoad"]
 - !private ["s9EquatableP", "whatsappURL"]
 - !private ["s9EquatableP", "white"]
@@ -466,7 +466,6 @@ depends-member:
 - !private ["s23ExpressibleByNilLiteralP", "white"]
 - !private ["s26ExpressibleByStringLiteralP", "init"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
-- !private ["s8HashableP", "Balbabe"]
 - !private ["s8HashableP", "CGSize"]
 - !private ["s8HashableP", "CKClusterView"]
 - !private ["s8HashableP", "CKNonHierarchicalDistanceBasedAlgorithm"]
@@ -477,13 +476,13 @@ depends-member:
 - !private ["s8HashableP", "UIApplication"]
 - !private ["s8HashableP", "UIButton"]
 - ["s8HashableP", "UIColor"]
+- !private ["s8HashableP", "User"]
 - !private ["s8HashableP", "_getBuiltinLogicValue"]
 - !private ["s8HashableP", "addTarget"]
 - !private ["s8HashableP", "algorithm"]
 - !private ["s8HashableP", "alwaysTemplate"]
 - !private ["s8HashableP", "annotation"]
 - !private ["s8HashableP", "annotations"]
-- !private ["s8HashableP", "balbabe"]
 - ["s8HashableP", "blue"]
 - !private ["s8HashableP", "canShowCallout"]
 - !private ["s8HashableP", "cellSize"]
@@ -536,6 +535,7 @@ depends-member:
 - !private ["s8HashableP", "updateBorderColor"]
 - !private ["s8HashableP", "updateClustersIfNeeded"]
 - !private ["s8HashableP", "updateShouldCenterOnUser"]
+- !private ["s8HashableP", "user"]
 - !private ["s8HashableP", "viewDidLoad"]
 - !private ["s8HashableP", "white"]
 - !private ["s8HashableP", "withRenderingMode"]
@@ -546,11 +546,11 @@ depends-member:
 - !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
 - !private ["s25LosslessStringConvertibleP", "init"]
 - !private ["So12MKAnnotationP", "annotations"]
-- !private ["So12MKAnnotationP", "balbabe"]
 - !private ["So12MKAnnotationP", "count"]
 - !private ["So12MKAnnotationP", "firstAnnotation"]
 - !private ["So12MKAnnotationP", "init"]
 - !private ["So12MKAnnotationP", "trip"]
+- !private ["So12MKAnnotationP", "user"]
 - !private ["So16MKAnnotationViewC", "annotation"]
 - !private ["So16MKAnnotationViewC", "canShowCallout"]
 - !private ["So16MKAnnotationViewC", "init"]
@@ -565,7 +565,6 @@ depends-member:
 - !private ["So9MKMapViewC", "dequeueReusableAnnotationView"]
 - !private ["So9MKMapViewC", "deselectAnnotation"]
 - !private ["So9MKMapViewC", "setCenter"]
-- !private ["So17MKMapViewDelegateP", "Balbabe"]
 - !private ["So17MKMapViewDelegateP", "CGSize"]
 - !private ["So17MKMapViewDelegateP", "CKClusterView"]
 - !private ["So17MKMapViewDelegateP", "CKNonHierarchicalDistanceBasedAlgorithm"]
@@ -576,6 +575,7 @@ depends-member:
 - !private ["So17MKMapViewDelegateP", "UIApplication"]
 - !private ["So17MKMapViewDelegateP", "UIButton"]
 - ["So17MKMapViewDelegateP", "UIColor"]
+- !private ["So17MKMapViewDelegateP", "User"]
 - !private ["So17MKMapViewDelegateP", "centerMapButton"]
 - !private ["So17MKMapViewDelegateP", "configuration"]
 - !private ["So17MKMapViewDelegateP", "edgesForExtendedLayout"]
@@ -604,14 +604,13 @@ depends-member:
 - !private ["So19MKPinAnnotationViewC", "leftCalloutAccessoryView"]
 - !private ["So19MKPinAnnotationViewC", "pinTintColor"]
 - !private ["So19MKPinAnnotationViewC", "rightCalloutAccessoryView"]
-- !private ["So17MKPointAnnotationC", "balbabe"]
 - !private ["So17MKPointAnnotationC", "trip"]
-- !private ["So7MKShapeC", "balbabe"]
+- !private ["So17MKPointAnnotationC", "user"]
 - !private ["So7MKShapeC", "trip"]
+- !private ["So7MKShapeC", "user"]
 - !private ["s10MirrorPathP", "init"]
 - !private ["s17MutableCollectionP", "contains"]
 - !private ["s17MutableCollectionP", "reduce"]
-- !private ["So8NSCodingP", "Balbabe"]
 - !private ["So8NSCodingP", "CGSize"]
 - !private ["So8NSCodingP", "CKClusterView"]
 - !private ["So8NSCodingP", "CKNonHierarchicalDistanceBasedAlgorithm"]
@@ -622,6 +621,7 @@ depends-member:
 - !private ["So8NSCodingP", "UIApplication"]
 - !private ["So8NSCodingP", "UIButton"]
 - ["So8NSCodingP", "UIColor"]
+- !private ["So8NSCodingP", "User"]
 - !private ["So8NSCodingP", "addTarget"]
 - !private ["So8NSCodingP", "annotation"]
 - ["So8NSCodingP", "blue"]
@@ -675,7 +675,6 @@ depends-member:
 - ["So9NSCopyingP", "green"]
 - !private ["So9NSCopyingP", "init"]
 - !private ["So9NSCopyingP", "white"]
-- !private ["So26NSExtensionRequestHandlingP", "Balbabe"]
 - !private ["So26NSExtensionRequestHandlingP", "CGSize"]
 - !private ["So26NSExtensionRequestHandlingP", "CKClusterView"]
 - !private ["So26NSExtensionRequestHandlingP", "CKNonHierarchicalDistanceBasedAlgorithm"]
@@ -686,6 +685,7 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "UIApplication"]
 - !private ["So26NSExtensionRequestHandlingP", "UIButton"]
 - ["So26NSExtensionRequestHandlingP", "UIColor"]
+- !private ["So26NSExtensionRequestHandlingP", "User"]
 - !private ["So26NSExtensionRequestHandlingP", "centerMapButton"]
 - !private ["So26NSExtensionRequestHandlingP", "configuration"]
 - !private ["So26NSExtensionRequestHandlingP", "edgesForExtendedLayout"]
@@ -726,7 +726,6 @@ depends-member:
 - !private ["So21NSItemProviderWritingP", "white"]
 - !private ["So21NSItemProviderWritingP", "withRenderingMode"]
 - !private ["So16NSMutableCopyingP", "init"]
-- ["So8NSObjectC", "Balbabe"]
 - ["So8NSObjectC", "Bool"]
 - !private ["So8NSObjectC", "CGSize"]
 - !private ["So8NSObjectC", "CKCluster"]
@@ -747,12 +746,12 @@ depends-member:
 - ["So8NSObjectC", "UIButton"]
 - ["So8NSObjectC", "UIColor"]
 - ["So8NSObjectC", "UIControl"]
+- ["So8NSObjectC", "User"]
 - ["So8NSObjectC", "Void"]
 - !private ["So8NSObjectC", "addTarget"]
 - !private ["So8NSObjectC", "algorithm"]
 - !private ["So8NSObjectC", "annotation"]
 - !private ["So8NSObjectC", "annotations"]
-- !private ["So8NSObjectC", "balbabe"]
 - ["So8NSObjectC", "blue"]
 - !private ["So8NSObjectC", "canShowCallout"]
 - !private ["So8NSObjectC", "cellSize"]
@@ -804,10 +803,10 @@ depends-member:
 - !private ["So8NSObjectC", "updateBorderColor"]
 - !private ["So8NSObjectC", "updateClustersIfNeeded"]
 - ["So8NSObjectC", "updateShouldCenterOnUser"]
+- !private ["So8NSObjectC", "user"]
 - ["So8NSObjectC", "viewDidLoad"]
 - !private ["So8NSObjectC", "white"]
 - !private ["So8NSObjectC", "withRenderingMode"]
-- !private ["So16NSObjectProtocolP", "Balbabe"]
 - !private ["So16NSObjectProtocolP", "CGSize"]
 - !private ["So16NSObjectProtocolP", "CKClusterView"]
 - !private ["So16NSObjectProtocolP", "CKNonHierarchicalDistanceBasedAlgorithm"]
@@ -818,11 +817,11 @@ depends-member:
 - !private ["So16NSObjectProtocolP", "UIApplication"]
 - !private ["So16NSObjectProtocolP", "UIButton"]
 - ["So16NSObjectProtocolP", "UIColor"]
+- !private ["So16NSObjectProtocolP", "User"]
 - !private ["So16NSObjectProtocolP", "addTarget"]
 - !private ["So16NSObjectProtocolP", "algorithm"]
 - !private ["So16NSObjectProtocolP", "annotation"]
 - !private ["So16NSObjectProtocolP", "annotations"]
-- !private ["So16NSObjectProtocolP", "balbabe"]
 - ["So16NSObjectProtocolP", "blue"]
 - !private ["So16NSObjectProtocolP", "canShowCallout"]
 - !private ["So16NSObjectProtocolP", "cellSize"]
@@ -873,6 +872,7 @@ depends-member:
 - !private ["So16NSObjectProtocolP", "updateBorderColor"]
 - !private ["So16NSObjectProtocolP", "updateClustersIfNeeded"]
 - !private ["So16NSObjectProtocolP", "updateShouldCenterOnUser"]
+- !private ["So16NSObjectProtocolP", "user"]
 - !private ["So16NSObjectProtocolP", "viewDidLoad"]
 - !private ["So16NSObjectProtocolP", "white"]
 - !private ["So16NSObjectProtocolP", "withRenderingMode"]
@@ -915,11 +915,10 @@ depends-member:
 - !private ["s20TextOutputStreamableP", "init"]
 - ["13WhereIsBalboa4TripV", "deinit"]
 - !private ["13WhereIsBalboa4TripV", "metadata"]
-- !private ["13WhereIsBalboa14TripAnnotationC", "balbabe"]
 - !private ["13WhereIsBalboa14TripAnnotationC", "deinit"]
 - !private ["13WhereIsBalboa14TripAnnotationC", "init"]
 - !private ["13WhereIsBalboa14TripAnnotationC", "trip"]
-- ["13WhereIsBalboa21TripMapViewControllerC", "Balbabe"]
+- !private ["13WhereIsBalboa14TripAnnotationC", "user"]
 - ["13WhereIsBalboa21TripMapViewControllerC", "Bool"]
 - !private ["13WhereIsBalboa21TripMapViewControllerC", "CGSize"]
 - !private ["13WhereIsBalboa21TripMapViewControllerC", "CKCluster"]
@@ -940,6 +939,7 @@ depends-member:
 - ["13WhereIsBalboa21TripMapViewControllerC", "UIButton"]
 - ["13WhereIsBalboa21TripMapViewControllerC", "UIColor"]
 - ["13WhereIsBalboa21TripMapViewControllerC", "UIControl"]
+- ["13WhereIsBalboa21TripMapViewControllerC", "User"]
 - ["13WhereIsBalboa21TripMapViewControllerC", "Void"]
 - !private ["13WhereIsBalboa21TripMapViewControllerC", "centerMapButton"]
 - !private ["13WhereIsBalboa21TripMapViewControllerC", "configuration"]
@@ -969,8 +969,8 @@ depends-member:
 - !private ["13WhereIsBalboa12TripMetadataV", "address"]
 - !private ["13WhereIsBalboa22TripsDataConfigurationV", "currentLocation"]
 - !private ["13WhereIsBalboa22TripsDataConfigurationV", "deinit"]
-- !private ["13WhereIsBalboa22TripsDataConfigurationV", "keyedBalbabes"]
-- !private ["13WhereIsBalboa22TripsDataConfigurationV", "loggedInBalbabe"]
+- !private ["13WhereIsBalboa22TripsDataConfigurationV", "keyedUsers"]
+- !private ["13WhereIsBalboa22TripsDataConfigurationV", "userManager"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "addTarget"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "init"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "isSelected"]
@@ -1016,7 +1016,6 @@ depends-member:
 - !private ["So12UIAppearanceP", "tintColor"]
 - !private ["So12UIAppearanceP", "title"]
 - !private ["So12UIAppearanceP", "updateBorderColor"]
-- !private ["So21UIAppearanceContainerP", "Balbabe"]
 - !private ["So21UIAppearanceContainerP", "CGSize"]
 - !private ["So21UIAppearanceContainerP", "CKClusterView"]
 - !private ["So21UIAppearanceContainerP", "CKNonHierarchicalDistanceBasedAlgorithm"]
@@ -1027,6 +1026,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "UIApplication"]
 - !private ["So21UIAppearanceContainerP", "UIButton"]
 - ["So21UIAppearanceContainerP", "UIColor"]
+- !private ["So21UIAppearanceContainerP", "User"]
 - !private ["So21UIAppearanceContainerP", "addTarget"]
 - !private ["So21UIAppearanceContainerP", "annotation"]
 - !private ["So21UIAppearanceContainerP", "canShowCallout"]
@@ -1080,7 +1080,6 @@ depends-member:
 - ["So7UIColorC", "blue"]
 - ["So7UIColorC", "green"]
 - !private ["So7UIColorC", "white"]
-- !private ["So18UIContentContainerP", "Balbabe"]
 - !private ["So18UIContentContainerP", "CGSize"]
 - !private ["So18UIContentContainerP", "CKClusterView"]
 - !private ["So18UIContentContainerP", "CKNonHierarchicalDistanceBasedAlgorithm"]
@@ -1091,6 +1090,7 @@ depends-member:
 - !private ["So18UIContentContainerP", "UIApplication"]
 - !private ["So18UIContentContainerP", "UIButton"]
 - ["So18UIContentContainerP", "UIColor"]
+- !private ["So18UIContentContainerP", "User"]
 - !private ["So18UIContentContainerP", "centerMapButton"]
 - !private ["So18UIContentContainerP", "configuration"]
 - !private ["So18UIContentContainerP", "edgesForExtendedLayout"]
@@ -1162,7 +1162,6 @@ depends-member:
 - !private ["So13UIDynamicItemP", "tintColor"]
 - !private ["So13UIDynamicItemP", "title"]
 - !private ["So13UIDynamicItemP", "updateBorderColor"]
-- !private ["So18UIFocusEnvironmentP", "Balbabe"]
 - !private ["So18UIFocusEnvironmentP", "CGSize"]
 - !private ["So18UIFocusEnvironmentP", "CKClusterView"]
 - !private ["So18UIFocusEnvironmentP", "CKNonHierarchicalDistanceBasedAlgorithm"]
@@ -1173,6 +1172,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "UIApplication"]
 - !private ["So18UIFocusEnvironmentP", "UIButton"]
 - ["So18UIFocusEnvironmentP", "UIColor"]
+- !private ["So18UIFocusEnvironmentP", "User"]
 - !private ["So18UIFocusEnvironmentP", "addTarget"]
 - !private ["So18UIFocusEnvironmentP", "annotation"]
 - !private ["So18UIFocusEnvironmentP", "canShowCallout"]
@@ -1240,7 +1240,6 @@ depends-member:
 - !private ["So39UIItemProviderPresentationSizeProvidingP", "scaled"]
 - !private ["So39UIItemProviderPresentationSizeProvidingP", "withRenderingMode"]
 - !private ["So7UILabelC", "text"]
-- !private ["So30UIPasteConfigurationSupportingP", "Balbabe"]
 - !private ["So30UIPasteConfigurationSupportingP", "CGSize"]
 - !private ["So30UIPasteConfigurationSupportingP", "CKClusterView"]
 - !private ["So30UIPasteConfigurationSupportingP", "CKNonHierarchicalDistanceBasedAlgorithm"]
@@ -1251,6 +1250,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "UIApplication"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIButton"]
 - ["So30UIPasteConfigurationSupportingP", "UIColor"]
+- !private ["So30UIPasteConfigurationSupportingP", "User"]
 - !private ["So30UIPasteConfigurationSupportingP", "addTarget"]
 - !private ["So30UIPasteConfigurationSupportingP", "annotation"]
 - !private ["So30UIPasteConfigurationSupportingP", "canShowCallout"]
@@ -1295,7 +1295,6 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "updateShouldCenterOnUser"]
 - !private ["So30UIPasteConfigurationSupportingP", "viewDidLoad"]
 - ["So30UIPasteConfigurationSupportingP", ""]
-- ["So11UIResponderC", "Balbabe"]
 - ["So11UIResponderC", "Bool"]
 - !private ["So11UIResponderC", "CGSize"]
 - !private ["So11UIResponderC", "CKCluster"]
@@ -1316,6 +1315,7 @@ depends-member:
 - ["So11UIResponderC", "UIButton"]
 - ["So11UIResponderC", "UIColor"]
 - ["So11UIResponderC", "UIControl"]
+- ["So11UIResponderC", "User"]
 - ["So11UIResponderC", "Void"]
 - !private ["So11UIResponderC", "addTarget"]
 - !private ["So11UIResponderC", "annotation"]
@@ -1361,7 +1361,6 @@ depends-member:
 - !private ["So11UIResponderC", "updateBorderColor"]
 - ["So11UIResponderC", "updateShouldCenterOnUser"]
 - ["So11UIResponderC", "viewDidLoad"]
-- !private ["So30UIResponderStandardEditActionsP", "Balbabe"]
 - !private ["So30UIResponderStandardEditActionsP", "CGSize"]
 - !private ["So30UIResponderStandardEditActionsP", "CKClusterView"]
 - !private ["So30UIResponderStandardEditActionsP", "CKNonHierarchicalDistanceBasedAlgorithm"]
@@ -1372,6 +1371,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "UIApplication"]
 - !private ["So30UIResponderStandardEditActionsP", "UIButton"]
 - ["So30UIResponderStandardEditActionsP", "UIColor"]
+- !private ["So30UIResponderStandardEditActionsP", "User"]
 - !private ["So30UIResponderStandardEditActionsP", "addTarget"]
 - !private ["So30UIResponderStandardEditActionsP", "annotation"]
 - !private ["So30UIResponderStandardEditActionsP", "canShowCallout"]
@@ -1421,7 +1421,6 @@ depends-member:
 - !private ["So35UISpringLoadedInteractionSupportingP", "isSelected"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "setImage"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "tintColor"]
-- !private ["So16UIStateRestoringP", "Balbabe"]
 - !private ["So16UIStateRestoringP", "CGSize"]
 - !private ["So16UIStateRestoringP", "CKClusterView"]
 - !private ["So16UIStateRestoringP", "CKNonHierarchicalDistanceBasedAlgorithm"]
@@ -1432,6 +1431,7 @@ depends-member:
 - !private ["So16UIStateRestoringP", "UIApplication"]
 - !private ["So16UIStateRestoringP", "UIButton"]
 - ["So16UIStateRestoringP", "UIColor"]
+- !private ["So16UIStateRestoringP", "User"]
 - !private ["So16UIStateRestoringP", "centerMapButton"]
 - !private ["So16UIStateRestoringP", "configuration"]
 - !private ["So16UIStateRestoringP", "edgesForExtendedLayout"]
@@ -1456,7 +1456,6 @@ depends-member:
 - !private ["So16UIStateRestoringP", "updateShouldCenterOnUser"]
 - !private ["So16UIStateRestoringP", "viewDidLoad"]
 - ["So16UIStateRestoringP", ""]
-- !private ["So18UITraitEnvironmentP", "Balbabe"]
 - !private ["So18UITraitEnvironmentP", "CGSize"]
 - !private ["So18UITraitEnvironmentP", "CKClusterView"]
 - !private ["So18UITraitEnvironmentP", "CKNonHierarchicalDistanceBasedAlgorithm"]
@@ -1467,6 +1466,7 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "UIApplication"]
 - !private ["So18UITraitEnvironmentP", "UIButton"]
 - ["So18UITraitEnvironmentP", "UIColor"]
+- !private ["So18UITraitEnvironmentP", "User"]
 - !private ["So18UITraitEnvironmentP", "addTarget"]
 - !private ["So18UITraitEnvironmentP", "annotation"]
 - !private ["So18UITraitEnvironmentP", "canShowCallout"]
@@ -1528,7 +1528,6 @@ depends-member:
 - !private ["So6UIViewC", "tintColor"]
 - !private ["So6UIViewC", "title"]
 - !private ["So6UIViewC", "updateBorderColor"]
-- ["So16UIViewControllerC", "Balbabe"]
 - ["So16UIViewControllerC", "Bool"]
 - !private ["So16UIViewControllerC", "CGSize"]
 - !private ["So16UIViewControllerC", "CKCluster"]
@@ -1549,6 +1548,7 @@ depends-member:
 - ["So16UIViewControllerC", "UIButton"]
 - ["So16UIViewControllerC", "UIColor"]
 - ["So16UIViewControllerC", "UIControl"]
+- ["So16UIViewControllerC", "User"]
 - ["So16UIViewControllerC", "Void"]
 - ["So16UIViewControllerC", "centerMapButton"]
 - ["So16UIViewControllerC", "configuration"]
@@ -1575,6 +1575,9 @@ depends-member:
 - ["So16UIViewControllerC", "updateShouldCenterOnUser"]
 - ["So16UIViewControllerC", "viewDidLoad"]
 - ["So16UIViewControllerC", ""]
+- !private ["13WhereIsBalboa4UserV", "metadata"]
+- !private ["13WhereIsBalboa11UserManagerC", "loggedInUser"]
+- !private ["13WhereIsBalboa12UserMetadataV", "whatsappURL"]
 - !private ["s14_ArrayProtocolP", "contains"]
 - !private ["s14_ArrayProtocolP", "reduce"]
 - !private ["s23_BidirectionalIndexableP", "contains"]
@@ -1625,7 +1628,6 @@ depends-member:
 - !private ["s14_IndexableBaseP", "map"]
 - !private ["s14_IndexableBaseP", "reduce"]
 - !private ["s14_IndexableBaseP", "subscript"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "Balbabe"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "CGSize"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "CKClusterView"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "CKNonHierarchicalDistanceBasedAlgorithm"]
@@ -1636,11 +1638,11 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIApplication"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIButton"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "UIColor"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "User"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "addTarget"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "algorithm"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "annotation"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "annotations"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "balbabe"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "blue"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "canShowCallout"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "cellSize"]
@@ -1691,6 +1693,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "updateBorderColor"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "updateClustersIfNeeded"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "updateShouldCenterOnUser"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "user"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "viewDidLoad"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "white"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "withRenderingMode"]
@@ -1717,8 +1720,6 @@ depends-member:
 depends-nominal:
 - !private "13WhereIsBalboa7AddressV"
 - !private "Sa"
-- !private "13WhereIsBalboa7BalbabeV"
-- !private "13WhereIsBalboa15BalbabeMetadataV"
 - !private "s23BidirectionalCollectionP"
 - !private "Sb"
 - !private "So15CALayerDelegateP"
@@ -1821,6 +1822,9 @@ depends-nominal:
 - "So18UITraitEnvironmentP"
 - !private "So6UIViewC"
 - "So16UIViewControllerC"
+- !private "13WhereIsBalboa4UserV"
+- !private "13WhereIsBalboa11UserManagerC"
+- !private "13WhereIsBalboa12UserMetadataV"
 - !private "s14_ArrayProtocolP"
 - !private "s23_BidirectionalIndexableP"
 - !private "s37_DefaultCustomPlaygroundQuickLookableP"
@@ -1848,6 +1852,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework/Modules/SwiftyJSON.swiftmodule/arm64.swiftmodule"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/PopupDialog/PopupDialog.framework/Modules/PopupDialog.swiftmodule/arm64.swiftmodule"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/KeychainAccess/KeychainAccess.framework/Modules/KeychainAccess.swiftmodule/arm64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/QuartzCore.swiftmodule"
@@ -1867,6 +1872,7 @@ depends-external:
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework/Headers/SwiftyJSON-umbrella.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/PopupDialog/PopupDialog.framework/Headers/PopupDialog-umbrella.h"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/KeychainAccess/KeychainAccess.framework/Headers/KeychainAccess-umbrella.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/ClusterKit/ClusterKit.framework/Headers/ClusterKit-umbrella.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseDatabase/Frameworks/FirebaseDatabase.framework/Headers/FIRMutableData.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageMetadata.h"
@@ -1930,6 +1936,7 @@ depends-external:
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseStorage/Frameworks/FirebaseStorage.framework/Headers/FIRStorageConstants.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework/Headers/SwiftyJSON-Swift.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/PopupDialog/PopupDialog.framework/Headers/PopupDialog-Swift.h"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/KeychainAccess/KeychainAccess.framework/Headers/KeychainAccess-Swift.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/ClusterKit/ClusterKit.framework/Headers/MKMapView+ClusterKit.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/ClusterKit/ClusterKit.framework/Headers/ClusterKit.h"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthDataResult.h"
@@ -1948,5 +1955,6 @@ depends-external:
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/PopupDialog/PopupDialog.framework/Modules/module.modulemap"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAuth/Frameworks/FirebaseAuth.framework/Modules/module.modulemap"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
+- "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/KeychainAccess/KeychainAccess.framework/Modules/module.modulemap"
 - "/Users/sharifahmed/Desktop/WhereIsBalboa/build/Build/Products/Debug-iphoneos/ClusterKit/ClusterKit.framework/Modules/module.modulemap"
-interface-hash: "c7f047fb4cdce1478c66548fb40e4e81"
+interface-hash: "bd526d36f09f7e90f4130933472773c4"

@@ -23,7 +23,7 @@ class ProfileViewController: UIViewController, UISearchBarDelegate, LocationSear
     
     let keyboardManager = KeyboardManager()
     let userManager: UserManager
-    
+
     // MARK: - Init
     
     init(_ userManager: UserManager) {
@@ -82,9 +82,9 @@ class ProfileViewController: UIViewController, UISearchBarDelegate, LocationSear
             !name.isEmpty,
             let whatsapp = whatsappTextField.text?.trimmingCharacters(in: [" "]),
             !whatsapp.isEmpty
-        else {
-            showAlert(title: "Missing fields", message: "Please ensure that all fields are properly filled in")
-            return
+            else {
+                showAlert(title: "Missing fields", message: "Please ensure that all fields are properly filled in")
+                return
         }
         
         let hometown = updatedAddress ?? userManager.loggedInUser.metadata.hometown
@@ -96,10 +96,10 @@ class ProfileViewController: UIViewController, UISearchBarDelegate, LocationSear
                 }
                 strongSelf.dismiss(animated: true) {
                     switch result {
-                        case .failure(let error):
-                            strongSelf.showRetryAlert(message: error.localizedDescription, retryHandler: strongSelf.saveProfileChanges)
-                        case .success:
-                            strongSelf.showAlert(title: "Done!", message: "Successfully updated your information")
+                    case .failure(let error):
+                        strongSelf.showRetryAlert(message: error.localizedDescription, retryHandler: strongSelf.saveProfileChanges)
+                    case .success:
+                        strongSelf.showAlert(title: "Done!", message: "Successfully updated your information")
                     }
                 }
             }
@@ -113,6 +113,26 @@ class ProfileViewController: UIViewController, UISearchBarDelegate, LocationSear
     
     @IBAction private func selectCity() {
         present(searchController, animated: true)
+    }
+    
+    @IBAction private func updateEmail() {
+        let promptViewController = TextFieldPromptViewController.init(promptText: "Update to what email?", placeholderText: "Email") { inputText, onComplete in
+            Auth.auth().currentUser!.updateEmail(to: inputText, completion: { error in
+                onComplete(error?.localizedDescription ?? "Succesfully updated your email!")
+            })
+        }
+        let alert = PopupDialog(viewController: promptViewController)
+        present(alert, animated: true)
+    }
+    
+    @IBAction private func updatePassword() {
+        let promptViewController = TextFieldPromptViewController.init(promptText: "Where to send a password reset email?", placeholderText: "Email") { inputText, onComplete in
+            Auth.auth().sendPasswordReset(withEmail: inputText, completion: { error in
+                onComplete(error?.localizedDescription ?? "Sent! Check your email.")
+            })
+        }
+        let alert = PopupDialog(viewController: promptViewController)
+        present(alert, animated: true)
     }
     
     // MARK: - LocationSearchTableViewControllerDelegate
@@ -135,8 +155,8 @@ class ProfileViewController: UIViewController, UISearchBarDelegate, LocationSear
         guard
             let search = searchBar.text,
             search.isEmpty == false
-        else {
-            return
+            else {
+                return
         }
         
         let searchTableViewController = LocationSearchTableViewController(search, delegate: self)
@@ -151,3 +171,4 @@ class ProfileViewController: UIViewController, UISearchBarDelegate, LocationSear
         return false
     }
 }
+
